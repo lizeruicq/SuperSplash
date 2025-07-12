@@ -1,0 +1,8 @@
+{
+  "__type__": "cc.TextAsset",
+  "_name": "SmallBurg_outside_assets",
+  "_objFlags": 0,
+  "__editorExtras__": {},
+  "_native": "",
+  "text": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<tileset version=\"1.10\" tiledversion=\"1.11.2\" name=\"SmallBurg_outside_assets\" tilewidth=\"16\" tileheight=\"16\" tilecount=\"928\" columns=\"32\">\n <image source=\"SmallBurg_outside_assets.png\" width=\"512\" height=\"478\"/>\n</tileset>\n"
+}
