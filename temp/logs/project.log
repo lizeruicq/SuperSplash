@@ -1,0 +1,27 @@
+7-12-2025 22:45:00 - log: Load engine in /Applications/Cocos/Creator/3.8.6/CocosCreator.app/Contents/Resources/resources/3d/engine
+7-12-2025 22:45:00 - log: Register native engine in /Applications/Cocos/Creator/3.8.6/CocosCreator.app/Contents/Resources/resources/3d/engine/native
+7-12-2025 22:45:00 - log: Request namespace: device-list
+7-12-2025 22:45:03 - info: [PreviewInEditor] 预览环境初始化完毕
+7-12-2025 22:45:03 - log: [Scene] meshopt wasm decoder initialized
+7-12-2025 22:45:03 - log: [Scene] [box2d]:box2d wasm lib loaded.
+7-12-2025 22:45:03 - log: [Scene] [bullet]:bullet wasm lib loaded.
+7-12-2025 22:45:03 - log: [Scene] [PHYSICS]: using builtin.
+7-12-2025 22:45:04 - log: [Scene] Cocos Creator v3.8.6
+7-12-2025 22:45:04 - log: [Scene] Using custom pipeline: Builtin
+7-12-2025 22:45:04 - log: [Scene] [PHYSICS2D]: switch from box2d-wasm to box2d.
+7-12-2025 22:45:08 - log: [PreviewInEditor] meshopt wasm decoder initialized
+7-12-2025 22:45:08 - log: [PreviewInEditor] [box2d]:box2d wasm lib loaded.
+7-12-2025 22:45:08 - log: [PreviewInEditor] [bullet]:bullet wasm lib loaded.
+7-12-2025 22:45:08 - log: [PreviewInEditor] [PHYSICS]: using builtin.
+7-12-2025 22:45:08 - log: [PreviewInEditor] Cocos Creator v3.8.6
+7-12-2025 22:45:08 - log: [PreviewInEditor] Using custom pipeline: Builtin
+7-12-2025 22:45:08 - log: [PreviewInEditor] [PHYSICS2D]: switch from box2d-wasm to box2d.
+7-12-2025 22:45:08 - log: [PreviewInEditor] 检测到普通游戏环境
+7-12-2025 22:45:08 - log: [PreviewInEditor] 玩家数据保存成功
+7-12-2025 22:45:08 - log: [PreviewInEditor] 玩家数据已重置
+7-12-2025 22:45:08 - log: [PreviewInEditor] 玩家数据加载成功
+7-12-2025 22:45:09 - log: [PreviewInEditor] 更新关卡显示
+7-12-2025 22:45:09 - log: [PreviewInEditor] 关卡 level-1: 解锁状态 = true
+7-12-2025 22:45:09 - log: [PreviewInEditor] 关卡 level-2: 解锁状态 = false
+7-12-2025 22:45:09 - log: [PreviewInEditor] 关卡 level-3: 解锁状态 = false
+7-12-2025 22:45:11 - info: [PreviewInEditor] 预览环境初始化完毕

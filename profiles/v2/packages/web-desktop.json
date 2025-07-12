@@ -1,0 +1,26 @@
+{
+  "__version__": "1.0.1",
+  "builder": {
+    "common": {
+      "polyfills": {
+        "asyncFunctions": true
+      },
+      "startScene": "9a4dce19-24b9-4d46-b38f-ef49f2287dcb",
+      "scenes": [
+        {
+          "url": "db://assets/scene/gamescene.scene",
+          "uuid": "1563d039-d898-4d8f-9415-9f1da853b8a3"
+        },
+        {
+          "url": "db://assets/scene/mainmenu.scene",
+          "uuid": "9a4dce19-24b9-4d46-b38f-ef49f2287dcb"
+        },
+        {
+          "url": "db://assets/scene/LevelSelect.scene",
+          "uuid": "091c5c0e-b72a-4cad-ab68-635bc57ff236"
+        }
+      ],
+      "name": "driftClash"
+    }
+  }
+}
