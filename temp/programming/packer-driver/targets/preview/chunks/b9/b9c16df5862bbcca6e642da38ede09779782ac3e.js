@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Button, director, ToggleContainer, Sprite, Color, Label, TempData, PlayerManager, _dec, _dec2, _dec3, _dec4, _dec5, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _crd, ccclass, property, SelectManager;
+  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Button, ToggleContainer, Sprite, Color, Label, TempData, PlayerManager, SceneTransition, _dec, _dec2, _dec3, _dec4, _dec5, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _crd, ccclass, property, SelectManager;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -17,6 +17,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
     _reporterNs.report("PlayerManager", "./PlayerManager", _context.meta, extras);
   }
 
+  function _reportPossibleCrUseOfSceneTransition(extras) {
+    _reporterNs.report("SceneTransition", "./SceneTransition", _context.meta, extras);
+  }
+
   return {
     setters: [function (_unresolved_) {
       _reporterNs = _unresolved_;
@@ -27,7 +31,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
       _decorator = _cc._decorator;
       Component = _cc.Component;
       Button = _cc.Button;
-      director = _cc.director;
       ToggleContainer = _cc.ToggleContainer;
       Sprite = _cc.Sprite;
       Color = _cc.Color;
@@ -36,13 +39,15 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
       TempData = _unresolved_2.TempData;
     }, function (_unresolved_3) {
       PlayerManager = _unresolved_3.PlayerManager;
+    }, function (_unresolved_4) {
+      SceneTransition = _unresolved_4.SceneTransition;
     }],
     execute: function () {
       _crd = true;
 
       _cclegacy._RF.push({}, "be7b23A2jVN6agcMGkP3NKP", "SelectManager", undefined);
 
-      __checkObsolete__(['_decorator', 'Component', 'Button', 'director', 'ToggleContainer', 'Toggle', 'Sprite', 'Color', 'Label', 'Node']);
+      __checkObsolete__(['_decorator', 'Component', 'Button', 'ToggleContainer', 'Toggle', 'Sprite', 'Color', 'Label', 'Node']);
 
       // @ts-ignore
       ({
@@ -210,7 +215,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           }), TempData) : TempData).selectedCar = carToggle.node.name;
           console.log(levelToggle.node.name, carToggle.node.name); // 切换到游戏场景
 
-          director.loadScene('gamescene');
+          (_crd && SceneTransition === void 0 ? (_reportPossibleCrUseOfSceneTransition({
+            error: Error()
+          }), SceneTransition) : SceneTransition).loadScene('gamescene');
         }
         /**
          * 设置车辆购买按钮

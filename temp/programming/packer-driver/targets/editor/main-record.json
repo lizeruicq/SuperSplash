@@ -1,7 +1,7 @@
 {
   "modules": {
     "cce:/internal/x/cc": {
-      "mTimestamp": 2607.148667,
+      "mTimestamp": 2903.279917,
       "chunkId": "93ba276ea7b26ffcdc433fab14afc1ed6f05647b",
       "imports": [
         {
@@ -976,7 +976,7 @@
       ]
     },
     "cce:/internal/x/prerequisite-imports": {
-      "mTimestamp": 3138.083292,
+      "mTimestamp": 102936099.175042,
       "chunkId": "6d8fd2b0177941b032ddc0733af48a561fb60657",
       "imports": [
         {
@@ -1246,7 +1246,7 @@
           }
         },
         {
-          "value": "file:///Users/zeruili/projects/cocos_project/driftClash/assets/scripts/SelectManager.ts",
+          "value": "file:///Users/zeruili/projects/cocos_project/driftClash/assets/scripts/SceneTransition.ts",
           "resolved": "__unresolved_19",
           "loc": {
             "start": {
@@ -1255,63 +1255,91 @@
             },
             "end": {
               "line": 5,
-              "column": 2534
+              "column": 2536
+            }
+          }
+        },
+        {
+          "value": "file:///Users/zeruili/projects/cocos_project/driftClash/assets/scripts/SceneTransitionTest.ts",
+          "resolved": "__unresolved_20",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 2552
+            },
+            "end": {
+              "line": 5,
+              "column": 2647
+            }
+          }
+        },
+        {
+          "value": "file:///Users/zeruili/projects/cocos_project/driftClash/assets/scripts/SelectManager.ts",
+          "resolved": "__unresolved_21",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 2663
+            },
+            "end": {
+              "line": 5,
+              "column": 2752
             }
           }
         },
         {
           "value": "file:///Users/zeruili/projects/cocos_project/driftClash/assets/scripts/TempData.ts",
-          "resolved": "__unresolved_20",
+          "resolved": "__unresolved_22",
           "loc": {
             "start": {
               "line": 5,
-              "column": 2550
+              "column": 2768
             },
             "end": {
               "line": 5,
-              "column": 2634
+              "column": 2852
             }
           }
         },
         {
           "value": "file:///Users/zeruili/projects/cocos_project/driftClash/assets/scripts/VehicleDestructionTest.ts",
-          "resolved": "__unresolved_21",
+          "resolved": "__unresolved_23",
           "loc": {
             "start": {
               "line": 5,
-              "column": 2650
+              "column": 2868
             },
             "end": {
               "line": 5,
-              "column": 2748
+              "column": 2966
             }
           }
         },
         {
           "value": "file:///Users/zeruili/projects/cocos_project/driftClash/assets/scripts/camera_follow.ts",
-          "resolved": "__unresolved_22",
+          "resolved": "__unresolved_24",
           "loc": {
             "start": {
               "line": 5,
-              "column": 2764
+              "column": 2982
             },
             "end": {
               "line": 5,
-              "column": 2853
+              "column": 3071
             }
           }
         },
         {
           "value": "file:///Users/zeruili/projects/cocos_project/driftClash/assets/scripts/player.ts",
-          "resolved": "__unresolved_23",
+          "resolved": "__unresolved_25",
           "loc": {
             "start": {
               "line": 5,
-              "column": 2869
+              "column": 3087
             },
             "end": {
               "line": 5,
-              "column": 2951
+              "column": 3169
             }
           }
         }
@@ -1448,6 +1476,20 @@
           "resolved": {
             "type": "module",
             "url": "file:///Users/zeruili/projects/cocos_project/driftClash/assets/scripts/PlayerManagerExample.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///Users/zeruili/projects/cocos_project/driftClash/assets/scripts/SceneTransition.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///Users/zeruili/projects/cocos_project/driftClash/assets/scripts/SceneTransitionTest.ts"
           },
           "messages": []
         },
@@ -2050,1953 +2092,6 @@
         }
       ]
     },
-    "cce:/internal/code-quality/cr.mjs": {
-      "mTimestamp": 1752331500352,
-      "chunkId": "6a5019a719a9014c047e67aa1cf34453ab8392ce",
-      "imports": [],
-      "type": "esm",
-      "resolutions": []
-    },
-    "file:///Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/player.ts": {
-      "mTimestamp": {
-        "mtime": 1751901084420.601,
-        "uuid": "b3924dc4-f7fe-491c-9736-a65419c312f5"
-      },
-      "chunkId": "e061563a0253631f95ef95555cb718e9327c631e",
-      "imports": [
-        {
-          "value": "cce:/internal/code-quality/cr.mjs",
-          "resolved": "__unresolved_0"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 214
-            },
-            "end": {
-              "line": 1,
-              "column": 218
-            }
-          }
-        },
-        {
-          "value": "./AIPlayer",
-          "resolved": "__unresolved_1",
-          "loc": {
-            "start": {
-              "line": 3,
-              "column": 25
-            },
-            "end": {
-              "line": 3,
-              "column": 37
-            }
-          }
-        },
-        {
-          "value": "./GameManager",
-          "resolved": "__unresolved_2",
-          "loc": {
-            "start": {
-              "line": 4,
-              "column": 28
-            },
-            "end": {
-              "line": 4,
-              "column": 43
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/code-quality/cr.mjs"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/AIPlayer.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/GameManager.ts"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/camera_follow.ts": {
-      "mTimestamp": {
-        "mtime": 1751727963848.3662,
-        "uuid": "daf21382-6b58-4c9b-aeb4-ace960c8ca29"
-      },
-      "chunkId": "1a84a147180d9cb925c4cfb281d12b83e37d3f20",
-      "imports": [
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 77
-            },
-            "end": {
-              "line": 1,
-              "column": 81
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/collision_detector.ts": {
-      "mTimestamp": {
-        "mtime": 1751094555397.9116,
-        "uuid": "70644ea5-aad0-4c29-a420-9eadb9fea93a"
-      },
-      "chunkId": "906fd830b0f5bc980998f9441e3195a08b45cf0f",
-      "imports": [
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 85
-            },
-            "end": {
-              "line": 1,
-              "column": 89
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/physics_collision.ts": {
-      "mTimestamp": {
-        "mtime": 1751098149182.8494,
-        "uuid": "6080bc56-8c57-4daa-8426-e533186f5f76"
-      },
-      "chunkId": "9bd2687c1d16c799fed68f292e2081816d3d8aab",
-      "imports": [
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 109
-            },
-            "end": {
-              "line": 1,
-              "column": 113
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/PlayerManager.ts": {
-      "mTimestamp": {
-        "mtime": 1752310844027.2988,
-        "uuid": "1b6d6687-2973-4618-af7b-db52ef67b8c1"
-      },
-      "chunkId": "03f32b50346f4138353210f2ee29acca0996b97b",
-      "imports": [
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 65
-            },
-            "end": {
-              "line": 1,
-              "column": 69
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/PlayerManagerExample.ts": {
-      "mTimestamp": {
-        "mtime": 1751106880479.3552,
-        "uuid": "20b5e8dd-5831-40bc-a3c3-2eba62b0f2b3"
-      },
-      "chunkId": "ab16ed11c9a15ffe23be11384ddcb0f67483a20e",
-      "imports": [
-        {
-          "value": "cce:/internal/code-quality/cr.mjs",
-          "resolved": "__unresolved_0"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 59
-            },
-            "end": {
-              "line": 1,
-              "column": 63
-            }
-          }
-        },
-        {
-          "value": "./PlayerManager",
-          "resolved": "__unresolved_1",
-          "loc": {
-            "start": {
-              "line": 2,
-              "column": 42
-            },
-            "end": {
-              "line": 2,
-              "column": 59
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/code-quality/cr.mjs"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/PlayerManager.ts"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/MainMenuController.ts": {
-      "mTimestamp": {
-        "mtime": 1751462001148.3167,
-        "uuid": "0cf6405c-918a-40f1-b383-68a9fc739b7f"
-      },
-      "chunkId": "e36f61b00531d89fc9b8ea8331bcab9b013d78d0",
-      "imports": [
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 56
-            },
-            "end": {
-              "line": 1,
-              "column": 60
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/PlayerInfoUI.ts": {
-      "mTimestamp": {
-        "mtime": 1751376224317.8184,
-        "uuid": "66fbc94f-5230-4bee-8600-db121d4f07fe"
-      },
-      "chunkId": "1ff2566132afd850b3ba06a25573368b96471aac",
-      "imports": [
-        {
-          "value": "cce:/internal/code-quality/cr.mjs",
-          "resolved": "__unresolved_0"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 45
-            },
-            "end": {
-              "line": 1,
-              "column": 49
-            }
-          }
-        },
-        {
-          "value": "./PlayerManager",
-          "resolved": "__unresolved_1",
-          "loc": {
-            "start": {
-              "line": 2,
-              "column": 42
-            },
-            "end": {
-              "line": 2,
-              "column": 59
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/code-quality/cr.mjs"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/PlayerManager.ts"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/GameSceneLoader.ts": {
-      "mTimestamp": {
-        "mtime": 1751549831060.5007,
-        "uuid": "b67f4523-8daa-464a-8546-d89befbb2977"
-      },
-      "chunkId": "a2085a306541897bb8fb36a74f4e56329cf83f57",
-      "imports": [
-        {
-          "value": "cce:/internal/code-quality/cr.mjs",
-          "resolved": "__unresolved_0"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 95
-            },
-            "end": {
-              "line": 1,
-              "column": 99
-            }
-          }
-        },
-        {
-          "value": "./TempData",
-          "resolved": "__unresolved_1",
-          "loc": {
-            "start": {
-              "line": 2,
-              "column": 25
-            },
-            "end": {
-              "line": 2,
-              "column": 37
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/code-quality/cr.mjs"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/TempData.ts"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/SelectManager.ts": {
-      "mTimestamp": {
-        "mtime": 1752294206351.0625,
-        "uuid": "be7b2dc0-da35-4de9-a81c-30690fdcd28f"
-      },
-      "chunkId": "2cf1a6550c6b6cdf3ada12401368ad8645d1b008",
-      "imports": [
-        {
-          "value": "cce:/internal/code-quality/cr.mjs",
-          "resolved": "__unresolved_0"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 109
-            },
-            "end": {
-              "line": 1,
-              "column": 113
-            }
-          }
-        },
-        {
-          "value": "./TempData",
-          "resolved": "__unresolved_1",
-          "loc": {
-            "start": {
-              "line": 2,
-              "column": 25
-            },
-            "end": {
-              "line": 2,
-              "column": 37
-            }
-          }
-        },
-        {
-          "value": "./PlayerManager",
-          "resolved": "__unresolved_2",
-          "loc": {
-            "start": {
-              "line": 3,
-              "column": 42
-            },
-            "end": {
-              "line": 3,
-              "column": 59
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/code-quality/cr.mjs"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/TempData.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/PlayerManager.ts"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/TempData.ts": {
-      "mTimestamp": {
-        "mtime": 1751728327354.985,
-        "uuid": "4702a2d2-89fb-4b88-a080-9712952901be"
-      },
-      "chunkId": "171041b9933f82c690da4a7d97b610a6ea10831d",
-      "imports": [
-        {
-          "value": "cc"
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/GameSceneManager.ts": {
-      "mTimestamp": {
-        "mtime": 1751789134091.4932,
-        "uuid": "b67f4523-8daa-464a-8546-d89befbb2977"
-      },
-      "chunkId": "73747159fbbb7d43ba0f4ff7e4774e674f252a62",
-      "imports": [
-        {
-          "value": "cce:/internal/code-quality/cr.mjs",
-          "resolved": "__unresolved_0"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 101
-            },
-            "end": {
-              "line": 1,
-              "column": 105
-            }
-          }
-        },
-        {
-          "value": "./TempData",
-          "resolved": "__unresolved_1",
-          "loc": {
-            "start": {
-              "line": 2,
-              "column": 25
-            },
-            "end": {
-              "line": 2,
-              "column": 37
-            }
-          }
-        },
-        {
-          "value": "./camera_follow",
-          "resolved": "__unresolved_2",
-          "loc": {
-            "start": {
-              "line": 3,
-              "column": 29
-            },
-            "end": {
-              "line": 3,
-              "column": 46
-            }
-          }
-        },
-        {
-          "value": "./player",
-          "resolved": "__unresolved_3",
-          "loc": {
-            "start": {
-              "line": 4,
-              "column": 23
-            },
-            "end": {
-              "line": 4,
-              "column": 33
-            }
-          }
-        },
-        {
-          "value": "./AIController",
-          "resolved": "__unresolved_4",
-          "loc": {
-            "start": {
-              "line": 5,
-              "column": 29
-            },
-            "end": {
-              "line": 5,
-              "column": 45
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/code-quality/cr.mjs"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/TempData.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/camera_follow.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/player.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/AIController.ts"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/AIController.ts": {
-      "mTimestamp": {
-        "mtime": 1751820288895.0928,
-        "uuid": "922b0d89-4cee-4a0e-b072-f593d4a178c3"
-      },
-      "chunkId": "4dd995f12cff4d79503797751b9d598fca77ba4f",
-      "imports": [
-        {
-          "value": "cce:/internal/code-quality/cr.mjs",
-          "resolved": "__unresolved_0"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 84
-            },
-            "end": {
-              "line": 1,
-              "column": 88
-            }
-          }
-        },
-        {
-          "value": "./GameManager",
-          "resolved": "__unresolved_1",
-          "loc": {
-            "start": {
-              "line": 3,
-              "column": 28
-            },
-            "end": {
-              "line": 3,
-              "column": 43
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/code-quality/cr.mjs"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/GameManager.ts"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/AIPlayer.ts": {
-      "mTimestamp": {
-        "mtime": 1751900525110.592,
-        "uuid": "ff477e7e-ceef-42c8-804f-c97803369c7b"
-      },
-      "chunkId": "0bc11b2f7c29b784345ae0572927f4303e38c0df",
-      "imports": [
-        {
-          "value": "cce:/internal/code-quality/cr.mjs",
-          "resolved": "__unresolved_0"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 164
-            },
-            "end": {
-              "line": 1,
-              "column": 168
-            }
-          }
-        },
-        {
-          "value": "./player",
-          "resolved": "__unresolved_1",
-          "loc": {
-            "start": {
-              "line": 3,
-              "column": 23
-            },
-            "end": {
-              "line": 3,
-              "column": 33
-            }
-          }
-        },
-        {
-          "value": "./GameManager",
-          "resolved": "__unresolved_2",
-          "loc": {
-            "start": {
-              "line": 4,
-              "column": 28
-            },
-            "end": {
-              "line": 4,
-              "column": 43
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/code-quality/cr.mjs"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/player.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/GameManager.ts"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/HealthBar.ts": {
-      "mTimestamp": {
-        "mtime": 1751791651475.3425,
-        "uuid": "b09090d5-6769-43b3-b84e-e391dce516c0"
-      },
-      "chunkId": "352ff4d7be761f3234e0fac3149e9f48bd944991",
-      "imports": [
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 97
-            },
-            "end": {
-              "line": 1,
-              "column": 101
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/HealthBarUI.ts": {
-      "mTimestamp": {
-        "mtime": 1751886004994.6763,
-        "uuid": "79d6f812-9554-4262-84e1-fd743e611bf9"
-      },
-      "chunkId": "c898d39bda182a050a3f8669e8a79c303cd86325",
-      "imports": [
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 50
-            },
-            "end": {
-              "line": 1,
-              "column": 54
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/GameManager.ts": {
-      "mTimestamp": {
-        "mtime": 1752079271452.2722,
-        "uuid": "b67f4523-8daa-464a-8546-d89befbb2977"
-      },
-      "chunkId": "16015e5bdda8a654cb6ed8da2a13853c5201ef3a",
-      "imports": [
-        {
-          "value": "cce:/internal/code-quality/cr.mjs",
-          "resolved": "__unresolved_0"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 127
-            },
-            "end": {
-              "line": 1,
-              "column": 131
-            }
-          }
-        },
-        {
-          "value": "./TempData",
-          "resolved": "__unresolved_1",
-          "loc": {
-            "start": {
-              "line": 2,
-              "column": 25
-            },
-            "end": {
-              "line": 2,
-              "column": 37
-            }
-          }
-        },
-        {
-          "value": "./camera_follow",
-          "resolved": "__unresolved_2",
-          "loc": {
-            "start": {
-              "line": 3,
-              "column": 29
-            },
-            "end": {
-              "line": 3,
-              "column": 46
-            }
-          }
-        },
-        {
-          "value": "./player",
-          "resolved": "__unresolved_3",
-          "loc": {
-            "start": {
-              "line": 4,
-              "column": 23
-            },
-            "end": {
-              "line": 4,
-              "column": 33
-            }
-          }
-        },
-        {
-          "value": "./AIController",
-          "resolved": "__unresolved_4",
-          "loc": {
-            "start": {
-              "line": 5,
-              "column": 29
-            },
-            "end": {
-              "line": 5,
-              "column": 45
-            }
-          }
-        },
-        {
-          "value": "./AIPlayer",
-          "resolved": "__unresolved_5",
-          "loc": {
-            "start": {
-              "line": 6,
-              "column": 25
-            },
-            "end": {
-              "line": 6,
-              "column": 37
-            }
-          }
-        },
-        {
-          "value": "./PlayerManager",
-          "resolved": "__unresolved_6",
-          "loc": {
-            "start": {
-              "line": 7,
-              "column": 30
-            },
-            "end": {
-              "line": 7,
-              "column": 47
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/code-quality/cr.mjs"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/TempData.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/camera_follow.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/player.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/AIController.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/AIPlayer.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/PlayerManager.ts"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/GameManagerExample.ts": {
-      "mTimestamp": {
-        "mtime": 1751880804437.5667,
-        "uuid": "8e647ccd-65a0-4fe9-9a1f-6d0bf9e6510b"
-      },
-      "chunkId": "263d675e650011f528da25d1cce106aa5584f8ee",
-      "imports": [
-        {
-          "value": "cce:/internal/code-quality/cr.mjs",
-          "resolved": "__unresolved_0"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 97
-            },
-            "end": {
-              "line": 1,
-              "column": 101
-            }
-          }
-        },
-        {
-          "value": "./GameManager",
-          "resolved": "__unresolved_1",
-          "loc": {
-            "start": {
-              "line": 2,
-              "column": 39
-            },
-            "end": {
-              "line": 2,
-              "column": 54
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/code-quality/cr.mjs"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/GameManager.ts"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/GameOverPanel.ts": {
-      "mTimestamp": {
-        "mtime": 1751880733138.6445,
-        "uuid": "62b903fa-d761-4f2b-8016-ee288919f17a"
-      },
-      "chunkId": "fb2ee12c25f68d3b8f49378a3585fa14aea8bbf9",
-      "imports": [
-        {
-          "value": "cce:/internal/code-quality/cr.mjs",
-          "resolved": "__unresolved_0"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 59
-            },
-            "end": {
-              "line": 1,
-              "column": 63
-            }
-          }
-        },
-        {
-          "value": "./GameManager",
-          "resolved": "__unresolved_1",
-          "loc": {
-            "start": {
-              "line": 2,
-              "column": 28
-            },
-            "end": {
-              "line": 2,
-              "column": 43
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/code-quality/cr.mjs"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/GameManager.ts"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/PausePanel.ts": {
-      "mTimestamp": {
-        "mtime": 1751880715966.924,
-        "uuid": "5a320709-c4da-48a6-9e0a-f1f0884117fb"
-      },
-      "chunkId": "614f18f2b508f0d4d446d344941a14118c79dded",
-      "imports": [
-        {
-          "value": "cce:/internal/code-quality/cr.mjs",
-          "resolved": "__unresolved_0"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 52
-            },
-            "end": {
-              "line": 1,
-              "column": 56
-            }
-          }
-        },
-        {
-          "value": "./GameManager",
-          "resolved": "__unresolved_1",
-          "loc": {
-            "start": {
-              "line": 2,
-              "column": 28
-            },
-            "end": {
-              "line": 2,
-              "column": 43
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/code-quality/cr.mjs"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/GameManager.ts"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/VehicleDestructionTest.ts": {
-      "mTimestamp": {
-        "mtime": 1751901119716.8408,
-        "uuid": "01c08043-bfa2-4c83-957c-a194c966ef09"
-      },
-      "chunkId": "daab5021a117553d173ba3064c3944c0f9764de7",
-      "imports": [
-        {
-          "value": "cce:/internal/code-quality/cr.mjs",
-          "resolved": "__unresolved_0"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 97
-            },
-            "end": {
-              "line": 1,
-              "column": 101
-            }
-          }
-        },
-        {
-          "value": "./player",
-          "resolved": "__unresolved_1",
-          "loc": {
-            "start": {
-              "line": 2,
-              "column": 23
-            },
-            "end": {
-              "line": 2,
-              "column": 33
-            }
-          }
-        },
-        {
-          "value": "./GameManager",
-          "resolved": "__unresolved_2",
-          "loc": {
-            "start": {
-              "line": 4,
-              "column": 28
-            },
-            "end": {
-              "line": 4,
-              "column": 43
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/code-quality/cr.mjs"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/player.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/GameManager.ts"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/CarPurchaseTest.ts": {
-      "mTimestamp": {
-        "mtime": 1751991366973.6372,
-        "uuid": "4b4e4d80-e536-48c9-811a-9601e0bf5362"
-      },
-      "chunkId": "f2787bcbe4451a34eb0f084f13067bb85642e2fb",
-      "imports": [
-        {
-          "value": "cce:/internal/code-quality/cr.mjs",
-          "resolved": "__unresolved_0"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 61
-            },
-            "end": {
-              "line": 1,
-              "column": 65
-            }
-          }
-        },
-        {
-          "value": "./PlayerManager",
-          "resolved": "__unresolved_1",
-          "loc": {
-            "start": {
-              "line": 2,
-              "column": 30
-            },
-            "end": {
-              "line": 2,
-              "column": 47
-            }
-          }
-        },
-        {
-          "value": "./SelectManager",
-          "resolved": "__unresolved_2",
-          "loc": {
-            "start": {
-              "line": 3,
-              "column": 30
-            },
-            "end": {
-              "line": 3,
-              "column": 47
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/code-quality/cr.mjs"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/PlayerManager.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/SelectManager.ts"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/LevelGradeTest.ts": {
-      "mTimestamp": {
-        "mtime": 1752079216948.198,
-        "uuid": "4296e978-bdb0-4cb9-9cdd-5f8311ca5d88"
-      },
-      "chunkId": "3714f50370568d468243bab3580b3f70a37b95ba",
-      "imports": [
-        {
-          "value": "cce:/internal/code-quality/cr.mjs",
-          "resolved": "__unresolved_0"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 61
-            },
-            "end": {
-              "line": 1,
-              "column": 65
-            }
-          }
-        },
-        {
-          "value": "./PlayerManager",
-          "resolved": "__unresolved_1",
-          "loc": {
-            "start": {
-              "line": 2,
-              "column": 42
-            },
-            "end": {
-              "line": 2,
-              "column": 59
-            }
-          }
-        },
-        {
-          "value": "./SelectManager",
-          "resolved": "__unresolved_2",
-          "loc": {
-            "start": {
-              "line": 3,
-              "column": 30
-            },
-            "end": {
-              "line": 3,
-              "column": 47
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/code-quality/cr.mjs"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/PlayerManager.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/SelectManager.ts"
-          },
-          "messages": []
-        }
-      ]
-    },
     "file:///Users/zeruili/projects/cocos_project/driftClash/assets/scripts/AIController.ts": {
       "mTimestamp": {
         "mtime": 1751820288895.0928,
@@ -4293,7 +2388,7 @@
     },
     "file:///Users/zeruili/projects/cocos_project/driftClash/assets/scripts/GameManager.ts": {
       "mTimestamp": {
-        "mtime": 1752079271452.2722,
+        "mtime": 1752764243524.3816,
         "uuid": "b67f4523-8daa-464a-8546-d89befbb2977"
       },
       "chunkId": "d99ffa78595ef86f45405646d5cc14ad1480dee0",
@@ -4404,6 +2499,20 @@
               "column": 47
             }
           }
+        },
+        {
+          "value": "./SceneTransition",
+          "resolved": "__unresolved_7",
+          "loc": {
+            "start": {
+              "line": 8,
+              "column": 32
+            },
+            "end": {
+              "line": 8,
+              "column": 51
+            }
+          }
         }
       ],
       "type": "esm",
@@ -4475,6 +2584,13 @@
           "resolved": {
             "type": "module",
             "url": "file:///Users/zeruili/projects/cocos_project/driftClash/assets/scripts/PlayerManager.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///Users/zeruili/projects/cocos_project/driftClash/assets/scripts/SceneTransition.ts"
           },
           "messages": []
         }
@@ -4807,11 +2923,15 @@
     },
     "file:///Users/zeruili/projects/cocos_project/driftClash/assets/scripts/MainMenuController.ts": {
       "mTimestamp": {
-        "mtime": 1751462001148.3167,
+        "mtime": 1752769071568.746,
         "uuid": "0cf6405c-918a-40f1-b383-68a9fc739b7f"
       },
       "chunkId": "2a304f0f942d7336e9dc095417a34a706c892e8f",
       "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
         {
           "value": "cc"
         },
@@ -4823,11 +2943,25 @@
           "loc": {
             "start": {
               "line": 1,
-              "column": 56
+              "column": 52
             },
             "end": {
               "line": 1,
-              "column": 60
+              "column": 56
+            }
+          }
+        },
+        {
+          "value": "./SceneTransition",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 32
+            },
+            "end": {
+              "line": 2,
+              "column": 51
             }
           }
         }
@@ -4837,7 +2971,7 @@
         {
           "resolved": {
             "type": "module",
-            "url": "cce:/internal/x/cc"
+            "url": "cce:/internal/code-quality/cr.mjs"
           },
           "messages": []
         },
@@ -4852,6 +2986,20 @@
           "resolved": {
             "type": "module",
             "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///Users/zeruili/projects/cocos_project/driftClash/assets/scripts/SceneTransition.ts"
           },
           "messages": []
         }
@@ -5163,7 +3311,7 @@
     },
     "file:///Users/zeruili/projects/cocos_project/driftClash/assets/scripts/SelectManager.ts": {
       "mTimestamp": {
-        "mtime": 1752294206351.0625,
+        "mtime": 1752764431813.241,
         "uuid": "be7b2dc0-da35-4de9-a81c-30690fdcd28f"
       },
       "chunkId": "b9c16df5862bbcca6e642da38ede09779782ac3e",
@@ -5183,11 +3331,11 @@
           "loc": {
             "start": {
               "line": 1,
-              "column": 109
+              "column": 99
             },
             "end": {
               "line": 1,
-              "column": 113
+              "column": 103
             }
           }
         },
@@ -5211,11 +3359,25 @@
           "loc": {
             "start": {
               "line": 3,
-              "column": 42
+              "column": 30
             },
             "end": {
               "line": 3,
-              "column": 59
+              "column": 47
+            }
+          }
+        },
+        {
+          "value": "./SceneTransition",
+          "resolved": "__unresolved_3",
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 32
+            },
+            "end": {
+              "line": 4,
+              "column": 51
             }
           }
         }
@@ -5261,6 +3423,13 @@
           "resolved": {
             "type": "module",
             "url": "file:///Users/zeruili/projects/cocos_project/driftClash/assets/scripts/PlayerManager.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///Users/zeruili/projects/cocos_project/driftClash/assets/scripts/SceneTransition.ts"
           },
           "messages": []
         }
@@ -5545,6 +3714,285 @@
           "resolved": {
             "type": "module",
             "url": "file:///Users/zeruili/projects/cocos_project/driftClash/assets/scripts/GameManager.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "cce:/internal/code-quality/cr.mjs": {
+      "mTimestamp": 1752666136523,
+      "chunkId": "6a5019a719a9014c047e67aa1cf34453ab8392ce",
+      "imports": [],
+      "type": "esm",
+      "resolutions": []
+    },
+    "file:///Users/zeruili/projects/cocos_project/driftClash/assets/scripts/SceneFader.ts": {
+      "mTimestamp": {
+        "mtime": 1752764000376.482,
+        "uuid": "8f875fcf-118c-49ad-b54d-b63acc93af0c"
+      },
+      "chunkId": "f8773f37c39066f1e669860ad1c60516e354bc05",
+      "imports": [
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 116
+            },
+            "end": {
+              "line": 1,
+              "column": 120
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///Users/zeruili/projects/cocos_project/driftClash/assets/scripts/SceneFaderTest.ts": {
+      "mTimestamp": {
+        "mtime": 1752762103518.6096,
+        "uuid": "7163ca71-f80d-48df-86e8-8885f6dce345"
+      },
+      "chunkId": "9c46c306d949fec57901ba361b2178b220f0fe43",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 53
+            },
+            "end": {
+              "line": 1,
+              "column": 57
+            }
+          }
+        },
+        {
+          "value": "./SceneFader",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 27
+            },
+            "end": {
+              "line": 2,
+              "column": 41
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///Users/zeruili/projects/cocos_project/driftClash/assets/scripts/SceneFader.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///Users/zeruili/projects/cocos_project/driftClash/assets/scripts/SceneTransition.ts": {
+      "mTimestamp": {
+        "mtime": 1752764379799.7852,
+        "uuid": "c161466d-78da-494f-9ff2-6a5b9ae13301"
+      },
+      "chunkId": "74948618388cf8fc1977e55f6b358c932c03ec6a",
+      "imports": [
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 74
+            },
+            "end": {
+              "line": 1,
+              "column": 78
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///Users/zeruili/projects/cocos_project/driftClash/assets/scripts/SceneTransitionTest.ts": {
+      "mTimestamp": {
+        "mtime": 1752764356871.2915,
+        "uuid": "17b89013-b227-4e9d-9cd9-4df737c67b30"
+      },
+      "chunkId": "4256ecfeb63147a2ab4609fba45c0f175b2236f4",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 63
+            },
+            "end": {
+              "line": 1,
+              "column": 67
+            }
+          }
+        },
+        {
+          "value": "./SceneTransition",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 32
+            },
+            "end": {
+              "line": 2,
+              "column": 51
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///Users/zeruili/projects/cocos_project/driftClash/assets/scripts/SceneTransition.ts"
           },
           "messages": []
         }

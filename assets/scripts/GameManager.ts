@@ -5,6 +5,7 @@ import { player } from './player';
 import { AIController } from './AIController';
 import { AIPlayer } from './AIPlayer';
 import { PlayerManager } from './PlayerManager';
+import { SceneTransition } from './SceneTransition';
 const { ccclass, property } = _decorator;
 
 // 游戏状态枚举
@@ -418,7 +419,7 @@ export class GameManager extends Component {
         director.resume();
 
         // 重新加载当前场景
-        director.loadScene(director.getScene()!.name);
+        SceneTransition.loadScene(director.getScene()!.name);
     }
 
     /**
@@ -429,7 +430,7 @@ export class GameManager extends Component {
         director.resume();
 
         // 加载主菜单场景
-        director.loadScene('LevelSelect');
+        SceneTransition.loadScene('LevelSelect');
     }
 
     /**

@@ -1,139 +1,170 @@
 {
+  "311768e2-09ac-4c4f-834d-85e07497a5c5": {
+    "url": "db://assets/Scenes",
+    "value": {},
+    "versionCode": 1
+  },
   "ca8300bc-5694-4fb2-9420-c134432c4866": {
     "url": "db://assets/TiledMap",
     "value": {},
     "versionCode": 1
   },
-  "79ea8bc3-55e4-4161-87f4-d8417199f7b7": {
-    "url": "db://assets/TiledMap/SmallBurg_outside_assets.png",
-    "value": {
-      "depends": []
-    },
-    "versionCode": 1
-  },
-  "79ea8bc3-55e4-4161-87f4-d8417199f7b7@6c48a": {
-    "url": "db://assets/TiledMap/SmallBurg_outside_assets.png@6c48a",
-    "value": {
-      "depends": [
-        "79ea8bc3-55e4-4161-87f4-d8417199f7b7"
-      ]
-    },
-    "versionCode": 1
-  },
-  "79ea8bc3-55e4-4161-87f4-d8417199f7b7@f9941": {
-    "url": "db://assets/TiledMap/SmallBurg_outside_assets.png@f9941",
-    "value": {
-      "depends": [
-        "79ea8bc3-55e4-4161-87f4-d8417199f7b7@6c48a"
-      ]
-    },
-    "versionCode": 1
-  },
-  "3f4a8955-01c2-409a-8435-bc200cc537df": {
-    "url": "db://assets/TiledMap/smallburg_terrain_spring_with_shadows.png",
-    "value": {
-      "depends": []
-    },
-    "versionCode": 1
-  },
-  "3f4a8955-01c2-409a-8435-bc200cc537df@6c48a": {
-    "url": "db://assets/TiledMap/smallburg_terrain_spring_with_shadows.png@6c48a",
-    "value": {
-      "depends": [
-        "3f4a8955-01c2-409a-8435-bc200cc537df"
-      ]
-    },
-    "versionCode": 1
-  },
-  "3f4a8955-01c2-409a-8435-bc200cc537df@f9941": {
-    "url": "db://assets/TiledMap/smallburg_terrain_spring_with_shadows.png@f9941",
-    "value": {
-      "depends": [
-        "3f4a8955-01c2-409a-8435-bc200cc537df@6c48a"
-      ]
-    },
-    "versionCode": 1
-  },
-  "b421117e-67eb-4f59-bd1f-54f7accbd1c5": {
-    "url": "db://assets/TiledMap/untitled.tmx",
+  "f04d4757-2526-40bc-83dc-41410588d6eb": {
+    "url": "db://assets/img",
     "value": {},
     "versionCode": 1
   },
-  "64305baa-7783-4c84-8b22-65a3c9911550": {
-    "url": "db://assets/TiledMap/SmallBurg_outside_assets.tsx",
-    "value": {
-      "depends": []
-    },
+  "d97d032d-727a-433c-9189-878a2868c79d": {
+    "url": "db://assets/resources",
+    "value": {},
     "versionCode": 1
   },
-  "6fa4c070-0285-4d03-85b9-c31a736acbe7": {
-    "url": "db://assets/TiledMap/smallburg_terrain_spring_with_shadows.tsx",
-    "value": {
-      "depends": []
-    },
+  "d4ffaca8-3516-4d6f-9187-e37ee8010ebd": {
+    "url": "db://assets/scripts",
+    "value": {},
     "versionCode": 1
   },
-  "58373e6a-0c07-48bb-aeb7-6d2426d69f39": {
-    "url": "db://assets/TiledMap/smallburg_terrain.png",
-    "value": {
-      "depends": []
-    },
+  "6e03cd48-8a60-412f-b20f-82f4e1b5b329": {
+    "url": "db://assets/img/background",
+    "value": {},
     "versionCode": 1
   },
-  "58373e6a-0c07-48bb-aeb7-6d2426d69f39@6c48a": {
-    "url": "db://assets/TiledMap/smallburg_terrain.png@6c48a",
+  "b3322b39-4b8e-4556-8194-a14dbd5f51a9": {
+    "url": "db://assets/img/menu",
+    "value": {},
+    "versionCode": 1
+  },
+  "762a429e-c9d7-4d61-98f5-52886abdc2ad": {
+    "url": "db://assets/resources/prefab",
+    "value": {},
+    "versionCode": 1
+  },
+  "2054f310-6a94-41ce-a3b6-41dcd19b5f43": {
+    "url": "db://assets/resources/prefab/cars",
+    "value": {},
+    "versionCode": 1
+  },
+  "c23f290e-b5e8-46ea-bf20-d18ab9b6705f": {
+    "url": "db://assets/resources/prefab/levels",
+    "value": {},
+    "versionCode": 1
+  },
+  "922b0d89-4cee-4a0e-b072-f593d4a178c3": {
+    "url": "db://assets/scripts/AIController.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "ff477e7e-ceef-42c8-804f-c97803369c7b": {
+    "url": "db://assets/scripts/AIPlayer.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "4b4e4d80-e536-48c9-811a-9601e0bf5362": {
+    "url": "db://assets/scripts/CarPurchaseTest.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "b67f4523-8daa-464a-8546-d89befbb2977": {
+    "url": "db://assets/scripts/GameManager.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "8e647ccd-65a0-4fe9-9a1f-6d0bf9e6510b": {
+    "url": "db://assets/scripts/GameManagerExample.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "62b903fa-d761-4f2b-8016-ee288919f17a": {
+    "url": "db://assets/scripts/GameOverPanel.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "79d6f812-9554-4262-84e1-fd743e611bf9": {
+    "url": "db://assets/scripts/HealthBarUI.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "4296e978-bdb0-4cb9-9cdd-5f8311ca5d88": {
+    "url": "db://assets/scripts/LevelGradeTest.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "0cf6405c-918a-40f1-b383-68a9fc739b7f": {
+    "url": "db://assets/scripts/MainMenuController.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "5a320709-c4da-48a6-9e0a-f1f0884117fb": {
+    "url": "db://assets/scripts/PausePanel.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "66fbc94f-5230-4bee-8600-db121d4f07fe": {
+    "url": "db://assets/scripts/PlayerInfoUI.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "1b6d6687-2973-4618-af7b-db52ef67b8c1": {
+    "url": "db://assets/scripts/PlayerManager.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "20b5e8dd-5831-40bc-a3c3-2eba62b0f2b3": {
+    "url": "db://assets/scripts/PlayerManagerExample.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "be7b2dc0-da35-4de9-a81c-30690fdcd28f": {
+    "url": "db://assets/scripts/SelectManager.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "4702a2d2-89fb-4b88-a080-9712952901be": {
+    "url": "db://assets/scripts/TempData.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "01c08043-bfa2-4c83-957c-a194c966ef09": {
+    "url": "db://assets/scripts/VehicleDestructionTest.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "daf21382-6b58-4c9b-aeb4-ace960c8ca29": {
+    "url": "db://assets/scripts/camera_follow.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "b3924dc4-f7fe-491c-9736-a65419c312f5": {
+    "url": "db://assets/scripts/player.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "091c5c0e-b72a-4cad-ab68-635bc57ff236": {
+    "url": "db://assets/Scenes/LevelSelect.scene",
     "value": {
       "depends": [
-        "58373e6a-0c07-48bb-aeb7-6d2426d69f39"
+        "091c5c0e-b72a-4cad-ab68-635bc57ff236",
+        "20c9e6aa-64e9-4be4-baa7-0ec86216d0e3@f9941",
+        "57520716-48c8-4a19-8acf-41c9f8777fb0@f9941",
+        "20d2e143-4574-42b8-884c-e2c4dc7b3dd4@f9941",
+        "0bfa81f7-9b43-4f2a-bc44-2375066c8694@f9941",
+        "20835ba4-6145-4fbc-a58a-051ce700aa3e@f9941",
+        "544e49d6-3f05-4fa8-9a9e-091f98fc2ce8@f9941",
+        "951249e0-9f16-456d-8b85-a6ca954da16b@f9941",
+        "807a7b47-3819-4529-931c-683fbcf44eb0@f9941",
+        "d0ade2fb-557f-4edb-a96c-d68e19c7c942@f9941",
+        "35990206-f1f7-49c0-91d6-a50921fc8128@f9941",
+        "5308cc80-fcde-4667-baa6-dbcdc87fd132@f9941",
+        "a9e97b11-149f-46e6-a990-c95fd6d91cd7@f9941",
+        "0b33dc38-0c13-4f55-b754-27d76610db59@f9941",
+        "7e95e032-b6ae-4de9-a8ab-c81b24b5fb5f@f9941",
+        "81520cf5-3a02-463b-b3ec-c8870a3f4940"
+      ],
+      "dependScripts": [
+        "CC3eba29-7abb-723a-f7ab-ae275e2277e8",
+        "66fbc94f-5230-4bee-8600-db121d4f07fe",
+        "be7b2dc0-da35-4de9-a81c-30690fdcd28f"
       ]
-    },
-    "versionCode": 1
-  },
-  "58373e6a-0c07-48bb-aeb7-6d2426d69f39@f9941": {
-    "url": "db://assets/TiledMap/smallburg_terrain.png@f9941",
-    "value": {
-      "depends": [
-        "58373e6a-0c07-48bb-aeb7-6d2426d69f39@6c48a"
-      ]
-    },
-    "versionCode": 1
-  },
-  "96faef33-da58-4b5e-8a90-58a7d4cdf8e8": {
-    "url": "db://assets/TiledMap/smallburg_terrain.tsx",
-    "value": {
-      "depends": []
-    },
-    "versionCode": 1
-  },
-  "09c7c4fd-1bb1-44c6-b6b8-53d6372098fd": {
-    "url": "db://assets/TiledMap/City_tiles.png",
-    "value": {
-      "depends": []
-    },
-    "versionCode": 1
-  },
-  "09c7c4fd-1bb1-44c6-b6b8-53d6372098fd@6c48a": {
-    "url": "db://assets/TiledMap/City_tiles.png@6c48a",
-    "value": {
-      "depends": [
-        "09c7c4fd-1bb1-44c6-b6b8-53d6372098fd"
-      ]
-    },
-    "versionCode": 1
-  },
-  "09c7c4fd-1bb1-44c6-b6b8-53d6372098fd@f9941": {
-    "url": "db://assets/TiledMap/City_tiles.png@f9941",
-    "value": {
-      "depends": [
-        "09c7c4fd-1bb1-44c6-b6b8-53d6372098fd@6c48a"
-      ]
-    },
-    "versionCode": 1
-  },
-  "0f73f87e-5a6d-4c5f-a301-7985c7771ff8": {
-    "url": "db://assets/TiledMap/City_tiles.tsx",
-    "value": {
-      "depends": []
     },
     "versionCode": 1
   },
@@ -156,57 +187,55 @@
     },
     "versionCode": 1
   },
-  "f04d4757-2526-40bc-83dc-41410588d6eb": {
-    "url": "db://assets/img",
-    "value": {},
-    "versionCode": 1
-  },
-  "4642454b-0a99-4d69-9fbf-e1ff03eb693a": {
-    "url": "db://assets/img/car.png",
-    "value": {},
-    "versionCode": 1
-  },
-  "4642454b-0a99-4d69-9fbf-e1ff03eb693a@6c48a": {
-    "url": "db://assets/img/car.png@6c48a",
+  "9a4dce19-24b9-4d46-b38f-ef49f2287dcb": {
+    "url": "db://assets/Scenes/mainmenu.scene",
     "value": {
       "depends": [
-        "4642454b-0a99-4d69-9fbf-e1ff03eb693a"
+        "9a4dce19-24b9-4d46-b38f-ef49f2287dcb",
+        "8e4b7ec0-ba7e-4952-bd46-9750970405c6@f9941",
+        "4cf1948a-ffca-426e-9c43-1e7c864a1b60@f9941",
+        "593904f2-fa85-498f-9b0e-9f79890c24fd@f9941",
+        "1c18f6e7-3b13-401b-85a1-746bf7284949@f9941",
+        "fe4c58f2-8b33-45e3-9dfa-f37dfb272443@f9941",
+        "83baeef7-746b-4f91-9a84-fd8a58d2b8b3@f9941",
+        "a426c2c8-58b1-4e5a-a16c-e75061a2d034@f9941",
+        "6a0179db-b0bc-4905-8953-8ab076a3cfd6@f9941",
+        "81520cf5-3a02-463b-b3ec-c8870a3f4940"
+      ],
+      "dependScripts": [
+        "CC3eba29-7abb-723a-f7ab-ae275e2277e8",
+        "1b6d6687-2973-4618-af7b-db52ef67b8c1",
+        "0cf6405c-918a-40f1-b383-68a9fc739b7f"
       ]
     },
     "versionCode": 1
   },
-  "4642454b-0a99-4d69-9fbf-e1ff03eb693a@f9941": {
-    "url": "db://assets/img/car.png@f9941",
+  "09c7c4fd-1bb1-44c6-b6b8-53d6372098fd": {
+    "url": "db://assets/TiledMap/City_tiles.png",
     "value": {
-      "depends": [
-        "4642454b-0a99-4d69-9fbf-e1ff03eb693a@6c48a"
-      ]
+      "depends": []
     },
     "versionCode": 1
   },
-  "d4ffaca8-3516-4d6f-9187-e37ee8010ebd": {
-    "url": "db://assets/scripts",
-    "value": {},
+  "0f73f87e-5a6d-4c5f-a301-7985c7771ff8": {
+    "url": "db://assets/TiledMap/City_tiles.tsx",
+    "value": {
+      "depends": []
+    },
     "versionCode": 1
   },
-  "b3924dc4-f7fe-491c-9736-a65419c312f5": {
-    "url": "db://assets/scripts/player.ts",
-    "value": {},
+  "79ea8bc3-55e4-4161-87f4-d8417199f7b7": {
+    "url": "db://assets/TiledMap/SmallBurg_outside_assets.png",
+    "value": {
+      "depends": []
+    },
     "versionCode": 1
   },
-  "daf21382-6b58-4c9b-aeb4-ace960c8ca29": {
-    "url": "db://assets/scripts/camera_follow.ts",
-    "value": {},
-    "versionCode": 1
-  },
-  "5ba404c1-7cf0-46d9-bace-2ffb119cf6e9": {
-    "url": "db://assets/TiledMap/city.tmx",
-    "value": {},
-    "versionCode": 1
-  },
-  "e1182738-b716-43aa-a987-4937840262c7": {
-    "url": "db://assets/TiledMap/city2.tmx",
-    "value": {},
+  "64305baa-7783-4c84-8b22-65a3c9911550": {
+    "url": "db://assets/TiledMap/SmallBurg_outside_assets.tsx",
+    "value": {
+      "depends": []
+    },
     "versionCode": 1
   },
   "c58e421d-cd2f-4cd7-b53d-7b468774492f": {
@@ -229,377 +258,98 @@
     },
     "versionCode": 1
   },
-  "70644ea5-aad0-4c29-a420-9eadb9fea93a": {
-    "url": "db://assets/scripts/collision_detector.ts",
-    "value": {},
-    "versionCode": 1
-  },
-  "6080bc56-8c57-4daa-8426-e533186f5f76": {
-    "url": "db://assets/scripts/physics_collision.ts",
-    "value": {},
-    "versionCode": 1
-  },
-  "762a429e-c9d7-4d61-98f5-52886abdc2ad": {
-    "url": "db://assets/resources/prefab",
-    "value": {},
-    "versionCode": 1
-  },
-  "8c92c9cb-7f92-4c6e-99ee-d9499deeeed4": {
-    "url": "db://assets/resources/prefab/Map.prefab",
-    "value": {},
-    "versionCode": 1
-  },
-  "1b6d6687-2973-4618-af7b-db52ef67b8c1": {
-    "url": "db://assets/scripts/PlayerManager.ts",
-    "value": {},
-    "versionCode": 1
-  },
-  "20b5e8dd-5831-40bc-a3c3-2eba62b0f2b3": {
-    "url": "db://assets/scripts/PlayerManagerExample.ts",
-    "value": {},
-    "versionCode": 1
-  },
-  "311768e2-09ac-4c4f-834d-85e07497a5c5": {
-    "url": "db://assets/Scenes",
-    "value": {},
-    "versionCode": 1
-  },
-  "9a4dce19-24b9-4d46-b38f-ef49f2287dcb": {
-    "url": "db://assets/Scenes/mainmenu.scene",
+  "09c7c4fd-1bb1-44c6-b6b8-53d6372098fd@6c48a": {
+    "url": "db://assets/TiledMap/City_tiles.png@6c48a",
     "value": {
       "depends": [
-        "9a4dce19-24b9-4d46-b38f-ef49f2287dcb",
-        "664835a2-0e31-4c15-89e1-2120e3e3a8e5@f9941",
-        "20835ba4-6145-4fbc-a58a-051ce700aa3e@f9941",
-        "544e49d6-3f05-4fa8-9a9e-091f98fc2ce8@f9941",
-        "951249e0-9f16-456d-8b85-a6ca954da16b@f9941"
-      ],
-      "dependScripts": [
-        "1b6d6687-2973-4618-af7b-db52ef67b8c1",
-        "0cf6405c-918a-40f1-b383-68a9fc739b7f"
+        "09c7c4fd-1bb1-44c6-b6b8-53d6372098fd"
       ]
     },
     "versionCode": 1
   },
-  "664835a2-0e31-4c15-89e1-2120e3e3a8e5": {
-    "url": "db://assets/img/menu/background.png",
+  "58373e6a-0c07-48bb-aeb7-6d2426d69f39": {
+    "url": "db://assets/TiledMap/smallburg_terrain.png",
     "value": {
       "depends": []
     },
     "versionCode": 1
   },
-  "664835a2-0e31-4c15-89e1-2120e3e3a8e5@6c48a": {
-    "url": "db://assets/img/menu/background.png@6c48a",
-    "value": {
-      "depends": [
-        "664835a2-0e31-4c15-89e1-2120e3e3a8e5"
-      ]
-    },
-    "versionCode": 1
-  },
-  "664835a2-0e31-4c15-89e1-2120e3e3a8e5@f9941": {
-    "url": "db://assets/img/menu/background.png@f9941",
-    "value": {
-      "depends": [
-        "664835a2-0e31-4c15-89e1-2120e3e3a8e5@6c48a"
-      ]
-    },
-    "versionCode": 1
-  },
-  "b3322b39-4b8e-4556-8194-a14dbd5f51a9": {
-    "url": "db://assets/img/menu",
-    "value": {},
-    "versionCode": 1
-  },
-  "091c5c0e-b72a-4cad-ab68-635bc57ff236": {
-    "url": "db://assets/Scenes/LevelSelect.scene",
-    "value": {
-      "depends": [
-        "091c5c0e-b72a-4cad-ab68-635bc57ff236",
-        "20c9e6aa-64e9-4be4-baa7-0ec86216d0e3@f9941",
-        "57520716-48c8-4a19-8acf-41c9f8777fb0@f9941",
-        "20d2e143-4574-42b8-884c-e2c4dc7b3dd4@f9941",
-        "0bfa81f7-9b43-4f2a-bc44-2375066c8694@f9941",
-        "20835ba4-6145-4fbc-a58a-051ce700aa3e@f9941",
-        "544e49d6-3f05-4fa8-9a9e-091f98fc2ce8@f9941",
-        "951249e0-9f16-456d-8b85-a6ca954da16b@f9941",
-        "807a7b47-3819-4529-931c-683fbcf44eb0@f9941",
-        "d0ade2fb-557f-4edb-a96c-d68e19c7c942@f9941",
-        "35990206-f1f7-49c0-91d6-a50921fc8128@f9941",
-        "5308cc80-fcde-4667-baa6-dbcdc87fd132@f9941",
-        "a9e97b11-149f-46e6-a990-c95fd6d91cd7@f9941",
-        "0b33dc38-0c13-4f55-b754-27d76610db59@f9941",
-        "7e95e032-b6ae-4de9-a8ab-c81b24b5fb5f@f9941"
-      ],
-      "dependScripts": [
-        "66fbc94f-5230-4bee-8600-db121d4f07fe",
-        "be7b2dc0-da35-4de9-a81c-30690fdcd28f"
-      ]
-    },
-    "versionCode": 1
-  },
-  "20c9e6aa-64e9-4be4-baa7-0ec86216d0e3": {
-    "url": "db://assets/img/menu/background2.png",
+  "96faef33-da58-4b5e-8a90-58a7d4cdf8e8": {
+    "url": "db://assets/TiledMap/smallburg_terrain.tsx",
     "value": {
       "depends": []
     },
     "versionCode": 1
   },
-  "20c9e6aa-64e9-4be4-baa7-0ec86216d0e3@6c48a": {
-    "url": "db://assets/img/menu/background2.png@6c48a",
-    "value": {
-      "depends": [
-        "20c9e6aa-64e9-4be4-baa7-0ec86216d0e3"
-      ]
-    },
-    "versionCode": 1
-  },
-  "20c9e6aa-64e9-4be4-baa7-0ec86216d0e3@f9941": {
-    "url": "db://assets/img/menu/background2.png@f9941",
-    "value": {
-      "depends": [
-        "20c9e6aa-64e9-4be4-baa7-0ec86216d0e3@6c48a"
-      ]
-    },
-    "versionCode": 1
-  },
-  "0cf6405c-918a-40f1-b383-68a9fc739b7f": {
-    "url": "db://assets/scripts/MainMenuController.ts",
-    "value": {},
-    "versionCode": 1
-  },
-  "66fbc94f-5230-4bee-8600-db121d4f07fe": {
-    "url": "db://assets/scripts/PlayerInfoUI.ts",
-    "value": {},
-    "versionCode": 1
-  },
-  "c2ccf9a1-d5dc-451d-905f-387af1f12937": {
-    "url": "db://assets/img/background/soccer_court.png",
+  "3f4a8955-01c2-409a-8435-bc200cc537df": {
+    "url": "db://assets/TiledMap/smallburg_terrain_spring_with_shadows.png",
     "value": {
       "depends": []
     },
     "versionCode": 1
   },
-  "c2ccf9a1-d5dc-451d-905f-387af1f12937@6c48a": {
-    "url": "db://assets/img/background/soccer_court.png@6c48a",
+  "79ea8bc3-55e4-4161-87f4-d8417199f7b7@6c48a": {
+    "url": "db://assets/TiledMap/SmallBurg_outside_assets.png@6c48a",
     "value": {
       "depends": [
-        "c2ccf9a1-d5dc-451d-905f-387af1f12937"
+        "79ea8bc3-55e4-4161-87f4-d8417199f7b7"
       ]
     },
     "versionCode": 1
   },
-  "c2ccf9a1-d5dc-451d-905f-387af1f12937@f9941": {
-    "url": "db://assets/img/background/soccer_court.png@f9941",
-    "value": {
-      "depends": [
-        "c2ccf9a1-d5dc-451d-905f-387af1f12937@6c48a"
-      ]
-    },
-    "versionCode": 1
-  },
-  "20d2e143-4574-42b8-884c-e2c4dc7b3dd4": {
-    "url": "db://assets/img/check-square.png",
+  "6fa4c070-0285-4d03-85b9-c31a736acbe7": {
+    "url": "db://assets/TiledMap/smallburg_terrain_spring_with_shadows.tsx",
     "value": {
       "depends": []
     },
     "versionCode": 1
   },
-  "20d2e143-4574-42b8-884c-e2c4dc7b3dd4@6c48a": {
-    "url": "db://assets/img/check-square.png@6c48a",
+  "09c7c4fd-1bb1-44c6-b6b8-53d6372098fd@f9941": {
+    "url": "db://assets/TiledMap/City_tiles.png@f9941",
     "value": {
       "depends": [
-        "20d2e143-4574-42b8-884c-e2c4dc7b3dd4"
+        "09c7c4fd-1bb1-44c6-b6b8-53d6372098fd@6c48a"
       ]
     },
     "versionCode": 1
   },
-  "20d2e143-4574-42b8-884c-e2c4dc7b3dd4@f9941": {
-    "url": "db://assets/img/check-square.png@f9941",
+  "7e95e032-b6ae-4de9-a8ab-c81b24b5fb5f": {
+    "url": "db://assets/img/86-f.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "58373e6a-0c07-48bb-aeb7-6d2426d69f39@6c48a": {
+    "url": "db://assets/TiledMap/smallburg_terrain.png@6c48a",
     "value": {
       "depends": [
-        "20d2e143-4574-42b8-884c-e2c4dc7b3dd4@6c48a"
+        "58373e6a-0c07-48bb-aeb7-6d2426d69f39"
       ]
     },
     "versionCode": 1
   },
-  "baa7650a-4ddd-426f-940b-5a3f2fcd3e1a": {
-    "url": "db://assets/img/car1.png",
-    "value": {},
+  "ed611db6-e51e-4a53-b624-848dd45ace21": {
+    "url": "db://assets/img/86-t.png",
+    "value": {
+      "depends": []
+    },
     "versionCode": 1
   },
-  "baa7650a-4ddd-426f-940b-5a3f2fcd3e1a@6c48a": {
-    "url": "db://assets/img/car1.png@6c48a",
+  "3f4a8955-01c2-409a-8435-bc200cc537df@6c48a": {
+    "url": "db://assets/TiledMap/smallburg_terrain_spring_with_shadows.png@6c48a",
     "value": {
       "depends": [
-        "baa7650a-4ddd-426f-940b-5a3f2fcd3e1a"
+        "3f4a8955-01c2-409a-8435-bc200cc537df"
       ]
     },
     "versionCode": 1
   },
-  "baa7650a-4ddd-426f-940b-5a3f2fcd3e1a@f9941": {
-    "url": "db://assets/img/car1.png@f9941",
+  "79ea8bc3-55e4-4161-87f4-d8417199f7b7@f9941": {
+    "url": "db://assets/TiledMap/SmallBurg_outside_assets.png@f9941",
     "value": {
       "depends": [
-        "baa7650a-4ddd-426f-940b-5a3f2fcd3e1a@6c48a"
-      ]
-    },
-    "versionCode": 1
-  },
-  "00a28dfd-7e2c-45db-9ec2-7e7d05d6aa26": {
-    "url": "db://assets/img/car2.png",
-    "value": {},
-    "versionCode": 1
-  },
-  "00a28dfd-7e2c-45db-9ec2-7e7d05d6aa26@6c48a": {
-    "url": "db://assets/img/car2.png@6c48a",
-    "value": {
-      "depends": [
-        "00a28dfd-7e2c-45db-9ec2-7e7d05d6aa26"
-      ]
-    },
-    "versionCode": 1
-  },
-  "00a28dfd-7e2c-45db-9ec2-7e7d05d6aa26@f9941": {
-    "url": "db://assets/img/car2.png@f9941",
-    "value": {
-      "depends": [
-        "00a28dfd-7e2c-45db-9ec2-7e7d05d6aa26@6c48a"
-      ]
-    },
-    "versionCode": 1
-  },
-  "19467782-1d79-4656-a56d-5986a28af4de": {
-    "url": "db://assets/img/car3.png",
-    "value": {},
-    "versionCode": 1
-  },
-  "19467782-1d79-4656-a56d-5986a28af4de@6c48a": {
-    "url": "db://assets/img/car3.png@6c48a",
-    "value": {
-      "depends": [
-        "19467782-1d79-4656-a56d-5986a28af4de"
-      ]
-    },
-    "versionCode": 1
-  },
-  "19467782-1d79-4656-a56d-5986a28af4de@f9941": {
-    "url": "db://assets/img/car3.png@f9941",
-    "value": {
-      "depends": [
-        "19467782-1d79-4656-a56d-5986a28af4de@6c48a"
-      ]
-    },
-    "versionCode": 1
-  },
-  "b67f4523-8daa-464a-8546-d89befbb2977": {
-    "url": "db://assets/scripts/GameManager.ts",
-    "value": {},
-    "versionCode": 1
-  },
-  "be7b2dc0-da35-4de9-a81c-30690fdcd28f": {
-    "url": "db://assets/scripts/SelectManager.ts",
-    "value": {},
-    "versionCode": 1
-  },
-  "4702a2d2-89fb-4b88-a080-9712952901be": {
-    "url": "db://assets/scripts/TempData.ts",
-    "value": {},
-    "versionCode": 1
-  },
-  "c23f290e-b5e8-46ea-bf20-d18ab9b6705f": {
-    "url": "db://assets/resources/prefab/levels",
-    "value": {},
-    "versionCode": 1
-  },
-  "2054f310-6a94-41ce-a3b6-41dcd19b5f43": {
-    "url": "db://assets/resources/prefab/cars",
-    "value": {},
-    "versionCode": 1
-  },
-  "86152963-bbd5-439e-8d28-7f401e0bbfeb": {
-    "url": "db://assets/resources/prefab/cars/car-1.prefab",
-    "value": {},
-    "versionCode": 1
-  },
-  "cf804555-7d75-4720-8a54-4f8a1348275f": {
-    "url": "db://assets/resources/prefab/levels/level-2.prefab",
-    "value": {
-      "depends": [
-        "5fa4a020-ad12-4d51-9e7d-57cecdc056ca",
-        "49e36654-b2c3-47d9-afeb-5db28286a1b0@f9941",
-        "a238f344-7c25-4d83-a0ec-8c85e46d3ec8@f9941",
-        "807a7b47-3819-4529-931c-683fbcf44eb0@f9941"
-      ],
-      "dependScripts": [
-        "CC3eba29-7abb-723a-f7ab-ae275e2277e8",
-        "ff477e7e-ceef-42c8-804f-c97803369c7b"
-      ]
-    },
-    "versionCode": 1
-  },
-  "d97d032d-727a-433c-9189-878a2868c79d": {
-    "url": "db://assets/resources",
-    "value": {},
-    "versionCode": 1
-  },
-  "922b0d89-4cee-4a0e-b072-f593d4a178c3": {
-    "url": "db://assets/scripts/AIController.ts",
-    "value": {},
-    "versionCode": 1
-  },
-  "ff477e7e-ceef-42c8-804f-c97803369c7b": {
-    "url": "db://assets/scripts/AIPlayer.ts",
-    "value": {},
-    "versionCode": 1
-  },
-  "e5c14dc4-e58f-4dff-9c37-6ce49152eb25": {
-    "url": "db://assets/resources/prefab/cars/car-1.prefab",
-    "value": {},
-    "versionCode": 1
-  },
-  "078bcb66-7d1a-4f6d-8aeb-80233ada2376": {
-    "url": "db://assets/resources/prefab/cars/car-1.prefab",
-    "value": {},
-    "versionCode": 1
-  },
-  "b1cd6ab6-6362-4d6e-acc5-38afb59c20c8": {
-    "url": "db://assets/resources/prefab/cars/car-1.prefab",
-    "value": {},
-    "versionCode": 1
-  },
-  "37fef8d9-5917-47b3-a40f-4e2ace6bf328": {
-    "url": "db://assets/resources/prefab/cars/car-1.prefab",
-    "value": {
-      "depends": [
-        "a238f344-7c25-4d83-a0ec-8c85e46d3ec8@f9941",
-        "49e36654-b2c3-47d9-afeb-5db28286a1b0@f9941"
-      ],
-      "dependScripts": [
-        "b3924dc4-f7fe-491c-9736-a65419c312f5"
-      ]
-    },
-    "versionCode": 1
-  },
-  "bc8037e8-1253-42b4-be7b-c800bf7d7635": {
-    "url": "db://assets/img/Armature_shoot_120.png",
-    "value": {},
-    "versionCode": 1
-  },
-  "bc8037e8-1253-42b4-be7b-c800bf7d7635@6c48a": {
-    "url": "db://assets/img/Armature_shoot_120.png@6c48a",
-    "value": {
-      "depends": [
-        "bc8037e8-1253-42b4-be7b-c800bf7d7635"
-      ]
-    },
-    "versionCode": 1
-  },
-  "bc8037e8-1253-42b4-be7b-c800bf7d7635@f9941": {
-    "url": "db://assets/img/Armature_shoot_120.png@f9941",
-    "value": {
-      "depends": [
-        "bc8037e8-1253-42b4-be7b-c800bf7d7635@6c48a"
+        "79ea8bc3-55e4-4161-87f4-d8417199f7b7@6c48a"
       ]
     },
     "versionCode": 1
@@ -611,92 +361,51 @@
     },
     "versionCode": 1
   },
-  "49e36654-b2c3-47d9-afeb-5db28286a1b0@6c48a": {
-    "url": "db://assets/img/car.png@6c48a",
+  "58373e6a-0c07-48bb-aeb7-6d2426d69f39@f9941": {
+    "url": "db://assets/TiledMap/smallburg_terrain.png@f9941",
     "value": {
       "depends": [
-        "49e36654-b2c3-47d9-afeb-5db28286a1b0"
-      ]
-    },
-    "versionCode": 1
-  },
-  "49e36654-b2c3-47d9-afeb-5db28286a1b0@f9941": {
-    "url": "db://assets/img/car.png@f9941",
-    "value": {
-      "depends": [
-        "49e36654-b2c3-47d9-afeb-5db28286a1b0@6c48a"
-      ]
-    },
-    "versionCode": 1
-  },
-  "b09090d5-6769-43b3-b84e-e391dce516c0": {
-    "url": "db://assets/scripts/HealthBar.ts",
-    "value": {},
-    "versionCode": 1
-  },
-  "5fa4a020-ad12-4d51-9e7d-57cecdc056ca": {
-    "url": "db://assets/resources/prefab/cars/healthBar.prefab",
-    "value": {
-      "depends": [
-        "24a704da-2867-446d-8d1a-5e920c75e09d@f9941",
-        "9fd900dd-221b-4f89-8f2c-fba34243c835@f9941"
-      ],
-      "dependScripts": [
-        "79d6f812-9554-4262-84e1-fd743e611bf9"
-      ]
-    },
-    "versionCode": 1
-  },
-  "79d6f812-9554-4262-84e1-fd743e611bf9": {
-    "url": "db://assets/scripts/HealthBarUI.ts",
-    "value": {},
-    "versionCode": 1
-  },
-  "8e647ccd-65a0-4fe9-9a1f-6d0bf9e6510b": {
-    "url": "db://assets/scripts/GameManagerExample.ts",
-    "value": {},
-    "versionCode": 1
-  },
-  "62b903fa-d761-4f2b-8016-ee288919f17a": {
-    "url": "db://assets/scripts/GameOverPanel.ts",
-    "value": {},
-    "versionCode": 1
-  },
-  "5a320709-c4da-48a6-9e0a-f1f0884117fb": {
-    "url": "db://assets/scripts/PausePanel.ts",
-    "value": {},
-    "versionCode": 1
-  },
-  "01c08043-bfa2-4c83-957c-a194c966ef09": {
-    "url": "db://assets/scripts/VehicleDestructionTest.ts",
-    "value": {},
-    "versionCode": 1
-  },
-  "f4b3fba7-d358-45b5-9e15-d6599880be7d": {
-    "url": "db://assets/img/car1-crash.png",
-    "value": {},
-    "versionCode": 1
-  },
-  "f4b3fba7-d358-45b5-9e15-d6599880be7d@6c48a": {
-    "url": "db://assets/img/car1-crash.png@6c48a",
-    "value": {
-      "depends": [
-        "f4b3fba7-d358-45b5-9e15-d6599880be7d"
-      ]
-    },
-    "versionCode": 1
-  },
-  "f4b3fba7-d358-45b5-9e15-d6599880be7d@f9941": {
-    "url": "db://assets/img/car1-crash.png@f9941",
-    "value": {
-      "depends": [
-        "f4b3fba7-d358-45b5-9e15-d6599880be7d@6c48a"
+        "58373e6a-0c07-48bb-aeb7-6d2426d69f39@6c48a"
       ]
     },
     "versionCode": 1
   },
   "a238f344-7c25-4d83-a0ec-8c85e46d3ec8": {
     "url": "db://assets/img/car1-crash.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "7e95e032-b6ae-4de9-a8ab-c81b24b5fb5f@6c48a": {
+    "url": "db://assets/img/86-f.png@6c48a",
+    "value": {
+      "depends": [
+        "7e95e032-b6ae-4de9-a8ab-c81b24b5fb5f"
+      ]
+    },
+    "versionCode": 1
+  },
+  "ed611db6-e51e-4a53-b624-848dd45ace21@6c48a": {
+    "url": "db://assets/img/86-t.png@6c48a",
+    "value": {
+      "depends": [
+        "ed611db6-e51e-4a53-b624-848dd45ace21"
+      ]
+    },
+    "versionCode": 1
+  },
+  "3f4a8955-01c2-409a-8435-bc200cc537df@f9941": {
+    "url": "db://assets/TiledMap/smallburg_terrain_spring_with_shadows.png@f9941",
+    "value": {
+      "depends": [
+        "3f4a8955-01c2-409a-8435-bc200cc537df@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "20d2e143-4574-42b8-884c-e2c4dc7b3dd4": {
+    "url": "db://assets/img/check-square.png",
     "value": {
       "depends": []
     },
@@ -711,378 +420,101 @@
     },
     "versionCode": 1
   },
-  "a238f344-7c25-4d83-a0ec-8c85e46d3ec8@f9941": {
-    "url": "db://assets/img/car1-crash.png@f9941",
+  "49e36654-b2c3-47d9-afeb-5db28286a1b0@6c48a": {
+    "url": "db://assets/img/car.png@6c48a",
     "value": {
       "depends": [
-        "a238f344-7c25-4d83-a0ec-8c85e46d3ec8@6c48a"
+        "49e36654-b2c3-47d9-afeb-5db28286a1b0"
       ]
     },
     "versionCode": 1
   },
-  "6e03cd48-8a60-412f-b20f-82f4e1b5b329": {
-    "url": "db://assets/img/background",
-    "value": {},
-    "versionCode": 1
-  },
-  "807a7b47-3819-4529-931c-683fbcf44eb0": {
-    "url": "db://assets/img/background/snow.png",
-    "value": {
-      "depends": []
-    },
-    "versionCode": 1
-  },
-  "807a7b47-3819-4529-931c-683fbcf44eb0@6c48a": {
-    "url": "db://assets/img/background/snow.png@6c48a",
+  "ed611db6-e51e-4a53-b624-848dd45ace21@f9941": {
+    "url": "db://assets/img/86-t.png@f9941",
     "value": {
       "depends": [
-        "807a7b47-3819-4529-931c-683fbcf44eb0"
+        "ed611db6-e51e-4a53-b624-848dd45ace21@6c48a"
       ]
     },
     "versionCode": 1
   },
-  "807a7b47-3819-4529-931c-683fbcf44eb0@f9941": {
-    "url": "db://assets/img/background/snow.png@f9941",
-    "value": {
-      "depends": [
-        "807a7b47-3819-4529-931c-683fbcf44eb0@6c48a"
-      ]
-    },
-    "versionCode": 1
-  },
-  "5e122843-ecf2-42e7-ab74-ec19f70240a3": {
-    "url": "db://assets/resources/prefab/levels/level-1.prefab",
-    "value": {
-      "depends": [
-        "5fa4a020-ad12-4d51-9e7d-57cecdc056ca",
-        "49e36654-b2c3-47d9-afeb-5db28286a1b0@f9941",
-        "a238f344-7c25-4d83-a0ec-8c85e46d3ec8@f9941",
-        "0bfa81f7-9b43-4f2a-bc44-2375066c8694@f9941"
-      ],
-      "dependScripts": [
-        "CC3eba29-7abb-723a-f7ab-ae275e2277e8",
-        "ff477e7e-ceef-42c8-804f-c97803369c7b"
-      ]
-    },
-    "versionCode": 1
-  },
-  "0bfa81f7-9b43-4f2a-bc44-2375066c8694": {
-    "url": "db://assets/img/background/soccor_court2.png",
-    "value": {
-      "depends": []
-    },
-    "versionCode": 1
-  },
-  "0bfa81f7-9b43-4f2a-bc44-2375066c8694@6c48a": {
-    "url": "db://assets/img/background/soccor_court2.png@6c48a",
-    "value": {
-      "depends": [
-        "0bfa81f7-9b43-4f2a-bc44-2375066c8694"
-      ]
-    },
-    "versionCode": 1
-  },
-  "0bfa81f7-9b43-4f2a-bc44-2375066c8694@f9941": {
-    "url": "db://assets/img/background/soccor_court2.png@f9941",
-    "value": {
-      "depends": [
-        "0bfa81f7-9b43-4f2a-bc44-2375066c8694@6c48a"
-      ]
-    },
-    "versionCode": 1
-  },
-  "d0ade2fb-557f-4edb-a96c-d68e19c7c942": {
-    "url": "db://assets/img/background/jungle.png",
-    "value": {
-      "depends": []
-    },
-    "versionCode": 1
-  },
-  "d0ade2fb-557f-4edb-a96c-d68e19c7c942@6c48a": {
-    "url": "db://assets/img/background/jungle.png@6c48a",
-    "value": {
-      "depends": [
-        "d0ade2fb-557f-4edb-a96c-d68e19c7c942"
-      ]
-    },
-    "versionCode": 1
-  },
-  "d0ade2fb-557f-4edb-a96c-d68e19c7c942@f9941": {
-    "url": "db://assets/img/background/jungle.png@f9941",
-    "value": {
-      "depends": [
-        "d0ade2fb-557f-4edb-a96c-d68e19c7c942@6c48a"
-      ]
-    },
-    "versionCode": 1
-  },
-  "8d8867cd-f591-45fa-8564-e435fcdb1847": {
-    "url": "db://assets/resources/prefab/levels/level-3.prefab",
-    "value": {
-      "depends": [
-        "5fa4a020-ad12-4d51-9e7d-57cecdc056ca",
-        "49e36654-b2c3-47d9-afeb-5db28286a1b0@f9941",
-        "a238f344-7c25-4d83-a0ec-8c85e46d3ec8@f9941",
-        "d0ade2fb-557f-4edb-a96c-d68e19c7c942@f9941"
-      ],
-      "dependScripts": [
-        "CC3eba29-7abb-723a-f7ab-ae275e2277e8",
-        "ff477e7e-ceef-42c8-804f-c97803369c7b"
-      ]
-    },
-    "versionCode": 1
-  },
-  "4b4e4d80-e536-48c9-811a-9601e0bf5362": {
-    "url": "db://assets/scripts/CarPurchaseTest.ts",
-    "value": {},
-    "versionCode": 1
-  },
-  "4296e978-bdb0-4cb9-9cdd-5f8311ca5d88": {
-    "url": "db://assets/scripts/LevelGradeTest.ts",
-    "value": {},
-    "versionCode": 1
-  },
-  "60983f7e-c83e-4cec-a20e-0b5e4505bb0c": {
-    "url": "db://assets/img/z370.png",
-    "value": {},
-    "versionCode": 1
-  },
-  "60983f7e-c83e-4cec-a20e-0b5e4505bb0c@6c48a": {
-    "url": "db://assets/img/z370.png@6c48a",
-    "value": {
-      "depends": [
-        "60983f7e-c83e-4cec-a20e-0b5e4505bb0c"
-      ]
-    },
-    "versionCode": 1
-  },
-  "60983f7e-c83e-4cec-a20e-0b5e4505bb0c@f9941": {
-    "url": "db://assets/img/z370.png@f9941",
-    "value": {
-      "depends": [
-        "60983f7e-c83e-4cec-a20e-0b5e4505bb0c@6c48a"
-      ]
-    },
-    "versionCode": 1
-  },
-  "5308cc80-fcde-4667-baa6-dbcdc87fd132": {
-    "url": "db://assets/img/z370.png",
-    "value": {
-      "depends": []
-    },
-    "versionCode": 1
-  },
-  "5308cc80-fcde-4667-baa6-dbcdc87fd132@6c48a": {
-    "url": "db://assets/img/z370.png@6c48a",
-    "value": {
-      "depends": [
-        "5308cc80-fcde-4667-baa6-dbcdc87fd132"
-      ]
-    },
-    "versionCode": 1
-  },
-  "5308cc80-fcde-4667-baa6-dbcdc87fd132@f9941": {
-    "url": "db://assets/img/z370.png@f9941",
-    "value": {
-      "depends": [
-        "5308cc80-fcde-4667-baa6-dbcdc87fd132@6c48a"
-      ]
-    },
-    "versionCode": 1
-  },
-  "b9e95f02-4aec-4c01-8343-1c6ce036b0c6": {
-    "url": "db://assets/img/z370-t.png",
-    "value": {
-      "depends": []
-    },
-    "versionCode": 1
-  },
-  "b9e95f02-4aec-4c01-8343-1c6ce036b0c6@6c48a": {
-    "url": "db://assets/img/z370-t.png@6c48a",
-    "value": {
-      "depends": [
-        "b9e95f02-4aec-4c01-8343-1c6ce036b0c6"
-      ]
-    },
-    "versionCode": 1
-  },
-  "b9e95f02-4aec-4c01-8343-1c6ce036b0c6@f9941": {
-    "url": "db://assets/img/z370-t.png@f9941",
-    "value": {
-      "depends": [
-        "b9e95f02-4aec-4c01-8343-1c6ce036b0c6@6c48a"
-      ]
-    },
-    "versionCode": 1
-  },
-  "87676691-0988-4a4f-823c-9ede01a40e1c": {
-    "url": "db://assets/resources/prefab/cars/car-2.prefab",
-    "value": {
-      "depends": [
-        "b9e95f02-4aec-4c01-8343-1c6ce036b0c6@f9941"
-      ],
-      "dependScripts": [
-        "b3924dc4-f7fe-491c-9736-a65419c312f5"
-      ]
-    },
-    "versionCode": 1
-  },
-  "d48670db-79a0-4d45-9a14-9cca1814e445": {
-    "url": "db://assets/img/taycan-t.png",
-    "value": {},
-    "versionCode": 1
-  },
-  "d48670db-79a0-4d45-9a14-9cca1814e445@6c48a": {
-    "url": "db://assets/img/taycan-t.png@6c48a",
-    "value": {
-      "depends": [
-        "d48670db-79a0-4d45-9a14-9cca1814e445"
-      ]
-    },
-    "versionCode": 1
-  },
-  "d48670db-79a0-4d45-9a14-9cca1814e445@f9941": {
-    "url": "db://assets/img/taycan-t.png@f9941",
-    "value": {
-      "depends": [
-        "d48670db-79a0-4d45-9a14-9cca1814e445@6c48a"
-      ]
-    },
-    "versionCode": 1
-  },
-  "f82531ef-becb-41ca-bab6-9b8615d2fd30": {
-    "url": "db://assets/img/taycan-t.png",
-    "value": {},
-    "versionCode": 1
-  },
-  "f82531ef-becb-41ca-bab6-9b8615d2fd30@6c48a": {
-    "url": "db://assets/img/taycan-t.png@6c48a",
-    "value": {
-      "depends": [
-        "f82531ef-becb-41ca-bab6-9b8615d2fd30"
-      ]
-    },
-    "versionCode": 1
-  },
-  "f82531ef-becb-41ca-bab6-9b8615d2fd30@f9941": {
-    "url": "db://assets/img/taycan-t.png@f9941",
-    "value": {
-      "depends": [
-        "f82531ef-becb-41ca-bab6-9b8615d2fd30@6c48a"
-      ]
-    },
-    "versionCode": 1
-  },
-  "bf20c68d-8028-4764-8c6b-eb86808abea5": {
-    "url": "db://assets/img/taycan-f.png",
-    "value": {},
-    "versionCode": 1
-  },
-  "bf20c68d-8028-4764-8c6b-eb86808abea5@6c48a": {
-    "url": "db://assets/img/taycan-f.png@6c48a",
-    "value": {
-      "depends": [
-        "bf20c68d-8028-4764-8c6b-eb86808abea5"
-      ]
-    },
-    "versionCode": 1
-  },
-  "bf20c68d-8028-4764-8c6b-eb86808abea5@f9941": {
-    "url": "db://assets/img/taycan-f.png@f9941",
-    "value": {
-      "depends": [
-        "bf20c68d-8028-4764-8c6b-eb86808abea5@6c48a"
-      ]
-    },
-    "versionCode": 1
-  },
-  "a9e97b11-149f-46e6-a990-c95fd6d91cd7": {
-    "url": "db://assets/img/taycan-f.png",
-    "value": {
-      "depends": []
-    },
-    "versionCode": 1
-  },
-  "a9e97b11-149f-46e6-a990-c95fd6d91cd7@6c48a": {
-    "url": "db://assets/img/taycan-f.png@6c48a",
-    "value": {
-      "depends": [
-        "a9e97b11-149f-46e6-a990-c95fd6d91cd7"
-      ]
-    },
-    "versionCode": 1
-  },
-  "a9e97b11-149f-46e6-a990-c95fd6d91cd7@f9941": {
-    "url": "db://assets/img/taycan-f.png@f9941",
-    "value": {
-      "depends": [
-        "a9e97b11-149f-46e6-a990-c95fd6d91cd7@6c48a"
-      ]
-    },
-    "versionCode": 1
-  },
-  "d6c5db05-a7b5-4c39-b29f-89c86c315dcf": {
-    "url": "db://assets/img/taycan-t.png",
-    "value": {
-      "depends": []
-    },
-    "versionCode": 1
-  },
-  "d6c5db05-a7b5-4c39-b29f-89c86c315dcf@6c48a": {
-    "url": "db://assets/img/taycan-t.png@6c48a",
-    "value": {
-      "depends": [
-        "d6c5db05-a7b5-4c39-b29f-89c86c315dcf"
-      ]
-    },
-    "versionCode": 1
-  },
-  "d6c5db05-a7b5-4c39-b29f-89c86c315dcf@f9941": {
-    "url": "db://assets/img/taycan-t.png@f9941",
-    "value": {
-      "depends": [
-        "d6c5db05-a7b5-4c39-b29f-89c86c315dcf@6c48a"
-      ]
-    },
-    "versionCode": 1
-  },
-  "48fa46bf-e334-4f77-b8e5-b81b32cc3846": {
-    "url": "db://assets/resources/prefab/cars/car-3.prefab",
-    "value": {
-      "depends": [
-        "d6c5db05-a7b5-4c39-b29f-89c86c315dcf@f9941"
-      ],
-      "dependScripts": [
-        "b3924dc4-f7fe-491c-9736-a65419c312f5"
-      ]
-    },
-    "versionCode": 1
-  },
-  "ad9dea01-6c27-401b-ae7e-006aa4133b20": {
+  "35990206-f1f7-49c0-91d6-a50921fc8128": {
     "url": "db://assets/img/mini-f.png",
-    "value": {},
+    "value": {
+      "depends": []
+    },
     "versionCode": 1
   },
-  "ad9dea01-6c27-401b-ae7e-006aa4133b20@6c48a": {
-    "url": "db://assets/img/mini-f.png@6c48a",
+  "20d2e143-4574-42b8-884c-e2c4dc7b3dd4@6c48a": {
+    "url": "db://assets/img/check-square.png@6c48a",
     "value": {
       "depends": [
-        "ad9dea01-6c27-401b-ae7e-006aa4133b20"
+        "20d2e143-4574-42b8-884c-e2c4dc7b3dd4"
       ]
     },
     "versionCode": 1
   },
-  "ad9dea01-6c27-401b-ae7e-006aa4133b20@f9941": {
-    "url": "db://assets/img/mini-f.png@f9941",
+  "7e95e032-b6ae-4de9-a8ab-c81b24b5fb5f@f9941": {
+    "url": "db://assets/img/86-f.png@f9941",
     "value": {
       "depends": [
-        "ad9dea01-6c27-401b-ae7e-006aa4133b20@6c48a"
+        "7e95e032-b6ae-4de9-a8ab-c81b24b5fb5f@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "0b33dc38-0c13-4f55-b754-27d76610db59": {
+    "url": "db://assets/img/rx7-f.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "20d2e143-4574-42b8-884c-e2c4dc7b3dd4@f9941": {
+    "url": "db://assets/img/check-square.png@f9941",
+    "value": {
+      "depends": [
+        "20d2e143-4574-42b8-884c-e2c4dc7b3dd4@6c48a"
       ]
     },
     "versionCode": 1
   },
   "38414c6f-ce08-40c3-b0a0-4f24ce1031de": {
     "url": "db://assets/img/rx7-t.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "35990206-f1f7-49c0-91d6-a50921fc8128@6c48a": {
+    "url": "db://assets/img/mini-f.png@6c48a",
+    "value": {
+      "depends": [
+        "35990206-f1f7-49c0-91d6-a50921fc8128"
+      ]
+    },
+    "versionCode": 1
+  },
+  "0b33dc38-0c13-4f55-b754-27d76610db59@6c48a": {
+    "url": "db://assets/img/rx7-f.png@6c48a",
+    "value": {
+      "depends": [
+        "0b33dc38-0c13-4f55-b754-27d76610db59"
+      ]
+    },
+    "versionCode": 1
+  },
+  "0b33dc38-0c13-4f55-b754-27d76610db59@f9941": {
+    "url": "db://assets/img/rx7-f.png@f9941",
+    "value": {
+      "depends": [
+        "0b33dc38-0c13-4f55-b754-27d76610db59@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "a9e97b11-149f-46e6-a990-c95fd6d91cd7": {
+    "url": "db://assets/img/taycan-f.png",
     "value": {
       "depends": []
     },
@@ -1106,43 +538,50 @@
     },
     "versionCode": 1
   },
-  "0b33dc38-0c13-4f55-b754-27d76610db59": {
-    "url": "db://assets/img/rx7-f.png",
+  "d6c5db05-a7b5-4c39-b29f-89c86c315dcf": {
+    "url": "db://assets/img/taycan-t.png",
     "value": {
       "depends": []
     },
     "versionCode": 1
   },
-  "0b33dc38-0c13-4f55-b754-27d76610db59@6c48a": {
-    "url": "db://assets/img/rx7-f.png@6c48a",
+  "49e36654-b2c3-47d9-afeb-5db28286a1b0@f9941": {
+    "url": "db://assets/img/car.png@f9941",
     "value": {
       "depends": [
-        "0b33dc38-0c13-4f55-b754-27d76610db59"
+        "49e36654-b2c3-47d9-afeb-5db28286a1b0@6c48a"
       ]
     },
     "versionCode": 1
   },
-  "0b33dc38-0c13-4f55-b754-27d76610db59@f9941": {
-    "url": "db://assets/img/rx7-f.png@f9941",
-    "value": {
-      "depends": [
-        "0b33dc38-0c13-4f55-b754-27d76610db59@6c48a"
-      ]
-    },
-    "versionCode": 1
-  },
-  "35990206-f1f7-49c0-91d6-a50921fc8128": {
-    "url": "db://assets/img/mini-f.png",
+  "b9e95f02-4aec-4c01-8343-1c6ce036b0c6": {
+    "url": "db://assets/img/z370-t.png",
     "value": {
       "depends": []
     },
     "versionCode": 1
   },
-  "35990206-f1f7-49c0-91d6-a50921fc8128@6c48a": {
-    "url": "db://assets/img/mini-f.png@6c48a",
+  "a238f344-7c25-4d83-a0ec-8c85e46d3ec8@f9941": {
+    "url": "db://assets/img/car1-crash.png@f9941",
     "value": {
       "depends": [
-        "35990206-f1f7-49c0-91d6-a50921fc8128"
+        "a238f344-7c25-4d83-a0ec-8c85e46d3ec8@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "5308cc80-fcde-4667-baa6-dbcdc87fd132": {
+    "url": "db://assets/img/z370.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "a9e97b11-149f-46e6-a990-c95fd6d91cd7@6c48a": {
+    "url": "db://assets/img/taycan-f.png@6c48a",
+    "value": {
+      "depends": [
+        "a9e97b11-149f-46e6-a990-c95fd6d91cd7"
       ]
     },
     "versionCode": 1
@@ -1156,52 +595,259 @@
     },
     "versionCode": 1
   },
-  "ed611db6-e51e-4a53-b624-848dd45ace21": {
-    "url": "db://assets/img/86-t.png",
+  "d0ade2fb-557f-4edb-a96c-d68e19c7c942": {
+    "url": "db://assets/img/background/jungle.png",
     "value": {
       "depends": []
     },
     "versionCode": 1
   },
-  "ed611db6-e51e-4a53-b624-848dd45ace21@6c48a": {
-    "url": "db://assets/img/86-t.png@6c48a",
+  "d6c5db05-a7b5-4c39-b29f-89c86c315dcf@6c48a": {
+    "url": "db://assets/img/taycan-t.png@6c48a",
     "value": {
       "depends": [
-        "ed611db6-e51e-4a53-b624-848dd45ace21"
+        "d6c5db05-a7b5-4c39-b29f-89c86c315dcf"
       ]
     },
     "versionCode": 1
   },
-  "ed611db6-e51e-4a53-b624-848dd45ace21@f9941": {
-    "url": "db://assets/img/86-t.png@f9941",
+  "b9e95f02-4aec-4c01-8343-1c6ce036b0c6@6c48a": {
+    "url": "db://assets/img/z370-t.png@6c48a",
     "value": {
       "depends": [
-        "ed611db6-e51e-4a53-b624-848dd45ace21@6c48a"
+        "b9e95f02-4aec-4c01-8343-1c6ce036b0c6"
       ]
     },
     "versionCode": 1
   },
-  "7e95e032-b6ae-4de9-a8ab-c81b24b5fb5f": {
-    "url": "db://assets/img/86-f.png",
+  "5308cc80-fcde-4667-baa6-dbcdc87fd132@6c48a": {
+    "url": "db://assets/img/z370.png@6c48a",
+    "value": {
+      "depends": [
+        "5308cc80-fcde-4667-baa6-dbcdc87fd132"
+      ]
+    },
+    "versionCode": 1
+  },
+  "d6c5db05-a7b5-4c39-b29f-89c86c315dcf@f9941": {
+    "url": "db://assets/img/taycan-t.png@f9941",
+    "value": {
+      "depends": [
+        "d6c5db05-a7b5-4c39-b29f-89c86c315dcf@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "d0ade2fb-557f-4edb-a96c-d68e19c7c942@6c48a": {
+    "url": "db://assets/img/background/jungle.png@6c48a",
+    "value": {
+      "depends": [
+        "d0ade2fb-557f-4edb-a96c-d68e19c7c942"
+      ]
+    },
+    "versionCode": 1
+  },
+  "807a7b47-3819-4529-931c-683fbcf44eb0": {
+    "url": "db://assets/img/background/snow.png",
     "value": {
       "depends": []
     },
     "versionCode": 1
   },
-  "7e95e032-b6ae-4de9-a8ab-c81b24b5fb5f@6c48a": {
-    "url": "db://assets/img/86-f.png@6c48a",
+  "a9e97b11-149f-46e6-a990-c95fd6d91cd7@f9941": {
+    "url": "db://assets/img/taycan-f.png@f9941",
     "value": {
       "depends": [
-        "7e95e032-b6ae-4de9-a8ab-c81b24b5fb5f"
+        "a9e97b11-149f-46e6-a990-c95fd6d91cd7@6c48a"
       ]
     },
     "versionCode": 1
   },
-  "7e95e032-b6ae-4de9-a8ab-c81b24b5fb5f@f9941": {
-    "url": "db://assets/img/86-f.png@f9941",
+  "c2ccf9a1-d5dc-451d-905f-387af1f12937": {
+    "url": "db://assets/img/background/soccer_court.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "5308cc80-fcde-4667-baa6-dbcdc87fd132@f9941": {
+    "url": "db://assets/img/z370.png@f9941",
     "value": {
       "depends": [
-        "7e95e032-b6ae-4de9-a8ab-c81b24b5fb5f@6c48a"
+        "5308cc80-fcde-4667-baa6-dbcdc87fd132@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "0bfa81f7-9b43-4f2a-bc44-2375066c8694": {
+    "url": "db://assets/img/background/soccor_court2.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "b9e95f02-4aec-4c01-8343-1c6ce036b0c6@f9941": {
+    "url": "db://assets/img/z370-t.png@f9941",
+    "value": {
+      "depends": [
+        "b9e95f02-4aec-4c01-8343-1c6ce036b0c6@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "8e4b7ec0-ba7e-4952-bd46-9750970405c6": {
+    "url": "db://assets/img/menu/Design Racing Game Logo-3.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "807a7b47-3819-4529-931c-683fbcf44eb0@6c48a": {
+    "url": "db://assets/img/background/snow.png@6c48a",
+    "value": {
+      "depends": [
+        "807a7b47-3819-4529-931c-683fbcf44eb0"
+      ]
+    },
+    "versionCode": 1
+  },
+  "8e4b7ec0-ba7e-4952-bd46-9750970405c6@6c48a": {
+    "url": "db://assets/img/menu/Design Racing Game Logo-3.png@6c48a",
+    "value": {
+      "depends": [
+        "8e4b7ec0-ba7e-4952-bd46-9750970405c6"
+      ]
+    },
+    "versionCode": 1
+  },
+  "0bfa81f7-9b43-4f2a-bc44-2375066c8694@6c48a": {
+    "url": "db://assets/img/background/soccor_court2.png@6c48a",
+    "value": {
+      "depends": [
+        "0bfa81f7-9b43-4f2a-bc44-2375066c8694"
+      ]
+    },
+    "versionCode": 1
+  },
+  "c2ccf9a1-d5dc-451d-905f-387af1f12937@6c48a": {
+    "url": "db://assets/img/background/soccer_court.png@6c48a",
+    "value": {
+      "depends": [
+        "c2ccf9a1-d5dc-451d-905f-387af1f12937"
+      ]
+    },
+    "versionCode": 1
+  },
+  "d0ade2fb-557f-4edb-a96c-d68e19c7c942@f9941": {
+    "url": "db://assets/img/background/jungle.png@f9941",
+    "value": {
+      "depends": [
+        "d0ade2fb-557f-4edb-a96c-d68e19c7c942@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "807a7b47-3819-4529-931c-683fbcf44eb0@f9941": {
+    "url": "db://assets/img/background/snow.png@f9941",
+    "value": {
+      "depends": [
+        "807a7b47-3819-4529-931c-683fbcf44eb0@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "20c9e6aa-64e9-4be4-baa7-0ec86216d0e3": {
+    "url": "db://assets/img/menu/background2.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "f07db45e-fa1a-499c-b315-fc3e50f3aafa": {
+    "url": "db://assets/img/menu/shezhi.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "8e4b7ec0-ba7e-4952-bd46-9750970405c6@f9941": {
+    "url": "db://assets/img/menu/Design Racing Game Logo-3.png@f9941",
+    "value": {
+      "depends": [
+        "8e4b7ec0-ba7e-4952-bd46-9750970405c6@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "37fef8d9-5917-47b3-a40f-4e2ace6bf328": {
+    "url": "db://assets/resources/prefab/cars/car-1.prefab",
+    "value": {
+      "depends": [
+        "a238f344-7c25-4d83-a0ec-8c85e46d3ec8@f9941",
+        "49e36654-b2c3-47d9-afeb-5db28286a1b0@f9941"
+      ],
+      "dependScripts": [
+        "b3924dc4-f7fe-491c-9736-a65419c312f5"
+      ]
+    },
+    "versionCode": 1
+  },
+  "f07db45e-fa1a-499c-b315-fc3e50f3aafa@6c48a": {
+    "url": "db://assets/img/menu/shezhi.png@6c48a",
+    "value": {
+      "depends": [
+        "f07db45e-fa1a-499c-b315-fc3e50f3aafa"
+      ]
+    },
+    "versionCode": 1
+  },
+  "20c9e6aa-64e9-4be4-baa7-0ec86216d0e3@6c48a": {
+    "url": "db://assets/img/menu/background2.png@6c48a",
+    "value": {
+      "depends": [
+        "20c9e6aa-64e9-4be4-baa7-0ec86216d0e3"
+      ]
+    },
+    "versionCode": 1
+  },
+  "87676691-0988-4a4f-823c-9ede01a40e1c": {
+    "url": "db://assets/resources/prefab/cars/car-2.prefab",
+    "value": {
+      "depends": [
+        "b9e95f02-4aec-4c01-8343-1c6ce036b0c6@f9941"
+      ],
+      "dependScripts": [
+        "b3924dc4-f7fe-491c-9736-a65419c312f5"
+      ]
+    },
+    "versionCode": 1
+  },
+  "0bfa81f7-9b43-4f2a-bc44-2375066c8694@f9941": {
+    "url": "db://assets/img/background/soccor_court2.png@f9941",
+    "value": {
+      "depends": [
+        "0bfa81f7-9b43-4f2a-bc44-2375066c8694@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "48fa46bf-e334-4f77-b8e5-b81b32cc3846": {
+    "url": "db://assets/resources/prefab/cars/car-3.prefab",
+    "value": {
+      "depends": [
+        "d6c5db05-a7b5-4c39-b29f-89c86c315dcf@f9941"
+      ],
+      "dependScripts": [
+        "b3924dc4-f7fe-491c-9736-a65419c312f5"
+      ]
+    },
+    "versionCode": 1
+  },
+  "f07db45e-fa1a-499c-b315-fc3e50f3aafa@f9941": {
+    "url": "db://assets/img/menu/shezhi.png@f9941",
+    "value": {
+      "depends": [
+        "f07db45e-fa1a-499c-b315-fc3e50f3aafa@6c48a"
       ]
     },
     "versionCode": 1
@@ -1226,6 +872,535 @@
       ],
       "dependScripts": [
         "b3924dc4-f7fe-491c-9736-a65419c312f5"
+      ]
+    },
+    "versionCode": 1
+  },
+  "5fa4a020-ad12-4d51-9e7d-57cecdc056ca": {
+    "url": "db://assets/resources/prefab/cars/healthBar.prefab",
+    "value": {
+      "depends": [
+        "24a704da-2867-446d-8d1a-5e920c75e09d@f9941",
+        "9fd900dd-221b-4f89-8f2c-fba34243c835@f9941"
+      ],
+      "dependScripts": [
+        "79d6f812-9554-4262-84e1-fd743e611bf9"
+      ]
+    },
+    "versionCode": 1
+  },
+  "5e122843-ecf2-42e7-ab74-ec19f70240a3": {
+    "url": "db://assets/resources/prefab/levels/level-1.prefab",
+    "value": {
+      "depends": [
+        "5fa4a020-ad12-4d51-9e7d-57cecdc056ca",
+        "49e36654-b2c3-47d9-afeb-5db28286a1b0@f9941",
+        "a238f344-7c25-4d83-a0ec-8c85e46d3ec8@f9941",
+        "0bfa81f7-9b43-4f2a-bc44-2375066c8694@f9941"
+      ],
+      "dependScripts": [
+        "CC3eba29-7abb-723a-f7ab-ae275e2277e8",
+        "ff477e7e-ceef-42c8-804f-c97803369c7b"
+      ]
+    },
+    "versionCode": 1
+  },
+  "cf804555-7d75-4720-8a54-4f8a1348275f": {
+    "url": "db://assets/resources/prefab/levels/level-2.prefab",
+    "value": {
+      "depends": [
+        "5fa4a020-ad12-4d51-9e7d-57cecdc056ca",
+        "49e36654-b2c3-47d9-afeb-5db28286a1b0@f9941",
+        "a238f344-7c25-4d83-a0ec-8c85e46d3ec8@f9941",
+        "807a7b47-3819-4529-931c-683fbcf44eb0@f9941"
+      ],
+      "dependScripts": [
+        "CC3eba29-7abb-723a-f7ab-ae275e2277e8",
+        "ff477e7e-ceef-42c8-804f-c97803369c7b"
+      ]
+    },
+    "versionCode": 1
+  },
+  "8d8867cd-f591-45fa-8564-e435fcdb1847": {
+    "url": "db://assets/resources/prefab/levels/level-3.prefab",
+    "value": {
+      "depends": [
+        "5fa4a020-ad12-4d51-9e7d-57cecdc056ca",
+        "49e36654-b2c3-47d9-afeb-5db28286a1b0@f9941",
+        "a238f344-7c25-4d83-a0ec-8c85e46d3ec8@f9941",
+        "d0ade2fb-557f-4edb-a96c-d68e19c7c942@f9941"
+      ],
+      "dependScripts": [
+        "CC3eba29-7abb-723a-f7ab-ae275e2277e8",
+        "ff477e7e-ceef-42c8-804f-c97803369c7b"
+      ]
+    },
+    "versionCode": 1
+  },
+  "c2ccf9a1-d5dc-451d-905f-387af1f12937@f9941": {
+    "url": "db://assets/img/background/soccer_court.png@f9941",
+    "value": {
+      "depends": [
+        "c2ccf9a1-d5dc-451d-905f-387af1f12937@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "20c9e6aa-64e9-4be4-baa7-0ec86216d0e3@f9941": {
+    "url": "db://assets/img/menu/background2.png@f9941",
+    "value": {
+      "depends": [
+        "20c9e6aa-64e9-4be4-baa7-0ec86216d0e3@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "01429ced-ea3e-4c36-ad27-010bab218993": {
+    "url": "db://assets/img/traffic.png",
+    "value": {},
+    "versionCode": 1
+  },
+  "01429ced-ea3e-4c36-ad27-010bab218993@6c48a": {
+    "url": "db://assets/img/traffic.png@6c48a",
+    "value": {
+      "depends": [
+        "01429ced-ea3e-4c36-ad27-010bab218993"
+      ]
+    },
+    "versionCode": 1
+  },
+  "4d83377f-c8c8-4078-8da5-34ddb98ce3b1": {
+    "url": "db://assets/img/traffic.png",
+    "value": {},
+    "versionCode": 1
+  },
+  "4d83377f-c8c8-4078-8da5-34ddb98ce3b1@6c48a": {
+    "url": "db://assets/img/traffic.png@6c48a",
+    "value": {
+      "depends": [
+        "4d83377f-c8c8-4078-8da5-34ddb98ce3b1"
+      ]
+    },
+    "versionCode": 1
+  },
+  "59cab811-4252-4105-bd9e-9374bbec29a2": {
+    "url": "db://assets/img/traffic.png",
+    "value": {},
+    "versionCode": 1
+  },
+  "59cab811-4252-4105-bd9e-9374bbec29a2@6c48a": {
+    "url": "db://assets/img/traffic.png@6c48a",
+    "value": {
+      "depends": [
+        "59cab811-4252-4105-bd9e-9374bbec29a2"
+      ]
+    },
+    "versionCode": 1
+  },
+  "83baeef7-746b-4f91-9a84-fd8a58d2b8b3": {
+    "url": "db://assets/img/menu/traffic.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "83baeef7-746b-4f91-9a84-fd8a58d2b8b3@6c48a": {
+    "url": "db://assets/img/menu/traffic.png@6c48a",
+    "value": {
+      "depends": [
+        "83baeef7-746b-4f91-9a84-fd8a58d2b8b3"
+      ]
+    },
+    "versionCode": 1
+  },
+  "83baeef7-746b-4f91-9a84-fd8a58d2b8b3@f9941": {
+    "url": "db://assets/img/menu/traffic.png@f9941",
+    "value": {
+      "depends": [
+        "83baeef7-746b-4f91-9a84-fd8a58d2b8b3@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "400e205e-2eed-45f0-9384-3d7a7fafcbdf": {
+    "url": "db://assets/img/menu/red.png",
+    "value": {},
+    "versionCode": 1
+  },
+  "400e205e-2eed-45f0-9384-3d7a7fafcbdf@6c48a": {
+    "url": "db://assets/img/menu/red.png@6c48a",
+    "value": {
+      "depends": [
+        "400e205e-2eed-45f0-9384-3d7a7fafcbdf"
+      ]
+    },
+    "versionCode": 1
+  },
+  "400e205e-2eed-45f0-9384-3d7a7fafcbdf@f9941": {
+    "url": "db://assets/img/menu/red.png@f9941",
+    "value": {
+      "depends": [
+        "400e205e-2eed-45f0-9384-3d7a7fafcbdf@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "4cf1948a-ffca-426e-9c43-1e7c864a1b60": {
+    "url": "db://assets/img/menu/red.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "4cf1948a-ffca-426e-9c43-1e7c864a1b60@6c48a": {
+    "url": "db://assets/img/menu/red.png@6c48a",
+    "value": {
+      "depends": [
+        "4cf1948a-ffca-426e-9c43-1e7c864a1b60"
+      ]
+    },
+    "versionCode": 1
+  },
+  "4cf1948a-ffca-426e-9c43-1e7c864a1b60@f9941": {
+    "url": "db://assets/img/menu/red.png@f9941",
+    "value": {
+      "depends": [
+        "4cf1948a-ffca-426e-9c43-1e7c864a1b60@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "593904f2-fa85-498f-9b0e-9f79890c24fd": {
+    "url": "db://assets/img/menu/yellow.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "593904f2-fa85-498f-9b0e-9f79890c24fd@6c48a": {
+    "url": "db://assets/img/menu/yellow.png@6c48a",
+    "value": {
+      "depends": [
+        "593904f2-fa85-498f-9b0e-9f79890c24fd"
+      ]
+    },
+    "versionCode": 1
+  },
+  "593904f2-fa85-498f-9b0e-9f79890c24fd@f9941": {
+    "url": "db://assets/img/menu/yellow.png@f9941",
+    "value": {
+      "depends": [
+        "593904f2-fa85-498f-9b0e-9f79890c24fd@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "1c18f6e7-3b13-401b-85a1-746bf7284949": {
+    "url": "db://assets/img/menu/green.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "1c18f6e7-3b13-401b-85a1-746bf7284949@6c48a": {
+    "url": "db://assets/img/menu/green.png@6c48a",
+    "value": {
+      "depends": [
+        "1c18f6e7-3b13-401b-85a1-746bf7284949"
+      ]
+    },
+    "versionCode": 1
+  },
+  "1c18f6e7-3b13-401b-85a1-746bf7284949@f9941": {
+    "url": "db://assets/img/menu/green.png@f9941",
+    "value": {
+      "depends": [
+        "1c18f6e7-3b13-401b-85a1-746bf7284949@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "4b2a90e7-9654-43f7-b19c-1929bfdc1fa9": {
+    "url": "db://assets/img/menu/settings.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "4b2a90e7-9654-43f7-b19c-1929bfdc1fa9@6c48a": {
+    "url": "db://assets/img/menu/settings.png@6c48a",
+    "value": {
+      "depends": [
+        "4b2a90e7-9654-43f7-b19c-1929bfdc1fa9"
+      ]
+    },
+    "versionCode": 1
+  },
+  "4b2a90e7-9654-43f7-b19c-1929bfdc1fa9@f9941": {
+    "url": "db://assets/img/menu/settings.png@f9941",
+    "value": {
+      "depends": [
+        "4b2a90e7-9654-43f7-b19c-1929bfdc1fa9@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "c5508b8c-cf95-42d0-8edb-f7f4504d41df": {
+    "url": "db://assets/img/menu/panel.png",
+    "value": {},
+    "versionCode": 1
+  },
+  "c5508b8c-cf95-42d0-8edb-f7f4504d41df@6c48a": {
+    "url": "db://assets/img/menu/panel.png@6c48a",
+    "value": {
+      "depends": [
+        "c5508b8c-cf95-42d0-8edb-f7f4504d41df"
+      ]
+    },
+    "versionCode": 1
+  },
+  "c5508b8c-cf95-42d0-8edb-f7f4504d41df@f9941": {
+    "url": "db://assets/img/menu/panel.png@f9941",
+    "value": {
+      "depends": [
+        "c5508b8c-cf95-42d0-8edb-f7f4504d41df@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "0a74f435-3a83-44b1-af34-a8b16ea61ec9": {
+    "url": "db://assets/img/menu/panel2.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "0a74f435-3a83-44b1-af34-a8b16ea61ec9@6c48a": {
+    "url": "db://assets/img/menu/panel2.png@6c48a",
+    "value": {
+      "depends": [
+        "0a74f435-3a83-44b1-af34-a8b16ea61ec9"
+      ]
+    },
+    "versionCode": 1
+  },
+  "0a74f435-3a83-44b1-af34-a8b16ea61ec9@f9941": {
+    "url": "db://assets/img/menu/panel2.png@f9941",
+    "value": {
+      "depends": [
+        "0a74f435-3a83-44b1-af34-a8b16ea61ec9@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "6a0179db-b0bc-4905-8953-8ab076a3cfd6": {
+    "url": "db://assets/img/menu/panel.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "6a0179db-b0bc-4905-8953-8ab076a3cfd6@6c48a": {
+    "url": "db://assets/img/menu/panel.png@6c48a",
+    "value": {
+      "depends": [
+        "6a0179db-b0bc-4905-8953-8ab076a3cfd6"
+      ]
+    },
+    "versionCode": 1
+  },
+  "6a0179db-b0bc-4905-8953-8ab076a3cfd6@f9941": {
+    "url": "db://assets/img/menu/panel.png@f9941",
+    "value": {
+      "depends": [
+        "6a0179db-b0bc-4905-8953-8ab076a3cfd6@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "a50181e9-ecbd-4d36-bf53-3db514f24fee": {
+    "url": "db://assets/img/menu/purchase.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "a50181e9-ecbd-4d36-bf53-3db514f24fee@6c48a": {
+    "url": "db://assets/img/menu/purchase.png@6c48a",
+    "value": {
+      "depends": [
+        "a50181e9-ecbd-4d36-bf53-3db514f24fee"
+      ]
+    },
+    "versionCode": 1
+  },
+  "a50181e9-ecbd-4d36-bf53-3db514f24fee@f9941": {
+    "url": "db://assets/img/menu/purchase.png@f9941",
+    "value": {
+      "depends": [
+        "a50181e9-ecbd-4d36-bf53-3db514f24fee@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "8e2f4297-91a6-47cc-8cd7-438a85e78d5b": {
+    "url": "db://assets/img/menu/restart.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "8e2f4297-91a6-47cc-8cd7-438a85e78d5b@6c48a": {
+    "url": "db://assets/img/menu/restart.png@6c48a",
+    "value": {
+      "depends": [
+        "8e2f4297-91a6-47cc-8cd7-438a85e78d5b"
+      ]
+    },
+    "versionCode": 1
+  },
+  "8e2f4297-91a6-47cc-8cd7-438a85e78d5b@f9941": {
+    "url": "db://assets/img/menu/restart.png@f9941",
+    "value": {
+      "depends": [
+        "8e2f4297-91a6-47cc-8cd7-438a85e78d5b@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "f2a743f7-c00a-4610-b94b-5374123d572e": {
+    "url": "db://assets/img/menu/back.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "f2a743f7-c00a-4610-b94b-5374123d572e@6c48a": {
+    "url": "db://assets/img/menu/back.png@6c48a",
+    "value": {
+      "depends": [
+        "f2a743f7-c00a-4610-b94b-5374123d572e"
+      ]
+    },
+    "versionCode": 1
+  },
+  "f2a743f7-c00a-4610-b94b-5374123d572e@f9941": {
+    "url": "db://assets/img/menu/back.png@f9941",
+    "value": {
+      "depends": [
+        "f2a743f7-c00a-4610-b94b-5374123d572e@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "a426c2c8-58b1-4e5a-a16c-e75061a2d034": {
+    "url": "db://assets/img/menu/close.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "a426c2c8-58b1-4e5a-a16c-e75061a2d034@6c48a": {
+    "url": "db://assets/img/menu/close.png@6c48a",
+    "value": {
+      "depends": [
+        "a426c2c8-58b1-4e5a-a16c-e75061a2d034"
+      ]
+    },
+    "versionCode": 1
+  },
+  "4befdd25-e632-4e7e-aa34-819783640186": {
+    "url": "db://assets/img/menu/select.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "a426c2c8-58b1-4e5a-a16c-e75061a2d034@f9941": {
+    "url": "db://assets/img/menu/close.png@f9941",
+    "value": {
+      "depends": [
+        "a426c2c8-58b1-4e5a-a16c-e75061a2d034@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "4befdd25-e632-4e7e-aa34-819783640186@6c48a": {
+    "url": "db://assets/img/menu/select.png@6c48a",
+    "value": {
+      "depends": [
+        "4befdd25-e632-4e7e-aa34-819783640186"
+      ]
+    },
+    "versionCode": 1
+  },
+  "4befdd25-e632-4e7e-aa34-819783640186@f9941": {
+    "url": "db://assets/img/menu/select.png@f9941",
+    "value": {
+      "depends": [
+        "4befdd25-e632-4e7e-aa34-819783640186@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "fe4c58f2-8b33-45e3-9dfa-f37dfb272443": {
+    "url": "db://assets/img/menu/setting.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "fe4c58f2-8b33-45e3-9dfa-f37dfb272443@6c48a": {
+    "url": "db://assets/img/menu/setting.png@6c48a",
+    "value": {
+      "depends": [
+        "fe4c58f2-8b33-45e3-9dfa-f37dfb272443"
+      ]
+    },
+    "versionCode": 1
+  },
+  "fe4c58f2-8b33-45e3-9dfa-f37dfb272443@f9941": {
+    "url": "db://assets/img/menu/setting.png@f9941",
+    "value": {
+      "depends": [
+        "fe4c58f2-8b33-45e3-9dfa-f37dfb272443@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "b151674d-edce-4959-a7c5-1d9872314e93": {
+    "url": "db://assets/scripts/SceneFader.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "8f875fcf-118c-49ad-b54d-b63acc93af0c": {
+    "url": "db://assets/scripts/SceneFader.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "7163ca71-f80d-48df-86e8-8885f6dce345": {
+    "url": "db://assets/scripts/SceneFaderTest.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "c161466d-78da-494f-9ff2-6a5b9ae13301": {
+    "url": "db://assets/scripts/SceneTransition.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "17b89013-b227-4e9d-9cd9-4df737c67b30": {
+    "url": "db://assets/scripts/SceneTransitionTest.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "81520cf5-3a02-463b-b3ec-c8870a3f4940": {
+    "url": "db://assets/resources/prefab/loading.prefab",
+    "value": {
+      "depends": [
+        "bd1bcaba-bd7d-4a71-b143-997c882383e4@f9941"
+      ],
+      "dependScripts": [
+        "c161466d-78da-494f-9ff2-6a5b9ae13301"
       ]
     },
     "versionCode": 1

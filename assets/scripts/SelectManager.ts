@@ -1,6 +1,7 @@
-import { _decorator, Component, Button, director, ToggleContainer, Toggle, Sprite, Color, Label, Node } from 'cc';
+import { _decorator, Component, Button, ToggleContainer, Toggle, Sprite, Color, Label, Node } from 'cc';
 import { TempData } from './TempData';
-import { PlayerManager, LevelGrade } from './PlayerManager';
+import { PlayerManager } from './PlayerManager';
+import { SceneTransition } from './SceneTransition';
 // @ts-ignore
 const { ccclass, property } = _decorator;
 
@@ -154,7 +155,7 @@ export class SelectManager extends Component {
         console.log(levelToggle.node.name,carToggle.node.name)
 
         // 切换到游戏场景
-        director.loadScene('gamescene');
+        SceneTransition.loadScene('gamescene');
     }
 
 
