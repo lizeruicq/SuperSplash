@@ -1,482 +1,6 @@
 {
   "version": "1.0.0",
   "map": {
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/Scenes": {
-      "time": 1752297673909.6003,
-      "uuid": "311768e2-09ac-4c4f-834d-85e07497a5c5"
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/TiledMap": {
-      "time": 1751092931321.343,
-      "uuid": "ca8300bc-5694-4fb2-9420-c134432c4866"
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/img": {
-      "time": 1752309893174.439,
-      "uuid": "f04d4757-2526-40bc-83dc-41410588d6eb"
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/resources": {
-      "time": 1751727739750.397,
-      "uuid": "d97d032d-727a-433c-9189-878a2868c79d"
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/scripts": {
-      "time": 1752079647051.1963,
-      "uuid": "d4ffaca8-3516-4d6f-9187-e37ee8010ebd"
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/img/menu": {
-      "time": 1752293270841.689,
-      "uuid": "b3322b39-4b8e-4556-8194-a14dbd5f51a9"
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/resources/prefab": {
-      "time": 1751549939507.022,
-      "uuid": "762a429e-c9d7-4d61-98f5-52886abdc2ad"
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/resources/prefab/cars": {
-      "time": 1752310766595.3074,
-      "uuid": "2054f310-6a94-41ce-a3b6-41dcd19b5f43"
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/resources/prefab/levels": {
-      "time": 1751987027190.782,
-      "uuid": "c23f290e-b5e8-46ea-bf20-d18ab9b6705f"
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/AIController.ts": {
-      "time": 1751820288895.0928,
-      "uuid": "922b0d89-4cee-4a0e-b072-f593d4a178c3"
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/AIPlayer.ts": {
-      "time": 1751900525110.592,
-      "uuid": "ff477e7e-ceef-42c8-804f-c97803369c7b"
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/MainMenuController.ts": {
-      "time": 1751462001148.3167,
-      "uuid": "0cf6405c-918a-40f1-b383-68a9fc739b7f"
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/PlayerInfoUI.ts": {
-      "time": 1751376224317.8184,
-      "uuid": "66fbc94f-5230-4bee-8600-db121d4f07fe"
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/PlayerManager.ts": {
-      "time": 1752310844027.2988,
-      "uuid": "1b6d6687-2973-4618-af7b-db52ef67b8c1"
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/PlayerManagerExample.ts": {
-      "time": 1751106880479.3552,
-      "uuid": "20b5e8dd-5831-40bc-a3c3-2eba62b0f2b3"
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/SelectManager.ts": {
-      "time": 1752294206351.0625,
-      "uuid": "be7b2dc0-da35-4de9-a81c-30690fdcd28f"
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/TempData.ts": {
-      "time": 1751728327354.985,
-      "uuid": "4702a2d2-89fb-4b88-a080-9712952901be"
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/camera_follow.ts": {
-      "time": 1751727963848.3662,
-      "uuid": "daf21382-6b58-4c9b-aeb4-ace960c8ca29"
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/player.ts": {
-      "time": 1751901084420.601,
-      "uuid": "b3924dc4-f7fe-491c-9736-a65419c312f5"
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/Scenes.meta": {
-      "time": 1751109393489.111
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/TiledMap.meta": {
-      "time": 1750498043785.241
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/img.meta": {
-      "time": 1750861537288.3977
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/resources.meta": {
-      "time": 1751549490748.0537
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/scripts.meta": {
-      "time": 1750948232792.9692
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/img/menu.meta": {
-      "time": 1751167707037.9941
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/resources/prefab.meta": {
-      "time": 1751102457579.5425
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/resources/prefab/cars.meta": {
-      "time": 1751463188433.467
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/resources/prefab/levels.meta": {
-      "time": 1751463178912.3833
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/AIController.ts.meta": {
-      "time": 1751560179490.0051
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/AIPlayer.ts.meta": {
-      "time": 1751560179490.1855
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/MainMenuController.ts.meta": {
-      "time": 1751210132518.3552
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/PlayerInfoUI.ts.meta": {
-      "time": 1751210132518.5479
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/PlayerManager.ts.meta": {
-      "time": 1751106507131.1199
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/PlayerManagerExample.ts.meta": {
-      "time": 1751106507131.3494
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/SelectManager.ts.meta": {
-      "time": 1751380777875.8699
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/TempData.ts.meta": {
-      "time": 1751382441481.8594
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/camera_follow.ts.meta": {
-      "time": 1750950248807.6147
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/player.ts.meta": {
-      "time": 1750948553272.1372
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/Scenes/gamescene.scene": {
-      "time": 1752297466520.4963,
-      "uuid": "1563d039-d898-4d8f-9415-9f1da853b8a3"
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/Scenes/mainmenu.scene": {
-      "time": 1752297676769.5498,
-      "uuid": "9a4dce19-24b9-4d46-b38f-ef49f2287dcb"
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/TiledMap/City_tiles.png": {
-      "time": 1750772920271.239,
-      "uuid": "09c7c4fd-1bb1-44c6-b6b8-53d6372098fd"
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/TiledMap/City_tiles.tsx": {
-      "time": 1750772969217.576,
-      "uuid": "0f73f87e-5a6d-4c5f-a301-7985c7771ff8"
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/TiledMap/SmallBurg_outside_assets.png": {
-      "time": 1750498182045.2585,
-      "uuid": "79ea8bc3-55e4-4161-87f4-d8417199f7b7"
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/TiledMap/SmallBurg_outside_assets.tsx": {
-      "time": 1750498411272.1216,
-      "uuid": "64305baa-7783-4c84-8b22-65a3c9911550"
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/TiledMap/city.tmx": {
-      "time": 1751078938485.3904,
-      "uuid": "c58e421d-cd2f-4cd7-b53d-7b468774492f"
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/TiledMap/city2.tmx": {
-      "time": 1751092931321.0757,
-      "uuid": "77271c78-8b07-4918-bd48-a6f2015e66ca"
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/TiledMap/smallburg_terrain.png": {
-      "time": 1750500952785.5593,
-      "uuid": "58373e6a-0c07-48bb-aeb7-6d2426d69f39"
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/TiledMap/smallburg_terrain.tsx": {
-      "time": 1750500976387.6982,
-      "uuid": "96faef33-da58-4b5e-8a90-58a7d4cdf8e8"
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/TiledMap/smallburg_terrain_spring_with_shadows.png": {
-      "time": 1750498195807.7363,
-      "uuid": "3f4a8955-01c2-409a-8435-bc200cc537df"
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/TiledMap/smallburg_terrain_spring_with_shadows.tsx": {
-      "time": 1750500622643.127,
-      "uuid": "6fa4c070-0285-4d03-85b9-c31a736acbe7"
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/img/check-square.png": {
-      "time": 1751376786187.233,
-      "uuid": "20d2e143-4574-42b8-884c-e2c4dc7b3dd4"
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/img/menu/background.png": {
-      "time": 1751167694442.7295,
-      "uuid": "664835a2-0e31-4c15-89e1-2120e3e3a8e5"
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/img/menu/background2.png": {
-      "time": 1751174286817.8877,
-      "uuid": "20c9e6aa-64e9-4be4-baa7-0ec86216d0e3"
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/Scenes/gamescene.scene.meta": {
-      "time": 1750773427338.5786
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/Scenes/mainmenu.scene.meta": {
-      "time": 1751167376857.5898
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/TiledMap/City_tiles.tsx.meta": {
-      "time": 1750772982576.9148
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/TiledMap/SmallBurg_outside_assets.tsx.meta": {
-      "time": 1750500888774.1113
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/TiledMap/city.tmx.meta": {
-      "time": 1751078962113.1714
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/TiledMap/city2.tmx.meta": {
-      "time": 1751080168021.7188
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/TiledMap/smallburg_terrain.tsx.meta": {
-      "time": 1750522104939.456
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/TiledMap/City_tiles.png.meta": {
-      "time": 1750772920295.2656
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/TiledMap/SmallBurg_outside_assets.png.meta": {
-      "time": 1750498182073.4214
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/TiledMap/smallburg_terrain_spring_with_shadows.tsx.meta": {
-      "time": 1750500888774.2898
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/TiledMap/smallburg_terrain.png.meta": {
-      "time": 1750500952798.2244
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/TiledMap/smallburg_terrain_spring_with_shadows.png.meta": {
-      "time": 1750498195834.9563
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/img/check-square.png.meta": {
-      "time": 1751376786207.1125
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/img/menu/background.png.meta": {
-      "time": 1751167721421.8413
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/img/menu/background2.png.meta": {
-      "time": 1751174326711.5562
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/resources/prefab/cars/car-1.prefab.meta": {
-      "time": 1751728591200.1184
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/resources/prefab/cars/car-1.prefab": {
-      "time": 1751901263266.1194,
-      "uuid": "37fef8d9-5917-47b3-a40f-4e2ace6bf328"
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/img/car.png.meta": {
-      "time": 1751729802015.1
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/img/car.png": {
-      "time": 1751729801951.5068,
-      "uuid": "49e36654-b2c3-47d9-afeb-5db28286a1b0"
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/resources/prefab/cars/healthBar.prefab.meta": {
-      "time": 1751793298608.602
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/resources/prefab/cars/healthBar.prefab": {
-      "time": 1751794822690.7478,
-      "uuid": "5fa4a020-ad12-4d51-9e7d-57cecdc056ca"
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/HealthBarUI.ts.meta": {
-      "time": 1751794812473.0356
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/HealthBarUI.ts": {
-      "time": 1751886004994.6763,
-      "uuid": "79d6f812-9554-4262-84e1-fd743e611bf9"
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/GameManager.ts.meta": {
-      "time": 1751380777875.7239
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/GameManager.ts": {
-      "time": 1752079271452.2722,
-      "uuid": "b67f4523-8daa-464a-8546-d89befbb2977"
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/GameManagerExample.ts.meta": {
-      "time": 1751881488726.1409
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/GameOverPanel.ts.meta": {
-      "time": 1751881488726.2793
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/PausePanel.ts.meta": {
-      "time": 1751881488726.3596
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/GameManagerExample.ts": {
-      "time": 1751880804437.5667,
-      "uuid": "8e647ccd-65a0-4fe9-9a1f-6d0bf9e6510b"
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/GameOverPanel.ts": {
-      "time": 1751880733138.6445,
-      "uuid": "62b903fa-d761-4f2b-8016-ee288919f17a"
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/PausePanel.ts": {
-      "time": 1751880715966.924,
-      "uuid": "5a320709-c4da-48a6-9e0a-f1f0884117fb"
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/VehicleDestructionTest.ts.meta": {
-      "time": 1751884169703.804
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/VehicleDestructionTest.ts": {
-      "time": 1751901119716.8408,
-      "uuid": "01c08043-bfa2-4c83-957c-a194c966ef09"
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/img/car1-crash.png.meta": {
-      "time": 1751884812357.5554
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/img/car1-crash.png": {
-      "time": 1751884553985.8413,
-      "uuid": "a238f344-7c25-4d83-a0ec-8c85e46d3ec8"
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/img/background.meta": {
-      "time": 1751949501457.9102
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/img/background": {
-      "time": 1751987020019.679,
-      "uuid": "6e03cd48-8a60-412f-b20f-82f4e1b5b329"
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/img/background/soccer_court.png.meta": {
-      "time": 1751292845179.1672
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/img/background/soccer_court.png": {
-      "time": 1751292845151.776,
-      "uuid": "c2ccf9a1-d5dc-451d-905f-387af1f12937"
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/img/background/snow.png.meta": {
-      "time": 1751949515843.4895
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/img/background/snow.png": {
-      "time": 1751949511624.504,
-      "uuid": "807a7b47-3819-4529-931c-683fbcf44eb0"
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/resources/prefab/levels/level-1.prefab.meta": {
-      "time": 1751949969165.876
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/resources/prefab/levels/level-1.prefab": {
-      "time": 1751987370678.7454,
-      "uuid": "5e122843-ecf2-42e7-ab74-ec19f70240a3"
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/resources/prefab/levels/level-2.prefab.meta": {
-      "time": 1751949975316.93
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/resources/prefab/levels/level-2.prefab": {
-      "time": 1751950113187.6118,
-      "uuid": "cf804555-7d75-4720-8a54-4f8a1348275f"
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/img/background/soccor_court2.png.meta": {
-      "time": 1751985647884.53
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/img/background/soccor_court2.png": {
-      "time": 1751985647853.775,
-      "uuid": "0bfa81f7-9b43-4f2a-bc44-2375066c8694"
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/img/background/jungle.png.meta": {
-      "time": 1751987020043.7673
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/img/background/jungle.png": {
-      "time": 1751987020018.4854,
-      "uuid": "d0ade2fb-557f-4edb-a96c-d68e19c7c942"
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/resources/prefab/levels/level-3.prefab.meta": {
-      "time": 1751987027194.968
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/resources/prefab/levels/level-3.prefab": {
-      "time": 1751987748423.326,
-      "uuid": "8d8867cd-f591-45fa-8564-e435fcdb1847"
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/CarPurchaseTest.ts.meta": {
-      "time": 1751991143542.6362
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/CarPurchaseTest.ts": {
-      "time": 1751991366973.6372,
-      "uuid": "4b4e4d80-e536-48c9-811a-9601e0bf5362"
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/LevelGradeTest.ts.meta": {
-      "time": 1752079647052.005
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/LevelGradeTest.ts": {
-      "time": 1752079216948.198,
-      "uuid": "4296e978-bdb0-4cb9-9cdd-5f8311ca5d88"
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/img/z370.png.meta": {
-      "time": 1752293681750.353
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/img/z370.png": {
-      "time": 1752293681726.4382,
-      "uuid": "5308cc80-fcde-4667-baa6-dbcdc87fd132"
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/img/z370-t.png.meta": {
-      "time": 1752293773804.6663
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/img/z370-t.png": {
-      "time": 1752293773784.7495,
-      "uuid": "b9e95f02-4aec-4c01-8343-1c6ce036b0c6"
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/resources/prefab/cars/car-2.prefab.meta": {
-      "time": 1752293799853.8403
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/resources/prefab/cars/car-2.prefab": {
-      "time": 1752297892939.975,
-      "uuid": "87676691-0988-4a4f-823c-9ede01a40e1c"
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/img/taycan-f.png.meta": {
-      "time": 1752297270718.6594
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/img/taycan-f.png": {
-      "time": 1752297270692.8096,
-      "uuid": "a9e97b11-149f-46e6-a990-c95fd6d91cd7"
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/img/taycan-t.png.meta": {
-      "time": 1752297317531.6914
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/img/taycan-t.png": {
-      "time": 1752297317515.436,
-      "uuid": "d6c5db05-a7b5-4c39-b29f-89c86c315dcf"
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/resources/prefab/cars/car-3.prefab.meta": {
-      "time": 1752297351825.2554
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/resources/prefab/cars/car-3.prefab": {
-      "time": 1752297949268.8665,
-      "uuid": "48fa46bf-e334-4f77-b8e5-b81b32cc3846"
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/Scenes/LevelSelect.scene.meta": {
-      "time": 1751174008010.2412
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/Scenes/LevelSelect.scene": {
-      "time": 1752310861782.8162,
-      "uuid": "091c5c0e-b72a-4cad-ab68-635bc57ff236"
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/img/rx7-t.png.meta": {
-      "time": 1752307674180.1877
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/img/rx7-t.png": {
-      "time": 1752307674152.285,
-      "uuid": "38414c6f-ce08-40c3-b0a0-4f24ce1031de"
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/img/rx7-f.png.meta": {
-      "time": 1752307678975.1118
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/img/rx7-f.png": {
-      "time": 1752307678956.312,
-      "uuid": "0b33dc38-0c13-4f55-b754-27d76610db59"
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/img/mini-f.png.meta": {
-      "time": 1752309829326.0146
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/img/mini-f.png": {
-      "time": 1752309829276.943,
-      "uuid": "35990206-f1f7-49c0-91d6-a50921fc8128"
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/img/86-t.png.meta": {
-      "time": 1752309893190.168
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/img/86-f.png.meta": {
-      "time": 1752309893204.6702
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/img/86-t.png": {
-      "time": 1752309893173.038,
-      "uuid": "ed611db6-e51e-4a53-b624-848dd45ace21"
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/img/86-f.png": {
-      "time": 1752309893173.1184,
-      "uuid": "7e95e032-b6ae-4de9-a8ab-c81b24b5fb5f"
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/resources/prefab/cars/car-4.prefab.meta": {
-      "time": 1752310765790.4875
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/resources/prefab/cars/car-4.prefab": {
-      "time": 1752310828917.4,
-      "uuid": "471a5567-970e-4fc0-9056-614a089c850d"
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/resources/prefab/cars/car-5.prefab.meta": {
-      "time": 1752310766597.8823
-    },
-    "/Users/zeruili/projects/cocos_project/TopRacing/assets/resources/prefab/cars/car-5.prefab": {
-      "time": 1752310815621.1382,
-      "uuid": "642f4c4e-3979-4274-9594-3c8286a57fb2"
-    },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/Scenes": {
       "time": 1752297673909.6003,
       "uuid": "311768e2-09ac-4c4f-834d-85e07497a5c5"
@@ -486,7 +10,7 @@
       "uuid": "ca8300bc-5694-4fb2-9420-c134432c4866"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/img": {
-      "time": 1752309893174.439,
+      "time": 1752511891564.781,
       "uuid": "f04d4757-2526-40bc-83dc-41410588d6eb"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/resources": {
@@ -494,7 +18,7 @@
       "uuid": "d97d032d-727a-433c-9189-878a2868c79d"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/scripts": {
-      "time": 1752079647051.1963,
+      "time": 1752764446971.6685,
       "uuid": "d4ffaca8-3516-4d6f-9187-e37ee8010ebd"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background": {
@@ -502,11 +26,11 @@
       "uuid": "6e03cd48-8a60-412f-b20f-82f4e1b5b329"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu": {
-      "time": 1752293270841.689,
+      "time": 1752758444514.5884,
       "uuid": "b3322b39-4b8e-4556-8194-a14dbd5f51a9"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab": {
-      "time": 1751549939507.022,
+      "time": 1752764704357.9436,
       "uuid": "762a429e-c9d7-4d61-98f5-52886abdc2ad"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/cars": {
@@ -530,7 +54,7 @@
       "uuid": "4b4e4d80-e536-48c9-811a-9601e0bf5362"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/scripts/GameManager.ts": {
-      "time": 1752079271452.2722,
+      "time": 1752764243524.3816,
       "uuid": "b67f4523-8daa-464a-8546-d89befbb2977"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/scripts/GameManagerExample.ts": {
@@ -550,7 +74,7 @@
       "uuid": "4296e978-bdb0-4cb9-9cdd-5f8311ca5d88"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/scripts/MainMenuController.ts": {
-      "time": 1751462001148.3167,
+      "time": 1752769071568.746,
       "uuid": "0cf6405c-918a-40f1-b383-68a9fc739b7f"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/scripts/PausePanel.ts": {
@@ -570,7 +94,7 @@
       "uuid": "20b5e8dd-5831-40bc-a3c3-2eba62b0f2b3"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/scripts/SelectManager.ts": {
-      "time": 1752294206351.0625,
+      "time": 1752764431813.241,
       "uuid": "be7b2dc0-da35-4de9-a81c-30690fdcd28f"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/scripts/TempData.ts": {
@@ -674,15 +198,15 @@
       "time": 1750948553272.1372
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/Scenes/LevelSelect.scene": {
-      "time": 1752310861782.8162,
+      "time": 1752764715423.166,
       "uuid": "091c5c0e-b72a-4cad-ab68-635bc57ff236"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/Scenes/gamescene.scene": {
-      "time": 1752331282705.7761,
+      "time": 1752764788547.3088,
       "uuid": "1563d039-d898-4d8f-9415-9f1da853b8a3"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/Scenes/mainmenu.scene": {
-      "time": 1752297676769.5498,
+      "time": 1752769214277.6667,
       "uuid": "9a4dce19-24b9-4d46-b38f-ef49f2287dcb"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/TiledMap/City_tiles.png": {
@@ -789,13 +313,17 @@
       "time": 1751985647853.775,
       "uuid": "0bfa81f7-9b43-4f2a-bc44-2375066c8694"
     },
-    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/background.png": {
-      "time": 1751167694442.7295,
-      "uuid": "664835a2-0e31-4c15-89e1-2120e3e3a8e5"
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/Design Racing Game Logo-3.png": {
+      "time": 1752505113483.7354,
+      "uuid": "8e4b7ec0-ba7e-4952-bd46-9750970405c6"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/background2.png": {
       "time": 1751174286817.8877,
       "uuid": "20c9e6aa-64e9-4be4-baa7-0ec86216d0e3"
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/shezhi.png": {
+      "time": 1752505777785.0217,
+      "uuid": "f07db45e-fa1a-499c-b315-fc3e50f3aafa"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/cars/car-1.prefab": {
       "time": 1751901263266.1191,
@@ -833,9 +361,6 @@
       "time": 1751987748423.326,
       "uuid": "8d8867cd-f591-45fa-8564-e435fcdb1847"
     },
-    "/Users/zeruili/projects/cocos_project/driftClash/assets/Scenes/mainmenu.scene.meta": {
-      "time": 1751167376857.5898
-    },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/Scenes/gamescene.scene.meta": {
       "time": 1750773427338.5786
     },
@@ -845,14 +370,17 @@
     "/Users/zeruili/projects/cocos_project/driftClash/assets/Scenes/LevelSelect.scene.meta": {
       "time": 1751174008010.2412
     },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/Scenes/mainmenu.scene.meta": {
+      "time": 1751167376857.5898
+    },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/TiledMap/SmallBurg_outside_assets.tsx.meta": {
       "time": 1750500888774.1113
     },
-    "/Users/zeruili/projects/cocos_project/driftClash/assets/TiledMap/city2.tmx.meta": {
-      "time": 1751080168021.7188
-    },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/TiledMap/city.tmx.meta": {
       "time": 1751078962113.1714
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/TiledMap/city2.tmx.meta": {
+      "time": 1751080168021.7188
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/TiledMap/smallburg_terrain.tsx.meta": {
       "time": 1750522104939.456
@@ -860,11 +388,11 @@
     "/Users/zeruili/projects/cocos_project/driftClash/assets/TiledMap/City_tiles.png.meta": {
       "time": 1750772920295.2656
     },
-    "/Users/zeruili/projects/cocos_project/driftClash/assets/TiledMap/SmallBurg_outside_assets.png.meta": {
-      "time": 1750498182073.4214
-    },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/TiledMap/smallburg_terrain_spring_with_shadows.tsx.meta": {
       "time": 1750500888774.2898
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/TiledMap/SmallBurg_outside_assets.png.meta": {
+      "time": 1750498182073.4214
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/TiledMap/smallburg_terrain.png.meta": {
       "time": 1750500952798.2244
@@ -872,62 +400,68 @@
     "/Users/zeruili/projects/cocos_project/driftClash/assets/TiledMap/smallburg_terrain_spring_with_shadows.png.meta": {
       "time": 1750498195834.9563
     },
-    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/86-f.png.meta": {
-      "time": 1752309893204.6704
-    },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/img/86-t.png.meta": {
-      "time": 1752309893190.168
+      "time": 1752545232778.0032
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/86-f.png.meta": {
+      "time": 1752545223790.5332
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/img/check-square.png.meta": {
       "time": 1751376786207.1125
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/img/rx7-f.png.meta": {
-      "time": 1752307678975.112
-    },
-    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/car.png.meta": {
-      "time": 1751729802015.1
-    },
-    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/car1-crash.png.meta": {
-      "time": 1751884812357.5554
-    },
-    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/mini-f.png.meta": {
-      "time": 1752309829326.0146
+      "time": 1752545248900.3193
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/img/rx7-t.png.meta": {
-      "time": 1752307674180.1877
+      "time": 1752545254511.4185
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/car.png.meta": {
+      "time": 1752545239424.45
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/car1-crash.png.meta": {
+      "time": 1752545235987.8638
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/mini-f.png.meta": {
+      "time": 1752545245355.454
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/img/taycan-t.png.meta": {
-      "time": 1752297317531.6917
+      "time": 1752546544851.523
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/img/taycan-f.png.meta": {
-      "time": 1752297270718.6594
-    },
-    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/z370-t.png.meta": {
-      "time": 1752293773804.6663
+      "time": 1752546541478.2397
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/img/z370.png.meta": {
-      "time": 1752293681750.353
+      "time": 1752546547819.8604
     },
-    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/snow.png.meta": {
-      "time": 1751949515843.4897
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/z370-t.png.meta": {
+      "time": 1752546551833.9575
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/jungle.png.meta": {
       "time": 1751987020043.7673
     },
-    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/soccer_court.png.meta": {
-      "time": 1751292845179.1672
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/snow.png.meta": {
+      "time": 1751949515843.4897
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/Design Racing Game Logo-3.png.meta": {
+      "time": 1752505121464.0532
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/cars/car-1.prefab.meta": {
       "time": 1751728591200.1184
     },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/soccor_court2.png.meta": {
+      "time": 1751985647884.53
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/shezhi.png.meta": {
+      "time": 1752505794908.0308
+    },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/cars/car-2.prefab.meta": {
       "time": 1752293799853.8403
     },
-    "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/cars/car-3.prefab.meta": {
-      "time": 1752297351825.2554
-    },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/cars/car-4.prefab.meta": {
       "time": 1752310765790.4875
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/cars/car-3.prefab.meta": {
+      "time": 1752297351825.2554
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/cars/car-5.prefab.meta": {
       "time": 1752310766597.8823
@@ -944,111 +478,175 @@
     "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/levels/level-3.prefab.meta": {
       "time": 1751987027194.968
     },
-    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/soccor_court2.png.meta": {
-      "time": 1751985647884.53
-    },
-    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/background.png.meta": {
-      "time": 1751167721421.8413
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/soccer_court.png.meta": {
+      "time": 1751292845179.1672
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/background2.png.meta": {
       "time": 1751174326711.5562
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/traffic.png.meta": {
+      "time": 1752511920975.2095
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/traffic.png": {
+      "time": 1752511662822.8542,
+      "uuid": "83baeef7-746b-4f91-9a84-fd8a58d2b8b3"
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/red.png.meta": {
+      "time": 1752546557985.1265
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/red.png": {
+      "time": 1752511998855.823,
+      "uuid": "4cf1948a-ffca-426e-9c43-1e7c864a1b60"
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/yellow.png.meta": {
+      "time": 1752666966332.643
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/yellow.png": {
+      "time": 1752666966316.5176,
+      "uuid": "593904f2-fa85-498f-9b0e-9f79890c24fd"
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/green.png.meta": {
+      "time": 1752546561080.2385
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/green.png": {
+      "time": 1752512534424.8093,
+      "uuid": "1c18f6e7-3b13-401b-85a1-746bf7284949"
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/settings.png.meta": {
+      "time": 1752666805719.1794
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/settings.png": {
+      "time": 1752666805611.1243,
+      "uuid": "4b2a90e7-9654-43f7-b19c-1929bfdc1fa9"
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/panel2.png.meta": {
+      "time": 1752672261206.9924
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/panel2.png": {
+      "time": 1752672261124.5845,
+      "uuid": "0a74f435-3a83-44b1-af34-a8b16ea61ec9"
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/panel.png.meta": {
+      "time": 1752672269394.4138
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/panel.png": {
+      "time": 1752672269353.8113,
+      "uuid": "6a0179db-b0bc-4905-8953-8ab076a3cfd6"
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/purchase.png.meta": {
+      "time": 1752728148455.1956
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/restart.png.meta": {
+      "time": 1752728148476.2253
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/back.png.meta": {
+      "time": 1752728148503.0312
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/close.png.meta": {
+      "time": 1752728148535.142
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/select.png.meta": {
+      "time": 1752728148574.5757
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/purchase.png": {
+      "time": 1752728148424.7473,
+      "uuid": "a50181e9-ecbd-4d36-bf53-3db514f24fee"
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/restart.png": {
+      "time": 1752728148425.1606,
+      "uuid": "8e2f4297-91a6-47cc-8cd7-438a85e78d5b"
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/back.png": {
+      "time": 1752728148426.1,
+      "uuid": "f2a743f7-c00a-4610-b94b-5374123d572e"
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/close.png": {
+      "time": 1752728148426.1245,
+      "uuid": "a426c2c8-58b1-4e5a-a16c-e75061a2d034"
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/select.png": {
+      "time": 1752728148426.2974,
+      "uuid": "4befdd25-e632-4e7e-aa34-819783640186"
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/setting.png.meta": {
+      "time": 1752758444560.703
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/setting.png": {
+      "time": 1752758444512.1648,
+      "uuid": "fe4c58f2-8b33-45e3-9dfa-f37dfb272443"
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/scripts/SceneTransition.ts.meta": {
+      "time": 1752764446973.8596
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/scripts/SceneTransitionTest.ts.meta": {
+      "time": 1752764446974.029
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/scripts/SceneTransition.ts": {
+      "time": 1752764379799.7852,
+      "uuid": "c161466d-78da-494f-9ff2-6a5b9ae13301"
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/scripts/SceneTransitionTest.ts": {
+      "time": 1752764356871.2915,
+      "uuid": "17b89013-b227-4e9d-9cd9-4df737c67b30"
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/loading.prefab.meta": {
+      "time": 1752764704359.1843
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/loading.prefab": {
+      "time": 1752764704358.6055,
+      "uuid": "81520cf5-3a02-463b-b3ec-c8870a3f4940"
     }
   },
   "missing": {
-    "4642454b-0a99-4d69-9fbf-e1ff03eb693a": {
-      "path": "/Users/zeruili/projects/cocos_project/TopRacing/assets/img/car.png",
-      "time": 1750861738179.247,
-      "removeTime": 1751729772508
+    "01429ced-ea3e-4c36-ad27-010bab218993": {
+      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/img/traffic.png",
+      "time": 1752511124581.0806,
+      "removeTime": 1752511136690
     },
-    "bc8037e8-1253-42b4-be7b-c800bf7d7635": {
-      "path": "/Users/zeruili/projects/cocos_project/TopRacing/assets/img/Armature_shoot_120.png",
-      "time": 1751729657231.89,
-      "removeTime": 1751729689486
+    "4d83377f-c8c8-4078-8da5-34ddb98ce3b1": {
+      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/img/traffic.png",
+      "time": 1752511352883.7546,
+      "removeTime": 1752511363984
     },
-    "5fa4a020-ad12-4d51-9e7d-57cecdc056ca": {
-      "path": "/Users/zeruili/projects/cocos_project/TopRacing/assets/Scenes/healthBar.prefab",
-      "time": 1751793298607.6782,
-      "removeTime": 1751793443824
+    "59cab811-4252-4105-bd9e-9374bbec29a2": {
+      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/img/traffic.png",
+      "time": 1752511611910.5056,
+      "removeTime": 1752511619996
     },
-    "b09090d5-6769-43b3-b84e-e391dce516c0": {
-      "path": "/Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/HealthBar.ts",
-      "time": 1751791651475.3425,
-      "removeTime": 1751793835764
+    "83baeef7-746b-4f91-9a84-fd8a58d2b8b3": {
+      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/img/traffic.png",
+      "time": 1752511662822.8542,
+      "removeTime": 1752511891565
     },
-    "b67f4523-8daa-464a-8546-d89befbb2977": {
-      "path": "/Users/zeruili/projects/cocos_project/TopRacing/assets/scripts/GameSceneManager.ts",
-      "time": 1751789134091.4932,
-      "removeTime": 1751815279145
+    "400e205e-2eed-45f0-9384-3d7a7fafcbdf": {
+      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/red.png",
+      "time": 1752511882601.504,
+      "removeTime": 1752511968827
     },
-    "f4b3fba7-d358-45b5-9e15-d6599880be7d": {
-      "path": "/Users/zeruili/projects/cocos_project/TopRacing/assets/img/car1-crash.png",
-      "time": 1751884505349.837,
-      "removeTime": 1751884547146
+    "593904f2-fa85-498f-9b0e-9f79890c24fd": {
+      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/red-001.png",
+      "time": 1752512254378.0823,
+      "removeTime": 1752512258878
     },
-    "c2ccf9a1-d5dc-451d-905f-387af1f12937": {
-      "path": "/Users/zeruili/projects/cocos_project/TopRacing/assets/img/soccer_court.png",
-      "time": 1751292845151.776,
-      "removeTime": 1751949506374
+    "c5508b8c-cf95-42d0-8edb-f7f4504d41df": {
+      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/panel.png",
+      "time": 1752670687075.8027,
+      "removeTime": 1752672266283
     },
-    "807a7b47-3819-4529-931c-683fbcf44eb0": {
-      "path": "/Users/zeruili/projects/cocos_project/TopRacing/assets/img/background/图的风格转换.png",
-      "time": 1751949511624.504,
-      "removeTime": 1751949515817
+    "b151674d-edce-4959-a7c5-1d9872314e93": {
+      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/scripts/SceneFader.ts",
+      "time": 1752761675738.4355,
+      "removeTime": 1752761805207
     },
-    "cf804555-7d75-4720-8a54-4f8a1348275f": {
-      "path": "/Users/zeruili/projects/cocos_project/TopRacing/assets/resources/prefab/levels/level-21.prefab",
-      "time": 1751949964242.731,
-      "removeTime": 1751949975313
+    "7163ca71-f80d-48df-86e8-8885f6dce345": {
+      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/scripts/SceneFaderTest.ts",
+      "time": 1752762103518.6096,
+      "removeTime": 1752764016889
     },
-    "5e122843-ecf2-42e7-ab74-ec19f70240a3": {
-      "path": "/Users/zeruili/projects/cocos_project/TopRacing/assets/resources/prefab/levels/level-2.prefab",
-      "time": 1751949944068.8435,
-      "removeTime": 1751949969162
-    },
-    "60983f7e-c83e-4cec-a20e-0b5e4505bb0c": {
-      "path": "/Users/zeruili/projects/cocos_project/TopRacing/assets/img/z370.png",
-      "time": 1752293238442.156,
-      "removeTime": 1752293660197
-    },
-    "d48670db-79a0-4d45-9a14-9cca1814e445": {
-      "path": "/Users/zeruili/projects/cocos_project/TopRacing/assets/img/taycan-t.png",
-      "time": 1752296988793.6448,
-      "removeTime": 1752296997995
-    },
-    "091c5c0e-b72a-4cad-ab68-635bc57ff236": {
-      "path": "/Users/zeruili/projects/cocos_project/TopRacing/assets/Scenes/LevelSelect.scene",
-      "time": 1752294391596.1812,
-      "removeTime": 1752296997995
-    },
-    "f82531ef-becb-41ca-bab6-9b8615d2fd30": {
-      "path": "/Users/zeruili/projects/cocos_project/TopRacing/assets/img/taycan-t.png",
-      "time": 1752297080739.4429,
-      "removeTime": 1752297263458
-    },
-    "bf20c68d-8028-4764-8c6b-eb86808abea5": {
-      "path": "/Users/zeruili/projects/cocos_project/TopRacing/assets/img/taycan-f.png",
-      "time": 1752297245591.5608,
-      "removeTime": 1752297267351
-    },
-    "19467782-1d79-4656-a56d-5986a28af4de": {
-      "path": "/Users/zeruili/projects/cocos_project/TopRacing/assets/img/car3.png",
-      "time": 1751377813728.5242,
-      "removeTime": 1752297766441
-    },
-    "baa7650a-4ddd-426f-940b-5a3f2fcd3e1a": {
-      "path": "/Users/zeruili/projects/cocos_project/TopRacing/assets/img/car1.png",
-      "time": 1751377502189.8423,
-      "removeTime": 1752297769851
-    },
-    "00a28dfd-7e2c-45db-9ec2-7e7d05d6aa26": {
-      "path": "/Users/zeruili/projects/cocos_project/TopRacing/assets/img/car2.png",
-      "time": 1751377776307.9075,
-      "removeTime": 1752297773822
-    },
-    "ad9dea01-6c27-401b-ae7e-006aa4133b20": {
-      "path": "/Users/zeruili/projects/cocos_project/TopRacing/assets/img/mini-f.png",
-      "time": 1752309817431.9502,
-      "removeTime": 1752309827201
+    "8f875fcf-118c-49ad-b54d-b63acc93af0c": {
+      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/scripts/SceneFader.ts",
+      "time": 1752764000376.482,
+      "removeTime": 1752764030995
     }
   }
 }

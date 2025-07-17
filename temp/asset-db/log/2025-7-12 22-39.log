@@ -1,274 +1,0 @@
-2025-7-12 22:39:31-debug: start **** info
-2025-7-12 22:39:31-log: Cannot access game frame or container.
-2025-7-12 22:39:31-debug: asset-db:require-engine-code (386ms)
-2025-7-12 22:39:31-log: [box2d]:box2d wasm lib loaded.
-2025-7-12 22:39:31-log: meshopt wasm decoder initialized
-2025-7-12 22:39:31-log: [bullet]:bullet wasm lib loaded.
-2025-7-12 22:39:31-log: Cocos Creator v3.8.6
-2025-7-12 22:39:31-log: Forward render pipeline initialized.
-2025-7-12 22:39:31-debug: [Assets Memory track]: asset-db:worker-init: initEngine start:29.65MB, end 79.78MB, increase: 50.13MB
-2025-7-12 22:39:31-debug: [Assets Memory track]: asset-db-plugin-register: programming start:80.61MB, end 88.30MB, increase: 7.69MB
-2025-7-12 22:39:32-debug: [Assets Memory track]: asset-db-plugin-register: builder start:88.33MB, end 223.84MB, increase: 135.51MB
-2025-7-12 22:39:32-debug: [Assets Memory track]: asset-db-plugin-register: engine-extends start:224.05MB, end 226.95MB, increase: 2.90MB
-2025-7-12 22:39:32-debug: [Assets Memory track]: asset-db-plugin-register: project start:80.49MB, end 227.11MB, increase: 146.62MB
-2025-7-12 22:39:32-debug: [Assets Memory track]: asset-db:worker-init: initPlugin start:79.80MB, end 227.51MB, increase: 147.71MB
-2025-7-12 22:39:31-log: Using legacy pipeline
-2025-7-12 22:39:32-debug: run package(honor-mini-game) handler(enable) success!
-2025-7-12 22:39:32-debug: run package(huawei-agc) handler(enable) success!
-2025-7-12 22:39:32-debug: run package(huawei-quick-game) handler(enable) success!
-2025-7-12 22:39:32-debug: run package(ios) handler(enable) start
-2025-7-12 22:39:32-debug: run package(ios) handler(enable) success!
-2025-7-12 22:39:32-debug: run package(linux) handler(enable) start
-2025-7-12 22:39:32-debug: run package(linux) handler(enable) success!
-2025-7-12 22:39:32-debug: run package(mac) handler(enable) start
-2025-7-12 22:39:32-debug: run package(mac) handler(enable) success!
-2025-7-12 22:39:32-debug: run package(migu-mini-game) handler(enable) start
-2025-7-12 22:39:32-debug: run package(migu-mini-game) handler(enable) success!
-2025-7-12 22:39:32-debug: run package(native) handler(enable) start
-2025-7-12 22:39:32-debug: run package(native) handler(enable) success!
-2025-7-12 22:39:32-debug: run package(honor-mini-game) handler(enable) start
-2025-7-12 22:39:32-debug: run package(ohos) handler(enable) success!
-2025-7-12 22:39:32-debug: run package(oppo-mini-game) handler(enable) start
-2025-7-12 22:39:32-debug: run package(oppo-mini-game) handler(enable) success!
-2025-7-12 22:39:32-debug: run package(runtime-dev-tools) handler(enable) start
-2025-7-12 22:39:32-debug: run package(runtime-dev-tools) handler(enable) success!
-2025-7-12 22:39:32-debug: run package(taobao-mini-game) handler(enable) start
-2025-7-12 22:39:32-debug: run package(taobao-mini-game) handler(enable) success!
-2025-7-12 22:39:32-debug: run package(vivo-mini-game) handler(enable) start
-2025-7-12 22:39:32-debug: run package(vivo-mini-game) handler(enable) success!
-2025-7-12 22:39:32-debug: run package(web-desktop) handler(enable) start
-2025-7-12 22:39:32-debug: run package(web-desktop) handler(enable) success!
-2025-7-12 22:39:32-debug: run package(web-mobile) handler(enable) start
-2025-7-12 22:39:32-debug: run package(huawei-quick-game) handler(enable) start
-2025-7-12 22:39:32-debug: run package(wechatgame) handler(enable) start
-2025-7-12 22:39:32-debug: run package(wechatgame) handler(enable) success!
-2025-7-12 22:39:32-debug: run package(wechatprogram) handler(enable) start
-2025-7-12 22:39:32-debug: run package(ohos) handler(enable) start
-2025-7-12 22:39:32-debug: run package(wechatprogram) handler(enable) success!
-2025-7-12 22:39:32-debug: run package(windows) handler(enable) start
-2025-7-12 22:39:32-debug: run package(windows) handler(enable) success!
-2025-7-12 22:39:32-debug: run package(xiaomi-quick-game) handler(enable) start
-2025-7-12 22:39:32-debug: run package(xiaomi-quick-game) handler(enable) success!
-2025-7-12 22:39:32-debug: run package(cocos-service) handler(enable) start
-2025-7-12 22:39:32-debug: run package(im-plugin) handler(enable) start
-2025-7-12 22:39:32-debug: run package(im-plugin) handler(enable) success!
-2025-7-12 22:39:32-debug: run package(fix-asset-default-userdata) handler(enable) success!
-2025-7-12 22:39:32-debug: run package(fix-asset-default-userdata) handler(enable) start
-2025-7-12 22:39:32-debug: run package(placeholder) handler(enable) start
-2025-7-12 22:39:32-debug: run package(huawei-agc) handler(enable) start
-2025-7-12 22:39:32-debug: run package(cocos-service) handler(enable) success!
-2025-7-12 22:39:32-debug: run package(placeholder) handler(enable) success!
-2025-7-12 22:39:32-debug: asset-db:worker-init: initPlugin (774ms)
-2025-7-12 22:39:32-debug: run package(web-mobile) handler(enable) success!
-2025-7-12 22:39:32-debug: [Assets Memory track]: asset-db:worker-init start:29.64MB, end 228.70MB, increase: 199.06MB
-2025-7-12 22:39:32-debug: Run asset db hook programming:beforePreStart ...
-2025-7-12 22:39:32-debug: Run asset db hook programming:beforePreStart success!
-2025-7-12 22:39:32-debug: Run asset db hook engine-extends:beforePreStart ...
-2025-7-12 22:39:32-debug: Run asset db hook engine-extends:beforePreStart success!
-2025-7-12 22:39:32-debug: asset-db:worker-init (1248ms)
-2025-7-12 22:39:32-debug: asset-db-hook-programming-beforePreStart (38ms)
-2025-7-12 22:39:32-debug: asset-db-hook-engine-extends-beforePreStart (38ms)
-2025-7-12 22:39:32-debug: Preimport db internal success
-2025-7-12 22:39:32-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/scriptsbackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:32-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/resourcesbackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:32-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/Scenesbackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:32-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/TiledMapbackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:32-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/imgbackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:32-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/img/backgroundbackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:32-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/levelsbackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:32-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/img/menubackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:32-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/carsbackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:32-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefabbackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:32-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/scripts/AIController.tsbackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:32-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/scripts/GameManagerExample.tsbackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:32-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/scripts/CarPurchaseTest.tsbackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:32-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/scripts/GameManager.tsbackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:32-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/scripts/AIPlayer.tsbackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:32-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/scripts/GameOverPanel.tsbackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:32-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/scripts/HealthBarUI.tsbackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:32-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/scripts/MainMenuController.tsbackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:32-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/scripts/LevelGradeTest.tsbackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:32-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/scripts/PausePanel.tsbackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:32-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/scripts/PlayerInfoUI.tsbackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:32-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/scripts/PlayerManager.tsbackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:32-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/scripts/PlayerManagerExample.tsbackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:32-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/scripts/SelectManager.tsbackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:32-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/scripts/TempData.tsbackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:32-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/scripts/VehicleDestructionTest.tsbackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:32-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/scripts/camera_follow.tsbackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:32-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/scripts/player.tsbackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:32-debug: Preimport db assets success
-2025-7-12 22:39:32-debug: Run asset db hook programming:afterPreStart ...
-2025-7-12 22:39:32-debug: starting packer-driver...
-2025-7-12 22:39:33-debug: initialize scripting environment...
-2025-7-12 22:39:33-debug: [[Executor]] prepare before lock
-2025-7-12 22:39:33-debug: Set detail map pack:///resolution-detail-map.json: {}
-2025-7-12 22:39:33-debug: Run asset db hook programming:afterPreStart success!
-2025-7-12 22:39:33-debug: Start up the 'internal' database...
-2025-7-12 22:39:33-debug: Run asset db hook engine-extends:afterPreStart ...
-2025-7-12 22:39:33-debug: Run asset db hook engine-extends:afterPreStart success!
-2025-7-12 22:39:33-debug: [[Executor]] prepare after unlock
-2025-7-12 22:39:33-debug: asset-db-hook-programming-afterPreStart (827ms)
-2025-7-12 22:39:33-debug: asset-db:worker-effect-data-processing (151ms)
-2025-7-12 22:39:33-debug: asset-db-hook-engine-extends-afterPreStart (151ms)
-2025-7-12 22:39:33-debug: [Assets Memory track]: asset-db:worker-startup-database[internal] start:228.79MB, end 242.46MB, increase: 13.67MB
-2025-7-12 22:39:33-debug: Start up the 'assets' database...
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/Scenes/mainmenu.scenebackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/Scenes/LevelSelect.scenebackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/Scenes/gamescene.scenebackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: asset-db:worker-startup-database[internal] (930ms)
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/TiledMap/City_tiles.tsxbackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/TiledMap/City_tiles.pngbackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/TiledMap/SmallBurg_outside_assets.tsxbackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/TiledMap/SmallBurg_outside_assets.pngbackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/TiledMap/city.tmxbackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/TiledMap/city2.tmxbackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/TiledMap/City_tiles.png@6c48abackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/TiledMap/SmallBurg_outside_assets.png@6c48abackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/TiledMap/smallburg_terrain.pngbackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/TiledMap/City_tiles.png@f9941background: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/TiledMap/SmallBurg_outside_assets.png@f9941background: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/TiledMap/smallburg_terrain.tsxbackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/TiledMap/smallburg_terrain_spring_with_shadows.pngbackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/TiledMap/smallburg_terrain.png@6c48abackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/TiledMap/smallburg_terrain_spring_with_shadows.tsxbackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/TiledMap/smallburg_terrain.png@f9941background: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/img/86-t.pngbackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/img/86-f.pngbackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/TiledMap/smallburg_terrain_spring_with_shadows.png@6c48abackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/img/car.pngbackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/TiledMap/smallburg_terrain_spring_with_shadows.png@f9941background: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/img/car1-crash.pngbackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/img/86-f.png@6c48abackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/img/car.png@6c48abackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/img/86-t.png@6c48abackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/img/86-f.png@f9941background: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/img/car.png@f9941background: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/img/86-t.png@f9941background: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/img/car1-crash.png@6c48abackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/img/car1-crash.png@f9941background: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/img/check-square.pngbackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/img/mini-f.pngbackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/img/rx7-f.pngbackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/img/check-square.png@6c48abackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/img/check-square.png@f9941background: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/img/rx7-f.png@6c48abackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/img/mini-f.png@6c48abackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/img/rx7-f.png@f9941background: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/img/mini-f.png@f9941background: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/img/rx7-t.pngbackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/img/taycan-f.pngbackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/img/taycan-t.pngbackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/img/rx7-t.png@6c48abackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/img/rx7-t.png@f9941background: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/img/taycan-f.png@6c48abackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/img/taycan-t.png@6c48abackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/img/taycan-f.png@f9941background: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/img/taycan-t.png@f9941background: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/img/z370-t.pngbackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/img/z370.pngbackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/img/background/jungle.pngbackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/img/z370-t.png@6c48abackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/img/background/snow.pngbackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/img/z370-t.png@f9941background: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/img/background/soccer_court.pngbackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/img/z370.png@6c48abackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/img/z370.png@f9941background: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/img/background/jungle.png@6c48abackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/img/background/jungle.png@f9941background: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/img/background/snow.png@6c48abackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/img/background/soccer_court.png@6c48abackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/img/background/snow.png@f9941background: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/img/background/soccer_court.png@f9941background: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/img/background/soccor_court2.pngbackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/background.pngbackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/img/background/soccor_court2.png@6c48abackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/img/background/soccor_court2.png@f9941background: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/background.png@6c48abackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/background.png@f9941background: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/cars/car-1.prefabbackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/background2.pngbackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/cars/car-2.prefabbackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/cars/car-3.prefabbackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/cars/car-4.prefabbackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/cars/car-5.prefabbackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/cars/healthBar.prefabbackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/background2.png@6c48abackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/levels/level-1.prefabbackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/background2.png@f9941background: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/levels/level-2.prefabbackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/levels/level-3.prefabbackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/TiledMap/city2.tmxbackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/TiledMap/city.tmxbackground: #aaff85; color: #000;color: #000;
-2025-7-12 22:39:33-debug: [Assets Memory track]: asset-db:worker-startup-database[assets] start:226.75MB, end 243.33MB, increase: 16.58MB
-2025-7-12 22:39:33-debug: lazy register asset handler text
-2025-7-12 22:39:33-debug: lazy register asset handler json
-2025-7-12 22:39:33-debug: lazy register asset handler spine-data
-2025-7-12 22:39:33-debug: lazy register asset handler dragonbones
-2025-7-12 22:39:33-debug: lazy register asset handler dragonbones-atlas
-2025-7-12 22:39:33-debug: lazy register asset handler terrain
-2025-7-12 22:39:33-debug: lazy register asset handler javascript
-2025-7-12 22:39:33-debug: lazy register asset handler typescript
-2025-7-12 22:39:33-debug: lazy register asset handler scene
-2025-7-12 22:39:33-debug: lazy register asset handler sprite-frame
-2025-7-12 22:39:33-debug: lazy register asset handler prefab
-2025-7-12 22:39:33-debug: lazy register asset handler tiled-map
-2025-7-12 22:39:33-debug: lazy register asset handler buffer
-2025-7-12 22:39:33-debug: lazy register asset handler image
-2025-7-12 22:39:33-debug: lazy register asset handler sign-image
-2025-7-12 22:39:33-debug: lazy register asset handler alpha-image
-2025-7-12 22:39:33-debug: lazy register asset handler texture
-2025-7-12 22:39:33-debug: lazy register asset handler texture-cube
-2025-7-12 22:39:33-debug: lazy register asset handler erp-texture-cube
-2025-7-12 22:39:33-debug: lazy register asset handler render-texture
-2025-7-12 22:39:33-debug: lazy register asset handler texture-cube-face
-2025-7-12 22:39:33-debug: lazy register asset handler rt-sprite-frame
-2025-7-12 22:39:33-debug: lazy register asset handler gltf
-2025-7-12 22:39:33-debug: lazy register asset handler gltf-mesh
-2025-7-12 22:39:33-debug: lazy register asset handler gltf-animation
-2025-7-12 22:39:33-debug: lazy register asset handler gltf-skeleton
-2025-7-12 22:39:33-debug: lazy register asset handler gltf-material
-2025-7-12 22:39:33-debug: lazy register asset handler gltf-scene
-2025-7-12 22:39:33-debug: lazy register asset handler directory
-2025-7-12 22:39:33-debug: lazy register asset handler material
-2025-7-12 22:39:33-debug: lazy register asset handler physics-material
-2025-7-12 22:39:33-debug: lazy register asset handler fbx
-2025-7-12 22:39:33-debug: lazy register asset handler effect
-2025-7-12 22:39:33-debug: lazy register asset handler effect-header
-2025-7-12 22:39:33-debug: lazy register asset handler audio-clip
-2025-7-12 22:39:33-debug: lazy register asset handler animation-clip
-2025-7-12 22:39:33-debug: lazy register asset handler animation-graph
-2025-7-12 22:39:33-debug: lazy register asset handler animation-graph-variant
-2025-7-12 22:39:33-debug: lazy register asset handler animation-mask
-2025-7-12 22:39:33-debug: lazy register asset handler ttf-font
-2025-7-12 22:39:33-debug: lazy register asset handler bitmap-font
-2025-7-12 22:39:33-debug: lazy register asset handler particle
-2025-7-12 22:39:33-debug: lazy register asset handler *
-2025-7-12 22:39:33-debug: lazy register asset handler auto-atlas
-2025-7-12 22:39:33-debug: lazy register asset handler label-atlas
-2025-7-12 22:39:33-debug: [Assets Memory track]: asset-db:worker-init: startup start:228.81MB, end 243.34MB, increase: 14.53MB
-2025-7-12 22:39:33-debug: lazy register asset handler render-stage
-2025-7-12 22:39:33-debug: lazy register asset handler render-flow
-2025-7-12 22:39:33-debug: lazy register asset handler instantiation-material
-2025-7-12 22:39:33-debug: lazy register asset handler instantiation-mesh
-2025-7-12 22:39:33-debug: lazy register asset handler sprite-atlas
-2025-7-12 22:39:33-debug: lazy register asset handler instantiation-skeleton
-2025-7-12 22:39:33-debug: lazy register asset handler instantiation-animation
-2025-7-12 22:39:33-debug: lazy register asset handler render-pipeline
-2025-7-12 22:39:33-debug: lazy register asset handler video-clip
-2025-7-12 22:39:33-debug: lazy register asset handler gltf-embeded-image
-2025-7-12 22:39:33-debug: asset-db:ready (3424ms)
-2025-7-12 22:39:33-debug: asset-db:start-database (1066ms)
-2025-7-12 22:39:33-debug: asset-db:worker-startup-database[assets] (1009ms)
-2025-7-12 22:39:33-debug: fix the bug of updateDefaultUserData
-2025-7-12 22:39:33-debug: init worker message success
-2025-7-12 22:39:33-debug: programming:execute-script (3ms)
-2025-7-12 22:39:33-debug: [Build Memory track]: builder:worker-init start:246.28MB, end 257.87MB, increase: 11.59MB
-2025-7-12 22:39:33-debug: builder:worker-init (205ms)
-2025-7-12 22:39:37-debug: refresh db internal success
-2025-7-12 22:39:37-debug: refresh db assets success
-2025-7-12 22:39:37-debug: Run asset db hook engine-extends:afterRefresh ...
-2025-7-12 22:39:37-debug: Run asset db hook engine-extends:afterRefresh success!
-2025-7-12 22:39:37-debug: asset-db:refresh-all-database (19ms)
-2025-7-12 22:39:37-debug: asset-db:worker-effect-data-processing (2ms)
-2025-7-12 22:39:37-debug: asset-db-hook-engine-extends-afterRefresh (2ms)

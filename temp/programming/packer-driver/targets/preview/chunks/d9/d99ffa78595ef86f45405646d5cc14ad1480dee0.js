@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Node, Prefab, instantiate, resources, UITransform, director, ProgressBar, Label, Button, TempData, CameraFollow, player, AIController, AIPlayer, PlayerManager, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _dec10, _dec11, _dec12, _dec13, _dec14, _dec15, _dec16, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _descriptor12, _descriptor13, _descriptor14, _descriptor15, _class3, _crd, ccclass, property, GameState, GameManager;
+  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Node, Prefab, instantiate, resources, UITransform, director, ProgressBar, Label, Button, TempData, CameraFollow, player, AIController, AIPlayer, PlayerManager, SceneTransition, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _dec10, _dec11, _dec12, _dec13, _dec14, _dec15, _dec16, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _descriptor12, _descriptor13, _descriptor14, _descriptor15, _class3, _crd, ccclass, property, GameState, GameManager;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -31,6 +31,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
   function _reportPossibleCrUseOfPlayerManager(extras) {
     _reporterNs.report("PlayerManager", "./PlayerManager", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfSceneTransition(extras) {
+    _reporterNs.report("SceneTransition", "./SceneTransition", _context.meta, extras);
   }
 
   return {
@@ -63,6 +67,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       AIPlayer = _unresolved_6.AIPlayer;
     }, function (_unresolved_7) {
       PlayerManager = _unresolved_7.PlayerManager;
+    }, function (_unresolved_8) {
+      SceneTransition = _unresolved_8.SceneTransition;
     }],
     execute: function () {
       _crd = true;
@@ -511,7 +517,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           // 恢复游戏时间
           director.resume(); // 重新加载当前场景
 
-          director.loadScene(director.getScene().name);
+          (_crd && SceneTransition === void 0 ? (_reportPossibleCrUseOfSceneTransition({
+            error: Error()
+          }), SceneTransition) : SceneTransition).loadScene(director.getScene().name);
         }
         /**
          * 返回主菜单
@@ -522,7 +530,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           // 恢复游戏时间
           director.resume(); // 加载主菜单场景
 
-          director.loadScene('LevelSelect');
+          (_crd && SceneTransition === void 0 ? (_reportPossibleCrUseOfSceneTransition({
+            error: Error()
+          }), SceneTransition) : SceneTransition).loadScene('LevelSelect');
         }
         /**
          * 更新游戏结束UI
