@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Button, ToggleContainer, Sprite, Color, Label, TempData, PlayerManager, SceneTransition, _dec, _dec2, _dec3, _dec4, _dec5, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _crd, ccclass, property, SelectManager;
+  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Button, ToggleContainer, Sprite, Color, Label, Node, TempData, PlayerManager, SceneTransition, PurchasePanel, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _crd, ccclass, property, SelectManager;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -21,6 +21,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("SceneTransition", "./SceneTransition", _context.meta, extras);
   }
 
+  function _reportPossibleCrUseOfPurchasePanel(extras) {
+    _reporterNs.report("PurchasePanel", "./PurchasePanel", _context.meta, extras);
+  }
+
   return {
     setters: [function (_unresolved_) {
       _reporterNs = _unresolved_;
@@ -35,27 +39,34 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       Sprite = _cc.Sprite;
       Color = _cc.Color;
       Label = _cc.Label;
+      Node = _cc.Node;
     }, function (_unresolved_2) {
       TempData = _unresolved_2.TempData;
     }, function (_unresolved_3) {
       PlayerManager = _unresolved_3.PlayerManager;
     }, function (_unresolved_4) {
       SceneTransition = _unresolved_4.SceneTransition;
+    }, function (_unresolved_5) {
+      PurchasePanel = _unresolved_5.PurchasePanel;
     }],
     execute: function () {
       _crd = true;
 
       _cclegacy._RF.push({}, "be7b23A2jVN6agcMGkP3NKP", "SelectManager", undefined);
 
-      __checkObsolete__(['_decorator', 'Component', 'Button', 'ToggleContainer', 'Toggle', 'Sprite', 'Color', 'Label', 'Node']);
+      __checkObsolete__(['_decorator', 'Component', 'Button', 'ToggleContainer', 'Toggle', 'Sprite', 'Color', 'Label', 'Node', 'find', 'instantiate']);
 
       // @ts-ignore
       ({
         ccclass,
         property
-      } = _decorator); // 车辆价格配置
+      } = _decorator); // 添加PurchasePanel引用
 
-      _export("SelectManager", SelectManager = (_dec = ccclass('SelectManager'), _dec2 = property(ToggleContainer), _dec3 = property(ToggleContainer), _dec4 = property(Button), _dec5 = property(Label), _dec(_class = (_class2 = class SelectManager extends Component {
+      // 车辆价格配置
+      _export("SelectManager", SelectManager = (_dec = ccclass('SelectManager'), _dec2 = property(ToggleContainer), _dec3 = property(ToggleContainer), _dec4 = property(Button), _dec5 = property(Label), _dec6 = property({
+        type: Node,
+        tooltip: '场景中的购买面板节点'
+      }), _dec(_class = (_class2 = class SelectManager extends Component {
         constructor() {
           super(...arguments);
 
@@ -68,6 +79,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           _initializerDefineProperty(this, "insufficientMoneyLabel", _descriptor4, this);
 
           // 金币不足提示标签
+          // 购买面板相关属性
+          _initializerDefineProperty(this, "purchasePanelNode", _descriptor5, this);
+
           // 车辆价格配置
           this.carPrices = {
             'car-1': 0,
@@ -82,9 +96,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           };
           this.insufficientMoneyTimer = 0;
+          // 金币不足提示计时器
+          this.pendingCarId = null;
         }
 
-        // 金币不足提示计时器
         onLoad() {
           this.updateLevelToggles();
           this.updateCarToggles();
@@ -107,9 +122,14 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
             toggle.interactable = isUnlocked;
             var sprite = toggle.node.getComponent(Sprite);
+            var lock = toggle.node.getChildByName('lock');
 
             if (sprite) {
               sprite.color = isUnlocked ? Color.WHITE : Color.BLACK;
+            }
+
+            if (lock) {
+              lock.active = !isUnlocked;
             } // 更新评级显示
 
 
@@ -250,23 +270,20 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             }
 
             if (purchaseButton) {
-              var _purchaseButton$getCh;
-
               purchaseButton.active = true; // 设置按钮文本
-
-              var buttonLabel = (_purchaseButton$getCh = purchaseButton.getChildByName('Label')) == null ? void 0 : _purchaseButton$getCh.getComponent(Label);
-
-              if (buttonLabel) {
-                buttonLabel.string = "\u8D2D\u4E70 " + this.carPrices[carId];
-              } // 绑定点击事件
-
+              // const buttonLabel = purchaseButton.getChildByName('Label')?.getComponent(Label);
+              // if (buttonLabel) {
+              //     buttonLabel.string = `购买 ${this.carPrices[carId]}`;
+              // }
+              // 绑定点击事件
 
               var button = purchaseButton.getComponent(Button);
 
               if (button) {
                 button.node.off(Button.EventType.CLICK);
                 button.node.on(Button.EventType.CLICK, () => {
-                  this.onPurchaseCar(carId);
+                  this.pendingCarId = carId;
+                  this.showPurchasePanel(this.carPrices[carId]);
                 }, this);
               }
             }
@@ -278,27 +295,47 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           }
         }
         /**
-         * 购买车辆
+         * 显示购买面板
          */
 
 
-        onPurchaseCar(carId) {
-          var price = this.carPrices[carId];
-
-          if (price === undefined) {
-            console.warn("\u8F66\u8F86 " + carId + " \u6CA1\u6709\u914D\u7F6E\u4EF7\u683C");
+        showPurchasePanel(price) {
+          if (!this.purchasePanelNode) {
+            console.error('购买面板节点未配置');
             return;
           }
 
+          var purchasePanel = this.purchasePanelNode.getComponent(_crd && PurchasePanel === void 0 ? (_reportPossibleCrUseOfPurchasePanel({
+            error: Error()
+          }), PurchasePanel) : PurchasePanel);
+
+          if (!purchasePanel) {
+            console.error('购买面板组件未找到');
+            return;
+          } // 确保面板在最上层
+          // this.purchasePanelNode.setSiblingIndex(Number.MAX_SAFE_INTEGER);
+          // 显示面板
+
+
+          purchasePanel.show(price, purchasePrice => {
+            // 确认购买后的回调
+            this.processPurchase(purchasePrice);
+          });
+        }
+        /**
+         * 处理实际购买逻辑
+         */
+
+
+        processPurchase(price) {
+          if (!this.pendingCarId) {
+            return;
+          }
+
+          var carId = this.pendingCarId;
           var playerManager = (_crd && PlayerManager === void 0 ? (_reportPossibleCrUseOfPlayerManager({
             error: Error()
-          }), PlayerManager) : PlayerManager).instance;
-
-          if (!playerManager) {
-            console.error('PlayerManager 实例不存在');
-            return;
-          } // 检查玩家金币是否足够
-
+          }), PlayerManager) : PlayerManager).instance; // 检查玩家金币是否足够（再次检查，因为用户可能在面板显示期间改变了金币）
 
           if (playerManager.playerData.money >= price) {
             // 扣除金币并解锁车辆
@@ -313,8 +350,42 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           } else {
             // 金币不足，显示提示
             this.showInsufficientMoneyMessage();
-          }
+          } // 重置待购买车辆ID
+
+
+          this.pendingCarId = null;
         }
+        /**
+         * 购买车辆
+         */
+        // onPurchaseCar(carId: string) {
+        //     const price = this.carPrices[carId];
+        //     if (price === undefined) {
+        //         console.warn(`车辆 ${carId} 没有配置价格`);
+        //         return;
+        //     }
+        //     const playerManager = PlayerManager.instance;
+        //     if (!playerManager) {
+        //         console.error('PlayerManager 实例不存在');
+        //         return;
+        //     }
+        //     // 检查玩家金币是否足够
+        //     if (playerManager.playerData.money >= price) {
+        //         // 扣除金币并解锁车辆
+        //         if (playerManager.spendMoney(price)) {
+        //             playerManager.unlockCar(carId);
+        //             console.log(`成功购买车辆 ${carId}，花费 ${price} 金币`);
+        //             // 更新UI显示
+        //             this.updateCarToggles();
+        //             // 保存数据
+        //             playerManager.savePlayerData();
+        //         }
+        //     } else {
+        //         // 金币不足，显示提示
+        //         this.showInsufficientMoneyMessage();
+        //     }
+        // }
+
         /**
          * 显示金币不足提示
          */
@@ -382,6 +453,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           return null;
         }
       }), _descriptor4 = _applyDecoratedDescriptor(_class2.prototype, "insufficientMoneyLabel", [_dec5], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function initializer() {
+          return null;
+        }
+      }), _descriptor5 = _applyDecoratedDescriptor(_class2.prototype, "purchasePanelNode", [_dec6], {
         configurable: true,
         enumerable: true,
         writable: true,

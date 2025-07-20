@@ -1,7 +1,7 @@
 {
   "modules": {
     "cce:/internal/x/cc": {
-      "mTimestamp": 2923.153,
+      "mTimestamp": 2775.905,
       "chunkId": "93ba276ea7b26ffcdc433fab14afc1ed6f05647b",
       "imports": [
         {
@@ -514,7 +514,7 @@
       ]
     },
     "cce:/internal/x/prerequisite-imports": {
-      "mTimestamp": 102936128.849667,
+      "mTimestamp": 133312029.041333,
       "chunkId": "6d8fd2b0177941b032ddc0733af48a561fb60657",
       "imports": [
         {
@@ -784,7 +784,7 @@
           }
         },
         {
-          "value": "file:///Users/zeruili/projects/cocos_project/driftClash/assets/scripts/SceneTransition.ts",
+          "value": "file:///Users/zeruili/projects/cocos_project/driftClash/assets/scripts/PurchasePanel.ts",
           "resolved": "__unresolved_19",
           "loc": {
             "start": {
@@ -793,12 +793,12 @@
             },
             "end": {
               "line": 23,
-              "column": 98
+              "column": 96
             }
           }
         },
         {
-          "value": "file:///Users/zeruili/projects/cocos_project/driftClash/assets/scripts/SceneTransitionTest.ts",
+          "value": "file:///Users/zeruili/projects/cocos_project/driftClash/assets/scripts/SceneTransition.ts",
           "resolved": "__unresolved_20",
           "loc": {
             "start": {
@@ -807,12 +807,12 @@
             },
             "end": {
               "line": 24,
-              "column": 102
+              "column": 98
             }
           }
         },
         {
-          "value": "file:///Users/zeruili/projects/cocos_project/driftClash/assets/scripts/SelectManager.ts",
+          "value": "file:///Users/zeruili/projects/cocos_project/driftClash/assets/scripts/SceneTransitionTest.ts",
           "resolved": "__unresolved_21",
           "loc": {
             "start": {
@@ -821,12 +821,12 @@
             },
             "end": {
               "line": 25,
-              "column": 96
+              "column": 102
             }
           }
         },
         {
-          "value": "file:///Users/zeruili/projects/cocos_project/driftClash/assets/scripts/TempData.ts",
+          "value": "file:///Users/zeruili/projects/cocos_project/driftClash/assets/scripts/SelectManager.ts",
           "resolved": "__unresolved_22",
           "loc": {
             "start": {
@@ -835,12 +835,12 @@
             },
             "end": {
               "line": 26,
-              "column": 91
+              "column": 96
             }
           }
         },
         {
-          "value": "file:///Users/zeruili/projects/cocos_project/driftClash/assets/scripts/VehicleDestructionTest.ts",
+          "value": "file:///Users/zeruili/projects/cocos_project/driftClash/assets/scripts/TempData.ts",
           "resolved": "__unresolved_23",
           "loc": {
             "start": {
@@ -849,12 +849,12 @@
             },
             "end": {
               "line": 27,
-              "column": 105
+              "column": 91
             }
           }
         },
         {
-          "value": "file:///Users/zeruili/projects/cocos_project/driftClash/assets/scripts/camera_follow.ts",
+          "value": "file:///Users/zeruili/projects/cocos_project/driftClash/assets/scripts/VehicleDestructionTest.ts",
           "resolved": "__unresolved_24",
           "loc": {
             "start": {
@@ -863,12 +863,12 @@
             },
             "end": {
               "line": 28,
-              "column": 96
+              "column": 105
             }
           }
         },
         {
-          "value": "file:///Users/zeruili/projects/cocos_project/driftClash/assets/scripts/player.ts",
+          "value": "file:///Users/zeruili/projects/cocos_project/driftClash/assets/scripts/camera_follow.ts",
           "resolved": "__unresolved_25",
           "loc": {
             "start": {
@@ -877,6 +877,20 @@
             },
             "end": {
               "line": 29,
+              "column": 96
+            }
+          }
+        },
+        {
+          "value": "file:///Users/zeruili/projects/cocos_project/driftClash/assets/scripts/player.ts",
+          "resolved": "__unresolved_26",
+          "loc": {
+            "start": {
+              "line": 30,
+              "column": 7
+            },
+            "end": {
+              "line": 30,
               "column": 89
             }
           }
@@ -1014,6 +1028,13 @@
           "resolved": {
             "type": "module",
             "url": "file:///Users/zeruili/projects/cocos_project/driftClash/assets/scripts/PlayerManagerExample.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///Users/zeruili/projects/cocos_project/driftClash/assets/scripts/PurchasePanel.ts"
           },
           "messages": []
         },
@@ -1821,7 +1842,7 @@
     },
     "file:///Users/zeruili/projects/cocos_project/driftClash/assets/scripts/CarPurchaseTest.ts": {
       "mTimestamp": {
-        "mtime": 1751991366973.6372,
+        "mtime": 1752984193663.6465,
         "uuid": "4b4e4d80-e536-48c9-811a-9601e0bf5362"
       },
       "chunkId": "b3579c24d3ff1737e64230f634d3755a64945629",
@@ -2849,7 +2870,7 @@
     },
     "file:///Users/zeruili/projects/cocos_project/driftClash/assets/scripts/SelectManager.ts": {
       "mTimestamp": {
-        "mtime": 1752764431813.241,
+        "mtime": 1753024286121.1687,
         "uuid": "be7b2dc0-da35-4de9-a81c-30690fdcd28f"
       },
       "chunkId": "b9c16df5862bbcca6e642da38ede09779782ac3e",
@@ -2869,11 +2890,11 @@
           "loc": {
             "start": {
               "line": 1,
-              "column": 99
+              "column": 118
             },
             "end": {
               "line": 1,
-              "column": 103
+              "column": 122
             }
           }
         },
@@ -2916,6 +2937,20 @@
             "end": {
               "line": 4,
               "column": 51
+            }
+          }
+        },
+        {
+          "value": "./PurchasePanel",
+          "resolved": "__unresolved_4",
+          "loc": {
+            "start": {
+              "line": 9,
+              "column": 30
+            },
+            "end": {
+              "line": 9,
+              "column": 47
             }
           }
         }
@@ -2968,6 +3003,13 @@
           "resolved": {
             "type": "module",
             "url": "file:///Users/zeruili/projects/cocos_project/driftClash/assets/scripts/SceneTransition.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///Users/zeruili/projects/cocos_project/driftClash/assets/scripts/PurchasePanel.ts"
           },
           "messages": []
         }
@@ -3258,7 +3300,7 @@
       ]
     },
     "cce:/internal/code-quality/cr.mjs": {
-      "mTimestamp": 1752666136523,
+      "mTimestamp": 1752890975838,
       "chunkId": "6a5019a719a9014c047e67aa1cf34453ab8392ce",
       "imports": [],
       "type": "esm",
@@ -3531,6 +3573,58 @@
           "resolved": {
             "type": "module",
             "url": "file:///Users/zeruili/projects/cocos_project/driftClash/assets/scripts/SceneTransition.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///Users/zeruili/projects/cocos_project/driftClash/assets/scripts/PurchasePanel.ts": {
+      "mTimestamp": {
+        "mtime": 1752985191970.8643,
+        "uuid": "c4e943de-6ca3-46a0-9231-17cb43e8e456"
+      },
+      "chunkId": "aaafdbc479e118e05b87b66f5a036fc792fd6c50",
+      "imports": [
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 84
+            },
+            "end": {
+              "line": 2,
+              "column": 88
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
           },
           "messages": []
         }

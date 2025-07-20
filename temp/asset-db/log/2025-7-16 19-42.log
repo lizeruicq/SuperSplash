@@ -2539,3 +2539,12 @@
 2025-7-18 00:20:14-debug: asset-db:reimport-asset9a4dce19-24b9-4d46-b38f-ef49f2287dcb (4ms)
 2025-7-18 00:20:14-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/Scenes/mainmenu.scenebackground: #aaff85; color: #000;color: #000;
 2025-7-18 00:20:14-debug: asset-db:reimport-asset9a4dce19-24b9-4d46-b38f-ef49f2287dcb (5ms)
+2025-7-18 17:49:56-debug: refresh db internal success
+2025-7-18 17:49:56-debug: refresh db assets success
+2025-7-18 17:49:56-debug: Run asset db hook engine-extends:afterRefresh ...
+2025-7-18 17:49:56-debug: Run asset db hook engine-extends:afterRefresh success!
+2025-7-18 17:49:56-debug: asset-db:refresh-all-database (46ms)
+2025-7-18 17:49:56-debug: asset-db-hook-engine-extends-afterRefresh (1ms)
+2025-7-18 17:49:56-debug: asset-db:worker-effect-data-processing (1ms)
+2025-7-18 17:49:57-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/Scenes/mainmenu.scenebackground: #aaff85; color: #000;color: #000;
+2025-7-18 17:49:57-debug: asset-db:reimport-asset9a4dce19-24b9-4d46-b38f-ef49f2287dcb (9ms)
