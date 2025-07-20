@@ -1,9 +1,12 @@
-import { _decorator, Component, Button, ToggleContainer, Toggle, Sprite, Color, Label, Node } from 'cc';
+import { _decorator, Component, Button, ToggleContainer, Toggle, Sprite, Color, Label, Node, find, instantiate } from 'cc';
 import { TempData } from './TempData';
 import { PlayerManager } from './PlayerManager';
 import { SceneTransition } from './SceneTransition';
 // @ts-ignore
 const { ccclass, property } = _decorator;
+
+// 添加PurchasePanel引用
+import { PurchasePanel } from './PurchasePanel';
 
 // 车辆价格配置
 interface CarPriceConfig {
@@ -24,6 +27,13 @@ export class SelectManager extends Component {
     @property(Label)
     insufficientMoneyLabel: Label = null!; // 金币不足提示标签
 
+    // 购买面板相关属性
+    @property({
+        type: Node,
+        tooltip: '场景中的购买面板节点',
+    })
+    private purchasePanelNode: Node = null!;
+
     // 车辆价格配置
     private carPrices: CarPriceConfig = {
         'car-1': 0,      // 默认车辆免费
@@ -34,6 +44,7 @@ export class SelectManager extends Component {
     };
 
     private insufficientMoneyTimer: number = 0; // 金币不足提示计时器
+    private pendingCarId: string = null!;
 
     onLoad() {
         this.updateLevelToggles();
@@ -59,8 +70,13 @@ export class SelectManager extends Component {
             // 设置交互性和颜色
             toggle.interactable = isUnlocked;
             const sprite = toggle.node.getComponent(Sprite);
+            const lock = toggle.node.getChildByName('lock');
+
             if (sprite) {
                 sprite.color = isUnlocked ? Color.WHITE : Color.BLACK;
+            }
+            if (lock) {
+                lock.active = !isUnlocked;
             }
 
             // 更新评级显示
@@ -189,17 +205,18 @@ export class SelectManager extends Component {
                 purchaseButton.active = true;
 
                 // 设置按钮文本
-                const buttonLabel = purchaseButton.getChildByName('Label')?.getComponent(Label);
-                if (buttonLabel) {
-                    buttonLabel.string = `购买 ${this.carPrices[carId]}`;
-                }
+                // const buttonLabel = purchaseButton.getChildByName('Label')?.getComponent(Label);
+                // if (buttonLabel) {
+                //     buttonLabel.string = `购买 ${this.carPrices[carId]}`;
+                // }
 
                 // 绑定点击事件
                 const button = purchaseButton.getComponent(Button);
                 if (button) {
                     button.node.off(Button.EventType.CLICK);
                     button.node.on(Button.EventType.CLICK, () => {
-                        this.onPurchaseCar(carId);
+                        this.pendingCarId = carId;
+                        this.showPurchasePanel(this.carPrices[carId]);
                     }, this);
                 }
             }
@@ -212,22 +229,42 @@ export class SelectManager extends Component {
     }
 
     /**
-     * 购买车辆
+     * 显示购买面板
      */
-    onPurchaseCar(carId: string) {
-        const price = this.carPrices[carId];
-        if (price === undefined) {
-            console.warn(`车辆 ${carId} 没有配置价格`);
+    private showPurchasePanel(price: number) {
+        if (!this.purchasePanelNode) {
+            console.error('购买面板节点未配置');
             return;
         }
 
+        const purchasePanel = this.purchasePanelNode.getComponent<PurchasePanel>(PurchasePanel);
+        if (!purchasePanel) {
+            console.error('购买面板组件未找到');
+            return;
+        }
+
+        // 确保面板在最上层
+        // this.purchasePanelNode.setSiblingIndex(Number.MAX_SAFE_INTEGER);
+
+        // 显示面板
+        purchasePanel.show(price, (purchasePrice) => {
+            // 确认购买后的回调
+            this.processPurchase(purchasePrice);
+        });
+    }
+
+    /**
+     * 处理实际购买逻辑
+     */
+    private processPurchase(price: number) {
+        if (!this.pendingCarId) {
+            return;
+        }
+
+        const carId = this.pendingCarId;
         const playerManager = PlayerManager.instance;
-        if (!playerManager) {
-            console.error('PlayerManager 实例不存在');
-            return;
-        }
 
-        // 检查玩家金币是否足够
+        // 检查玩家金币是否足够（再次检查，因为用户可能在面板显示期间改变了金币）
         if (playerManager.playerData.money >= price) {
             // 扣除金币并解锁车辆
             if (playerManager.spendMoney(price)) {
@@ -245,7 +282,46 @@ export class SelectManager extends Component {
             // 金币不足，显示提示
             this.showInsufficientMoneyMessage();
         }
+
+        // 重置待购买车辆ID
+        this.pendingCarId = null;
     }
+
+    /**
+     * 购买车辆
+     */
+    // onPurchaseCar(carId: string) {
+    //     const price = this.carPrices[carId];
+    //     if (price === undefined) {
+    //         console.warn(`车辆 ${carId} 没有配置价格`);
+    //         return;
+    //     }
+
+    //     const playerManager = PlayerManager.instance;
+    //     if (!playerManager) {
+    //         console.error('PlayerManager 实例不存在');
+    //         return;
+    //     }
+
+    //     // 检查玩家金币是否足够
+    //     if (playerManager.playerData.money >= price) {
+    //         // 扣除金币并解锁车辆
+    //         if (playerManager.spendMoney(price)) {
+    //             playerManager.unlockCar(carId);
+
+    //             console.log(`成功购买车辆 ${carId}，花费 ${price} 金币`);
+
+    //             // 更新UI显示
+    //             this.updateCarToggles();
+
+    //             // 保存数据
+    //             playerManager.savePlayerData();
+    //         }
+    //     } else {
+    //         // 金币不足，显示提示
+    //         this.showInsufficientMoneyMessage();
+    //     }
+    // }
 
     /**
      * 显示金币不足提示
@@ -286,3 +362,4 @@ export class SelectManager extends Component {
         this.carPrices[carId] = price;
     }
 }
+

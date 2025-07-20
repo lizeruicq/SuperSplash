@@ -144,23 +144,33 @@
     "value": {
       "depends": [
         "091c5c0e-b72a-4cad-ab68-635bc57ff236",
-        "20c9e6aa-64e9-4be4-baa7-0ec86216d0e3@f9941",
-        "57520716-48c8-4a19-8acf-41c9f8777fb0@f9941",
-        "20d2e143-4574-42b8-884c-e2c4dc7b3dd4@f9941",
+        "b2b39a66-2564-4be8-8802-d043d12ffd8b@f9941",
+        "a47a6013-b8ef-4f76-8a70-0a5d0f2ba81b@f9941",
+        "cff45180-1973-4a53-8d9e-791cf8f042d8@f9941",
+        "4befdd25-e632-4e7e-aa34-819783640186@f9941",
+        "5c270278-c097-4dba-9f15-f3886683bff7@f9941",
         "0bfa81f7-9b43-4f2a-bc44-2375066c8694@f9941",
         "20835ba4-6145-4fbc-a58a-051ce700aa3e@f9941",
         "544e49d6-3f05-4fa8-9a9e-091f98fc2ce8@f9941",
         "951249e0-9f16-456d-8b85-a6ca954da16b@f9941",
         "807a7b47-3819-4529-931c-683fbcf44eb0@f9941",
         "d0ade2fb-557f-4edb-a96c-d68e19c7c942@f9941",
+        "b730527c-3233-41c2-aaf7-7cdab58f9749@f9941",
+        "9368a3e2-29bf-4ad3-a422-77a08242544b@f9941",
+        "a50181e9-ecbd-4d36-bf53-3db514f24fee@f9941",
         "35990206-f1f7-49c0-91d6-a50921fc8128@f9941",
         "5308cc80-fcde-4667-baa6-dbcdc87fd132@f9941",
         "a9e97b11-149f-46e6-a990-c95fd6d91cd7@f9941",
         "0b33dc38-0c13-4f55-b754-27d76610db59@f9941",
         "7e95e032-b6ae-4de9-a8ab-c81b24b5fb5f@f9941",
+        "4cf1948a-ffca-426e-9c43-1e7c864a1b60@f9941",
+        "593904f2-fa85-498f-9b0e-9f79890c24fd@f9941",
+        "a426c2c8-58b1-4e5a-a16c-e75061a2d034@f9941",
+        "6a0179db-b0bc-4905-8953-8ab076a3cfd6@f9941",
         "81520cf5-3a02-463b-b3ec-c8870a3f4940"
       ],
       "dependScripts": [
+        "c4e943de-6ca3-46a0-9231-17cb43e8e456",
         "CC3eba29-7abb-723a-f7ab-ae275e2277e8",
         "66fbc94f-5230-4bee-8600-db121d4f07fe",
         "be7b2dc0-da35-4de9-a81c-30690fdcd28f"
@@ -192,7 +202,7 @@
     "value": {
       "depends": [
         "9a4dce19-24b9-4d46-b38f-ef49f2287dcb",
-        "8e4b7ec0-ba7e-4952-bd46-9750970405c6@f9941",
+        "1c5052fa-8819-46bc-bb95-1aa90b873e2e@f9941",
         "4cf1948a-ffca-426e-9c43-1e7c864a1b60@f9941",
         "593904f2-fa85-498f-9b0e-9f79890c24fd@f9941",
         "1c18f6e7-3b13-401b-85a1-746bf7284949@f9941",
@@ -758,9 +768,7 @@
   },
   "20c9e6aa-64e9-4be4-baa7-0ec86216d0e3": {
     "url": "db://assets/img/menu/background2.png",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "f07db45e-fa1a-499c-b315-fc3e50f3aafa": {
@@ -1403,6 +1411,161 @@
         "c161466d-78da-494f-9ff2-6a5b9ae13301"
       ]
     },
+    "versionCode": 1
+  },
+  "1c5052fa-8819-46bc-bb95-1aa90b873e2e": {
+    "url": "db://assets/img/menu/background1.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "1c5052fa-8819-46bc-bb95-1aa90b873e2e@6c48a": {
+    "url": "db://assets/img/menu/background1.png@6c48a",
+    "value": {
+      "depends": [
+        "1c5052fa-8819-46bc-bb95-1aa90b873e2e"
+      ]
+    },
+    "versionCode": 1
+  },
+  "1c5052fa-8819-46bc-bb95-1aa90b873e2e@f9941": {
+    "url": "db://assets/img/menu/background1.png@f9941",
+    "value": {
+      "depends": [
+        "1c5052fa-8819-46bc-bb95-1aa90b873e2e@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "b2b39a66-2564-4be8-8802-d043d12ffd8b": {
+    "url": "db://assets/img/menu/background2.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "b2b39a66-2564-4be8-8802-d043d12ffd8b@6c48a": {
+    "url": "db://assets/img/menu/background2.png@6c48a",
+    "value": {
+      "depends": [
+        "b2b39a66-2564-4be8-8802-d043d12ffd8b"
+      ]
+    },
+    "versionCode": 1
+  },
+  "b2b39a66-2564-4be8-8802-d043d12ffd8b@f9941": {
+    "url": "db://assets/img/menu/background2.png@f9941",
+    "value": {
+      "depends": [
+        "b2b39a66-2564-4be8-8802-d043d12ffd8b@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "a47a6013-b8ef-4f76-8a70-0a5d0f2ba81b": {
+    "url": "db://assets/img/menu/helmet.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "a47a6013-b8ef-4f76-8a70-0a5d0f2ba81b@6c48a": {
+    "url": "db://assets/img/menu/helmet.png@6c48a",
+    "value": {
+      "depends": [
+        "a47a6013-b8ef-4f76-8a70-0a5d0f2ba81b"
+      ]
+    },
+    "versionCode": 1
+  },
+  "a47a6013-b8ef-4f76-8a70-0a5d0f2ba81b@f9941": {
+    "url": "db://assets/img/menu/helmet.png@f9941",
+    "value": {
+      "depends": [
+        "a47a6013-b8ef-4f76-8a70-0a5d0f2ba81b@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "cff45180-1973-4a53-8d9e-791cf8f042d8": {
+    "url": "db://assets/img/menu/moeny.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "cff45180-1973-4a53-8d9e-791cf8f042d8@6c48a": {
+    "url": "db://assets/img/menu/moeny.png@6c48a",
+    "value": {
+      "depends": [
+        "cff45180-1973-4a53-8d9e-791cf8f042d8"
+      ]
+    },
+    "versionCode": 1
+  },
+  "cff45180-1973-4a53-8d9e-791cf8f042d8@f9941": {
+    "url": "db://assets/img/menu/moeny.png@f9941",
+    "value": {
+      "depends": [
+        "cff45180-1973-4a53-8d9e-791cf8f042d8@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "5c270278-c097-4dba-9f15-f3886683bff7": {
+    "url": "db://assets/img/menu/lock.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "5c270278-c097-4dba-9f15-f3886683bff7@6c48a": {
+    "url": "db://assets/img/menu/lock.png@6c48a",
+    "value": {
+      "depends": [
+        "5c270278-c097-4dba-9f15-f3886683bff7"
+      ]
+    },
+    "versionCode": 1
+  },
+  "5c270278-c097-4dba-9f15-f3886683bff7@f9941": {
+    "url": "db://assets/img/menu/lock.png@f9941",
+    "value": {
+      "depends": [
+        "5c270278-c097-4dba-9f15-f3886683bff7@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "9368a3e2-29bf-4ad3-a422-77a08242544b": {
+    "url": "db://assets/img/menu/select2.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "9368a3e2-29bf-4ad3-a422-77a08242544b@6c48a": {
+    "url": "db://assets/img/menu/select2.png@6c48a",
+    "value": {
+      "depends": [
+        "9368a3e2-29bf-4ad3-a422-77a08242544b"
+      ]
+    },
+    "versionCode": 1
+  },
+  "9368a3e2-29bf-4ad3-a422-77a08242544b@f9941": {
+    "url": "db://assets/img/menu/select2.png@f9941",
+    "value": {
+      "depends": [
+        "9368a3e2-29bf-4ad3-a422-77a08242544b@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "c4e943de-6ca3-46a0-9231-17cb43e8e456": {
+    "url": "db://assets/scripts/PurchasePanel.ts",
+    "value": {},
     "versionCode": 1
   }
 }

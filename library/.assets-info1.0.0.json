@@ -10,7 +10,7 @@
       "uuid": "ca8300bc-5694-4fb2-9420-c134432c4866"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/img": {
-      "time": 1752511891564.781,
+      "time": 1752897928533.7007,
       "uuid": "f04d4757-2526-40bc-83dc-41410588d6eb"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/resources": {
@@ -18,7 +18,7 @@
       "uuid": "d97d032d-727a-433c-9189-878a2868c79d"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/scripts": {
-      "time": 1752764446971.6685,
+      "time": 1752984207644.8904,
       "uuid": "d4ffaca8-3516-4d6f-9187-e37ee8010ebd"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background": {
@@ -26,7 +26,7 @@
       "uuid": "6e03cd48-8a60-412f-b20f-82f4e1b5b329"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu": {
-      "time": 1752758444514.5884,
+      "time": 1752939687169.0164,
       "uuid": "b3322b39-4b8e-4556-8194-a14dbd5f51a9"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab": {
@@ -50,7 +50,7 @@
       "uuid": "ff477e7e-ceef-42c8-804f-c97803369c7b"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/scripts/CarPurchaseTest.ts": {
-      "time": 1751991366973.6372,
+      "time": 1752984193663.6465,
       "uuid": "4b4e4d80-e536-48c9-811a-9601e0bf5362"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/scripts/GameManager.ts": {
@@ -94,7 +94,7 @@
       "uuid": "20b5e8dd-5831-40bc-a3c3-2eba62b0f2b3"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/scripts/SelectManager.ts": {
-      "time": 1752764431813.241,
+      "time": 1753024286121.1687,
       "uuid": "be7b2dc0-da35-4de9-a81c-30690fdcd28f"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/scripts/TempData.ts": {
@@ -198,7 +198,7 @@
       "time": 1750948553272.1372
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/Scenes/LevelSelect.scene": {
-      "time": 1752764715423.166,
+      "time": 1753025016481.4915,
       "uuid": "091c5c0e-b72a-4cad-ab68-635bc57ff236"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/Scenes/gamescene.scene": {
@@ -206,7 +206,7 @@
       "uuid": "1563d039-d898-4d8f-9415-9f1da853b8a3"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/Scenes/mainmenu.scene": {
-      "time": 1752769214277.6667,
+      "time": 1752938604640.5166,
       "uuid": "9a4dce19-24b9-4d46-b38f-ef49f2287dcb"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/TiledMap/City_tiles.png": {
@@ -286,7 +286,7 @@
       "uuid": "a9e97b11-149f-46e6-a990-c95fd6d91cd7"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/img/taycan-t.png": {
-      "time": 1752297317515.436,
+      "time": 1752897928534.9988,
       "uuid": "d6c5db05-a7b5-4c39-b29f-89c86c315dcf"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/img/z370-t.png": {
@@ -317,10 +317,6 @@
       "time": 1752505113483.7354,
       "uuid": "8e4b7ec0-ba7e-4952-bd46-9750970405c6"
     },
-    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/background2.png": {
-      "time": 1751174286817.8877,
-      "uuid": "20c9e6aa-64e9-4be4-baa7-0ec86216d0e3"
-    },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/shezhi.png": {
       "time": 1752505777785.0217,
       "uuid": "f07db45e-fa1a-499c-b315-fc3e50f3aafa"
@@ -330,19 +326,19 @@
       "uuid": "37fef8d9-5917-47b3-a40f-4e2ace6bf328"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/cars/car-2.prefab": {
-      "time": 1752297892939.975,
+      "time": 1752898232603.2727,
       "uuid": "87676691-0988-4a4f-823c-9ede01a40e1c"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/cars/car-3.prefab": {
-      "time": 1752297949268.8665,
+      "time": 1752898225901.786,
       "uuid": "48fa46bf-e334-4f77-b8e5-b81b32cc3846"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/cars/car-4.prefab": {
-      "time": 1752310828917.4,
+      "time": 1752898194696.021,
       "uuid": "471a5567-970e-4fc0-9056-614a089c850d"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/cars/car-5.prefab": {
-      "time": 1752310815621.1384,
+      "time": 1752898179226.7686,
       "uuid": "642f4c4e-3979-4274-9594-3c8286a57fb2"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/cars/healthBar.prefab": {
@@ -425,7 +421,7 @@
       "time": 1752545245355.454
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/img/taycan-t.png.meta": {
-      "time": 1752546544851.523
+      "time": 1752897928637.0527
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/img/taycan-f.png.meta": {
       "time": 1752546541478.2397
@@ -480,9 +476,6 @@
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/soccer_court.png.meta": {
       "time": 1751292845179.1672
-    },
-    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/background2.png.meta": {
-      "time": 1751174326711.5562
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/traffic.png.meta": {
       "time": 1752511920975.2095
@@ -595,6 +588,55 @@
     "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/loading.prefab": {
       "time": 1752764704358.6055,
       "uuid": "81520cf5-3a02-463b-b3ec-c8870a3f4940"
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/background1.png.meta": {
+      "time": 1752891498595.658
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/background2.png.meta": {
+      "time": 1752891498613.7517
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/background1.png": {
+      "time": 1752891498563.5964,
+      "uuid": "1c5052fa-8819-46bc-bb95-1aa90b873e2e"
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/background2.png": {
+      "time": 1752891498565.2583,
+      "uuid": "b2b39a66-2564-4be8-8802-d043d12ffd8b"
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/helmet.png.meta": {
+      "time": 1752896266685.539
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/helmet.png": {
+      "time": 1752896266672.393,
+      "uuid": "a47a6013-b8ef-4f76-8a70-0a5d0f2ba81b"
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/moeny.png.meta": {
+      "time": 1752897069058.643
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/moeny.png": {
+      "time": 1752897069048.1191,
+      "uuid": "cff45180-1973-4a53-8d9e-791cf8f042d8"
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/lock.png.meta": {
+      "time": 1752938388990.0142
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/lock.png": {
+      "time": 1752938388981.9143,
+      "uuid": "5c270278-c097-4dba-9f15-f3886683bff7"
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/select2.png.meta": {
+      "time": 1752939687177.8015
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/select2.png": {
+      "time": 1752939687168.1555,
+      "uuid": "9368a3e2-29bf-4ad3-a422-77a08242544b"
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/scripts/PurchasePanel.ts.meta": {
+      "time": 1752984207646.1838
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/scripts/PurchasePanel.ts": {
+      "time": 1752985191970.8643,
+      "uuid": "c4e943de-6ca3-46a0-9231-17cb43e8e456"
     }
   },
   "missing": {
@@ -647,6 +689,11 @@
       "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/scripts/SceneFader.ts",
       "time": 1752764000376.482,
       "removeTime": 1752764030995
+    },
+    "20c9e6aa-64e9-4be4-baa7-0ec86216d0e3": {
+      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/background2.png",
+      "time": 1751174286817.8877,
+      "removeTime": 1752891428658
     }
   }
 }
