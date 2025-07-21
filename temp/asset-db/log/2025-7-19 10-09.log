@@ -1918,3 +1918,267 @@
 2025-7-20 23:23:31-debug: asset-db:reimport-asset091c5c0e-b72a-4cad-ab68-635bc57ff236 (13ms)
 2025-7-20 23:23:36-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/Scenes/LevelSelect.scenebackground: #aaff85; color: #000;color: #000;
 2025-7-20 23:23:36-debug: asset-db:reimport-asset091c5c0e-b72a-4cad-ab68-635bc57ff236 (10ms)
+2025-7-20 23:25:51-debug: refresh db internal success
+2025-7-20 23:25:51-debug: refresh db assets success
+2025-7-20 23:25:51-debug: Run asset db hook engine-extends:afterRefresh ...
+2025-7-20 23:25:51-debug: Run asset db hook engine-extends:afterRefresh success!
+2025-7-20 23:25:51-debug: asset-db:refresh-all-database (38ms)
+2025-7-20 23:25:55-debug: refresh db internal success
+2025-7-20 23:25:55-debug: refresh db assets success
+2025-7-20 23:25:55-debug: Run asset db hook engine-extends:afterRefresh success!
+2025-7-20 23:25:55-debug: Run asset db hook engine-extends:afterRefresh ...
+2025-7-20 23:25:55-debug: asset-db:refresh-all-database (25ms)
+2025-7-21 13:00:06-debug: refresh db internal success
+2025-7-21 13:00:06-debug: refresh db assets success
+2025-7-21 13:00:06-debug: Run asset db hook engine-extends:afterRefresh ...
+2025-7-21 13:00:06-debug: Run asset db hook engine-extends:afterRefresh success!
+2025-7-21 13:00:06-debug: asset-db:refresh-all-database (56ms)
+2025-7-21 13:00:06-debug: asset-db:worker-effect-data-processing (1ms)
+2025-7-21 13:00:06-debug: asset-db-hook-engine-extends-afterRefresh (2ms)
+2025-7-21 20:29:08-debug: refresh db internal success
+2025-7-21 20:29:08-debug: refresh db assets success
+2025-7-21 20:29:08-debug: Run asset db hook engine-extends:afterRefresh ...
+2025-7-21 20:29:08-debug: Run asset db hook engine-extends:afterRefresh success!
+2025-7-21 20:29:08-debug: asset-db:refresh-all-database (46ms)
+2025-7-21 20:29:08-debug: asset-db:worker-effect-data-processing (1ms)
+2025-7-21 20:29:08-debug: asset-db-hook-engine-extends-afterRefresh (2ms)
+2025-7-21 23:03:25-debug: refresh db internal success
+2025-7-21 23:03:25-debug: refresh db assets success
+2025-7-21 23:03:25-debug: Run asset db hook engine-extends:afterRefresh ...
+2025-7-21 23:03:25-debug: Run asset db hook engine-extends:afterRefresh success!
+2025-7-21 23:03:25-debug: asset-db:refresh-all-database (43ms)
+2025-7-21 23:03:25-debug: asset-db:worker-effect-data-processing (1ms)
+2025-7-21 23:03:25-debug: asset-db-hook-engine-extends-afterRefresh (1ms)
+2025-7-21 23:04:26-debug: refresh db internal success
+2025-7-21 23:04:26-debug: refresh db assets success
+2025-7-21 23:04:26-debug: Run asset db hook engine-extends:afterRefresh ...
+2025-7-21 23:04:26-debug: Run asset db hook engine-extends:afterRefresh success!
+2025-7-21 23:04:26-debug: asset-db:refresh-all-database (39ms)
+2025-7-21 23:04:26-debug: asset-db-hook-engine-extends-afterRefresh (1ms)
+2025-7-21 23:04:26-debug: asset-db:worker-effect-data-processing (1ms)
+2025-7-21 23:04:47-debug: refresh db internal success
+2025-7-21 23:04:47-debug: refresh db assets success
+2025-7-21 23:04:47-debug: Run asset db hook engine-extends:afterRefresh success!
+2025-7-21 23:04:47-debug: Run asset db hook engine-extends:afterRefresh ...
+2025-7-21 23:04:47-debug: asset-db:refresh-all-database (13ms)
+2025-7-21 23:04:47-debug: asset-db-hook-engine-extends-afterRefresh (1ms)
+2025-7-21 23:04:47-debug: asset-db:worker-effect-data-processing (1ms)
+2025-7-21 23:04:55-debug: start refresh asset from /Users/zeruili/projects/cocos_project/driftClash/assets/resources/sound...
+2025-7-21 23:04:55-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/resources/soundbackground: #aaff85; color: #000;color: #000;
+2025-7-21 23:04:55-debug: refresh asset /Users/zeruili/projects/cocos_project/driftClash/assets/resources success
+2025-7-21 23:04:56-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/resourcesbackground: #aaff85; color: #000;color: #000;
+2025-7-21 23:08:22-debug: refresh db internal success
+2025-7-21 23:08:22-debug: refresh db assets success
+2025-7-21 23:08:22-debug: Run asset db hook engine-extends:afterRefresh ...
+2025-7-21 23:08:22-debug: Run asset db hook engine-extends:afterRefresh success!
+2025-7-21 23:08:22-debug: asset-db:refresh-all-database (25ms)
+2025-7-21 23:08:25-debug: asset-db:reimport-asset/Users/zeruili/projects/cocos_project/driftClash/assets/resources/sound/Plop.ogg (1ms)
+2025-7-21 23:08:25-debug: start refresh asset from /Users/zeruili/projects/cocos_project/driftClash/assets/resources/sound/Plop.ogg...
+2025-7-21 23:08:25-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/resources/sound/Plop.oggbackground: #aaff85; color: #000;color: #000;
+2025-7-21 23:08:25-debug: start refresh asset from /Users/zeruili/projects/cocos_project/driftClash/assets/resources/sound/crash.ogg...
+2025-7-21 23:08:25-debug: start refresh asset from /Users/zeruili/projects/cocos_project/driftClash/assets/resources/sound/tires_squal_loop.wav...
+2025-7-21 23:08:25-debug: start refresh asset from /Users/zeruili/projects/cocos_project/driftClash/assets/resources/sound/running.wav...
+2025-7-21 23:08:25-debug: asset-db:reimport-asset/Users/zeruili/projects/cocos_project/driftClash/assets/resources/sound/running.wav (9ms)
+2025-7-21 23:08:25-debug: asset-db:reimport-asset/Users/zeruili/projects/cocos_project/driftClash/assets/resources/sound/bgm.wav (1ms)
+2025-7-21 23:08:25-debug: start refresh asset from /Users/zeruili/projects/cocos_project/driftClash/assets/resources/sound/bgm.wav...
+2025-7-21 23:08:25-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/resources/sound/crash.oggbackground: #aaff85; color: #000;color: #000;
+2025-7-21 23:08:25-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/resources/sound/tires_squal_loop.wavbackground: #aaff85; color: #000;color: #000;
+2025-7-21 23:08:25-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/resources/sound/running.wavbackground: #aaff85; color: #000;color: #000;
+2025-7-21 23:08:25-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/resources/sound/bgm.wavbackground: #aaff85; color: #000;color: #000;
+2025-7-21 23:08:25-debug: refresh asset /Users/zeruili/projects/cocos_project/driftClash/assets/resources/sound success
+2025-7-21 23:08:25-debug: refresh asset /Users/zeruili/projects/cocos_project/driftClash/assets/resources/sound success
+2025-7-21 23:08:25-debug: refresh asset /Users/zeruili/projects/cocos_project/driftClash/assets/resources/sound success
+2025-7-21 23:08:25-debug: refresh asset /Users/zeruili/projects/cocos_project/driftClash/assets/resources/sound success
+2025-7-21 23:08:25-debug: refresh asset /Users/zeruili/projects/cocos_project/driftClash/assets/resources/sound success
+2025-7-21 23:08:25-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/resources/soundbackground: #aaff85; color: #000;color: #000;
+2025-7-21 23:08:32-debug: start refresh asset from /Users/zeruili/projects/cocos_project/driftClash/assets/resources/sound/drift.mp3...
+2025-7-21 23:08:32-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/resources/sound/drift.mp3background: #aaff85; color: #000;color: #000;
+2025-7-21 23:08:32-debug: asset-db:reimport-asset/Users/zeruili/projects/cocos_project/driftClash/assets/resources/sound/engine_on.mp3 (1ms)
+2025-7-21 23:08:32-debug: start refresh asset from /Users/zeruili/projects/cocos_project/driftClash/assets/resources/sound/engine_on.mp3...
+2025-7-21 23:08:32-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/resources/sound/engine_on.mp3background: #aaff85; color: #000;color: #000;
+2025-7-21 23:08:32-debug: refresh asset /Users/zeruili/projects/cocos_project/driftClash/assets/resources/sound success
+2025-7-21 23:08:32-debug: refresh asset /Users/zeruili/projects/cocos_project/driftClash/assets/resources/sound success
+2025-7-21 23:08:32-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/resources/soundbackground: #aaff85; color: #000;color: #000;
+2025-7-21 23:08:32-debug: refresh db internal success
+2025-7-21 23:08:32-debug: refresh db assets success
+2025-7-21 23:08:32-debug: Run asset db hook engine-extends:afterRefresh ...
+2025-7-21 23:08:32-debug: Run asset db hook engine-extends:afterRefresh success!
+2025-7-21 23:08:32-debug: asset-db:refresh-all-database (18ms)
+2025-7-21 23:08:35-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/Scenes/LevelSelect.scenebackground: #aaff85; color: #000;color: #000;
+2025-7-21 23:08:35-debug: asset-db:reimport-asset091c5c0e-b72a-4cad-ab68-635bc57ff236 (12ms)
+2025-7-21 23:08:44-debug: refresh db internal success
+2025-7-21 23:08:44-debug: refresh db assets success
+2025-7-21 23:08:44-debug: Run asset db hook engine-extends:afterRefresh ...
+2025-7-21 23:08:44-debug: Run asset db hook engine-extends:afterRefresh success!
+2025-7-21 23:08:44-debug: asset-db:refresh-all-database (31ms)
+2025-7-21 23:08:44-debug: asset-db:worker-effect-data-processing (1ms)
+2025-7-21 23:08:44-debug: asset-db-hook-engine-extends-afterRefresh (1ms)
+2025-7-21 23:27:57-debug: refresh db internal success
+2025-7-21 23:27:57-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/scripts/SoundManager.tsbackground: #aaff85; color: #000;color: #000;
+2025-7-21 23:27:57-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/scriptsbackground: #aaff85; color: #000;color: #000;
+2025-7-21 23:27:57-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/scripts/GameManager.tsbackground: #aaff85; color: #000;color: #000;
+2025-7-21 23:27:57-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/scripts/MainMenuController.tsbackground: #aaff85; color: #000;color: #000;
+2025-7-21 23:27:57-debug: refresh db assets success
+2025-7-21 23:27:57-debug: Run asset db hook engine-extends:afterRefresh ...
+2025-7-21 23:27:57-debug: Run asset db hook engine-extends:afterRefresh success!
+2025-7-21 23:27:57-debug: asset-db:refresh-all-database (48ms)
+2025-7-21 23:27:57-debug: asset-db:worker-effect-data-processing (1ms)
+2025-7-21 23:27:57-debug: asset-db-hook-engine-extends-afterRefresh (1ms)
+2025-7-21 23:29:42-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/Scenes/mainmenu.scenebackground: #aaff85; color: #000;color: #000;
+2025-7-21 23:29:42-debug: asset-db:reimport-asset9a4dce19-24b9-4d46-b38f-ef49f2287dcb (9ms)
+2025-7-21 23:30:00-debug: refresh db internal success
+2025-7-21 23:30:00-debug: refresh db assets success
+2025-7-21 23:30:00-debug: Run asset db hook engine-extends:afterRefresh ...
+2025-7-21 23:30:00-debug: Run asset db hook engine-extends:afterRefresh success!
+2025-7-21 23:30:00-debug: asset-db:refresh-all-database (35ms)
+2025-7-21 23:30:00-debug: asset-db:worker-effect-data-processing (1ms)
+2025-7-21 23:30:00-debug: asset-db-hook-engine-extends-afterRefresh (1ms)
+2025-7-21 23:30:30-debug: refresh db internal success
+2025-7-21 23:30:30-debug: refresh db assets success
+2025-7-21 23:30:30-debug: Run asset db hook engine-extends:afterRefresh ...
+2025-7-21 23:30:30-debug: Run asset db hook engine-extends:afterRefresh success!
+2025-7-21 23:30:30-debug: asset-db:refresh-all-database (30ms)
+2025-7-21 23:30:30-debug: asset-db:worker-effect-data-processing (1ms)
+2025-7-21 23:30:30-debug: asset-db-hook-engine-extends-afterRefresh (1ms)
+2025-7-21 23:30:43-debug: refresh db internal success
+2025-7-21 23:30:43-debug: refresh db assets success
+2025-7-21 23:30:43-debug: Run asset db hook engine-extends:afterRefresh ...
+2025-7-21 23:30:43-debug: Run asset db hook engine-extends:afterRefresh success!
+2025-7-21 23:30:43-debug: asset-db:refresh-all-database (29ms)
+2025-7-21 23:30:43-debug: asset-db:worker-effect-data-processing (1ms)
+2025-7-21 23:30:43-debug: asset-db-hook-engine-extends-afterRefresh (1ms)
+2025-7-21 23:31:00-debug: refresh db internal success
+2025-7-21 23:31:00-debug: refresh db assets success
+2025-7-21 23:31:00-debug: Run asset db hook engine-extends:afterRefresh ...
+2025-7-21 23:31:00-debug: Run asset db hook engine-extends:afterRefresh success!
+2025-7-21 23:31:00-debug: asset-db:refresh-all-database (28ms)
+2025-7-21 23:31:03-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/Scenes/mainmenu.scenebackground: #aaff85; color: #000;color: #000;
+2025-7-21 23:31:03-debug: asset-db:reimport-asset9a4dce19-24b9-4d46-b38f-ef49f2287dcb (10ms)
+2025-7-21 23:31:07-debug: Query all assets info in project
+2025-7-21 23:31:07-debug: init custom config: keepNodeUuid: false, useCache: true
+2025-7-21 23:31:07-debug: Skip compress image, progress: 0%
+2025-7-21 23:31:07-debug: Init all bundles start..., progress: 0%
+2025-7-21 23:31:07-debug: 查询 Asset Bundle start, progress: 0%
+2025-7-21 23:31:07-debug: Init bundle root assets start..., progress: 0%
+2025-7-21 23:31:07-debug: // ---- build task 查询 Asset Bundle ----
+2025-7-21 23:31:07-debug: Num of bundles: 3..., progress: 0%
+2025-7-21 23:31:07-debug: Query preload assets/scripts from cc.config.json: 60f7195c-ec2a-45eb-ba94-8955f60e81d0,1c02ae6f-4492-4915-b8f8-7492a3b1e4cd,810e96e4-e456-4468-9b59-f4e8f39732c0,efe8e2a3-eace-427b-b4f1-cb8a937ec77d,e9aa9a3e-5b2b-4ac7-a2c7-073de2b2b24f,8bbdbcdd-5cd4-4100-b6d5-b7c9625b6107,50f4348b-c883-4e2f-8f11-ce233b859fa1,fda095cb-831d-4601-ad94-846013963de8,f92806d7-1768-443f-afe8-12bcde84d0f0,dd3a144d-ab7f-41f0-82b8-2e43a090d496,f0416e68-0200-4b77-a926-4f9d16e494da,970b0598-bcb0-4714-91fb-2e81440dccd8,bcd64cc6-2dd9-43f6-abbe-66318d332032,d930590d-bb92-4cc8-8bd1-23cd027f9edf,a3cd009f-0ab0-420d-9278-b9fdab939bbc,6a2d0734-bd9e-4ddf-946e-caa52498cb75,c27215d8-6835-4b68-bfbb-bdeac6100c04,b5d6115f-0370-4d7c-aad3-c194cc71cf98,871c3b6c-7379-419d-bda3-794b239ab90d,ff9b0199-ce04-4cfe-86cc-6c719f08d6e4,de1c2107-70c8-4021-8459-6399f24d01c6,cbf30902-517f-40dc-af90-a550bac27cf1
+2025-7-21 23:31:07-debug: Init bundle root assets success..., progress: 0%
+2025-7-21 23:31:07-debug:   Number of all scripts: 28
+2025-7-21 23:31:07-debug:   Number of other assets: 455
+2025-7-21 23:31:07-debug:   Number of all scenes: 3
+2025-7-21 23:31:07-debug: // ---- build task 查询 Asset Bundle ---- (40ms)
+2025-7-21 23:31:07-log: run build task 查询 Asset Bundle success in 40 ms√, progress: 5%
+2025-7-21 23:31:07-debug: [Build Memory track]: 查询 Asset Bundle start:214.50MB, end 214.47MB, increase: -30.48KB
+2025-7-21 23:31:07-debug: // ---- build task 查询 Asset Bundle ----
+2025-7-21 23:31:07-debug: 查询 Asset Bundle start, progress: 5%
+2025-7-21 23:31:07-debug: // ---- build task 查询 Asset Bundle ---- (2ms)
+2025-7-21 23:31:07-log: run build task 查询 Asset Bundle success in 2 ms√, progress: 10%
+2025-7-21 23:31:07-debug: [Build Memory track]: 查询 Asset Bundle start:214.49MB, end 214.59MB, increase: 101.07KB
+2025-7-21 23:31:07-debug: // ---- build task 整理部分构建选项内数据到 settings.json ----
+2025-7-21 23:31:07-debug: 整理部分构建选项内数据到 settings.json start, progress: 10%
+2025-7-21 23:31:07-log: run build task 整理部分构建选项内数据到 settings.json success in √, progress: 12%
+2025-7-21 23:31:07-debug: [Build Memory track]: 整理部分构建选项内数据到 settings.json start:214.62MB, end 214.63MB, increase: 16.27KB
+2025-7-21 23:31:07-debug: 填充脚本数据到 settings.json start, progress: 12%
+2025-7-21 23:31:07-debug: // ---- build task 填充脚本数据到 settings.json ----
+2025-7-21 23:31:07-log: run build task 填充脚本数据到 settings.json success in √, progress: 13%
+2025-7-21 23:31:07-debug: [Build Memory track]: 填充脚本数据到 settings.json start:214.66MB, end 214.67MB, increase: 15.50KB
+2025-7-21 23:31:07-debug: // ---- build task 整理部分构建选项内数据到 settings.json ----
+2025-7-21 23:31:07-debug: 整理部分构建选项内数据到 settings.json start, progress: 13%
+2025-7-21 23:31:07-debug: // ---- build task 整理部分构建选项内数据到 settings.json ---- (6ms)
+2025-7-21 23:31:07-log: run build task 整理部分构建选项内数据到 settings.json success in 6 ms√, progress: 15%
+2025-7-21 23:31:07-debug: [Build Memory track]: 整理部分构建选项内数据到 settings.json start:214.70MB, end 214.82MB, increase: 123.18KB
+2025-7-21 23:31:47-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/Scenes/mainmenu.scenebackground: #aaff85; color: #000;color: #000;
+2025-7-21 23:31:47-debug: asset-db:reimport-asset9a4dce19-24b9-4d46-b38f-ef49f2287dcb (10ms)
+2025-7-21 23:31:49-debug: Query all assets info in project
+2025-7-21 23:31:49-debug: init custom config: keepNodeUuid: false, useCache: true
+2025-7-21 23:31:49-debug: Skip compress image, progress: 0%
+2025-7-21 23:31:49-debug: Init all bundles start..., progress: 0%
+2025-7-21 23:31:49-debug: 查询 Asset Bundle start, progress: 0%
+2025-7-21 23:31:49-debug: Num of bundles: 3..., progress: 0%
+2025-7-21 23:31:49-debug: // ---- build task 查询 Asset Bundle ----
+2025-7-21 23:31:49-debug: Init bundle root assets start..., progress: 0%
+2025-7-21 23:31:49-debug: Query preload assets/scripts from cc.config.json: 60f7195c-ec2a-45eb-ba94-8955f60e81d0,1c02ae6f-4492-4915-b8f8-7492a3b1e4cd,810e96e4-e456-4468-9b59-f4e8f39732c0,efe8e2a3-eace-427b-b4f1-cb8a937ec77d,e9aa9a3e-5b2b-4ac7-a2c7-073de2b2b24f,8bbdbcdd-5cd4-4100-b6d5-b7c9625b6107,50f4348b-c883-4e2f-8f11-ce233b859fa1,fda095cb-831d-4601-ad94-846013963de8,f92806d7-1768-443f-afe8-12bcde84d0f0,dd3a144d-ab7f-41f0-82b8-2e43a090d496,f0416e68-0200-4b77-a926-4f9d16e494da,970b0598-bcb0-4714-91fb-2e81440dccd8,bcd64cc6-2dd9-43f6-abbe-66318d332032,d930590d-bb92-4cc8-8bd1-23cd027f9edf,a3cd009f-0ab0-420d-9278-b9fdab939bbc,6a2d0734-bd9e-4ddf-946e-caa52498cb75,c27215d8-6835-4b68-bfbb-bdeac6100c04,b5d6115f-0370-4d7c-aad3-c194cc71cf98,871c3b6c-7379-419d-bda3-794b239ab90d,ff9b0199-ce04-4cfe-86cc-6c719f08d6e4,de1c2107-70c8-4021-8459-6399f24d01c6,cbf30902-517f-40dc-af90-a550bac27cf1
+2025-7-21 23:31:49-debug:   Number of all scenes: 3
+2025-7-21 23:31:49-debug:   Number of other assets: 455
+2025-7-21 23:31:49-debug:   Number of all scripts: 28
+2025-7-21 23:31:49-debug: // ---- build task 查询 Asset Bundle ---- (2ms)
+2025-7-21 23:31:49-log: run build task 查询 Asset Bundle success in 2 ms√, progress: 5%
+2025-7-21 23:31:49-debug: [Build Memory track]: 查询 Asset Bundle start:198.31MB, end 198.32MB, increase: 9.71KB
+2025-7-21 23:31:49-debug: // ---- build task 查询 Asset Bundle ----
+2025-7-21 23:31:49-debug: Init bundle root assets success..., progress: 0%
+2025-7-21 23:31:49-debug: 查询 Asset Bundle start, progress: 5%
+2025-7-21 23:31:49-debug: // ---- build task 查询 Asset Bundle ---- (1ms)
+2025-7-21 23:31:49-debug: [Build Memory track]: 查询 Asset Bundle start:198.34MB, end 198.44MB, increase: 101.23KB
+2025-7-21 23:31:49-debug: 整理部分构建选项内数据到 settings.json start, progress: 10%
+2025-7-21 23:31:49-debug: // ---- build task 整理部分构建选项内数据到 settings.json ----
+2025-7-21 23:31:49-log: run build task 查询 Asset Bundle success in 1 ms√, progress: 10%
+2025-7-21 23:31:49-debug: // ---- build task 整理部分构建选项内数据到 settings.json ---- (1ms)
+2025-7-21 23:31:49-debug: 填充脚本数据到 settings.json start, progress: 12%
+2025-7-21 23:31:49-debug: [Build Memory track]: 填充脚本数据到 settings.json start:198.52MB, end 198.53MB, increase: 12.96KB
+2025-7-21 23:31:49-debug: [Build Memory track]: 整理部分构建选项内数据到 settings.json start:198.47MB, end 198.49MB, increase: 23.81KB
+2025-7-21 23:31:49-log: run build task 整理部分构建选项内数据到 settings.json success in 1 ms√, progress: 12%
+2025-7-21 23:31:49-debug: 整理部分构建选项内数据到 settings.json start, progress: 13%
+2025-7-21 23:31:49-debug: // ---- build task 填充脚本数据到 settings.json ----
+2025-7-21 23:31:49-debug: // ---- build task 整理部分构建选项内数据到 settings.json ----
+2025-7-21 23:31:49-log: run build task 填充脚本数据到 settings.json success in √, progress: 13%
+2025-7-21 23:31:49-debug: // ---- build task 整理部分构建选项内数据到 settings.json ---- (3ms)
+2025-7-21 23:31:49-debug: [Build Memory track]: 整理部分构建选项内数据到 settings.json start:198.55MB, end 198.68MB, increase: 125.75KB
+2025-7-21 23:31:49-log: run build task 整理部分构建选项内数据到 settings.json success in 3 ms√, progress: 15%
+2025-7-21 23:32:07-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/Scenes/mainmenu.scenebackground: #aaff85; color: #000;color: #000;
+2025-7-21 23:32:07-debug: asset-db:reimport-asset9a4dce19-24b9-4d46-b38f-ef49f2287dcb (7ms)
+2025-7-21 23:34:40-debug: refresh db internal success
+2025-7-21 23:34:40-debug: refresh db assets success
+2025-7-21 23:34:40-debug: Run asset db hook engine-extends:afterRefresh ...
+2025-7-21 23:34:40-debug: Run asset db hook engine-extends:afterRefresh success!
+2025-7-21 23:34:40-debug: asset-db:refresh-all-database (42ms)
+2025-7-21 23:34:40-debug: asset-db:worker-effect-data-processing (1ms)
+2025-7-21 23:34:40-debug: asset-db-hook-engine-extends-afterRefresh (1ms)
+2025-7-21 23:35:31-debug: refresh db internal success
+2025-7-21 23:35:31-debug: refresh db assets success
+2025-7-21 23:35:31-debug: Run asset db hook engine-extends:afterRefresh ...
+2025-7-21 23:35:31-debug: Run asset db hook engine-extends:afterRefresh success!
+2025-7-21 23:35:31-debug: asset-db:refresh-all-database (19ms)
+2025-7-21 23:35:38-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/Scenes/mainmenu.scenebackground: #aaff85; color: #000;color: #000;
+2025-7-21 23:35:38-debug: asset-db:reimport-asset9a4dce19-24b9-4d46-b38f-ef49f2287dcb (9ms)
+2025-7-21 23:35:40-debug: Query all assets info in project
+2025-7-21 23:35:40-debug: init custom config: keepNodeUuid: false, useCache: true
+2025-7-21 23:35:40-debug: Skip compress image, progress: 0%
+2025-7-21 23:35:40-debug: Init all bundles start..., progress: 0%
+2025-7-21 23:35:40-debug: // ---- build task 查询 Asset Bundle ----
+2025-7-21 23:35:40-debug: 查询 Asset Bundle start, progress: 0%
+2025-7-21 23:35:40-debug: Init bundle root assets start..., progress: 0%
+2025-7-21 23:35:40-debug: Num of bundles: 3..., progress: 0%
+2025-7-21 23:35:40-debug: Query preload assets/scripts from cc.config.json: 60f7195c-ec2a-45eb-ba94-8955f60e81d0,1c02ae6f-4492-4915-b8f8-7492a3b1e4cd,810e96e4-e456-4468-9b59-f4e8f39732c0,efe8e2a3-eace-427b-b4f1-cb8a937ec77d,e9aa9a3e-5b2b-4ac7-a2c7-073de2b2b24f,8bbdbcdd-5cd4-4100-b6d5-b7c9625b6107,50f4348b-c883-4e2f-8f11-ce233b859fa1,fda095cb-831d-4601-ad94-846013963de8,f92806d7-1768-443f-afe8-12bcde84d0f0,dd3a144d-ab7f-41f0-82b8-2e43a090d496,f0416e68-0200-4b77-a926-4f9d16e494da,970b0598-bcb0-4714-91fb-2e81440dccd8,bcd64cc6-2dd9-43f6-abbe-66318d332032,d930590d-bb92-4cc8-8bd1-23cd027f9edf,a3cd009f-0ab0-420d-9278-b9fdab939bbc,6a2d0734-bd9e-4ddf-946e-caa52498cb75,c27215d8-6835-4b68-bfbb-bdeac6100c04,b5d6115f-0370-4d7c-aad3-c194cc71cf98,871c3b6c-7379-419d-bda3-794b239ab90d,ff9b0199-ce04-4cfe-86cc-6c719f08d6e4,de1c2107-70c8-4021-8459-6399f24d01c6,cbf30902-517f-40dc-af90-a550bac27cf1
+2025-7-21 23:35:40-debug:   Number of other assets: 455
+2025-7-21 23:35:40-debug:   Number of all scripts: 28
+2025-7-21 23:35:40-debug: Init bundle root assets success..., progress: 0%
+2025-7-21 23:35:40-debug:   Number of all scenes: 3
+2025-7-21 23:35:40-debug: // ---- build task 查询 Asset Bundle ---- (1ms)
+2025-7-21 23:35:40-log: run build task 查询 Asset Bundle success in 1 ms√, progress: 5%
+2025-7-21 23:35:40-debug: 查询 Asset Bundle start, progress: 5%
+2025-7-21 23:35:40-debug: [Build Memory track]: 查询 Asset Bundle start:200.01MB, end 199.98MB, increase: -33.45KB
+2025-7-21 23:35:40-debug: // ---- build task 查询 Asset Bundle ----
+2025-7-21 23:35:40-log: run build task 查询 Asset Bundle success in √, progress: 10%
+2025-7-21 23:35:40-debug: [Build Memory track]: 查询 Asset Bundle start:200.01MB, end 199.38MB, increase: -636.57KB
+2025-7-21 23:35:40-debug: 整理部分构建选项内数据到 settings.json start, progress: 10%
+2025-7-21 23:35:40-debug: // ---- build task 整理部分构建选项内数据到 settings.json ----
+2025-7-21 23:35:40-debug: // ---- build task 整理部分构建选项内数据到 settings.json ---- (1ms)
+2025-7-21 23:35:40-log: run build task 整理部分构建选项内数据到 settings.json success in 1 ms√, progress: 12%
+2025-7-21 23:35:40-debug: [Build Memory track]: 整理部分构建选项内数据到 settings.json start:199.41MB, end 199.43MB, increase: 23.83KB
+2025-7-21 23:35:40-debug: 填充脚本数据到 settings.json start, progress: 12%
+2025-7-21 23:35:40-debug: // ---- build task 填充脚本数据到 settings.json ----
+2025-7-21 23:35:40-log: run build task 填充脚本数据到 settings.json success in √, progress: 13%
+2025-7-21 23:35:40-debug: // ---- build task 整理部分构建选项内数据到 settings.json ----
+2025-7-21 23:35:40-debug: 整理部分构建选项内数据到 settings.json start, progress: 13%
+2025-7-21 23:35:40-debug: [Build Memory track]: 填充脚本数据到 settings.json start:199.46MB, end 199.47MB, increase: 15.52KB
+2025-7-21 23:35:40-debug: // ---- build task 整理部分构建选项内数据到 settings.json ---- (1ms)
+2025-7-21 23:35:40-log: run build task 整理部分构建选项内数据到 settings.json success in 1 ms√, progress: 15%
+2025-7-21 23:35:40-debug: [Build Memory track]: 整理部分构建选项内数据到 settings.json start:199.50MB, end 199.62MB, increase: 122.75KB
+2025-7-21 23:35:57-debug: refresh db internal success
+2025-7-21 23:35:57-debug: refresh db assets success
+2025-7-21 23:35:57-debug: Run asset db hook engine-extends:afterRefresh ...
+2025-7-21 23:35:57-debug: Run asset db hook engine-extends:afterRefresh success!
+2025-7-21 23:35:57-debug: asset-db:refresh-all-database (30ms)
+2025-7-21 23:35:57-debug: asset-db:worker-effect-data-processing (1ms)
+2025-7-21 23:35:57-debug: asset-db-hook-engine-extends-afterRefresh (1ms)

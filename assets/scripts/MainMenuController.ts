@@ -1,5 +1,6 @@
-import { _decorator, Component, Button, Node } from 'cc';
+import { _decorator, Component, Button, Node, Label } from 'cc';
 import { SceneTransition } from './SceneTransition';
+import { SoundManager } from './SoundManager';
 const { ccclass, property } = _decorator;
 
 @ccclass('MainMenuController')
@@ -19,6 +20,11 @@ export class MainMenuController extends Component {
     @property(Node)
     settingPanel: Node = null!; // 拖拽你的设置面板节点到这里
 
+    @property(Label)
+    audioLabel: Label = null!; // 拖拽音效按钮的Label组件到这里
+
+
+
     start() {
         if (this.startGameBtn) {
             this.startGameBtn.node.on(Button.EventType.CLICK, this.onStartGame, this);
@@ -32,6 +38,7 @@ export class MainMenuController extends Component {
         if(this.audioBtn){
             this.audioBtn.node.on(Button.EventType.CLICK, this.onAudioClick, this);
         }
+        this.updateAudioButtonLabel();
     }
 
     displaySettingPanel() {
@@ -43,7 +50,14 @@ export class MainMenuController extends Component {
     }
 
     onAudioClick() {
-       
+       SoundManager.instance.toggleAudio();
+       this.updateAudioButtonLabel();
+    }
+
+    updateAudioButtonLabel() {
+        if (this.audioLabel) {
+            this.audioLabel.string = SoundManager.instance.isMuted() ? "音效:关" : "音效:开";
+        }
     }
 
 
@@ -51,4 +65,4 @@ export class MainMenuController extends Component {
         SceneTransition.loadScene("LevelSelect");
         // director.loadScene("gamescene");
     }
-} 
+}

@@ -6,6 +6,7 @@ import { AIController } from './AIController';
 import { AIPlayer } from './AIPlayer';
 import { PlayerManager } from './PlayerManager';
 import { SceneTransition } from './SceneTransition';
+
 const { ccclass, property } = _decorator;
 
 // 游戏状态枚举

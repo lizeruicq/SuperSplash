@@ -215,7 +215,8 @@
       "dependScripts": [
         "CC3eba29-7abb-723a-f7ab-ae275e2277e8",
         "1b6d6687-2973-4618-af7b-db52ef67b8c1",
-        "0cf6405c-918a-40f1-b383-68a9fc739b7f"
+        "0cf6405c-918a-40f1-b383-68a9fc739b7f",
+        "7c385d18-836f-4804-ae30-5bd158cfb7f5"
       ]
     },
     "versionCode": 1
@@ -1565,6 +1566,65 @@
   },
   "c4e943de-6ca3-46a0-9231-17cb43e8e456": {
     "url": "db://assets/scripts/PurchasePanel.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "aa396c5e-59ca-4418-8f95-bdc105fc74ed": {
+    "url": "db://assets/resources/sound",
+    "value": {},
+    "versionCode": 1
+  },
+  "05d09d2a-d1e6-4db4-b7f1-46c828561e1c": {
+    "url": "db://assets/resources/sound/Plop.ogg",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "6b75695c-de58-4b54-86d8-520be166015c": {
+    "url": "db://assets/resources/sound/crash.ogg",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "f89116d5-8d7e-402f-9955-3285188d78de": {
+    "url": "db://assets/resources/sound/tires_squal_loop.wav",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "cb5bf55f-787d-4418-a1b0-f21d440384ce": {
+    "url": "db://assets/resources/sound/running.wav",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "c492a1c7-8290-4d71-98ff-a4bb822cb067": {
+    "url": "db://assets/resources/sound/bgm.wav",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "c1f2ce3a-5aa8-45ba-ab3e-5fff8bb87af9": {
+    "url": "db://assets/resources/sound/drift.mp3",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "9f868da1-89e4-4ca6-a4e1-2b592981db21": {
+    "url": "db://assets/resources/sound/engine_on.mp3",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "7c385d18-836f-4804-ae30-5bd158cfb7f5": {
+    "url": "db://assets/scripts/SoundManager.ts",
     "value": {},
     "versionCode": 1
   }
