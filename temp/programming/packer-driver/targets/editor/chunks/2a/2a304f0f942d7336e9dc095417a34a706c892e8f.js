@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Button, Node, SceneTransition, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _crd, ccclass, property, MainMenuController;
+  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Button, Node, Label, SceneTransition, SoundManager, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _crd, ccclass, property, MainMenuController;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -11,6 +11,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
   function _reportPossibleCrUseOfSceneTransition(extras) {
     _reporterNs.report("SceneTransition", "./SceneTransition", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfSoundManager(extras) {
+    _reporterNs.report("SoundManager", "./SoundManager", _context.meta, extras);
   }
 
   return {
@@ -24,22 +28,25 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
       Component = _cc.Component;
       Button = _cc.Button;
       Node = _cc.Node;
+      Label = _cc.Label;
     }, function (_unresolved_2) {
       SceneTransition = _unresolved_2.SceneTransition;
+    }, function (_unresolved_3) {
+      SoundManager = _unresolved_3.SoundManager;
     }],
     execute: function () {
       _crd = true;
 
       _cclegacy._RF.push({}, "0cf64BckYpA8bODaKn8c5t/", "MainMenuController", undefined);
 
-      __checkObsolete__(['_decorator', 'Component', 'Button', 'Node']);
+      __checkObsolete__(['_decorator', 'Component', 'Button', 'Node', 'Label']);
 
       ({
         ccclass,
         property
       } = _decorator);
 
-      _export("MainMenuController", MainMenuController = (_dec = ccclass('MainMenuController'), _dec2 = property(Button), _dec3 = property(Button), _dec4 = property(Button), _dec5 = property(Button), _dec6 = property(Node), _dec(_class = (_class2 = class MainMenuController extends Component {
+      _export("MainMenuController", MainMenuController = (_dec = ccclass('MainMenuController'), _dec2 = property(Button), _dec3 = property(Button), _dec4 = property(Button), _dec5 = property(Button), _dec6 = property(Node), _dec7 = property(Label), _dec(_class = (_class2 = class MainMenuController extends Component {
         constructor(...args) {
           super(...args);
 
@@ -53,9 +60,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
           _initializerDefineProperty(this, "audioBtn", _descriptor4, this);
 
           _initializerDefineProperty(this, "settingPanel", _descriptor5, this);
+
+          // 拖拽你的设置面板节点到这里
+          _initializerDefineProperty(this, "audioLabel", _descriptor6, this);
         }
 
-        // 拖拽你的设置面板节点到这里
+        // 拖拽音效按钮的Label组件到这里
         start() {
           if (this.startGameBtn) {
             this.startGameBtn.node.on(Button.EventType.CLICK, this.onStartGame, this);
@@ -72,6 +82,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
           if (this.audioBtn) {
             this.audioBtn.node.on(Button.EventType.CLICK, this.onAudioClick, this);
           }
+
+          this.updateAudioButtonLabel();
         }
 
         displaySettingPanel() {
@@ -82,7 +94,20 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
           this.settingPanel.active = false;
         }
 
-        onAudioClick() {}
+        onAudioClick() {
+          (_crd && SoundManager === void 0 ? (_reportPossibleCrUseOfSoundManager({
+            error: Error()
+          }), SoundManager) : SoundManager).instance.toggleAudio();
+          this.updateAudioButtonLabel();
+        }
+
+        updateAudioButtonLabel() {
+          if (this.audioLabel) {
+            this.audioLabel.string = (_crd && SoundManager === void 0 ? (_reportPossibleCrUseOfSoundManager({
+              error: Error()
+            }), SoundManager) : SoundManager).instance.isMuted() ? "音效:关" : "音效:开";
+          }
+        }
 
         onStartGame() {
           (_crd && SceneTransition === void 0 ? (_reportPossibleCrUseOfSceneTransition({
@@ -119,6 +144,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
           return null;
         }
       }), _descriptor5 = _applyDecoratedDescriptor(_class2.prototype, "settingPanel", [_dec6], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function () {
+          return null;
+        }
+      }), _descriptor6 = _applyDecoratedDescriptor(_class2.prototype, "audioLabel", [_dec7], {
         configurable: true,
         enumerable: true,
         writable: true,
