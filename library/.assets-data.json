@@ -172,6 +172,7 @@
         "81520cf5-3a02-463b-b3ec-c8870a3f4940"
       ],
       "dependScripts": [
+        "add913cb-f124-45b3-9292-5dcf066e9b47",
         "c4e943de-6ca3-46a0-9231-17cb43e8e456",
         "CC3eba29-7abb-723a-f7ab-ae275e2277e8",
         "66fbc94f-5230-4bee-8600-db121d4f07fe",
@@ -1640,6 +1641,36 @@
     "value": {
       "depends": []
     },
+    "versionCode": 1
+  },
+  "796e3776-c599-4f75-9591-35aaeaae7fb6": {
+    "url": "db://assets/scripts/CarProperties.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "add913cb-f124-45b3-9292-5dcf066e9b47": {
+    "url": "db://assets/scripts/CarPropertyDisplay.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "c3a028ad-7e42-4812-9c4d-81c538024cd1": {
+    "url": "db://assets/scripts/ConfigManager.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "c0d77e1a-8903-4645-b707-b56218e1eded": {
+    "url": "db://assets/resources/config",
+    "value": {},
+    "versionCode": 1
+  },
+  "2059e09d-4d24-4506-aec5-e652c266d1ad": {
+    "url": "db://assets/resources/config/car_properties.json",
+    "value": {},
+    "versionCode": 1
+  },
+  "a2dc4b69-200c-4660-b066-d070121d4fe0": {
+    "url": "db://assets/resources/config/player_data_default.json",
+    "value": {},
     "versionCode": 1
   }
 }

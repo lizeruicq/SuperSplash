@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Button, ToggleContainer, Sprite, Color, Label, Node, TempData, PlayerManager, SceneTransition, PurchasePanel, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _crd, ccclass, property, SelectManager;
+  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Button, ToggleContainer, Toggle, Sprite, Color, Label, Node, find, TempData, PlayerManager, SceneTransition, CarPropertyDisplay, PurchasePanel, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _crd, ccclass, property, SelectManager;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -21,6 +21,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("SceneTransition", "./SceneTransition", _context.meta, extras);
   }
 
+  function _reportPossibleCrUseOfCarPropertyDisplay(extras) {
+    _reporterNs.report("CarPropertyDisplay", "./CarPropertyDisplay", _context.meta, extras);
+  }
+
   function _reportPossibleCrUseOfPurchasePanel(extras) {
     _reporterNs.report("PurchasePanel", "./PurchasePanel", _context.meta, extras);
   }
@@ -36,10 +40,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       Component = _cc.Component;
       Button = _cc.Button;
       ToggleContainer = _cc.ToggleContainer;
+      Toggle = _cc.Toggle;
       Sprite = _cc.Sprite;
       Color = _cc.Color;
       Label = _cc.Label;
       Node = _cc.Node;
+      find = _cc.find;
     }, function (_unresolved_2) {
       TempData = _unresolved_2.TempData;
     }, function (_unresolved_3) {
@@ -47,14 +53,16 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     }, function (_unresolved_4) {
       SceneTransition = _unresolved_4.SceneTransition;
     }, function (_unresolved_5) {
-      PurchasePanel = _unresolved_5.PurchasePanel;
+      CarPropertyDisplay = _unresolved_5.CarPropertyDisplay;
+    }, function (_unresolved_6) {
+      PurchasePanel = _unresolved_6.PurchasePanel;
     }],
     execute: function () {
       _crd = true;
 
       _cclegacy._RF.push({}, "be7b23A2jVN6agcMGkP3NKP", "SelectManager", undefined);
 
-      __checkObsolete__(['_decorator', 'Component', 'Button', 'ToggleContainer', 'Toggle', 'Sprite', 'Color', 'Label', 'Node', 'find', 'instantiate']);
+      __checkObsolete__(['_decorator', 'Component', 'Button', 'ToggleContainer', 'Toggle', 'Sprite', 'Color', 'Label', 'Node', 'find']);
 
       // @ts-ignore
       ({
@@ -66,6 +74,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       _export("SelectManager", SelectManager = (_dec = ccclass('SelectManager'), _dec2 = property(ToggleContainer), _dec3 = property(ToggleContainer), _dec4 = property(Button), _dec5 = property(Label), _dec6 = property({
         type: Node,
         tooltip: '场景中的购买面板节点'
+      }), _dec7 = property({
+        type: _crd && CarPropertyDisplay === void 0 ? (_reportPossibleCrUseOfCarPropertyDisplay({
+          error: Error()
+        }), CarPropertyDisplay) : CarPropertyDisplay,
+        tooltip: 'car-property节点上的CarPropertyDisplay组件'
       }), _dec(_class = (_class2 = class SelectManager extends Component {
         constructor(...args) {
           super(...args);
@@ -81,6 +94,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           // 金币不足提示标签
           // 购买面板相关属性
           _initializerDefineProperty(this, "purchasePanelNode", _descriptor5, this);
+
+          // 车辆属性显示相关属性
+          _initializerDefineProperty(this, "carPropertyDisplay", _descriptor6, this);
 
           // 车辆价格配置
           this.carPrices = {
@@ -103,11 +119,15 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         onLoad() {
           this.updateLevelToggles();
           this.updateCarToggles();
-          this.setupCarPurchaseButtons(); // 隐藏金币不足提示
+          this.setupCarPurchaseButtons();
+          this.setupCarSelectionListener(); // 隐藏金币不足提示
 
           if (this.insufficientMoneyLabel) {
             this.insufficientMoneyLabel.node.active = false;
-          }
+          } // 自动查找车辆属性显示组件（如果没有手动设置）
+
+
+          this.autoFindCarPropertyDisplay();
         }
 
         updateLevelToggles() {
@@ -430,6 +450,89 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         setCarPrice(carId, price) {
           this.carPrices[carId] = price;
         }
+        /**
+         * 自动查找车辆属性显示组件
+         */
+
+
+        autoFindCarPropertyDisplay() {
+          if (!this.carPropertyDisplay) {
+            // 尝试在场景中查找car-property节点
+            const carPropertyNode = find('Canvas/car-property') || find('car-property') || this.node.getChildByName('car-property');
+
+            if (carPropertyNode) {
+              this.carPropertyDisplay = carPropertyNode.getComponent(_crd && CarPropertyDisplay === void 0 ? (_reportPossibleCrUseOfCarPropertyDisplay({
+                error: Error()
+              }), CarPropertyDisplay) : CarPropertyDisplay);
+
+              if (!this.carPropertyDisplay) {
+                console.warn('car-property节点找到了，但没有CarPropertyDisplay组件');
+              }
+            } else {
+              console.warn('未找到car-property节点，请确保场景中存在该节点');
+            }
+          }
+        }
+        /**
+         * 设置车辆选择监听器
+         */
+
+
+        setupCarSelectionListener() {
+          if (!this.carToggleGroup) {
+            console.warn('carToggleGroup未设置');
+            return;
+          } // 为每个车辆Toggle添加选择监听
+
+
+          this.carToggleGroup.toggleItems.forEach(toggle => {
+            toggle.node.on(Toggle.EventType.TOGGLE, this.onCarToggleChanged, this);
+          }); // 检查是否有默认选中的车辆
+
+          this.checkInitialCarSelection();
+        }
+        /**
+         * 车辆Toggle状态改变时的回调
+         */
+
+
+        onCarToggleChanged(toggle) {
+          if (toggle.isChecked) {
+            const carId = toggle.node.name;
+            console.log(`选中车辆: ${carId}`);
+            this.showCarProperties(carId);
+          }
+        }
+        /**
+         * 显示车辆属性
+         */
+
+
+        showCarProperties(carId) {
+          if (this.carPropertyDisplay) {
+            this.carPropertyDisplay.showCarProperties(carId);
+          } else {
+            console.warn('CarPropertyDisplay组件未找到，无法显示车辆属性');
+          }
+        }
+        /**
+         * 检查初始车辆选择
+         */
+
+
+        checkInitialCarSelection() {
+          const selectedToggle = this.carToggleGroup.toggleItems.find(toggle => toggle.isChecked);
+
+          if (selectedToggle) {
+            const carId = selectedToggle.node.name;
+            this.showCarProperties(carId);
+          } else {
+            // 如果没有选中的车辆，隐藏属性显示
+            if (this.carPropertyDisplay) {
+              this.carPropertyDisplay.hideAllProperties();
+            }
+          }
+        }
 
       }, (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "levelToggleGroup", [_dec2], {
         configurable: true,
@@ -460,6 +563,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           return null;
         }
       }), _descriptor5 = _applyDecoratedDescriptor(_class2.prototype, "purchasePanelNode", [_dec6], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function () {
+          return null;
+        }
+      }), _descriptor6 = _applyDecoratedDescriptor(_class2.prototype, "carPropertyDisplay", [_dec7], {
         configurable: true,
         enumerable: true,
         writable: true,

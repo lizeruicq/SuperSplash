@@ -2,7 +2,7 @@
   "version": "1.0.0",
   "map": {
     "/Users/zeruili/projects/cocos_project/driftClash/assets/Scenes": {
-      "time": 1752297673909.6003,
+      "time": 1753289009986.5469,
       "uuid": "311768e2-09ac-4c4f-834d-85e07497a5c5"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/TiledMap": {
@@ -14,11 +14,11 @@
       "uuid": "f04d4757-2526-40bc-83dc-41410588d6eb"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/resources": {
-      "time": 1753110295962.9092,
+      "time": 1753289009986.8596,
       "uuid": "d97d032d-727a-433c-9189-878a2868c79d"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/scripts": {
-      "time": 1753280887170.8518,
+      "time": 1753289058641.3025,
       "uuid": "d4ffaca8-3516-4d6f-9187-e37ee8010ebd"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background": {
@@ -94,7 +94,7 @@
       "uuid": "20b5e8dd-5831-40bc-a3c3-2eba62b0f2b3"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/scripts/SelectManager.ts": {
-      "time": 1753024286121.1687,
+      "time": 1753289009987.578,
       "uuid": "be7b2dc0-da35-4de9-a81c-30690fdcd28f"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/scripts/TempData.ts": {
@@ -191,7 +191,7 @@
       "time": 1750950248807.6147
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/Scenes/LevelSelect.scene": {
-      "time": 1753280953730.3313,
+      "time": 1753289009986.7363,
       "uuid": "091c5c0e-b72a-4cad-ab68-635bc57ff236"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/Scenes/gamescene.scene": {
@@ -707,6 +707,27 @@
     "/Users/zeruili/projects/cocos_project/driftClash/assets/scripts/player.ts": {
       "time": 1753280881932.4333,
       "uuid": "b3924dc4-f7fe-491c-9736-a65419c312f5"
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/scripts/CarProperties.ts.meta": {
+      "time": 1753289009987.2246
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/scripts/CarPropertyDisplay.ts.meta": {
+      "time": 1753289009987.396
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/scripts/CarProperties.ts": {
+      "time": 1753289030110.3845,
+      "uuid": "796e3776-c599-4f75-9591-35aaeaae7fb6"
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/scripts/CarPropertyDisplay.ts": {
+      "time": 1753289030110.355,
+      "uuid": "add913cb-f124-45b3-9292-5dcf066e9b47"
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/config.meta": {
+      "time": 1753289009986.835
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/config": {
+      "time": 1753289058641.621,
+      "uuid": "c0d77e1a-8903-4645-b707-b56218e1eded"
     }
   },
   "missing": {
@@ -769,6 +790,21 @@
       "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/scripts/playerCar.ts",
       "time": 1753280881932.4333,
       "removeTime": 1753280887171
+    },
+    "c3a028ad-7e42-4812-9c4d-81c538024cd1": {
+      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/scripts/ConfigManager.ts",
+      "time": 1753284657778.7651,
+      "removeTime": 1753289058641
+    },
+    "2059e09d-4d24-4506-aec5-e652c266d1ad": {
+      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/config/car_properties.json",
+      "time": 1753284624455.7817,
+      "removeTime": 1753289058641
+    },
+    "a2dc4b69-200c-4660-b066-d070121d4fe0": {
+      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/config/player_data_default.json",
+      "time": 1753284634187.9392,
+      "removeTime": 1753289058641
     }
   }
 }
