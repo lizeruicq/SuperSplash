@@ -62,6 +62,7 @@ export class MainMenuController extends Component {
 
 
     onStartGame() {
+        SoundManager.instance.playSoundEffect('buttonClick');
         SceneTransition.loadScene("LevelSelect");
         // director.loadScene("gamescene");
     }

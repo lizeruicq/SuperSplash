@@ -6,6 +6,7 @@ import { AIController } from './AIController';
 import { AIPlayer } from './AIPlayer';
 import { PlayerManager } from './PlayerManager';
 import { SceneTransition } from './SceneTransition';
+import { SoundManager } from './SoundManager';
 
 const { ccclass, property } = _decorator;
 
@@ -223,6 +224,7 @@ export class GameManager extends Component {
                 }
             });
         }
+        SoundManager.instance.playSoundEffect('carStart');
     }
 
     /**

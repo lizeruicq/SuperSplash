@@ -196,7 +196,7 @@ export class PlayerManager extends Component {
                 }
             },
             
-            unlockedLevels: ['level-1'], // 默认只解锁第一关
+            unlockedLevels: ['level-1','level-2','level-3'], // 默认只解锁第一关
             currentLevel: 'level-1',
             levelProgress: {
                 'level-1': {
