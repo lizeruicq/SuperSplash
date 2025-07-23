@@ -1,7 +1,8 @@
-import { _decorator, Component, Button, ToggleContainer, Toggle, Sprite, Color, Label, Node, find, instantiate } from 'cc';
+import { _decorator, Component, Button, ToggleContainer, Toggle, Sprite, Color, Label, Node, find } from 'cc';
 import { TempData } from './TempData';
 import { PlayerManager } from './PlayerManager';
 import { SceneTransition } from './SceneTransition';
+import { CarPropertyDisplay } from './CarPropertyDisplay';
 // @ts-ignore
 const { ccclass, property } = _decorator;
 
@@ -34,6 +35,13 @@ export class SelectManager extends Component {
     })
     private purchasePanelNode: Node = null!;
 
+    // 车辆属性显示相关属性
+    @property({
+        type: CarPropertyDisplay,
+        tooltip: 'car-property节点上的CarPropertyDisplay组件',
+    })
+    carPropertyDisplay: CarPropertyDisplay = null!;
+
     // 车辆价格配置
     private carPrices: CarPriceConfig = {
         'car-1': 0,      // 默认车辆免费
@@ -50,11 +58,15 @@ export class SelectManager extends Component {
         this.updateLevelToggles();
         this.updateCarToggles();
         this.setupCarPurchaseButtons();
+        this.setupCarSelectionListener();
 
         // 隐藏金币不足提示
         if (this.insufficientMoneyLabel) {
             this.insufficientMoneyLabel.node.active = false;
         }
+
+        // 自动查找车辆属性显示组件（如果没有手动设置）
+        this.autoFindCarPropertyDisplay();
     }
 
     updateLevelToggles() {
@@ -360,6 +372,83 @@ export class SelectManager extends Component {
      */
     setCarPrice(carId: string, price: number) {
         this.carPrices[carId] = price;
+    }
+
+    /**
+     * 自动查找车辆属性显示组件
+     */
+    private autoFindCarPropertyDisplay(): void {
+        if (!this.carPropertyDisplay) {
+            // 尝试在场景中查找car-property节点
+            const carPropertyNode = find('Canvas/car-property') ||
+                                   find('car-property') ||
+                                   this.node.getChildByName('car-property');
+
+            if (carPropertyNode) {
+                this.carPropertyDisplay = carPropertyNode.getComponent(CarPropertyDisplay);
+                if (!this.carPropertyDisplay) {
+                    console.warn('car-property节点找到了，但没有CarPropertyDisplay组件');
+                }
+            } else {
+                console.warn('未找到car-property节点，请确保场景中存在该节点');
+            }
+        }
+    }
+
+    /**
+     * 设置车辆选择监听器
+     */
+    private setupCarSelectionListener(): void {
+        if (!this.carToggleGroup) {
+            console.warn('carToggleGroup未设置');
+            return;
+        }
+
+        // 为每个车辆Toggle添加选择监听
+        this.carToggleGroup.toggleItems.forEach((toggle: Toggle) => {
+            toggle.node.on(Toggle.EventType.TOGGLE, this.onCarToggleChanged, this);
+        });
+
+        // 检查是否有默认选中的车辆
+        this.checkInitialCarSelection();
+    }
+
+    /**
+     * 车辆Toggle状态改变时的回调
+     */
+    private onCarToggleChanged(toggle: Toggle): void {
+        if (toggle.isChecked) {
+            const carId = toggle.node.name;
+            console.log(`选中车辆: ${carId}`);
+            this.showCarProperties(carId);
+        }
+    }
+
+    /**
+     * 显示车辆属性
+     */
+    private showCarProperties(carId: string): void {
+        if (this.carPropertyDisplay) {
+            this.carPropertyDisplay.showCarProperties(carId);
+        } else {
+            console.warn('CarPropertyDisplay组件未找到，无法显示车辆属性');
+        }
+    }
+
+    /**
+     * 检查初始车辆选择
+     */
+    private checkInitialCarSelection(): void {
+        const selectedToggle = this.carToggleGroup.toggleItems.find((toggle: Toggle) => toggle.isChecked);
+        if (selectedToggle) {
+            const carId = selectedToggle.node.name;
+            this.showCarProperties(carId);
+        } else {
+            // 如果没有选中的车辆，隐藏属性显示
+            if (this.carPropertyDisplay) {
+                this.carPropertyDisplay.hideAllProperties();
+            }
+        }
     }
 }
 
