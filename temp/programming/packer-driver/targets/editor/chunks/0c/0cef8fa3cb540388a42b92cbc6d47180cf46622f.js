@@ -152,7 +152,7 @@ System.register(["cc"], function (_export, _context) {
                 nitro: 0
               }
             },
-            unlockedLevels: ['level-1'],
+            unlockedLevels: ['level-1', 'level-2', 'level-3'],
             // 默认只解锁第一关
             currentLevel: 'level-1',
             levelProgress: {

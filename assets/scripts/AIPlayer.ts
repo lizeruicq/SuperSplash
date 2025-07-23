@@ -3,6 +3,7 @@ import { HealthBarUI } from './HealthBarUI';
 import { player } from './player';
 import { GameManager } from './GameManager';
 const { ccclass, property } = _decorator;
+import { SoundManager } from './SoundManager';
 
 @ccclass('AIPlayer')
 export class AIPlayer extends Component {
@@ -323,6 +324,7 @@ export class AIPlayer extends Component {
 
         this._isDestroyed = true;
         console.log('AI车辆被摧毁！');
+        SoundManager.instance.playSoundEffect('carDestruction');
 
         // 切换到摧毁状态的精灵图
         if (this.destroyedSprite) {

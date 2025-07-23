@@ -165,6 +165,8 @@
         "7e95e032-b6ae-4de9-a8ab-c81b24b5fb5f@f9941",
         "4cf1948a-ffca-426e-9c43-1e7c864a1b60@f9941",
         "593904f2-fa85-498f-9b0e-9f79890c24fd@f9941",
+        "24a704da-2867-446d-8d1a-5e920c75e09d@f9941",
+        "9fd900dd-221b-4f89-8f2c-fba34243c835@f9941",
         "a426c2c8-58b1-4e5a-a16c-e75061a2d034@f9941",
         "6a0179db-b0bc-4905-8953-8ab076a3cfd6@f9941",
         "81520cf5-3a02-463b-b3ec-c8870a3f4940"
@@ -210,7 +212,12 @@
         "83baeef7-746b-4f91-9a84-fd8a58d2b8b3@f9941",
         "a426c2c8-58b1-4e5a-a16c-e75061a2d034@f9941",
         "6a0179db-b0bc-4905-8953-8ab076a3cfd6@f9941",
-        "81520cf5-3a02-463b-b3ec-c8870a3f4940"
+        "81520cf5-3a02-463b-b3ec-c8870a3f4940",
+        "c492a1c7-8290-4d71-98ff-a4bb822cb067",
+        "05d09d2a-d1e6-4db4-b7f1-46c828561e1c",
+        "df16bb3a-bc77-4766-bae7-2769316ed6e5",
+        "9f868da1-89e4-4ca6-a4e1-2b592981db21",
+        "c1f2ce3a-5aa8-45ba-ab3e-5fff8bb87af9"
       ],
       "dependScripts": [
         "CC3eba29-7abb-723a-f7ab-ae275e2277e8",
@@ -1626,6 +1633,13 @@
   "7c385d18-836f-4804-ae30-5bd158cfb7f5": {
     "url": "db://assets/scripts/SoundManager.ts",
     "value": {},
+    "versionCode": 1
+  },
+  "df16bb3a-bc77-4766-bae7-2769316ed6e5": {
+    "url": "db://assets/resources/sound/explode.mp3",
+    "value": {
+      "depends": []
+    },
     "versionCode": 1
   }
 }

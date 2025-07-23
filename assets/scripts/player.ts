@@ -2,6 +2,7 @@ import { _decorator, Component, Node, input, Input, EventKeyboard, KeyCode, Vec2
 const { ccclass, property } = _decorator;
 import { AIPlayer } from './AIPlayer';
 import { GameManager } from './GameManager';
+import { SoundManager } from './SoundManager';
 
 @ccclass('player')
 export class player extends Component {
@@ -65,6 +66,7 @@ export class player extends Component {
     }
 
     onDestroy() {
+        
         // 确保在组件销毁时清理所有事件监听
         input.off(Input.EventType.KEY_DOWN, this.onKeyDown, this);
         input.off(Input.EventType.KEY_UP, this.onKeyUp, this);
@@ -127,9 +129,11 @@ export class player extends Component {
                 this._accel = -1;
                 break;
             case KeyCode.ARROW_LEFT:
+                SoundManager.instance.playSoundEffect('carDrift');
                 this._direction = -1;
                 break;
             case KeyCode.ARROW_RIGHT:
+                SoundManager.instance.playSoundEffect('carDrift');
                 this._direction = 1;
                 break;
         }
@@ -263,6 +267,7 @@ export class player extends Component {
      * 玩家车辆与AI车辆碰撞时，按双方速度造成伤害
      */
     onBeginContact(selfCollider: BoxCollider2D, otherCollider: BoxCollider2D, contact: IPhysics2DContact | null) {
+        SoundManager.instance.playSoundEffect('carCollision');
         console.log('玩家车辆发生碰撞，碰撞对象:', otherCollider.node.name);
         // 判断对方是否为AI车辆
         const otherNode = otherCollider.node;
@@ -334,7 +339,7 @@ export class player extends Component {
      */
     private destroyVehicle() {
         if (this._isDestroyed) return;
-
+        SoundManager.instance.playSoundEffect('carDestruction');
         this._isDestroyed = true;
         console.log('玩家车辆被摧毁！');
 
