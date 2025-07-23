@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Vec2, Vec3, RigidBody2D, ERigidBody2DType, BoxCollider2D, Contact2DType, ProgressBar, Sprite, SpriteFrame, tween, player, GameManager, _dec, _dec2, _dec3, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _crd, ccclass, property, AIPlayer;
+  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Vec2, Vec3, RigidBody2D, ERigidBody2DType, BoxCollider2D, Contact2DType, ProgressBar, Sprite, SpriteFrame, tween, player, GameManager, SoundManager, _dec, _dec2, _dec3, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _crd, ccclass, property, AIPlayer;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -15,6 +15,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
 
   function _reportPossibleCrUseOfGameManager(extras) {
     _reporterNs.report("GameManager", "./GameManager", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfSoundManager(extras) {
+    _reporterNs.report("SoundManager", "./SoundManager", _context.meta, extras);
   }
 
   return {
@@ -40,6 +44,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
       player = _unresolved_2.player;
     }, function (_unresolved_3) {
       GameManager = _unresolved_3.GameManager;
+    }, function (_unresolved_4) {
+      SoundManager = _unresolved_4.SoundManager;
     }],
     execute: function () {
       _crd = true;
@@ -384,7 +390,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
         destroyVehicle() {
           if (this._isDestroyed) return;
           this._isDestroyed = true;
-          console.log('AI车辆被摧毁！'); // 切换到摧毁状态的精灵图
+          console.log('AI车辆被摧毁！');
+          (_crd && SoundManager === void 0 ? (_reportPossibleCrUseOfSoundManager({
+            error: Error()
+          }), SoundManager) : SoundManager).instance.playSoundEffect('carDestruction'); // 切换到摧毁状态的精灵图
 
           if (this.destroyedSprite) {
             var sprite = this.getComponent(Sprite);

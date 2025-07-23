@@ -1,7 +1,7 @@
 System.register(["cc"], function (_export, _context) {
   "use strict";
 
-  var _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, AudioClip, AudioSource, director, sys, resources, _dec, _dec2, _dec3, _class, _class2, _descriptor, _descriptor2, _class3, _crd, ccclass, property, SoundManager;
+  var _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, AudioSource, director, sys, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _class3, _crd, ccclass, property, SoundManager;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -16,31 +16,62 @@ System.register(["cc"], function (_export, _context) {
       __checkObsoleteInNamespace__ = _cc.__checkObsoleteInNamespace__;
       _decorator = _cc._decorator;
       Component = _cc.Component;
-      AudioClip = _cc.AudioClip;
       AudioSource = _cc.AudioSource;
       director = _cc.director;
       sys = _cc.sys;
-      resources = _cc.resources;
     }],
     execute: function () {
       _crd = true;
 
       _cclegacy._RF.push({}, "7c3850Yg29IBK4wW9FYz7f1", "SoundManager", undefined);
 
-      __checkObsolete__(['_decorator', 'Component', 'Node', 'AudioClip', 'AudioSource', 'director', 'sys', 'resources']);
+      __checkObsolete__(['_decorator', 'Component', 'Node', 'AudioClip', 'AudioSource', 'director', 'sys']);
 
       ({
         ccclass,
         property
       } = _decorator);
 
-      _export("SoundManager", SoundManager = (_dec = ccclass('SoundManager'), _dec2 = property(AudioSource), _dec3 = property(AudioSource), _dec(_class = (_class2 = (_class3 = class SoundManager extends Component {
+      _export("SoundManager", SoundManager = (_dec = ccclass('SoundManager'), _dec2 = property({
+        type: AudioSource,
+        tooltip: "背景音乐"
+      }), _dec3 = property({
+        type: AudioSource,
+        tooltip: "按钮点击音效"
+      }), _dec4 = property({
+        type: AudioSource,
+        tooltip: "车辆碰撞音效"
+      }), _dec5 = property({
+        type: AudioSource,
+        tooltip: "车辆毁坏音效"
+      }), _dec6 = property({
+        type: AudioSource,
+        tooltip: "车辆启动音效"
+      }), _dec7 = property({
+        type: AudioSource,
+        tooltip: "车辆加速音效"
+      }), _dec8 = property({
+        type: AudioSource,
+        tooltip: "车辆漂移音效"
+      }), _dec(_class = (_class2 = (_class3 = class SoundManager extends Component {
         constructor() {
           super(...arguments);
 
           _initializerDefineProperty(this, "bgmAudioSource", _descriptor, this);
 
-          _initializerDefineProperty(this, "effectAudioSource", _descriptor2, this);
+          _initializerDefineProperty(this, "buttonClickAudioSource", _descriptor2, this);
+
+          _initializerDefineProperty(this, "carCollisionAudioSource", _descriptor3, this);
+
+          _initializerDefineProperty(this, "carDestructionAudioSource", _descriptor4, this);
+
+          _initializerDefineProperty(this, "carStartAudioSource", _descriptor5, this);
+
+          _initializerDefineProperty(this, "carAccelerateAudioSource", _descriptor6, this);
+
+          _initializerDefineProperty(this, "carDriftAudioSource", _descriptor7, this);
+
+          this.allAudioSources = [];
         }
 
         static get instance() {
@@ -54,63 +85,101 @@ System.register(["cc"], function (_export, _context) {
           }
 
           SoundManager._instance = this;
-          director.addPersistRootNode(this.node);
-          this.bgmAudioSource = this.node.addComponent(AudioSource);
-          this.effectAudioSource = this.node.addComponent(AudioSource);
+          director.addPersistRootNode(this.node); // 将所有音源收集到一个数组中，方便统一管理
+
+          this.allAudioSources.push(this.bgmAudioSource);
+          this.allAudioSources.push(this.buttonClickAudioSource);
+          this.allAudioSources.push(this.carCollisionAudioSource);
+          this.allAudioSources.push(this.carDestructionAudioSource);
+          this.allAudioSources.push(this.carStartAudioSource);
+          this.allAudioSources.push(this.carAccelerateAudioSource);
+          this.allAudioSources.push(this.carDriftAudioSource);
           this.loadState();
         }
 
         start() {
-          this.playBGM('bgm'); // 默认播放的BGM，请确保resources/sound目录下有bgm.mp3/wav等格式文件
+          this.playBGM();
         }
 
-        playBGM(name) {
-          var path = "sound/" + name;
-          resources.load(path, AudioClip, (err, clip) => {
-            if (err) {
-              console.warn("Failed to load BGM: " + path, err);
-              return;
-            }
-
-            this.bgmAudioSource.clip = clip;
-            this.bgmAudioSource.loop = true;
+        playBGM() {
+          if (this.bgmAudioSource) {
             this.bgmAudioSource.play();
-            console.log("Playing BGM: " + path);
-          });
+          }
         }
 
-        playSoundEffect(name) {
-          var path = "sound/" + name;
-          resources.load(path, AudioClip, (err, clip) => {
-            if (err) {
-              console.warn("Failed to load sound effect: " + path, err);
-              return;
-            }
+        playSoundEffect(soundName) {
+          var sourceToPlay = null;
 
-            this.effectAudioSource.playOneShot(clip);
-          });
+          switch (soundName) {
+            case 'buttonClick':
+              sourceToPlay = this.buttonClickAudioSource;
+              break;
+
+            case 'carCollision':
+              sourceToPlay = this.carCollisionAudioSource;
+              break;
+
+            case 'carDestruction':
+              sourceToPlay = this.carDestructionAudioSource;
+              break;
+
+            case 'carStart':
+              sourceToPlay = this.carStartAudioSource;
+              break;
+
+            case 'carAccelerate':
+              sourceToPlay = this.carAccelerateAudioSource;
+              break;
+
+            case 'carDrift':
+              sourceToPlay = this.carDriftAudioSource;
+              break;
+          }
+
+          if (sourceToPlay) {
+            sourceToPlay.play();
+          }
         }
 
         toggleAudio() {
-          var isMuted = this.isMuted();
-          this.bgmAudioSource.volume = isMuted ? 1 : 0;
-          this.effectAudioSource.volume = isMuted ? 1 : 0;
+          var muted = this.isMuted();
+          var newVolume = muted ? 1 : 0;
+          this.allAudioSources.forEach(source => {
+            if (source === this.bgmAudioSource) {
+              source.volume = newVolume * 0.3;
+            } else if (source) {
+              source.volume = newVolume;
+            }
+          });
           this.saveState();
         }
 
         isMuted() {
-          return this.bgmAudioSource.volume === 0;
+          // 检查BGM音源的音量作为代表
+          return this.bgmAudioSource ? this.bgmAudioSource.volume === 0 : false;
         }
 
         saveState() {
-          sys.localStorage.setItem('soundMuted', this.isMuted() ? '1' : '0');
+          var state = {
+            muted: this.isMuted()
+          };
+          sys.localStorage.setItem('soundState', JSON.stringify(state));
         }
 
         loadState() {
-          var muted = sys.localStorage.getItem('soundMuted');
-          var isMuted = muted === '0';
-          this.bgmAudioSource.volume = isMuted ? 0 : 1;
-          this.effectAudioSource.volume = isMuted ? 0 : 1;
+          var stateStr = sys.localStorage.getItem('soundState');
+
+          if (stateStr) {
+            var state = JSON.parse(stateStr);
+            var volume = state.muted ? 0 : 1;
+            this.allAudioSources.forEach(source => {
+              if (source === this.bgmAudioSource) {
+                source.volume = volume * 0.3;
+              } else if (source) {
+                source.volume = volume;
+              }
+            });
+          }
         }
 
       }, _class3._instance = null, _class3), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "bgmAudioSource", [_dec2], {
@@ -120,7 +189,42 @@ System.register(["cc"], function (_export, _context) {
         initializer: function initializer() {
           return null;
         }
-      }), _descriptor2 = _applyDecoratedDescriptor(_class2.prototype, "effectAudioSource", [_dec3], {
+      }), _descriptor2 = _applyDecoratedDescriptor(_class2.prototype, "buttonClickAudioSource", [_dec3], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function initializer() {
+          return null;
+        }
+      }), _descriptor3 = _applyDecoratedDescriptor(_class2.prototype, "carCollisionAudioSource", [_dec4], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function initializer() {
+          return null;
+        }
+      }), _descriptor4 = _applyDecoratedDescriptor(_class2.prototype, "carDestructionAudioSource", [_dec5], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function initializer() {
+          return null;
+        }
+      }), _descriptor5 = _applyDecoratedDescriptor(_class2.prototype, "carStartAudioSource", [_dec6], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function initializer() {
+          return null;
+        }
+      }), _descriptor6 = _applyDecoratedDescriptor(_class2.prototype, "carAccelerateAudioSource", [_dec7], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function initializer() {
+          return null;
+        }
+      }), _descriptor7 = _applyDecoratedDescriptor(_class2.prototype, "carDriftAudioSource", [_dec8], {
         configurable: true,
         enumerable: true,
         writable: true,
