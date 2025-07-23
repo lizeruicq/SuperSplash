@@ -110,6 +110,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
         }
 
         onStartGame() {
+          (_crd && SoundManager === void 0 ? (_reportPossibleCrUseOfSoundManager({
+            error: Error()
+          }), SoundManager) : SoundManager).instance.playSoundEffect('buttonClick');
           (_crd && SceneTransition === void 0 ? (_reportPossibleCrUseOfSceneTransition({
             error: Error()
           }), SceneTransition) : SceneTransition).loadScene("LevelSelect"); // director.loadScene("gamescene");
