@@ -155,7 +155,7 @@
         "951249e0-9f16-456d-8b85-a6ca954da16b@f9941",
         "807a7b47-3819-4529-931c-683fbcf44eb0@f9941",
         "d0ade2fb-557f-4edb-a96c-d68e19c7c942@f9941",
-        "b730527c-3233-41c2-aaf7-7cdab58f9749@f9941",
+        "28974bc3-f2e4-4a81-a402-d716d17c19a7@f9941",
         "9368a3e2-29bf-4ad3-a422-77a08242544b@f9941",
         "a50181e9-ecbd-4d36-bf53-3db514f24fee@f9941",
         "35990206-f1f7-49c0-91d6-a50921fc8128@f9941",
@@ -1670,6 +1670,59 @@
   },
   "a2dc4b69-200c-4660-b066-d070121d4fe0": {
     "url": "db://assets/resources/config/player_data_default.json",
+    "value": {},
+    "versionCode": 1
+  },
+  "ad3fde23-3b38-4abe-9874-3e4876f23c24": {
+    "url": "db://assets/img/menu/cs-ba.png",
+    "value": {},
+    "versionCode": 1
+  },
+  "ad3fde23-3b38-4abe-9874-3e4876f23c24@6c48a": {
+    "url": "db://assets/img/menu/cs-ba.png@6c48a",
+    "value": {
+      "depends": [
+        "ad3fde23-3b38-4abe-9874-3e4876f23c24"
+      ]
+    },
+    "versionCode": 1
+  },
+  "ad3fde23-3b38-4abe-9874-3e4876f23c24@f9941": {
+    "url": "db://assets/img/menu/cs-ba.png@f9941",
+    "value": {
+      "depends": [
+        "ad3fde23-3b38-4abe-9874-3e4876f23c24@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "28974bc3-f2e4-4a81-a402-d716d17c19a7": {
+    "url": "db://assets/img/menu/cs-ba.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "28974bc3-f2e4-4a81-a402-d716d17c19a7@6c48a": {
+    "url": "db://assets/img/menu/cs-ba.png@6c48a",
+    "value": {
+      "depends": [
+        "28974bc3-f2e4-4a81-a402-d716d17c19a7"
+      ]
+    },
+    "versionCode": 1
+  },
+  "28974bc3-f2e4-4a81-a402-d716d17c19a7@f9941": {
+    "url": "db://assets/img/menu/cs-ba.png@f9941",
+    "value": {
+      "depends": [
+        "28974bc3-f2e4-4a81-a402-d716d17c19a7@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "7e6b4c58-68bd-4d7f-985c-8501b7eb4dde": {
+    "url": "db://assets/scripts/gamescene",
     "value": {},
     "versionCode": 1
   }
