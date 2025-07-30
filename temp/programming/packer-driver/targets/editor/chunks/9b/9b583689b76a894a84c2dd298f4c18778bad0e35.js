@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Vec2, Vec3, RigidBody2D, ERigidBody2DType, BoxCollider2D, Contact2DType, ProgressBar, Sprite, SpriteFrame, tween, player, GameManager, SoundManager, _dec, _dec2, _dec3, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _crd, ccclass, property, AIPlayer;
+  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Vec2, Vec3, RigidBody2D, ERigidBody2DType, BoxCollider2D, Contact2DType, ProgressBar, Sprite, SpriteFrame, tween, Prefab, player, GameManager, SoundManager, _dec, _dec2, _dec3, _dec4, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _descriptor12, _crd, ccclass, property, AIPlayer;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -40,6 +40,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       Sprite = _cc.Sprite;
       SpriteFrame = _cc.SpriteFrame;
       tween = _cc.tween;
+      Prefab = _cc.Prefab;
     }, function (_unresolved_2) {
       player = _unresolved_2.player;
     }, function (_unresolved_3) {
@@ -52,14 +53,14 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
       _cclegacy._RF.push({}, "ff4775+zu9CyIBPyXgDNpx7", "AIPlayer", undefined);
 
-      __checkObsolete__(['_decorator', 'Component', 'Node', 'Vec2', 'Vec3', 'RigidBody2D', 'ERigidBody2DType', 'math', 'BoxCollider2D', 'Contact2DType', 'ProgressBar', 'Sprite', 'SpriteFrame', 'tween']);
+      __checkObsolete__(['_decorator', 'Component', 'Vec2', 'Vec3', 'RigidBody2D', 'ERigidBody2DType', 'BoxCollider2D', 'Contact2DType', 'ProgressBar', 'Sprite', 'SpriteFrame', 'tween', 'Prefab']);
 
       ({
         ccclass,
         property
       } = _decorator);
 
-      _export("AIPlayer", AIPlayer = (_dec = ccclass('AIPlayer'), _dec2 = property(ProgressBar), _dec3 = property(SpriteFrame), _dec(_class = (_class2 = class AIPlayer extends Component {
+      _export("AIPlayer", AIPlayer = (_dec = ccclass('AIPlayer'), _dec2 = property(ProgressBar), _dec3 = property(SpriteFrame), _dec4 = property(Prefab), _dec(_class = (_class2 = class AIPlayer extends Component {
         constructor(...args) {
           super(...args);
 
@@ -87,6 +88,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           _initializerDefineProperty(this, "removeDelay", _descriptor10, this);
 
           // 摧毁后移除节点的延迟时间（秒）
+          // 颜料喷洒相关属性
+          _initializerDefineProperty(this, "paintPrefab", _descriptor11, this);
+
+          // 颜料预制体
+          _initializerDefineProperty(this, "paintSprayInterval", _descriptor12, this);
+
+          // 颜料喷洒间隔（秒）
           this._rigidBody = null;
           this._direction = 0;
           // -1:左, 0:不转, 1:右
@@ -100,12 +108,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           // 摧毁相关
           this._isDestroyed = false;
           // 是否已摧毁
-          this._originalSprite = null;
-          // 原始精灵图
-          this._destroyAnimationSpeed = 0.95;
+          // 颜料喷洒相关私有变量
+          this._paintTimer = 0;
+          // 颜料喷洒计时器
+          this._vehicleId = '';
         }
 
-        // 摧毁动画速度衰减系数
+        // 车辆唯一ID
         onLoad() {
           this._rigidBody = null;
           this._direction = 0;
@@ -114,7 +123,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this._targetAngle = 0;
           this._lastValidPosition = new Vec2(); // 初始化摧毁状态
 
-          this._isDestroyed = false;
+          this._isDestroyed = false; // 初始化颜料喷洒相关
+
+          this._paintTimer = 0;
+          this._vehicleId = `ai_${this.node.name}_${Date.now()}`; // 生成唯一ID
         }
 
         start() {
@@ -136,14 +148,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this._targetAngle = this.initAngle;
           this.node.setRotationFromEuler(0, 0, this.initAngle); // 初始化血条
 
-          this.initHealthBar(); // 保存原始精灵图
-
-          const sprite = this.getComponent(Sprite);
-
-          if (sprite && sprite.spriteFrame) {
-            this._originalSprite = sprite.spriteFrame;
-          } // 检查BoxCollider2D组件是否存在
-
+          this.initHealthBar(); // 原始精灵图保存留作未来扩展
+          // 检查BoxCollider2D组件是否存在
 
           const collider = this.getComponent(BoxCollider2D);
 
@@ -271,7 +277,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           if (Math.abs(this._angle) > 360) {
             this._angle = this._angle % 360;
             this._targetAngle = this._targetAngle % 360;
-          }
+          } // 更新颜料喷洒
+
+
+          this.updatePaintSpray(deltaTime);
         } // 供AI控制器调用的接口
 
 
@@ -360,7 +369,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
          */
 
 
-        onCollisionEnter(other, self) {
+        onCollisionEnter(other, _self) {
           console.log('AIPlayer collided with something');
           const playerComponent = other.node.getComponent(_crd && player === void 0 ? (_reportPossibleCrUseOfplayer({
             error: Error()
@@ -532,7 +541,44 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         //     }
         //     console.log('AI车辆已恢复');
         // }
+        // ==================== 颜料喷洒系统 ====================
 
+        /**
+         * 更新颜料喷洒
+         * @param deltaTime 帧时间间隔
+         */
+
+
+        updatePaintSpray(deltaTime) {
+          if (this._isDestroyed || !this.paintPrefab) return; // 更新计时器
+
+          this._paintTimer += deltaTime; // 检查是否到了喷洒时间
+
+          if (this._paintTimer >= this.paintSprayInterval) {
+            this.sprayPaint();
+            this._paintTimer = 0; // 重置计时器
+          }
+        }
+        /**
+         * 喷洒颜料
+         */
+
+
+        sprayPaint() {
+          const gameManager = (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+            error: Error()
+          }), GameManager) : GameManager).getInstance();
+
+          if (!gameManager) {
+            console.warn('GameManager未找到，无法喷洒颜料');
+            return;
+          } // 获取当前车辆的世界位置
+
+
+          const worldPosition = this.node.getWorldPosition(); // 通过GameManager喷洒颜料
+
+          gameManager.sprayPaint(this.paintPrefab, worldPosition, this._vehicleId);
+        }
 
       }, (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "maxSpeed", [property], {
         configurable: true,
@@ -603,6 +649,20 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         writable: true,
         initializer: function () {
           return 3.0;
+        }
+      }), _descriptor11 = _applyDecoratedDescriptor(_class2.prototype, "paintPrefab", [_dec4], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function () {
+          return null;
+        }
+      }), _descriptor12 = _applyDecoratedDescriptor(_class2.prototype, "paintSprayInterval", [property], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function () {
+          return 0.2;
         }
       })), _class2)) || _class));
 

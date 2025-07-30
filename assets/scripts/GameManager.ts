@@ -1,4 +1,4 @@
-import { _decorator, Component, Node, Prefab, instantiate, resources, UITransform, director, ProgressBar, Label, Button } from 'cc';
+import { _decorator, Component, Node, Prefab, instantiate, resources, UITransform, director, ProgressBar, Label, Button, Vec3, labelAssembler } from 'cc';
 import { TempData } from './TempData';
 import { CameraFollow } from './camera_follow';
 import { player } from './player';
@@ -7,6 +7,8 @@ import { AIPlayer } from './AIPlayer';
 import { PlayerManager } from './PlayerManager';
 import { SceneTransition } from './SceneTransition';
 import { SoundManager } from './SoundManager';
+import { PaintManager } from './PaintManager';
+import { GameHUD } from './GameHUD';
 
 const { ccclass, property } = _decorator;
 
@@ -72,12 +74,34 @@ export class GameManager extends Component {
     private gameStartTime: number = 0;
     private gameEndTime: number = 0;
 
+    // 倒计时相关
+  
+    gameDuration: number = 120; // 游戏时长（秒），默认2分钟
+
+    private remainingTime: number = 120; // 剩余时间
+
     // 玩家数据
     private playerHP: number = 0; // 将在player加载完成后初始化
     private playerMaxHP: number = 0; // 将在player加载完成后初始化
     private enemyCount: number = 0;
     private initialEnemyCount: number = 0;
     private playerComponent: player | null = null; // 玩家组件引用
+
+
+    private paintManager: PaintManager | null = null;
+    // @property(PaintManager)
+    // paintManager: PaintManager = null!;
+
+    // HUD界面
+    @property(GameHUD)
+    gameHUD: GameHUD = null!;
+
+    // 游戏结束面板颜料占比显示
+    @property(Node)
+    paintRatiosContainer: Node = null!; // 颜料占比显示容器
+
+    @property(Label)
+    paintRatiosTitleLabel: Label = null!; // 颜料占比标题
 
     public static getInstance(): GameManager {
         return GameManager._instance;
@@ -98,12 +122,19 @@ export class GameManager extends Component {
         this.bindButtonEvents();
         this.loadLevelAndCar();
     }
+    update(deltaTime: number) {
+        // 只在游戏运行状态下更新倒计时
+        if (this.currentState === GameState.RUNNING) {
+            this.updateCountdown(deltaTime);
+        }
+    }
+
     onDestroy() {
          if (GameManager._instance === this) {
             GameManager._instance = null;
             console.log("GameManager 实例已销毁");
         }
-}
+    }
 
     /**
      * 初始化游戏
@@ -113,12 +144,22 @@ export class GameManager extends Component {
         this.gameStartTime = Date.now();
         this.gameEndTime = 0;
 
+        // 初始化倒计时
+        this.remainingTime = this.gameDuration;
+
         // 初始化UI面板状态
         if (this.pausePanel) {
             this.pausePanel.active = false;
         }
         if (this.gameOverPanel) {
             this.gameOverPanel.active = false;
+        }
+
+       
+
+        // 重置HUD显示
+        if (this.gameHUD) {
+            this.gameHUD.resetHUD();
         }
     }
 
@@ -202,6 +243,8 @@ export class GameManager extends Component {
                                 if (cameraFollow && mapNode && playerNode) {
                                     cameraFollow.init(mapNode, playerNode);
                                 }
+                                 // 初始化颜料系统
+                                this.initializePaintSystem();
                             }
                             if (err2) {
                                 console.error('加载车辆预制体失败:', err2, carId);
@@ -444,6 +487,9 @@ export class GameManager extends Component {
         if (this.gameOverTitleLabel) {
             this.gameOverTitleLabel.string = isVictory ? '胜利！' : '失败！';
         }
+
+        // 更新颜料占比显示
+        this.updateGameOverPaintRatios();
     }
 
     /**
@@ -618,5 +664,222 @@ export class GameManager extends Component {
      */
     public getEnemyCount(): number {
         return this.enemyCount;
+    }
+
+    // ==================== 颜料系统 ====================
+
+    /**
+     * 初始化颜料系统
+     */
+    private initializePaintSystem(): void {
+        // 查找或创建PaintManager
+        this.paintManager = this.node.scene.getComponentInChildren(PaintManager);
+
+        
+    }
+
+    /**
+     * 清除所有颜料（游戏重新开始时调用）
+     */
+    public clearAllPaint(): void {
+        if (this.paintManager) {
+            this.paintManager.clearAllPaint();
+        }
+    }
+
+    /**
+     * 车辆喷洒颜料的中介方法
+     * @param paintPrefab 颜料预制体
+     * @param worldPosition 世界坐标位置
+     * @param vehicleId 车辆ID
+     */
+    public sprayPaint(paintPrefab: Prefab, worldPosition: Vec3, vehicleId: string): void {
+        if (this.paintManager && paintPrefab) {
+            this.paintManager.addPaint(paintPrefab, worldPosition, vehicleId);
+        } else {
+            console.warn('GameManager: 无法喷洒颜料，PaintManager或颜料预制体为空');
+        }
+    }
+
+    /**
+     * 获取所有车辆的颜料占比
+     * @returns 包含每个车辆ID和其占比的对象
+     */
+    public getAllVehiclePaintRatios(): { [vehicleId: string]: number } {
+        if (this.paintManager) {
+            return this.paintManager.getAllPaintRatios();
+        }
+        return {};
+    }
+
+    /**
+     * 获取排序后的颜料占比（从高到低）
+     * @returns 按占比排序的数组
+     */
+    public getSortedVehiclePaintRatios(): Array<{ vehicleId: string, ratio: number, count: number }> {
+        if (this.paintManager) {
+            const sorted = this.paintManager.getSortedPaintRatios();
+            // 将ownerId重命名为vehicleId以保持一致性
+            return sorted.map(item => ({
+                vehicleId: item.ownerId,
+                ratio: item.ratio,
+                count: item.count
+            }));
+        }
+        return [];
+    }
+
+    // ==================== 倒计时系统 ====================
+
+    /**
+     * 更新倒计时
+     * @param deltaTime 帧时间间隔
+     */
+    private updateCountdown(deltaTime: number): void {
+        this.remainingTime -= deltaTime;
+
+        // 检查是否时间到了
+        if (this.remainingTime <= 0) {
+            this.remainingTime = 0;
+            this.onCountdownFinished();
+        }
+    }
+
+    /**
+     * 倒计时结束处理
+     */
+    private onCountdownFinished(): void {
+        console.log('倒计时结束，游戏结束');
+        // 计算最终的颜料占比并结束游戏
+        this.gameOver(this.determineWinner());
+    }
+
+    /**
+     * 确定获胜者（基于颜料占比）
+     * @returns 是否玩家获胜
+     */
+    private determineWinner(): boolean {
+        if (!this.paintManager) {
+            return false; // 如果没有颜料管理器，默认玩家失败
+        }
+
+        // 获取玩家颜料占比
+        const playerPaintCount = this.paintManager.getPaintCountByOwner('player');
+        const totalPaintCount = this.paintManager.getTotalPaintCount();
+
+        if (totalPaintCount === 0) {
+            return false; // 如果没有颜料，默认玩家失败
+        }
+
+        const playerRatio = playerPaintCount / totalPaintCount;
+        console.log(`玩家颜料占比: ${(playerRatio * 100).toFixed(1)}%`);
+
+        // 玩家占比超过50%则获胜
+        return playerRatio > 0.5;
+    }
+
+    /**
+     * 获取剩余时间
+     * @returns 剩余时间（秒）
+     */
+    public getRemainingTime(): number {
+        return Math.max(0, this.remainingTime);
+    }
+
+    /**
+     * 获取剩余时间的格式化字符串
+     * @returns 格式化的时间字符串 (MM:SS)
+     */
+    public getFormattedRemainingTime(): string {
+        const totalSeconds = Math.ceil(this.getRemainingTime());
+        const minutes = Math.floor(totalSeconds / 60);
+        const seconds = totalSeconds % 60;
+
+        // 手动实现padStart功能以兼容旧版本
+        const minutesStr = minutes < 10 ? '0' + minutes : minutes.toString();
+        const secondsStr = seconds < 10 ? '0' + seconds : seconds.toString();
+
+        return `${minutesStr}:${secondsStr}`;
+    }
+
+    // ==================== 游戏结束面板颜料占比显示 ====================
+
+    /**
+     * 更新游戏结束面板的颜料占比显示
+     */
+    private updateGameOverPaintRatios(): void {
+        if (!this.paintRatiosContainer) {
+            console.warn('GameManager: 颜料占比显示容器未设置');
+            return;
+        }
+
+        // 设置标题
+        if (this.paintRatiosTitleLabel) {
+            this.paintRatiosTitleLabel.string = "颜料占比统计";
+        }
+
+        // 清空现有显示
+        this.paintRatiosContainer.removeAllChildren();
+
+        // 获取排序后的颜料占比
+        const sortedRatios = this.getSortedVehiclePaintRatios();
+
+        if (sortedRatios.length === 0) {
+            // 如果没有颜料数据，显示提示
+            const noDataLabel = this.createGameOverRatioLabel("没有颜料数据", 0);
+            this.paintRatiosContainer.addChild(noDataLabel);
+            return;
+        }
+
+        // 显示每个车辆的占比
+        sortedRatios.forEach((ratioData, index) => {
+            const displayName = this.getVehicleDisplayName(ratioData.vehicleId);
+            const percentage = Math.round(ratioData.ratio * 100);
+            const text = `${displayName}: ${percentage}% (${ratioData.count}块)`;
+
+            const ratioLabel = this.createGameOverRatioLabel(text, index);
+            this.paintRatiosContainer.addChild(ratioLabel);
+        });
+    }
+
+    /**
+     * 创建游戏结束面板的占比显示标签
+     * @param text 显示文本
+     * @param index 索引（用于定位）
+     * @returns 标签节点
+     */
+    private createGameOverRatioLabel(text: string, index: number): Node {
+        const labelNode = new Node(`GameOverRatioLabel_${index}`);
+        const label = labelNode.addComponent(Label);
+
+        label.string = text;
+        label.fontSize = 24;
+        label.color = new (label.color.constructor as any)(255, 255, 255, 255);
+
+        // 设置位置
+        labelNode.setPosition(0, -index * 35, 0);
+
+        return labelNode;
+    }
+
+    /**
+     * 获取车辆显示名称
+     * @param vehicleId 车辆ID
+     * @returns 显示名称
+     */
+    private getVehicleDisplayName(vehicleId: string): string {
+        if (vehicleId === 'player') {
+            return '玩家';
+        }
+
+        // 处理AI车辆名称
+        if (vehicleId.startsWith('ai_')) {
+            const parts = vehicleId.split('_');
+            if (parts.length >= 2) {
+                return `AI-${parts[1]}`;
+            }
+        }
+
+        return vehicleId;
     }
 }

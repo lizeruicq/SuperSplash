@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8", "__unresolved_9", "__unresolved_10"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Node, Prefab, instantiate, resources, UITransform, director, ProgressBar, Label, Button, TempData, CameraFollow, player, AIController, AIPlayer, PlayerManager, SceneTransition, SoundManager, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _dec10, _dec11, _dec12, _dec13, _dec14, _dec15, _dec16, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _descriptor12, _descriptor13, _descriptor14, _descriptor15, _class3, _crd, ccclass, property, GameState, GameManager;
+  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Node, Prefab, instantiate, resources, UITransform, director, ProgressBar, Label, Button, TempData, CameraFollow, player, AIController, AIPlayer, PlayerManager, SceneTransition, SoundManager, PaintManager, GameHUD, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _dec10, _dec11, _dec12, _dec13, _dec14, _dec15, _dec16, _dec17, _dec18, _dec19, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _descriptor12, _descriptor13, _descriptor14, _descriptor15, _descriptor16, _descriptor17, _descriptor18, _class3, _crd, ccclass, property, GameState, GameManager;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -41,6 +41,14 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("SoundManager", "./SoundManager", _context.meta, extras);
   }
 
+  function _reportPossibleCrUseOfPaintManager(extras) {
+    _reporterNs.report("PaintManager", "./PaintManager", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfGameHUD(extras) {
+    _reporterNs.report("GameHUD", "./GameHUD", _context.meta, extras);
+  }
+
   return {
     setters: [function (_unresolved_) {
       _reporterNs = _unresolved_;
@@ -75,13 +83,17 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       SceneTransition = _unresolved_8.SceneTransition;
     }, function (_unresolved_9) {
       SoundManager = _unresolved_9.SoundManager;
+    }, function (_unresolved_10) {
+      PaintManager = _unresolved_10.PaintManager;
+    }, function (_unresolved_11) {
+      GameHUD = _unresolved_11.GameHUD;
     }],
     execute: function () {
       _crd = true;
 
       _cclegacy._RF.push({}, "b67f4UjjapGSoVG2Jvvuyl3", "GameManager", undefined);
 
-      __checkObsolete__(['_decorator', 'Component', 'Node', 'Prefab', 'instantiate', 'resources', 'UITransform', 'director', 'ProgressBar', 'Label', 'Button']);
+      __checkObsolete__(['_decorator', 'Component', 'Node', 'Prefab', 'instantiate', 'resources', 'UITransform', 'director', 'ProgressBar', 'Label', 'Button', 'Vec3', 'labelAssembler']);
 
       ({
         ccclass,
@@ -95,7 +107,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         return GameState;
       }({}));
 
-      _export("GameManager", GameManager = (_dec = ccclass('GameManager'), _dec2 = property(Node), _dec3 = property(Node), _dec4 = property(Node), _dec5 = property(Node), _dec6 = property(ProgressBar), _dec7 = property(Label), _dec8 = property(Button), _dec9 = property(Node), _dec10 = property(Node), _dec11 = property(Button), _dec12 = property(Button), _dec13 = property(Button), _dec14 = property(Label), _dec15 = property(Label), _dec16 = property(Label), _dec(_class = (_class2 = (_class3 = class GameManager extends Component {
+      _export("GameManager", GameManager = (_dec = ccclass('GameManager'), _dec2 = property(Node), _dec3 = property(Node), _dec4 = property(Node), _dec5 = property(Node), _dec6 = property(ProgressBar), _dec7 = property(Label), _dec8 = property(Button), _dec9 = property(Node), _dec10 = property(Node), _dec11 = property(Button), _dec12 = property(Button), _dec13 = property(Button), _dec14 = property(Label), _dec15 = property(Label), _dec16 = property(Label), _dec17 = property(_crd && GameHUD === void 0 ? (_reportPossibleCrUseOfGameHUD({
+        error: Error()
+      }), GameHUD) : GameHUD), _dec18 = property(Node), _dec19 = property(Label), _dec(_class = (_class2 = (_class3 = class GameManager extends Component {
         constructor() {
           super(...arguments);
 
@@ -148,6 +162,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.currentState = GameState.RUNNING;
           this.gameStartTime = 0;
           this.gameEndTime = 0;
+          // 倒计时相关
+          this.gameDuration = 120;
+          // 游戏时长（秒），默认2分钟
+          this.remainingTime = 120;
+          // 剩余时间
           // 玩家数据
           this.playerHP = 0;
           // 将在player加载完成后初始化
@@ -156,9 +175,22 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.enemyCount = 0;
           this.initialEnemyCount = 0;
           this.playerComponent = null;
+          // 玩家组件引用
+          this.paintManager = null;
+
+          // @property(PaintManager)
+          // paintManager: PaintManager = null!;
+          // HUD界面
+          _initializerDefineProperty(this, "gameHUD", _descriptor16, this);
+
+          // 游戏结束面板颜料占比显示
+          _initializerDefineProperty(this, "paintRatiosContainer", _descriptor17, this);
+
+          // 颜料占比显示容器
+          _initializerDefineProperty(this, "paintRatiosTitleLabel", _descriptor18, this);
         }
 
-        // 玩家组件引用
+        // 颜料占比标题
         static getInstance() {
           return GameManager._instance;
         }
@@ -180,6 +212,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.loadLevelAndCar();
         }
 
+        update(deltaTime) {
+          // 只在游戏运行状态下更新倒计时
+          if (this.currentState === GameState.RUNNING) {
+            this.updateCountdown(deltaTime);
+          }
+        }
+
         onDestroy() {
           if (GameManager._instance === this) {
             GameManager._instance = null;
@@ -194,7 +233,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         initializeGame() {
           this.currentState = GameState.RUNNING;
           this.gameStartTime = Date.now();
-          this.gameEndTime = 0; // 初始化UI面板状态
+          this.gameEndTime = 0; // 初始化倒计时
+
+          this.remainingTime = this.gameDuration; // 初始化UI面板状态
 
           if (this.pausePanel) {
             this.pausePanel.active = false;
@@ -202,6 +243,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           if (this.gameOverPanel) {
             this.gameOverPanel.active = false;
+          } // 重置HUD显示
+
+
+          if (this.gameHUD) {
+            this.gameHUD.resetHUD();
           }
         }
         /**
@@ -294,7 +340,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
                       if (cameraFollow && mapNode && playerNode) {
                         cameraFollow.init(mapNode, playerNode);
-                      }
+                      } // 初始化颜料系统
+
+
+                      this.initializePaintSystem();
                     }
 
                     if (err2) {
@@ -553,7 +602,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           // 更新标题
           if (this.gameOverTitleLabel) {
             this.gameOverTitleLabel.string = isVictory ? '胜利！' : '失败！';
-          }
+          } // 更新颜料占比显示
+
+
+          this.updateGameOverPaintRatios();
         }
         /**
          * 计算表现评价和奖励
@@ -743,6 +795,227 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
         getEnemyCount() {
           return this.enemyCount;
+        } // ==================== 颜料系统 ====================
+
+        /**
+         * 初始化颜料系统
+         */
+
+
+        initializePaintSystem() {
+          // 查找或创建PaintManager
+          this.paintManager = this.node.scene.getComponentInChildren(_crd && PaintManager === void 0 ? (_reportPossibleCrUseOfPaintManager({
+            error: Error()
+          }), PaintManager) : PaintManager);
+        }
+        /**
+         * 清除所有颜料（游戏重新开始时调用）
+         */
+
+
+        clearAllPaint() {
+          if (this.paintManager) {
+            this.paintManager.clearAllPaint();
+          }
+        }
+        /**
+         * 车辆喷洒颜料的中介方法
+         * @param paintPrefab 颜料预制体
+         * @param worldPosition 世界坐标位置
+         * @param vehicleId 车辆ID
+         */
+
+
+        sprayPaint(paintPrefab, worldPosition, vehicleId) {
+          if (this.paintManager && paintPrefab) {
+            this.paintManager.addPaint(paintPrefab, worldPosition, vehicleId);
+          } else {
+            console.warn('GameManager: 无法喷洒颜料，PaintManager或颜料预制体为空');
+          }
+        }
+        /**
+         * 获取所有车辆的颜料占比
+         * @returns 包含每个车辆ID和其占比的对象
+         */
+
+
+        getAllVehiclePaintRatios() {
+          if (this.paintManager) {
+            return this.paintManager.getAllPaintRatios();
+          }
+
+          return {};
+        }
+        /**
+         * 获取排序后的颜料占比（从高到低）
+         * @returns 按占比排序的数组
+         */
+
+
+        getSortedVehiclePaintRatios() {
+          if (this.paintManager) {
+            var sorted = this.paintManager.getSortedPaintRatios(); // 将ownerId重命名为vehicleId以保持一致性
+
+            return sorted.map(item => ({
+              vehicleId: item.ownerId,
+              ratio: item.ratio,
+              count: item.count
+            }));
+          }
+
+          return [];
+        } // ==================== 倒计时系统 ====================
+
+        /**
+         * 更新倒计时
+         * @param deltaTime 帧时间间隔
+         */
+
+
+        updateCountdown(deltaTime) {
+          this.remainingTime -= deltaTime; // 检查是否时间到了
+
+          if (this.remainingTime <= 0) {
+            this.remainingTime = 0;
+            this.onCountdownFinished();
+          }
+        }
+        /**
+         * 倒计时结束处理
+         */
+
+
+        onCountdownFinished() {
+          console.log('倒计时结束，游戏结束'); // 计算最终的颜料占比并结束游戏
+
+          this.gameOver(this.determineWinner());
+        }
+        /**
+         * 确定获胜者（基于颜料占比）
+         * @returns 是否玩家获胜
+         */
+
+
+        determineWinner() {
+          if (!this.paintManager) {
+            return false; // 如果没有颜料管理器，默认玩家失败
+          } // 获取玩家颜料占比
+
+
+          var playerPaintCount = this.paintManager.getPaintCountByOwner('player');
+          var totalPaintCount = this.paintManager.getTotalPaintCount();
+
+          if (totalPaintCount === 0) {
+            return false; // 如果没有颜料，默认玩家失败
+          }
+
+          var playerRatio = playerPaintCount / totalPaintCount;
+          console.log("\u73A9\u5BB6\u989C\u6599\u5360\u6BD4: " + (playerRatio * 100).toFixed(1) + "%"); // 玩家占比超过50%则获胜
+
+          return playerRatio > 0.5;
+        }
+        /**
+         * 获取剩余时间
+         * @returns 剩余时间（秒）
+         */
+
+
+        getRemainingTime() {
+          return Math.max(0, this.remainingTime);
+        }
+        /**
+         * 获取剩余时间的格式化字符串
+         * @returns 格式化的时间字符串 (MM:SS)
+         */
+
+
+        getFormattedRemainingTime() {
+          var totalSeconds = Math.ceil(this.getRemainingTime());
+          var minutes = Math.floor(totalSeconds / 60);
+          var seconds = totalSeconds % 60; // 手动实现padStart功能以兼容旧版本
+
+          var minutesStr = minutes < 10 ? '0' + minutes : minutes.toString();
+          var secondsStr = seconds < 10 ? '0' + seconds : seconds.toString();
+          return minutesStr + ":" + secondsStr;
+        } // ==================== 游戏结束面板颜料占比显示 ====================
+
+        /**
+         * 更新游戏结束面板的颜料占比显示
+         */
+
+
+        updateGameOverPaintRatios() {
+          if (!this.paintRatiosContainer) {
+            console.warn('GameManager: 颜料占比显示容器未设置');
+            return;
+          } // 设置标题
+
+
+          if (this.paintRatiosTitleLabel) {
+            this.paintRatiosTitleLabel.string = "颜料占比统计";
+          } // 清空现有显示
+
+
+          this.paintRatiosContainer.removeAllChildren(); // 获取排序后的颜料占比
+
+          var sortedRatios = this.getSortedVehiclePaintRatios();
+
+          if (sortedRatios.length === 0) {
+            // 如果没有颜料数据，显示提示
+            var noDataLabel = this.createGameOverRatioLabel("没有颜料数据", 0);
+            this.paintRatiosContainer.addChild(noDataLabel);
+            return;
+          } // 显示每个车辆的占比
+
+
+          sortedRatios.forEach((ratioData, index) => {
+            var displayName = this.getVehicleDisplayName(ratioData.vehicleId);
+            var percentage = Math.round(ratioData.ratio * 100);
+            var text = displayName + ": " + percentage + "% (" + ratioData.count + "\u5757)";
+            var ratioLabel = this.createGameOverRatioLabel(text, index);
+            this.paintRatiosContainer.addChild(ratioLabel);
+          });
+        }
+        /**
+         * 创建游戏结束面板的占比显示标签
+         * @param text 显示文本
+         * @param index 索引（用于定位）
+         * @returns 标签节点
+         */
+
+
+        createGameOverRatioLabel(text, index) {
+          var labelNode = new Node("GameOverRatioLabel_" + index);
+          var label = labelNode.addComponent(Label);
+          label.string = text;
+          label.fontSize = 24;
+          label.color = new label.color.constructor(255, 255, 255, 255); // 设置位置
+
+          labelNode.setPosition(0, -index * 35, 0);
+          return labelNode;
+        }
+        /**
+         * 获取车辆显示名称
+         * @param vehicleId 车辆ID
+         * @returns 显示名称
+         */
+
+
+        getVehicleDisplayName(vehicleId) {
+          if (vehicleId === 'player') {
+            return '玩家';
+          } // 处理AI车辆名称
+
+
+          if (vehicleId.startsWith('ai_')) {
+            var parts = vehicleId.split('_');
+
+            if (parts.length >= 2) {
+              return "AI-" + parts[1];
+            }
+          }
+
+          return vehicleId;
         }
 
       }, _class3._instance = null, _class3), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "playGround", [_dec2], {
@@ -844,6 +1117,27 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           return null;
         }
       }), _descriptor15 = _applyDecoratedDescriptor(_class2.prototype, "rewardLabel", [_dec16], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function initializer() {
+          return null;
+        }
+      }), _descriptor16 = _applyDecoratedDescriptor(_class2.prototype, "gameHUD", [_dec17], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function initializer() {
+          return null;
+        }
+      }), _descriptor17 = _applyDecoratedDescriptor(_class2.prototype, "paintRatiosContainer", [_dec18], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function initializer() {
+          return null;
+        }
+      }), _descriptor18 = _applyDecoratedDescriptor(_class2.prototype, "paintRatiosTitleLabel", [_dec19], {
         configurable: true,
         enumerable: true,
         writable: true,
