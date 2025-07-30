@@ -1,4 +1,4 @@
-import { _decorator, Component, Node, input, Input, EventKeyboard, KeyCode, Vec2, Vec3, RigidBody2D, ERigidBody2DType, Contact2DType, Collider2D, IPhysics2DContact, BoxCollider2D, Sprite, SpriteFrame, tween } from 'cc';
+import { _decorator, Component, input, Input, EventKeyboard, KeyCode, Vec2, Vec3, RigidBody2D, ERigidBody2DType, Contact2DType, IPhysics2DContact, BoxCollider2D, Sprite, SpriteFrame, tween, Prefab } from 'cc';
 const { ccclass, property } = _decorator;
 import { AIPlayer } from './AIPlayer';
 import { GameManager } from './GameManager';
@@ -28,6 +28,13 @@ export class player extends Component {
     @property
     removeDelay: number = 3.0; // 摧毁后移除节点的延迟时间（秒）
 
+    // 颜料喷洒相关属性
+    @property(Prefab)
+    paintPrefab: Prefab = null!; // 颜料预制体
+
+    @property
+    paintSprayInterval: number = 0.2; // 颜料喷洒间隔（秒）
+
     protected _rigidBody: RigidBody2D = null!;
     private _direction: number = 0; // -1:左, 0:不转, 1:右
     private _accel: number = 0; // -1:刹车, 0:无, 1:加速
@@ -39,7 +46,11 @@ export class player extends Component {
     private _currentHealth: number = 100; // 当前生命值
     private _isDestroyed: boolean = false; // 是否已摧毁
     private _originalSprite: SpriteFrame = null!; // 原始精灵图
-    private _destroyAnimationSpeed: number = 0.95; // 摧毁动画速度衰减系数
+
+
+    // 颜料喷洒相关私有变量
+    private _paintTimer: number = 0; // 颜料喷洒计时器
+    private _vehicleId: string = 'player'; // 车辆唯一ID
 
     onLoad() {
         // 确保在组件加载时初始化
@@ -53,6 +64,10 @@ export class player extends Component {
         // 初始化生命值和摧毁状态
         this._currentHealth = this.maxHealth;
         this._isDestroyed = false;
+
+        // 初始化颜料喷洒相关
+        this._paintTimer = 0;
+        this._vehicleId = 'player';
     }
 
     onEnable() {
@@ -247,6 +262,9 @@ export class player extends Component {
             this._angle = this._angle % 360;
             this._targetAngle = this._targetAngle % 360;
         }
+
+        // 更新颜料喷洒
+        this.updatePaintSpray(deltaTime);
     }
 
     public init(angle: number) {
@@ -266,7 +284,7 @@ export class player extends Component {
     /**
      * 玩家车辆与AI车辆碰撞时，按双方速度造成伤害
      */
-    onBeginContact(selfCollider: BoxCollider2D, otherCollider: BoxCollider2D, contact: IPhysics2DContact | null) {
+    onBeginContact(_selfCollider: BoxCollider2D, otherCollider: BoxCollider2D, _contact: IPhysics2DContact | null) {
         SoundManager.instance.playSoundEffect('carCollision');
         console.log('玩家车辆发生碰撞，碰撞对象:', otherCollider.node.name);
         // 判断对方是否为AI车辆
@@ -380,16 +398,7 @@ export class player extends Component {
         this._accel = 0;
     }
 
-    /**
-     * 安排移除节点（可选功能，通常玩家车辆不使用）
-     */
-    private scheduleRemoveNode() {
-        if (this.node && this.node.isValid) {
-            this.scheduleOnce(() => {
-                this.removeVehicleNode();
-            }, this.removeDelay);
-        }
-    }
+
 
     /**
      * 移除车辆节点（可选功能，通常玩家车辆不使用）
@@ -476,5 +485,42 @@ export class player extends Component {
 
         console.log('玩家车辆已恢复');
     }
+
+    // ==================== 颜料喷洒系统 ====================
+
+    /**
+     * 更新颜料喷洒
+     * @param deltaTime 帧时间间隔
+     */
+    private updatePaintSpray(deltaTime: number): void {
+        if (this._isDestroyed || !this.paintPrefab) return;
+
+        // 更新计时器
+        this._paintTimer += deltaTime;
+
+        // 检查是否到了喷洒时间
+        if (this._paintTimer >= this.paintSprayInterval) {
+            this.sprayPaint();
+            this._paintTimer = 0; // 重置计时器
+        }
+    }
+
+    /**
+     * 喷洒颜料
+     */
+    private sprayPaint(): void {
+        const gameManager = GameManager.getInstance();
+        if (!gameManager) {
+            console.warn('GameManager未找到，无法喷洒颜料');
+            return;
+        }
+
+        // 获取当前车辆的世界位置
+        const worldPosition = this.node.getWorldPosition();
+
+        // 通过GameManager喷洒颜料
+        gameManager.sprayPaint(this.paintPrefab, worldPosition, this._vehicleId);
+    }
+
 }
 

@@ -31,7 +31,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
     execute: function () {
       _crd = true;
 
-      _cclegacy._RF.push({}, "17b89ATsidOnZzZTfc3xnsw", "SceneTransitionTest", undefined);
+      _cclegacy._RF.push({}, "ffd93oBTstDcp0MKsLxMGwk", "SceneTransitionTest", undefined);
 
       __checkObsolete__(['_decorator', 'Component', 'Button', 'Label', 'director']);
 

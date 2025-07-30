@@ -801,6 +801,7 @@
     "value": {
       "depends": [
         "a238f344-7c25-4d83-a0ec-8c85e46d3ec8@f9941",
+        "d1312f02-4e7f-4f9f-aed7-f255abb6e7f8",
         "49e36654-b2c3-47d9-afeb-5db28286a1b0@f9941"
       ],
       "dependScripts": [
@@ -910,9 +911,11 @@
     "url": "db://assets/resources/prefab/levels/level-1.prefab",
     "value": {
       "depends": [
+        "4d5329e9-8f67-43e3-a399-e0fa9a5ad5f4",
         "5fa4a020-ad12-4d51-9e7d-57cecdc056ca",
         "49e36654-b2c3-47d9-afeb-5db28286a1b0@f9941",
         "a238f344-7c25-4d83-a0ec-8c85e46d3ec8@f9941",
+        "b71c19d0-4ac9-4dcb-aa32-b65fde2c406a",
         "0bfa81f7-9b43-4f2a-bc44-2375066c8694@f9941"
       ],
       "dependScripts": [
@@ -1724,6 +1727,132 @@
   "7e6b4c58-68bd-4d7f-985c-8501b7eb4dde": {
     "url": "db://assets/scripts/gamescene",
     "value": {},
+    "versionCode": 1
+  },
+  "7dd7ac9d-7d90-4745-bb56-3c99a1d345df": {
+    "url": "db://assets/scripts/PaintManager.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "e9c7f25f-e46f-4cf1-9025-dae477143ca9": {
+    "url": "db://assets/scripts/PaintSpot.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "b0b6bdec-bc34-4ac8-808c-a35118bcf609": {
+    "url": "db://assets/resources/prefab/paints",
+    "value": {},
+    "versionCode": 1
+  },
+  "962a8fae-c656-4e4a-bc33-02b0dbe793f5": {
+    "url": "db://assets/resources/prefab/paints/README.md",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "8d994a71-0534-4deb-9268-d898d9e0c007": {
+    "url": "db://assets/scripts/GameHUD.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "850968dc-a180-4230-a0c6-b9496fca7201": {
+    "url": "db://assets/scripts/GameOverPanel.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "c5a4039a-2f34-448c-ba11-89435a6132ed": {
+    "url": "db://assets/resources/prefab/paint",
+    "value": {},
+    "versionCode": 1
+  },
+  "eea97c99-7110-4239-a1cd-e97b3b5441c3": {
+    "url": "db://assets/img/paint_blue.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "eea97c99-7110-4239-a1cd-e97b3b5441c3@6c48a": {
+    "url": "db://assets/img/paint_blue.png@6c48a",
+    "value": {
+      "depends": [
+        "eea97c99-7110-4239-a1cd-e97b3b5441c3"
+      ]
+    },
+    "versionCode": 1
+  },
+  "eea97c99-7110-4239-a1cd-e97b3b5441c3@f9941": {
+    "url": "db://assets/img/paint_blue.png@f9941",
+    "value": {
+      "depends": [
+        "eea97c99-7110-4239-a1cd-e97b3b5441c3@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "d1312f02-4e7f-4f9f-aed7-f255abb6e7f8": {
+    "url": "db://assets/resources/prefab/paints/paint_blue.prefab",
+    "value": {
+      "depends": [
+        "eea97c99-7110-4239-a1cd-e97b3b5441c3@f9941"
+      ],
+      "dependScripts": [
+        "e9c7f25f-e46f-4cf1-9025-dae477143ca9"
+      ]
+    },
+    "versionCode": 1
+  },
+  "8cc3d7a6-bdc6-4872-af88-7b99795e09c3": {
+    "url": "db://assets/img/paint_orange.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "8cc3d7a6-bdc6-4872-af88-7b99795e09c3@6c48a": {
+    "url": "db://assets/img/paint_orange.png@6c48a",
+    "value": {
+      "depends": [
+        "8cc3d7a6-bdc6-4872-af88-7b99795e09c3"
+      ]
+    },
+    "versionCode": 1
+  },
+  "8cc3d7a6-bdc6-4872-af88-7b99795e09c3@f9941": {
+    "url": "db://assets/img/paint_orange.png@f9941",
+    "value": {
+      "depends": [
+        "8cc3d7a6-bdc6-4872-af88-7b99795e09c3@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "b71c19d0-4ac9-4dcb-aa32-b65fde2c406a": {
+    "url": "db://assets/resources/prefab/paints/paint_orange.prefab",
+    "value": {
+      "depends": [
+        "8cc3d7a6-bdc6-4872-af88-7b99795e09c3@f9941"
+      ],
+      "dependScripts": [
+        "e9c7f25f-e46f-4cf1-9025-dae477143ca9"
+      ]
+    },
+    "versionCode": 1
+  },
+  "ffd93a01-4ecb-4372-9d0c-2ac2f1306c24": {
+    "url": "db://assets/scripts/SceneTransitionTest.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "4d5329e9-8f67-43e3-a399-e0fa9a5ad5f4": {
+    "url": "db://assets/resources/prefab/paints/PaintRoot.prefab",
+    "value": {
+      "depends": [],
+      "dependScripts": [
+        "7dd7ac9d-7d90-4745-bb56-3c99a1d345df"
+      ]
+    },
     "versionCode": 1
   }
 }

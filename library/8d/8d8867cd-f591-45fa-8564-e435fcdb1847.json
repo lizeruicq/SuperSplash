@@ -537,6 +537,8 @@
       "__expectedType__": "cc.SpriteFrame"
     },
     "removeDelay": 3,
+    "paintPrefab": null,
+    "paintSprayInterval": 0.2,
     "_id": ""
   },
   {
@@ -939,6 +941,8 @@
       "__expectedType__": "cc.SpriteFrame"
     },
     "removeDelay": 3,
+    "paintPrefab": null,
+    "paintSprayInterval": 0.2,
     "_id": ""
   },
   {
@@ -1341,6 +1345,8 @@
       "__expectedType__": "cc.SpriteFrame"
     },
     "removeDelay": 3,
+    "paintPrefab": null,
+    "paintSprayInterval": 0.2,
     "_id": ""
   },
   {
@@ -1743,6 +1749,8 @@
       "__expectedType__": "cc.SpriteFrame"
     },
     "removeDelay": 3,
+    "paintPrefab": null,
+    "paintSprayInterval": 0.2,
     "_id": ""
   },
   {
@@ -2034,6 +2042,18 @@
       },
       {
         "__id__": 126
+      },
+      {
+        "__id__": 129
+      },
+      {
+        "__id__": 131
+      },
+      {
+        "__id__": 133
+      },
+      {
+        "__id__": 135
       }
     ],
     "nestedPrefabInstanceRoots": [
@@ -2169,6 +2189,94 @@
     "__type__": "cc.TargetInfo",
     "localID": [
       "e4T3FcLEZKR5ceOsPb+eF1"
+    ]
+  },
+  {
+    "__type__": "cc.TargetOverrideInfo",
+    "source": {
+      "__id__": 26
+    },
+    "sourceInfo": null,
+    "propertyPath": [
+      "healthBar"
+    ],
+    "target": {
+      "__id__": 4
+    },
+    "targetInfo": {
+      "__id__": 130
+    }
+  },
+  {
+    "__type__": "cc.TargetInfo",
+    "localID": [
+      "e9cQsECkREsqrYHJQVVWOE"
+    ]
+  },
+  {
+    "__type__": "cc.TargetOverrideInfo",
+    "source": {
+      "__id__": 50
+    },
+    "sourceInfo": null,
+    "propertyPath": [
+      "healthBar"
+    ],
+    "target": {
+      "__id__": 30
+    },
+    "targetInfo": {
+      "__id__": 132
+    }
+  },
+  {
+    "__type__": "cc.TargetInfo",
+    "localID": [
+      "e9cQsECkREsqrYHJQVVWOE"
+    ]
+  },
+  {
+    "__type__": "cc.TargetOverrideInfo",
+    "source": {
+      "__id__": 74
+    },
+    "sourceInfo": null,
+    "propertyPath": [
+      "healthBar"
+    ],
+    "target": {
+      "__id__": 54
+    },
+    "targetInfo": {
+      "__id__": 134
+    }
+  },
+  {
+    "__type__": "cc.TargetInfo",
+    "localID": [
+      "e9cQsECkREsqrYHJQVVWOE"
+    ]
+  },
+  {
+    "__type__": "cc.TargetOverrideInfo",
+    "source": {
+      "__id__": 98
+    },
+    "sourceInfo": null,
+    "propertyPath": [
+      "healthBar"
+    ],
+    "target": {
+      "__id__": 78
+    },
+    "targetInfo": {
+      "__id__": 136
+    }
+  },
+  {
+    "__type__": "cc.TargetInfo",
+    "localID": [
+      "e9cQsECkREsqrYHJQVVWOE"
     ]
   }
 ]

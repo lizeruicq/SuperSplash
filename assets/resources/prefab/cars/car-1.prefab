@@ -188,6 +188,11 @@
       "__expectedType__": "cc.SpriteFrame"
     },
     "removeDelay": 3,
+    "paintPrefab": {
+      "__uuid__": "d1312f02-4e7f-4f9f-aed7-f255abb6e7f8",
+      "__expectedType__": "cc.Prefab"
+    },
+    "paintSprayInterval": 0.1,
     "_id": ""
   },
   {

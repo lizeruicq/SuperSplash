@@ -30,7 +30,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
     execute: function () {
       _crd = true;
 
-      _cclegacy._RF.push({}, "62b90P612FPK4AW7iiJGfF6", "GameOverPanel", undefined);
+      _cclegacy._RF.push({}, "85096jcoYBCMKDGuUlvynIB", "GameOverPanel", undefined);
 
       __checkObsolete__(['_decorator', 'Component', 'Node', 'Button', 'Label']);
 
