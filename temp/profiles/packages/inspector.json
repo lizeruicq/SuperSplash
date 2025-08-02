@@ -175,10 +175,13 @@
     "texture": {
       "mipfilter": "none"
     }
+<<<<<<< HEAD
   },
   "eea97c99-7110-4239-a1cd-e97b3b5441c3@6c48a": {
     "texture": {
       "mipfilter": "none"
     }
+=======
+>>>>>>> origin/main
   }
 }

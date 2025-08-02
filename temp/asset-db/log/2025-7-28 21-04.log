@@ -480,6 +480,7 @@
 2025-7-28 21:06:57-debug: asset-db:refresh-all-database (38ms)
 2025-7-28 21:06:57-debug: asset-db:worker-effect-data-processing (1ms)
 2025-7-28 21:06:57-debug: asset-db-hook-engine-extends-afterRefresh (1ms)
+<<<<<<< HEAD
 2025-7-28 21:35:17-debug: refresh db internal success
 2025-7-28 21:35:17-debug: refresh db assets success
 2025-7-28 21:35:17-debug: Run asset db hook engine-extends:afterRefresh ...
@@ -1415,3 +1416,5 @@
 2025-7-29 22:54:49-debug: [Build Memory track]: 整理部分构建选项内数据到 settings.json start:200.46MB, end 200.58MB, increase: 123.32KB
 2025-7-29 22:55:27-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/Scenes/gamescene.scenebackground: #aaff85; color: #000;color: #000;
 2025-7-29 22:55:27-debug: asset-db:reimport-asset1563d039-d898-4d8f-9415-9f1da853b8a3 (4ms)
+=======
+>>>>>>> origin/main
