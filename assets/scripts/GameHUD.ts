@@ -1,4 +1,4 @@
-import { _decorator, Component, Node, Label, ProgressBar } from 'cc';
+import { _decorator, Component, Label } from 'cc';
 const { ccclass, property } = _decorator;
 import { GameManager } from './GameManager';
 
@@ -16,13 +16,31 @@ export class GameHUD extends Component {
     // 玩家颜料占比显示
     @property(Label)
     playerRatioLabel: Label = null!;
-    
-    @property(ProgressBar)
-    playerRatioBar: ProgressBar = null!;
-    
-    // AI颜料占比显示区域
-    @property(Node)
-    aiRatiosContainer: Node = null!;
+
+    // AI颜料占比显示标签（手动拖拽设置）
+    @property({
+        type: Label,
+        tooltip: 'AI车辆1的颜料占比显示标签'
+    })
+    ai1RatioLabel: Label = null!;
+
+    @property({
+        type: Label,
+        tooltip: 'AI车辆2的颜料占比显示标签'
+    })
+    ai2RatioLabel: Label = null!;
+
+    @property({
+        type: Label,
+        tooltip: 'AI车辆3的颜料占比显示标签'
+    })
+    ai3RatioLabel: Label = null!;
+
+    @property({
+        type: Label,
+        tooltip: 'AI车辆4的颜料占比显示标签'
+    })
+    ai4RatioLabel: Label = null!;
     
     // 更新频率控制
     @property
@@ -30,9 +48,6 @@ export class GameHUD extends Component {
     
     private updateTimer: number = 0;
     private gameManager: GameManager = null!;
-    
-    // AI占比显示组件缓存
-    private aiRatioLabels: Map<string, Label> = new Map();
 
     onLoad() {
         this.updateTimer = 0;
@@ -44,7 +59,7 @@ export class GameHUD extends Component {
             console.error('GameHUD: GameManager未找到');
             return;
         }
-        
+
         // 初始化AI占比显示
         this.initializeAIRatioDisplay();
     }
@@ -106,9 +121,9 @@ export class GameHUD extends Component {
             this.playerRatioLabel.string = `玩家: ${percentage}%`;
         }
         
-        if (this.playerRatioBar) {
-            this.playerRatioBar.progress = ratio;
-        }
+        // if (this.playerRatioBar) {
+        //     this.playerRatioBar.progress = ratio;
+        // }
     }
 
     /**
@@ -118,45 +133,31 @@ export class GameHUD extends Component {
     private updateAIRatiosDisplay(_allRatios: { [vehicleId: string]: number }): void {
         // 获取排序后的占比数据
         const sortedRatios = this.gameManager.getSortedVehiclePaintRatios();
-        
+
         // 只显示AI车辆（排除玩家）
         const aiRatios = sortedRatios.filter(item => item.vehicleId !== 'player');
-        
+
+        // 获取AI标签数组
+        const aiLabels = [this.ai1RatioLabel, this.ai2RatioLabel, this.ai3RatioLabel, this.ai4RatioLabel];
+
         // 更新每个AI的显示
         aiRatios.forEach((ratioData, index) => {
-            this.updateAIRatioItem(ratioData.vehicleId, ratioData.ratio, index);
+            if (index < aiLabels.length && aiLabels[index]) {
+                const percentage = Math.round(ratioData.ratio * 100);
+                const displayName = this.getAIDisplayName(ratioData.vehicleId);
+                aiLabels[index].string = `${displayName}: ${percentage}%`;
+            }
         });
+
+        // 清空未使用的标签
+        for (let i = aiRatios.length; i < aiLabels.length; i++) {
+            if (aiLabels[i]) {
+                aiLabels[i].string = '';
+            }
+        }
     }
 
-    /**
-     * 更新单个AI的占比显示
-     * @param vehicleId AI车辆ID
-     * @param ratio 占比
-     * @param index 显示索引
-     */
-    private updateAIRatioItem(vehicleId: string, ratio: number, index: number): void {
-        const percentage = Math.round(ratio * 100);
-        
-        // 获取或创建标签
-        let label = this.aiRatioLabels.get(vehicleId);
-        if (!label && this.aiRatiosContainer) {
-            // 创建新的标签节点
-            const labelNode = new Node(`AI_${vehicleId}_Label`);
-            label = labelNode.addComponent(Label);
-            label.fontSize = 20;
-            this.aiRatiosContainer.addChild(labelNode);
-            this.aiRatioLabels.set(vehicleId, label);
-            
-            // 设置位置
-            labelNode.setPosition(0, -index * 30, 0);
-        }
-        
-        if (label) {
-            // 简化AI显示名称
-            const displayName = this.getAIDisplayName(vehicleId);
-            label.string = `${displayName}: ${percentage}%`;
-        }
-    }
+
 
     /**
      * 获取AI的显示名称
@@ -178,16 +179,16 @@ export class GameHUD extends Component {
      * 初始化AI占比显示
      */
     private initializeAIRatioDisplay(): void {
-        if (!this.aiRatiosContainer) {
-            console.warn('GameHUD: AI占比容器未设置');
-            return;
-        }
-        
-        // 清空现有的AI显示
-        this.aiRatioLabels.clear();
-        
-        // 移除所有子节点
-        this.aiRatiosContainer.removeAllChildren();
+        // 初始化所有AI标签为空字符串
+        const aiLabels = [this.ai1RatioLabel, this.ai2RatioLabel, this.ai3RatioLabel, this.ai4RatioLabel];
+
+        aiLabels.forEach((label, index) => {
+            if (label) {
+                label.string = `AI-${index + 1}: 0%`;
+            } else {
+                console.warn(`GameHUD: AI${index + 1}RatioLabel未设置`);
+            }
+        });
     }
 
     /**
@@ -198,15 +199,11 @@ export class GameHUD extends Component {
             this.countdownLabel.string = "02:00";
             this.countdownLabel.color = new (this.countdownLabel.color.constructor as any)(255, 255, 255, 255);
         }
-        
+
         if (this.playerRatioLabel) {
             this.playerRatioLabel.string = "玩家: 0%";
         }
-        
-        if (this.playerRatioBar) {
-            this.playerRatioBar.progress = 0;
-        }
-        
+
         this.initializeAIRatioDisplay();
     }
 }
