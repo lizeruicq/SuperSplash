@@ -952,3 +952,13 @@
 2025-8-3 00:20:18-log: run build task 整理部分构建选项内数据到 settings.json success in 1 ms√, progress: 15%
 2025-8-3 00:21:42-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/Scenes/gamescene.scenebackground: #aaff85; color: #000;color: #000;
 2025-8-3 00:21:42-debug: asset-db:reimport-asset1563d039-d898-4d8f-9415-9f1da853b8a3 (5ms)
+2025-8-3 00:25:56-debug: refresh db internal success
+2025-8-3 00:25:56-debug: %cDestroy%c: /Users/zeruili/projects/cocos_project/driftClash/assets/scripts/SceneTransitionTest.tsbackground: #ffb8b8; color: #000;color: #000;
+2025-8-3 00:25:56-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/scriptsbackground: #aaff85; color: #000;color: #000;
+2025-8-3 00:25:56-debug: %cImport%c: /Users/zeruili/projects/cocos_project/driftClash/assets/scripts/GameHUD.tsbackground: #aaff85; color: #000;color: #000;
+2025-8-3 00:25:56-debug: refresh db assets success
+2025-8-3 00:25:56-debug: Run asset db hook engine-extends:afterRefresh success!
+2025-8-3 00:25:56-debug: Run asset db hook engine-extends:afterRefresh ...
+2025-8-3 00:25:56-debug: asset-db:refresh-all-database (46ms)
+2025-8-3 00:25:56-debug: asset-db:worker-effect-data-processing (1ms)
+2025-8-3 00:25:56-debug: asset-db-hook-engine-extends-afterRefresh (1ms)
