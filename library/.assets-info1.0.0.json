@@ -104,7 +104,7 @@
       "uuid": "091c5c0e-b72a-4cad-ab68-635bc57ff236"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/Scenes/gamescene.scene": {
-      "time": 1753802690891.5798,
+      "time": 1754151702448.3645,
       "uuid": "1563d039-d898-4d8f-9415-9f1da853b8a3"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/Scenes/mainmenu.scene": {
@@ -474,7 +474,7 @@
       "time": 1752764446973.8596
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/scripts/SceneTransition.ts": {
-      "time": 1752764379799.7852,
+      "time": 1754151184867.3506,
       "uuid": "c161466d-78da-494f-9ff2-6a5b9ae13301"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/loading.prefab.meta": {
@@ -656,7 +656,7 @@
       "time": 1751380777875.7236
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/scripts/GameManager.ts": {
-      "time": 1753802550727.3777,
+      "time": 1754151609317.531,
       "uuid": "b67f4523-8daa-464a-8546-d89befbb2977"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/scripts/PausePanel.ts.meta": {
@@ -670,7 +670,7 @@
       "time": 1750948553272.1372
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/scripts/player.ts": {
-      "time": 1753796696514.259,
+      "time": 1754147547256.0176,
       "uuid": "b3924dc4-f7fe-491c-9736-a65419c312f5"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/scripts/PlayerInfoUI.ts.meta": {
@@ -694,7 +694,7 @@
       "time": 1753710897296.1187
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/scripts/PaintManager.ts": {
-      "time": 1753802056990.5337,
+      "time": 1754150339253.2258,
       "uuid": "7dd7ac9d-7d90-4745-bb56-3c99a1d345df"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/scripts/PaintSpot.ts": {
@@ -719,14 +719,14 @@
       "time": 1753712719201.7864
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/scripts/GameHUD.ts": {
-      "time": 1753717305732.6733,
+      "time": 1754151135318.0881,
       "uuid": "8d994a71-0534-4deb-9268-d898d9e0c007"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/scripts/GameOverPanel.ts.meta": {
       "time": 1753716818526.3057
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/scripts/GameOverPanel.ts": {
-      "time": 1753715745795.6702,
+      "time": 1754151194777.046,
       "uuid": "850968dc-a180-4230-a0c6-b9496fca7201"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/img/paint_blue.png.meta": {

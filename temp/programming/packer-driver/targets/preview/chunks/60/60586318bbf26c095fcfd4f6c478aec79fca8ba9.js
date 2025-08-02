@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Button, Label, GameManager, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _crd, ccclass, property, GameOverPanel;
+  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Button, Label, GameManager, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _dec10, _dec11, _dec12, _dec13, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _descriptor12, _crd, ccclass, property, GameOverPanel;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -32,14 +32,26 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
       _cclegacy._RF.push({}, "85096jcoYBCMKDGuUlvynIB", "GameOverPanel", undefined);
 
-      __checkObsolete__(['_decorator', 'Component', 'Node', 'Button', 'Label']);
+      __checkObsolete__(['_decorator', 'Component', 'Button', 'Label']);
 
       ({
         ccclass,
         property
       } = _decorator);
 
-      _export("GameOverPanel", GameOverPanel = (_dec = ccclass('GameOverPanel'), _dec2 = property(Label), _dec3 = property(Label), _dec4 = property(Label), _dec5 = property(Label), _dec6 = property(Label), _dec7 = property(Button), _dec8 = property(Button), _dec(_class = (_class2 = class GameOverPanel extends Component {
+      _export("GameOverPanel", GameOverPanel = (_dec = ccclass('GameOverPanel'), _dec2 = property(Label), _dec3 = property(Label), _dec4 = property(Label), _dec5 = property(Label), _dec6 = property(Label), _dec7 = property(Label), _dec8 = property({
+        type: Label,
+        tooltip: 'AI车辆1的颜料占比显示标签'
+      }), _dec9 = property({
+        type: Label,
+        tooltip: 'AI车辆2的颜料占比显示标签'
+      }), _dec10 = property({
+        type: Label,
+        tooltip: 'AI车辆3的颜料占比显示标签'
+      }), _dec11 = property({
+        type: Label,
+        tooltip: 'AI车辆4的颜料占比显示标签'
+      }), _dec12 = property(Button), _dec13 = property(Button), _dec(_class = (_class2 = class GameOverPanel extends Component {
         constructor() {
           super(...arguments);
 
@@ -58,16 +70,29 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
           _initializerDefineProperty(this, "healthLabel", _descriptor5, this);
 
           // 剩余生命值标签
-          _initializerDefineProperty(this, "restartButton", _descriptor6, this);
+          // 玩家颜料占比显示
+          _initializerDefineProperty(this, "playerRatioLabel", _descriptor6, this);
+
+          // AI颜料占比显示标签（手动拖拽设置）
+          _initializerDefineProperty(this, "ai1RatioLabel", _descriptor7, this);
+
+          _initializerDefineProperty(this, "ai2RatioLabel", _descriptor8, this);
+
+          _initializerDefineProperty(this, "ai3RatioLabel", _descriptor9, this);
+
+          _initializerDefineProperty(this, "ai4RatioLabel", _descriptor10, this);
+
+          _initializerDefineProperty(this, "restartButton", _descriptor11, this);
 
           // 重新开始按钮
-          _initializerDefineProperty(this, "mainMenuButton", _descriptor7, this);
+          _initializerDefineProperty(this, "mainMenuButton", _descriptor12, this);
         }
 
         // 返回主菜单按钮
         start() {
           this.bindButtonEvents();
           this.updateGameStats();
+          this.updatePaintRatios();
         }
         /**
          * 绑定按钮事件
@@ -106,6 +131,65 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
             var healthPercentage = (playerHP / maxHP * 100).toFixed(1);
             this.healthLabel.string = "\u5269\u4F59\u751F\u547D\u503C: " + playerHP + "/" + maxHP + " (" + healthPercentage + "%)";
           }
+        }
+        /**
+         * 更新颜料占比显示
+         */
+
+
+        updatePaintRatios() {
+          var gameManager = (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+            error: Error()
+          }), GameManager) : GameManager).getInstance();
+          if (!gameManager) return; // 获取所有车辆的颜料占比
+
+          var allRatios = gameManager.getAllVehiclePaintRatios(); // 更新玩家占比
+
+          var playerRatio = allRatios['player'] || 0;
+          var playerPercentage = Math.round(playerRatio * 100);
+
+          if (this.playerRatioLabel) {
+            this.playerRatioLabel.string = "\u73A9\u5BB6: " + playerPercentage + "%";
+          } // 获取排序后的AI占比数据
+
+
+          var sortedRatios = gameManager.getSortedVehiclePaintRatios();
+          var aiRatios = sortedRatios.filter(item => item.vehicleId !== 'player'); // 获取AI标签数组
+
+          var aiLabels = [this.ai1RatioLabel, this.ai2RatioLabel, this.ai3RatioLabel, this.ai4RatioLabel]; // 更新每个AI的显示
+
+          aiRatios.forEach((ratioData, index) => {
+            if (index < aiLabels.length && aiLabels[index]) {
+              var percentage = Math.round(ratioData.ratio * 100);
+              var displayName = this.getAIDisplayName(ratioData.vehicleId);
+              aiLabels[index].string = displayName + ": " + percentage + "%";
+            }
+          }); // 清空未使用的标签
+
+          for (var i = aiRatios.length; i < aiLabels.length; i++) {
+            if (aiLabels[i]) {
+              aiLabels[i].string = '';
+            }
+          }
+        }
+        /**
+         * 获取AI的显示名称
+         * @param vehicleId AI车辆ID
+         * @returns 显示名称
+         */
+
+
+        getAIDisplayName(vehicleId) {
+          // 从vehicleId中提取简化的显示名称
+          if (vehicleId.startsWith('ai_')) {
+            var parts = vehicleId.split('_');
+
+            if (parts.length >= 2) {
+              return "AI-" + parts[1];
+            }
+          }
+
+          return vehicleId;
         }
         /**
          * 重新开始按钮点击
@@ -200,14 +284,49 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
         initializer: function initializer() {
           return null;
         }
-      }), _descriptor6 = _applyDecoratedDescriptor(_class2.prototype, "restartButton", [_dec7], {
+      }), _descriptor6 = _applyDecoratedDescriptor(_class2.prototype, "playerRatioLabel", [_dec7], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: function initializer() {
           return null;
         }
-      }), _descriptor7 = _applyDecoratedDescriptor(_class2.prototype, "mainMenuButton", [_dec8], {
+      }), _descriptor7 = _applyDecoratedDescriptor(_class2.prototype, "ai1RatioLabel", [_dec8], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function initializer() {
+          return null;
+        }
+      }), _descriptor8 = _applyDecoratedDescriptor(_class2.prototype, "ai2RatioLabel", [_dec9], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function initializer() {
+          return null;
+        }
+      }), _descriptor9 = _applyDecoratedDescriptor(_class2.prototype, "ai3RatioLabel", [_dec10], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function initializer() {
+          return null;
+        }
+      }), _descriptor10 = _applyDecoratedDescriptor(_class2.prototype, "ai4RatioLabel", [_dec11], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function initializer() {
+          return null;
+        }
+      }), _descriptor11 = _applyDecoratedDescriptor(_class2.prototype, "restartButton", [_dec12], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function initializer() {
+          return null;
+        }
+      }), _descriptor12 = _applyDecoratedDescriptor(_class2.prototype, "mainMenuButton", [_dec13], {
         configurable: true,
         enumerable: true,
         writable: true,

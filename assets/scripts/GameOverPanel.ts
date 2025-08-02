@@ -1,4 +1,4 @@
-import { _decorator, Component, Node, Button, Label } from 'cc';
+import { _decorator, Component, Button, Label } from 'cc';
 import { GameManager } from './GameManager';
 const { ccclass, property } = _decorator;
 
@@ -19,6 +19,35 @@ export class GameOverPanel extends Component {
     @property(Label)
     healthLabel: Label = null!; // 剩余生命值标签
 
+    // 玩家颜料占比显示
+    @property(Label)
+    playerRatioLabel: Label = null!;
+
+    // AI颜料占比显示标签（手动拖拽设置）
+    @property({
+        type: Label,
+        tooltip: 'AI车辆1的颜料占比显示标签'
+    })
+    ai1RatioLabel: Label = null!;
+
+    @property({
+        type: Label,
+        tooltip: 'AI车辆2的颜料占比显示标签'
+    })
+    ai2RatioLabel: Label = null!;
+
+    @property({
+        type: Label,
+        tooltip: 'AI车辆3的颜料占比显示标签'
+    })
+    ai3RatioLabel: Label = null!;
+
+    @property({
+        type: Label,
+        tooltip: 'AI车辆4的颜料占比显示标签'
+    })
+    ai4RatioLabel: Label = null!;
+
     @property(Button)
     restartButton: Button = null!; // 重新开始按钮
 
@@ -28,6 +57,7 @@ export class GameOverPanel extends Component {
     start() {
         this.bindButtonEvents();
         this.updateGameStats();
+        this.updatePaintRatios();
     }
 
     /**
@@ -63,6 +93,63 @@ export class GameOverPanel extends Component {
             const healthPercentage = (playerHP / maxHP * 100).toFixed(1);
             this.healthLabel.string = `剩余生命值: ${playerHP}/${maxHP} (${healthPercentage}%)`;
         }
+    }
+
+    /**
+     * 更新颜料占比显示
+     */
+    private updatePaintRatios(): void {
+        const gameManager = GameManager.getInstance();
+        if (!gameManager) return;
+
+        // 获取所有车辆的颜料占比
+        const allRatios = gameManager.getAllVehiclePaintRatios();
+
+        // 更新玩家占比
+        const playerRatio = allRatios['player'] || 0;
+        const playerPercentage = Math.round(playerRatio * 100);
+        if (this.playerRatioLabel) {
+            this.playerRatioLabel.string = `玩家: ${playerPercentage}%`;
+        }
+
+        // 获取排序后的AI占比数据
+        const sortedRatios = gameManager.getSortedVehiclePaintRatios();
+        const aiRatios = sortedRatios.filter(item => item.vehicleId !== 'player');
+
+        // 获取AI标签数组
+        const aiLabels = [this.ai1RatioLabel, this.ai2RatioLabel, this.ai3RatioLabel, this.ai4RatioLabel];
+
+        // 更新每个AI的显示
+        aiRatios.forEach((ratioData, index) => {
+            if (index < aiLabels.length && aiLabels[index]) {
+                const percentage = Math.round(ratioData.ratio * 100);
+                const displayName = this.getAIDisplayName(ratioData.vehicleId);
+                aiLabels[index].string = `${displayName}: ${percentage}%`;
+            }
+        });
+
+        // 清空未使用的标签
+        for (let i = aiRatios.length; i < aiLabels.length; i++) {
+            if (aiLabels[i]) {
+                aiLabels[i].string = '';
+            }
+        }
+    }
+
+    /**
+     * 获取AI的显示名称
+     * @param vehicleId AI车辆ID
+     * @returns 显示名称
+     */
+    private getAIDisplayName(vehicleId: string): string {
+        // 从vehicleId中提取简化的显示名称
+        if (vehicleId.startsWith('ai_')) {
+            const parts = vehicleId.split('_');
+            if (parts.length >= 2) {
+                return `AI-${parts[1]}`;
+            }
+        }
+        return vehicleId;
     }
 
     /**

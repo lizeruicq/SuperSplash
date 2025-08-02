@@ -93,7 +93,13 @@ System.register(["cc"], function (_export, _context) {
             return;
           }
 
-          var position2D = new Vec2(worldPosition.x, worldPosition.y); // 检查是否需要覆盖现有颜料
+          var position2D = new Vec2(worldPosition.x, worldPosition.y); // 检查是否在同一拥有者的颜料附近，如果是则不喷洒
+
+          if (this.isNearOwnPaint(position2D, ownerId)) {
+            // console.log(`跳过颜料喷洒: 拥有者=${ownerId}, 位置附近已有自己的颜料`);
+            return;
+          } // 检查是否需要覆盖其他拥有者的颜料
+
 
           this.checkAndRemoveOverlappingPaint(position2D, ownerId); // 创建新颜料节点
 
@@ -157,6 +163,28 @@ System.register(["cc"], function (_export, _context) {
 
             this.paintMap.delete(paintId);
           }
+        }
+        /**
+         * 检查指定位置是否在同一拥有者的颜料附近
+         * @param position 要检查的位置
+         * @param ownerId 拥有者ID
+         * @returns 如果附近有同一拥有者的颜料则返回true
+         */
+
+
+        isNearOwnPaint(position, ownerId) {
+          for (var paintData of this.paintMap.values()) {
+            // 只检查同一拥有者的颜料
+            if (paintData.ownerId === ownerId) {
+              var distance = Vec2.distance(paintData.position, position); // 如果距离小于覆盖半径，说明附近已有自己的颜料
+
+              if (distance < this.coverageRadius) {
+                return true;
+              }
+            }
+          }
+
+          return false;
         }
         /**
          * 生成颜料唯一ID

@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Node, Label, ProgressBar, GameManager, _dec, _dec2, _dec3, _dec4, _dec5, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _crd, ccclass, property, GameHUD;
+  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Label, GameManager, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _crd, ccclass, property, GameHUD;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -22,9 +22,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
       __checkObsoleteInNamespace__ = _cc.__checkObsoleteInNamespace__;
       _decorator = _cc._decorator;
       Component = _cc.Component;
-      Node = _cc.Node;
       Label = _cc.Label;
-      ProgressBar = _cc.ProgressBar;
     }, function (_unresolved_2) {
       GameManager = _unresolved_2.GameManager;
     }],
@@ -33,7 +31,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
       _cclegacy._RF.push({}, "8d994pxBTRN65Jo2JjZ4MAH", "GameHUD", undefined);
 
-      __checkObsolete__(['_decorator', 'Component', 'Node', 'Label', 'ProgressBar']);
+      __checkObsolete__(['_decorator', 'Component', 'Label']);
 
       ({
         ccclass,
@@ -44,7 +42,19 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
        * 游戏内HUD界面
        * 显示倒计时和颜料占比信息
        */
-      _export("GameHUD", GameHUD = (_dec = ccclass('GameHUD'), _dec2 = property(Label), _dec3 = property(Label), _dec4 = property(ProgressBar), _dec5 = property(Node), _dec(_class = (_class2 = class GameHUD extends Component {
+      _export("GameHUD", GameHUD = (_dec = ccclass('GameHUD'), _dec2 = property(Label), _dec3 = property(Label), _dec4 = property({
+        type: Label,
+        tooltip: 'AI车辆1的颜料占比显示标签'
+      }), _dec5 = property({
+        type: Label,
+        tooltip: 'AI车辆2的颜料占比显示标签'
+      }), _dec6 = property({
+        type: Label,
+        tooltip: 'AI车辆3的颜料占比显示标签'
+      }), _dec7 = property({
+        type: Label,
+        tooltip: 'AI车辆4的颜料占比显示标签'
+      }), _dec(_class = (_class2 = class GameHUD extends Component {
         constructor(...args) {
           super(...args);
 
@@ -54,19 +64,21 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
           // 玩家颜料占比显示
           _initializerDefineProperty(this, "playerRatioLabel", _descriptor2, this);
 
-          _initializerDefineProperty(this, "playerRatioBar", _descriptor3, this);
+          // AI颜料占比显示标签（手动拖拽设置）
+          _initializerDefineProperty(this, "ai1RatioLabel", _descriptor3, this);
 
-          // AI颜料占比显示区域
-          _initializerDefineProperty(this, "aiRatiosContainer", _descriptor4, this);
+          _initializerDefineProperty(this, "ai2RatioLabel", _descriptor4, this);
+
+          _initializerDefineProperty(this, "ai3RatioLabel", _descriptor5, this);
+
+          _initializerDefineProperty(this, "ai4RatioLabel", _descriptor6, this);
 
           // 更新频率控制
-          _initializerDefineProperty(this, "updateInterval", _descriptor5, this);
+          _initializerDefineProperty(this, "updateInterval", _descriptor7, this);
 
           // 每0.1秒更新一次
           this.updateTimer = 0;
           this.gameManager = null;
-          // AI占比显示组件缓存
-          this.aiRatioLabels = new Map();
         }
 
         onLoad() {
@@ -138,11 +150,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
           if (this.playerRatioLabel) {
             this.playerRatioLabel.string = `玩家: ${percentage}%`;
-          }
+          } // if (this.playerRatioBar) {
+          //     this.playerRatioBar.progress = ratio;
+          // }
 
-          if (this.playerRatioBar) {
-            this.playerRatioBar.progress = ratio;
-          }
         }
         /**
          * 更新AI占比显示
@@ -154,40 +165,22 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
           // 获取排序后的占比数据
           const sortedRatios = this.gameManager.getSortedVehiclePaintRatios(); // 只显示AI车辆（排除玩家）
 
-          const aiRatios = sortedRatios.filter(item => item.vehicleId !== 'player'); // 更新每个AI的显示
+          const aiRatios = sortedRatios.filter(item => item.vehicleId !== 'player'); // 获取AI标签数组
+
+          const aiLabels = [this.ai1RatioLabel, this.ai2RatioLabel, this.ai3RatioLabel, this.ai4RatioLabel]; // 更新每个AI的显示
 
           aiRatios.forEach((ratioData, index) => {
-            this.updateAIRatioItem(ratioData.vehicleId, ratioData.ratio, index);
-          });
-        }
-        /**
-         * 更新单个AI的占比显示
-         * @param vehicleId AI车辆ID
-         * @param ratio 占比
-         * @param index 显示索引
-         */
+            if (index < aiLabels.length && aiLabels[index]) {
+              const percentage = Math.round(ratioData.ratio * 100);
+              const displayName = this.getAIDisplayName(ratioData.vehicleId);
+              aiLabels[index].string = `${displayName}: ${percentage}%`;
+            }
+          }); // 清空未使用的标签
 
-
-        updateAIRatioItem(vehicleId, ratio, index) {
-          const percentage = Math.round(ratio * 100); // 获取或创建标签
-
-          let label = this.aiRatioLabels.get(vehicleId);
-
-          if (!label && this.aiRatiosContainer) {
-            // 创建新的标签节点
-            const labelNode = new Node(`AI_${vehicleId}_Label`);
-            label = labelNode.addComponent(Label);
-            label.fontSize = 20;
-            this.aiRatiosContainer.addChild(labelNode);
-            this.aiRatioLabels.set(vehicleId, label); // 设置位置
-
-            labelNode.setPosition(0, -index * 30, 0);
-          }
-
-          if (label) {
-            // 简化AI显示名称
-            const displayName = this.getAIDisplayName(vehicleId);
-            label.string = `${displayName}: ${percentage}%`;
+          for (let i = aiRatios.length; i < aiLabels.length; i++) {
+            if (aiLabels[i]) {
+              aiLabels[i].string = '';
+            }
           }
         }
         /**
@@ -215,15 +208,15 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
 
         initializeAIRatioDisplay() {
-          if (!this.aiRatiosContainer) {
-            console.warn('GameHUD: AI占比容器未设置');
-            return;
-          } // 清空现有的AI显示
-
-
-          this.aiRatioLabels.clear(); // 移除所有子节点
-
-          this.aiRatiosContainer.removeAllChildren();
+          // 初始化所有AI标签为空字符串
+          const aiLabels = [this.ai1RatioLabel, this.ai2RatioLabel, this.ai3RatioLabel, this.ai4RatioLabel];
+          aiLabels.forEach((label, index) => {
+            if (label) {
+              label.string = `AI-${index + 1}: 0%`;
+            } else {
+              console.warn(`GameHUD: AI${index + 1}RatioLabel未设置`);
+            }
+          });
         }
         /**
          * 重置HUD显示
@@ -238,10 +231,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
           if (this.playerRatioLabel) {
             this.playerRatioLabel.string = "玩家: 0%";
-          }
-
-          if (this.playerRatioBar) {
-            this.playerRatioBar.progress = 0;
           }
 
           this.initializeAIRatioDisplay();
@@ -261,21 +250,35 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
         initializer: function () {
           return null;
         }
-      }), _descriptor3 = _applyDecoratedDescriptor(_class2.prototype, "playerRatioBar", [_dec4], {
+      }), _descriptor3 = _applyDecoratedDescriptor(_class2.prototype, "ai1RatioLabel", [_dec4], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: function () {
           return null;
         }
-      }), _descriptor4 = _applyDecoratedDescriptor(_class2.prototype, "aiRatiosContainer", [_dec5], {
+      }), _descriptor4 = _applyDecoratedDescriptor(_class2.prototype, "ai2RatioLabel", [_dec5], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: function () {
           return null;
         }
-      }), _descriptor5 = _applyDecoratedDescriptor(_class2.prototype, "updateInterval", [property], {
+      }), _descriptor5 = _applyDecoratedDescriptor(_class2.prototype, "ai3RatioLabel", [_dec6], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function () {
+          return null;
+        }
+      }), _descriptor6 = _applyDecoratedDescriptor(_class2.prototype, "ai4RatioLabel", [_dec7], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function () {
+          return null;
+        }
+      }), _descriptor7 = _applyDecoratedDescriptor(_class2.prototype, "updateInterval", [property], {
         configurable: true,
         enumerable: true,
         writable: true,
