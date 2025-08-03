@@ -1,4 +1,4 @@
-import { _decorator, Component, Node, Prefab, instantiate, resources, UITransform, director, ProgressBar, Label, Button, Vec3, labelAssembler } from 'cc';
+import { _decorator, Component, Node, Prefab, instantiate, resources, UITransform, director, ProgressBar, Label, Button, Vec3 } from 'cc';
 import { TempData } from './TempData';
 import { CameraFollow } from './camera_follow';
 import { player } from './player';
@@ -8,6 +8,7 @@ import { PlayerManager } from './PlayerManager';
 import { SceneTransition } from './SceneTransition';
 import { SoundManager } from './SoundManager';
 import { PaintManager } from './PaintManager';
+import { GameOverPanel } from './GameOverPanel';
 import { GameHUD } from './GameHUD';
 
 const { ccclass, property } = _decorator;
@@ -57,15 +58,6 @@ export class GameManager extends Component {
     @property(Button)
     mainMenuButton: Button = null!; // 返回主菜单按钮
 
-    @property(Label)
-    gameOverTitleLabel: Label = null!; // 游戏结束标题
-
-    @property(Label)
-    performanceLabel: Label = null!; // 表现评价标签
-
-    @property(Label)
-    rewardLabel: Label = null!; // 奖励金币标签
-
     private static _instance: GameManager = null!;
     private aiPlayers: AIPlayer[] = [];
 
@@ -96,12 +88,12 @@ export class GameManager extends Component {
     @property(GameHUD)
     gameHUD: GameHUD = null!;
 
-    // 游戏结束面板颜料占比显示
-    @property(Node)
-    paintRatiosContainer: Node = null!; // 颜料占比显示容器
+    // // 游戏结束面板颜料占比显示
+    // @property(Node)
+    // paintRatiosContainer: Node = null!; // 颜料占比显示容器
 
-    @property(Label)
-    paintRatiosTitleLabel: Label = null!; // 颜料占比标题
+    // @property(Label)
+    // paintRatiosTitleLabel: Label = null!; // 颜料占比标题
 
     public static getInstance(): GameManager {
         return GameManager._instance;
@@ -443,16 +435,32 @@ export class GameManager extends Component {
         // 暂停游戏
         director.pause();
 
-        // 显示游戏结束面板
+        // 计算游戏结果数据
+        const gameResult = this.calculateGameResult(isVictory);
+
+        // 显示游戏结束面板并传递数据
         if (this.gameOverPanel) {
             this.gameOverPanel.active = true;
+
+            // 获取GameOverPanel组件并设置数据
+            const gameOverPanelComponent = this.gameOverPanel.getComponent(GameOverPanel);
+            if (gameOverPanelComponent) {
+                gameOverPanelComponent.setGameOverInfo(
+                    isVictory,
+                    gameResult.performance,
+                    gameResult.reward,
+                    gameResult.gameTime,
+                    gameResult.healthPercentage,
+                    gameResult.stars
+                );
+            }
         }
 
-        // 更新游戏结束UI
-        this.updateGameOverUI(isVictory);
+        // 给予玩家奖励
+        PlayerManager.instance.addMoney(gameResult.reward);
 
-        // 计算并给予奖励
-        this.calculateAndGiveReward(isVictory);
+        // 更新关卡进度
+        this.updateLevelProgress(this.gameEndTime - this.gameStartTime, gameResult.stars);
 
         console.log(isVictory ? '游戏胜利！' : '游戏失败！');
     }
@@ -471,7 +479,7 @@ export class GameManager extends Component {
     /**
      * 返回主菜单
      */
-    public returnToMainMenu() {
+    public returnToLevelSelect() {
         // 恢复游戏时间
         director.resume();
 
@@ -480,38 +488,33 @@ export class GameManager extends Component {
     }
 
     /**
-     * 更新游戏结束UI
+     * 计算游戏结果数据
+     * @param isVictory 是否胜利
+     * @returns 游戏结果数据
      */
-    private updateGameOverUI(isVictory: boolean) {
-        // 更新标题
-        if (this.gameOverTitleLabel) {
-            this.gameOverTitleLabel.string = isVictory ? '胜利！' : '失败！';
-        }
-
-        // 更新颜料占比显示
-        this.updateGameOverPaintRatios();
-    }
-
-    /**
-     * 计算表现评价和奖励
-     */
-    private calculateAndGiveReward(isVictory: boolean) {
-        // 计算游戏时长（毫秒）
-        const gameTimeMs = this.gameEndTime - this.gameStartTime;
-        const gameTimeSec = gameTimeMs / 1000;
-
-        if (!isVictory) {
-            // 失败时记录F级评价，不给奖励
-            this.updateRewardUI('失败', 10);
-            PlayerManager.instance.addMoney(10);
-
-            // 记录失败的关卡进度（0星，F级）
-            this.updateLevelProgress(gameTimeMs, 0);
-            return;
-        }
+    private calculateGameResult(isVictory: boolean): {
+        performance: string;
+        reward: number;
+        gameTime: number;
+        healthPercentage: number;
+        stars: number;
+    } {
+        // 计算游戏时长（秒）
+        const gameTimeSec = (this.gameEndTime - this.gameStartTime) / 1000;
 
         // 计算生命值百分比
         const healthPercentage = this.playerHP / this.playerMaxHP;
+
+        if (!isVictory) {
+            // 失败时返回基础数据
+            return {
+                performance: '失败',
+                reward: 10,
+                gameTime: gameTimeSec,
+                healthPercentage: healthPercentage,
+                stars: 0
+            };
+        }
 
         // 计算星星数（基于生命值和时间）
         const stars = this.calculateStars(gameTimeSec, healthPercentage);
@@ -519,35 +522,49 @@ export class GameManager extends Component {
         // 计算表现评价和奖励
         const { performance, reward } = this.calculatePerformance(gameTimeSec, healthPercentage);
 
-        // 更新UI显示
-        this.updateRewardUI(performance, reward);
-
-        // 给予玩家奖励
-        PlayerManager.instance.addMoney(reward);
-
-        // 更新关卡进度
-        this.updateLevelProgress(gameTimeMs, stars);
-
         console.log(`游戏时长: ${gameTimeSec.toFixed(1)}秒, 生命值: ${(healthPercentage * 100).toFixed(1)}%, 星星: ${stars}, 评价: ${performance}, 奖励: ${reward}金币`);
+
+        return {
+            performance,
+            reward,
+            gameTime: gameTimeSec,
+            healthPercentage,
+            stars
+        };
     }
 
     /**
-     * 计算星星数
+     * 计算星星数（基于颜料占比）
      */
     private calculateStars(gameTime: number, healthPercentage: number): number {
-        let stars = 1; // 基础1星（完成关卡）
-
-        // 基于时间加星
-        if (gameTime <= 60) {
-            stars++; // 60秒内完成 +1星
+        // 获取玩家颜料占比
+        if (!this.paintManager) {
+            return 1; // 如果没有颜料管理器，默认1星
         }
 
-        // 基于生命值加星
-        if (healthPercentage >= 0.5) {
-            stars++; // 生命值50%以上 +1星
+        const playerPaintCount = this.paintManager.getPaintCountByOwner('player');
+        const totalPaintCount = this.paintManager.getTotalPaintCount();
+
+        if (totalPaintCount === 0) {
+            return 1; // 如果没有颜料，默认1星
         }
 
-        return Math.min(stars, 3); // 最多3星
+        const playerRatio = playerPaintCount / totalPaintCount;
+        const playerPercentage = playerRatio * 100;
+
+        // 检查是否摧毁了所有AI车辆
+        const destroyedAllEnemies = this.enemyCount <= 0 && this.initialEnemyCount > 0;
+
+        // 根据新的评价规则计算星星
+        if (playerPercentage >= 45) {
+            return 3; // 3星（A级）：颜料数量>=45%
+        } else if (playerPercentage >= 35) {
+            return 2; // 2星（B级）：颜料数量>=35%
+        } else if (playerPercentage >= 25 || destroyedAllEnemies) {
+            return 1; // 1星（C级）：颜料数量>=25% 或 摧毁所有AI车辆
+        } else {
+            return 0; // 不满足任何条件，0星
+        }
     }
 
     /**
@@ -568,63 +585,39 @@ export class GameManager extends Component {
     }
 
     /**
-     * 计算表现评价
+     * 计算表现评价（基于星星数）
      */
     private calculatePerformance(gameTime: number, healthPercentage: number): { performance: string, reward: number } {
-        let score = 0;
+        // 先计算星星数
+        const stars = this.calculateStars(gameTime, healthPercentage);
 
-        // 时间评分 (0-50分)
-        if (gameTime <= 30) {
-            score += 50; // 30秒内完成，满分
-        } else if (gameTime <= 60) {
-            score += 40; // 60秒内完成，40分
-        } else if (gameTime <= 90) {
-            score += 30; // 90秒内完成，30分
-        } else if (gameTime <= 120) {
-            score += 20; // 120秒内完成，20分
-        } else {
-            score += 10; // 超过120秒，10分
-        }
-
-        // 生命值评分 (0-50分)
-        score += Math.floor(healthPercentage * 50);
-
-        // 根据总分确定评价和奖励
         let performance: string;
         let reward: number;
 
-        if (score >= 90) {
-            performance = 'S级 - 完美表现';
-            reward = 500;
-        } else if (score >= 80) {
-            performance = 'A级 - 优秀表现';
-            reward = 400;
-        } else if (score >= 70) {
-            performance = 'B级 - 良好表现';
-            reward = 300;
-        } else if (score >= 60) {
-            performance = 'C级 - 一般表现';
-            reward = 200;
-        } else {
-            performance = 'D级 - 需要改进';
-            reward = 100;
+        // 根据星星数确定评价和奖励
+        switch (stars) {
+            case 3:
+                performance = 'A';
+                reward = 500;
+                break;
+            case 2:
+                performance = 'B';
+                reward = 300;
+                break;
+            case 1:
+                performance = 'C';
+                reward = 200;
+                break;
+            default:
+                performance = 'F';
+                reward = 50;
+                break;
         }
 
         return { performance, reward };
     }
 
-    /**
-     * 更新奖励UI显示
-     */
-    private updateRewardUI(performance: string, reward: number) {
-        if (this.performanceLabel) {
-            this.performanceLabel.string = `表现评价: ${performance}`;
-        }
 
-        if (this.rewardLabel) {
-            this.rewardLabel.string = `获得金币: ${reward}`;
-        }
-    }
 
     // ==================== 公共方法 ====================
 
@@ -755,15 +748,27 @@ export class GameManager extends Component {
     }
 
     /**
-     * 确定获胜者（基于颜料占比）
+     * 确定获胜者（基于新的胜利条件）
      * @returns 是否玩家获胜
      */
     private determineWinner(): boolean {
+        // 检查玩家是否存活
+        if (this.playerHP <= 0) {
+            console.log('玩家已死亡，游戏失败');
+            return false;
+        }
+
+        // 检查是否所有AI车辆都被摧毁
+        if (this.enemyCount <= 0 && this.initialEnemyCount > 0) {
+            console.log('所有AI车辆已被摧毁，游戏胜利');
+            return true;
+        }
+
+        // 获取玩家颜料占比
         if (!this.paintManager) {
             return false; // 如果没有颜料管理器，默认玩家失败
         }
 
-        // 获取玩家颜料占比
         const playerPaintCount = this.paintManager.getPaintCountByOwner('player');
         const totalPaintCount = this.paintManager.getTotalPaintCount();
 
@@ -774,8 +779,14 @@ export class GameManager extends Component {
         const playerRatio = playerPaintCount / totalPaintCount;
         console.log(`玩家颜料占比: ${(playerRatio * 100).toFixed(1)}%`);
 
-        // 玩家占比超过50%则获胜
-        return playerRatio > 0.5;
+        // 玩家存活且颜料占比>25%则获胜
+        if (playerRatio > 0.25) {
+            console.log('玩家颜料占比超过25%，游戏胜利');
+            return true;
+        } else {
+            console.log('玩家颜料占比不足25%，游戏失败');
+            return false;
+        }
     }
 
     /**
@@ -802,84 +813,6 @@ export class GameManager extends Component {
         return `${minutesStr}:${secondsStr}`;
     }
 
-    // ==================== 游戏结束面板颜料占比显示 ====================
 
-    /**
-     * 更新游戏结束面板的颜料占比显示
-     */
-    private updateGameOverPaintRatios(): void {
-        if (!this.paintRatiosContainer) {
-            console.warn('GameManager: 颜料占比显示容器未设置');
-            return;
-        }
 
-        // 设置标题
-        if (this.paintRatiosTitleLabel) {
-            this.paintRatiosTitleLabel.string = "颜料占比统计";
-        }
-
-        // 清空现有显示
-        this.paintRatiosContainer.removeAllChildren();
-
-        // 获取排序后的颜料占比
-        const sortedRatios = this.getSortedVehiclePaintRatios();
-
-        if (sortedRatios.length === 0) {
-            // 如果没有颜料数据，显示提示
-            const noDataLabel = this.createGameOverRatioLabel("没有颜料数据", 0);
-            this.paintRatiosContainer.addChild(noDataLabel);
-            return;
-        }
-
-        // 显示每个车辆的占比
-        sortedRatios.forEach((ratioData, index) => {
-            const displayName = this.getVehicleDisplayName(ratioData.vehicleId);
-            const percentage = Math.round(ratioData.ratio * 100);
-            const text = `${displayName}: ${percentage}% (${ratioData.count}块)`;
-
-            const ratioLabel = this.createGameOverRatioLabel(text, index);
-            this.paintRatiosContainer.addChild(ratioLabel);
-        });
-    }
-
-    /**
-     * 创建游戏结束面板的占比显示标签
-     * @param text 显示文本
-     * @param index 索引（用于定位）
-     * @returns 标签节点
-     */
-    private createGameOverRatioLabel(text: string, index: number): Node {
-        const labelNode = new Node(`GameOverRatioLabel_${index}`);
-        const label = labelNode.addComponent(Label);
-
-        label.string = text;
-        label.fontSize = 24;
-        label.color = new (label.color.constructor as any)(255, 255, 255, 255);
-
-        // 设置位置
-        labelNode.setPosition(0, -index * 35, 0);
-
-        return labelNode;
-    }
-
-    /**
-     * 获取车辆显示名称
-     * @param vehicleId 车辆ID
-     * @returns 显示名称
-     */
-    private getVehicleDisplayName(vehicleId: string): string {
-        if (vehicleId === 'player') {
-            return '玩家';
-        }
-
-        // 处理AI车辆名称
-        if (vehicleId.startsWith('ai_')) {
-            const parts = vehicleId.split('_');
-            if (parts.length >= 2) {
-                return `AI-${parts[1]}`;
-            }
-        }
-
-        return vehicleId;
-    }
 }
