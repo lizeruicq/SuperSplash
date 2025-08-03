@@ -1,4 +1,4 @@
-import { _decorator, Component, Button, Label } from 'cc';
+import { _decorator, Component, Button, Label, Sprite, Color } from 'cc';
 import { GameManager } from './GameManager';
 const { ccclass, property } = _decorator;
 
@@ -16,8 +16,25 @@ export class GameOverPanel extends Component {
     @property(Label)
     gameTimeLabel: Label = null!; // 游戏时长标签
 
-    @property(Label)
-    healthLabel: Label = null!; // 剩余生命值标签
+
+    // 星星精灵节点（手动拖拽设置）
+    @property({
+        type: Sprite,
+        tooltip: '第1颗星星精灵'
+    })
+    star1Sprite: Sprite = null!;
+
+    @property({
+        type: Sprite,
+        tooltip: '第2颗星星精灵'
+    })
+    star2Sprite: Sprite = null!;
+
+    @property({
+        type: Sprite,
+        tooltip: '第3颗星星精灵'
+    })
+    star3Sprite: Sprite = null!;
 
     // 玩家颜料占比显示
     @property(Label)
@@ -52,12 +69,11 @@ export class GameOverPanel extends Component {
     restartButton: Button = null!; // 重新开始按钮
 
     @property(Button)
-    mainMenuButton: Button = null!; // 返回主菜单按钮
+    LevelSelectButton: Button = null!; // 返回主菜单按钮
 
     start() {
         this.bindButtonEvents();
-        this.updateGameStats();
-        this.updatePaintRatios();
+        // 注意：不在start中更新数据，而是等待GameManager调用setGameOverInfo
     }
 
     /**
@@ -68,32 +84,12 @@ export class GameOverPanel extends Component {
             this.restartButton.node.on(Button.EventType.CLICK, this.onRestartClick, this);
         }
 
-        if (this.mainMenuButton) {
-            this.mainMenuButton.node.on(Button.EventType.CLICK, this.onMainMenuClick, this);
+        if (this.LevelSelectButton) {
+            this.LevelSelectButton.node.on(Button.EventType.CLICK, this.onLevelSelectClick, this);
         }
     }
 
-    /**
-     * 更新游戏统计信息
-     */
-    private updateGameStats() {
-        const gameManager = GameManager.getInstance();
-        if (!gameManager) return;
 
-        // 更新游戏时长
-        if (this.gameTimeLabel) {
-            const gameTime = gameManager.getGameTime();
-            this.gameTimeLabel.string = `游戏时长: ${gameTime.toFixed(1)}秒`;
-        }
-
-        // 更新剩余生命值
-        if (this.healthLabel) {
-            const playerHP = gameManager.getPlayerHP();
-            const maxHP = gameManager.getPlayerMaxHP();
-            const healthPercentage = (playerHP / maxHP * 100).toFixed(1);
-            this.healthLabel.string = `剩余生命值: ${playerHP}/${maxHP} (${healthPercentage}%)`;
-        }
-    }
 
     /**
      * 更新颜料占比显示
@@ -109,7 +105,7 @@ export class GameOverPanel extends Component {
         const playerRatio = allRatios['player'] || 0;
         const playerPercentage = Math.round(playerRatio * 100);
         if (this.playerRatioLabel) {
-            this.playerRatioLabel.string = `玩家: ${playerPercentage}%`;
+            this.playerRatioLabel.string = `player: ${playerPercentage}%`;
         }
 
         // 获取排序后的AI占比数据
@@ -153,6 +149,32 @@ export class GameOverPanel extends Component {
     }
 
     /**
+     * 更新星星精灵显示
+     * @param stars 获得的星星数量
+     */
+    private updateStarSprites(stars: number): void {
+        const starSprites = [this.star1Sprite, this.star2Sprite, this.star3Sprite];
+
+        starSprites.forEach((sprite, index) => {
+            if (sprite) {
+                // 根据获得的星星数量设置精灵的透明度
+                if (index < stars) {
+                    // 亮起的星星：完全不透明
+                    sprite.color = new Color(255, 255, 255, 255);
+                } else {
+                    // 暗淡的星星：半透明
+                    sprite.color = new Color(255, 255, 255, 100);
+                }
+
+                // 可以选择完全隐藏未获得的星星
+                // sprite.node.active = index < stars;
+            }
+        });
+
+        console.log(`更新星星显示: ${stars}/3 颗星星亮起`);
+    }
+
+    /**
      * 重新开始按钮点击
      */
     private onRestartClick() {
@@ -165,28 +187,49 @@ export class GameOverPanel extends Component {
     /**
      * 返回主菜单按钮点击
      */
-    private onMainMenuClick() {
+    private onLevelSelectClick() {
         const gameManager = GameManager.getInstance();
         if (gameManager) {
-            gameManager.returnToMainMenu();
+            gameManager.returnToLevelSelect();
         }
     }
 
     /**
      * 设置游戏结束信息
      */
-    public setGameOverInfo(isVictory: boolean, performance: string, reward: number) {
+    public setGameOverInfo(
+        isVictory: boolean,
+        performance: string,
+        reward: number,
+        gameTime: number,
+        healthPercentage: number,
+        stars: number
+    ) {
+        // 更新标题
         if (this.titleLabel) {
-            this.titleLabel.string = isVictory ? '胜利！' : '失败！';
+            this.titleLabel.string = isVictory ? 'winner' : 'loser';
         }
 
+        // 更新表现评价
         if (this.performanceLabel) {
-            this.performanceLabel.string = `表现评价: ${performance}`;
+            this.performanceLabel.string = `performance: ${performance}`;
         }
 
+        // 更新奖励金币
         if (this.rewardLabel) {
-            this.rewardLabel.string = `获得金币: ${reward}`;
+            this.rewardLabel.string = `reward: ${reward}`;
         }
+
+        // 更新游戏时长
+        if (this.gameTimeLabel) {
+            this.gameTimeLabel.string = `time: ${gameTime.toFixed(1)}秒`;
+        }
+
+        // 更新星星精灵显示
+        this.updateStarSprites(stars);
+
+        // 更新颜料占比显示
+        this.updatePaintRatios();
     }
 
     onDestroy() {
@@ -194,8 +237,8 @@ export class GameOverPanel extends Component {
         if (this.restartButton) {
             this.restartButton.node.off(Button.EventType.CLICK, this.onRestartClick, this);
         }
-        if (this.mainMenuButton) {
-            this.mainMenuButton.node.off(Button.EventType.CLICK, this.onMainMenuClick, this);
+        if (this.LevelSelectButton) {
+            this.LevelSelectButton.node.off(Button.EventType.CLICK, this.onLevelSelectClick, this);
         }
     }
 }

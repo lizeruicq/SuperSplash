@@ -186,15 +186,25 @@
     "value": {
       "depends": [
         "1563d039-d898-4d8f-9415-9f1da853b8a3",
+        "b510303d-c68c-4e1b-8073-6a16eb4df9f8@f9941",
         "20835ba4-6145-4fbc-a58a-051ce700aa3e@f9941",
         "544e49d6-3f05-4fa8-9a9e-091f98fc2ce8@f9941",
         "951249e0-9f16-456d-8b85-a6ca954da16b@f9941",
+        "357cb1fb-4427-4677-aebe-aa3cf9f9df55@f9941",
+        "37e04c65-4ac4-41b8-8169-a266f40e9fa8@f9941",
+        "dcb5adf7-9474-4ec2-bac1-fefc5f844ea7@f9941",
+        "0a74f435-3a83-44b1-af34-a8b16ea61ec9@f9941",
+        "b730527c-3233-41c2-aaf7-7cdab58f9749@f9941",
+        "ff4b1155-db8b-4cda-9bc0-6e743e5710bc@f9941",
+        "8e2f4297-91a6-47cc-8cd7-438a85e78d5b@f9941",
+        "ac4c6226-b5ca-40aa-8e65-d953ab93c6b4@f9941",
         "24a704da-2867-446d-8d1a-5e920c75e09d@f9941",
         "9fd900dd-221b-4f89-8f2c-fba34243c835@f9941"
       ],
       "dependScripts": [
         "daf21382-6b58-4c9b-aeb4-ace960c8ca29",
         "b67f4523-8daa-464a-8546-d89befbb2977",
+        "850968dc-a180-4230-a0c6-b9496fca7201",
         "8d994a71-0534-4deb-9268-d898d9e0c007",
         "922b0d89-4cee-4a0e-b072-f593d4a178c3"
       ]
@@ -334,7 +344,7 @@
     "versionCode": 1
   },
   "7e95e032-b6ae-4de9-a8ab-c81b24b5fb5f": {
-    "url": "db://assets/img/86-f.png",
+    "url": "db://assets/img/cars/86-f.png",
     "value": {
       "depends": []
     },
@@ -350,7 +360,7 @@
     "versionCode": 1
   },
   "ed611db6-e51e-4a53-b624-848dd45ace21": {
-    "url": "db://assets/img/86-t.png",
+    "url": "db://assets/img/cars/86-t.png",
     "value": {
       "depends": []
     },
@@ -375,7 +385,7 @@
     "versionCode": 1
   },
   "49e36654-b2c3-47d9-afeb-5db28286a1b0": {
-    "url": "db://assets/img/car.png",
+    "url": "db://assets/img/cars/car.png",
     "value": {
       "depends": []
     },
@@ -391,14 +401,14 @@
     "versionCode": 1
   },
   "a238f344-7c25-4d83-a0ec-8c85e46d3ec8": {
-    "url": "db://assets/img/car1-crash.png",
+    "url": "db://assets/img/cars/car1-crash.png",
     "value": {
       "depends": []
     },
     "versionCode": 1
   },
   "7e95e032-b6ae-4de9-a8ab-c81b24b5fb5f@6c48a": {
-    "url": "db://assets/img/86-f.png@6c48a",
+    "url": "db://assets/img/cars/86-f.png@6c48a",
     "value": {
       "depends": [
         "7e95e032-b6ae-4de9-a8ab-c81b24b5fb5f"
@@ -407,7 +417,7 @@
     "versionCode": 1
   },
   "ed611db6-e51e-4a53-b624-848dd45ace21@6c48a": {
-    "url": "db://assets/img/86-t.png@6c48a",
+    "url": "db://assets/img/cars/86-t.png@6c48a",
     "value": {
       "depends": [
         "ed611db6-e51e-4a53-b624-848dd45ace21"
@@ -426,13 +436,11 @@
   },
   "20d2e143-4574-42b8-884c-e2c4dc7b3dd4": {
     "url": "db://assets/img/check-square.png",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "a238f344-7c25-4d83-a0ec-8c85e46d3ec8@6c48a": {
-    "url": "db://assets/img/car1-crash.png@6c48a",
+    "url": "db://assets/img/cars/car1-crash.png@6c48a",
     "value": {
       "depends": [
         "a238f344-7c25-4d83-a0ec-8c85e46d3ec8"
@@ -441,7 +449,7 @@
     "versionCode": 1
   },
   "49e36654-b2c3-47d9-afeb-5db28286a1b0@6c48a": {
-    "url": "db://assets/img/car.png@6c48a",
+    "url": "db://assets/img/cars/car.png@6c48a",
     "value": {
       "depends": [
         "49e36654-b2c3-47d9-afeb-5db28286a1b0"
@@ -450,7 +458,7 @@
     "versionCode": 1
   },
   "ed611db6-e51e-4a53-b624-848dd45ace21@f9941": {
-    "url": "db://assets/img/86-t.png@f9941",
+    "url": "db://assets/img/cars/86-t.png@f9941",
     "value": {
       "depends": [
         "ed611db6-e51e-4a53-b624-848dd45ace21@6c48a"
@@ -459,7 +467,7 @@
     "versionCode": 1
   },
   "35990206-f1f7-49c0-91d6-a50921fc8128": {
-    "url": "db://assets/img/mini-f.png",
+    "url": "db://assets/img/cars/mini-f.png",
     "value": {
       "depends": []
     },
@@ -475,7 +483,7 @@
     "versionCode": 1
   },
   "7e95e032-b6ae-4de9-a8ab-c81b24b5fb5f@f9941": {
-    "url": "db://assets/img/86-f.png@f9941",
+    "url": "db://assets/img/cars/86-f.png@f9941",
     "value": {
       "depends": [
         "7e95e032-b6ae-4de9-a8ab-c81b24b5fb5f@6c48a"
@@ -484,7 +492,7 @@
     "versionCode": 1
   },
   "0b33dc38-0c13-4f55-b754-27d76610db59": {
-    "url": "db://assets/img/rx7-f.png",
+    "url": "db://assets/img/cars/rx7-f.png",
     "value": {
       "depends": []
     },
@@ -500,14 +508,14 @@
     "versionCode": 1
   },
   "38414c6f-ce08-40c3-b0a0-4f24ce1031de": {
-    "url": "db://assets/img/rx7-t.png",
+    "url": "db://assets/img/cars/rx7-t.png",
     "value": {
       "depends": []
     },
     "versionCode": 1
   },
   "35990206-f1f7-49c0-91d6-a50921fc8128@6c48a": {
-    "url": "db://assets/img/mini-f.png@6c48a",
+    "url": "db://assets/img/cars/mini-f.png@6c48a",
     "value": {
       "depends": [
         "35990206-f1f7-49c0-91d6-a50921fc8128"
@@ -516,7 +524,7 @@
     "versionCode": 1
   },
   "0b33dc38-0c13-4f55-b754-27d76610db59@6c48a": {
-    "url": "db://assets/img/rx7-f.png@6c48a",
+    "url": "db://assets/img/cars/rx7-f.png@6c48a",
     "value": {
       "depends": [
         "0b33dc38-0c13-4f55-b754-27d76610db59"
@@ -525,7 +533,7 @@
     "versionCode": 1
   },
   "0b33dc38-0c13-4f55-b754-27d76610db59@f9941": {
-    "url": "db://assets/img/rx7-f.png@f9941",
+    "url": "db://assets/img/cars/rx7-f.png@f9941",
     "value": {
       "depends": [
         "0b33dc38-0c13-4f55-b754-27d76610db59@6c48a"
@@ -534,14 +542,14 @@
     "versionCode": 1
   },
   "a9e97b11-149f-46e6-a990-c95fd6d91cd7": {
-    "url": "db://assets/img/taycan-f.png",
+    "url": "db://assets/img/cars/taycan-f.png",
     "value": {
       "depends": []
     },
     "versionCode": 1
   },
   "38414c6f-ce08-40c3-b0a0-4f24ce1031de@6c48a": {
-    "url": "db://assets/img/rx7-t.png@6c48a",
+    "url": "db://assets/img/cars/rx7-t.png@6c48a",
     "value": {
       "depends": [
         "38414c6f-ce08-40c3-b0a0-4f24ce1031de"
@@ -550,7 +558,7 @@
     "versionCode": 1
   },
   "38414c6f-ce08-40c3-b0a0-4f24ce1031de@f9941": {
-    "url": "db://assets/img/rx7-t.png@f9941",
+    "url": "db://assets/img/cars/rx7-t.png@f9941",
     "value": {
       "depends": [
         "38414c6f-ce08-40c3-b0a0-4f24ce1031de@6c48a"
@@ -559,14 +567,14 @@
     "versionCode": 1
   },
   "d6c5db05-a7b5-4c39-b29f-89c86c315dcf": {
-    "url": "db://assets/img/taycan-t.png",
+    "url": "db://assets/img/cars/taycan-t.png",
     "value": {
       "depends": []
     },
     "versionCode": 1
   },
   "49e36654-b2c3-47d9-afeb-5db28286a1b0@f9941": {
-    "url": "db://assets/img/car.png@f9941",
+    "url": "db://assets/img/cars/car.png@f9941",
     "value": {
       "depends": [
         "49e36654-b2c3-47d9-afeb-5db28286a1b0@6c48a"
@@ -575,14 +583,14 @@
     "versionCode": 1
   },
   "b9e95f02-4aec-4c01-8343-1c6ce036b0c6": {
-    "url": "db://assets/img/z370-t.png",
+    "url": "db://assets/img/cars/z370-t.png",
     "value": {
       "depends": []
     },
     "versionCode": 1
   },
   "a238f344-7c25-4d83-a0ec-8c85e46d3ec8@f9941": {
-    "url": "db://assets/img/car1-crash.png@f9941",
+    "url": "db://assets/img/cars/car1-crash.png@f9941",
     "value": {
       "depends": [
         "a238f344-7c25-4d83-a0ec-8c85e46d3ec8@6c48a"
@@ -591,14 +599,14 @@
     "versionCode": 1
   },
   "5308cc80-fcde-4667-baa6-dbcdc87fd132": {
-    "url": "db://assets/img/z370.png",
+    "url": "db://assets/img/cars/z370.png",
     "value": {
       "depends": []
     },
     "versionCode": 1
   },
   "a9e97b11-149f-46e6-a990-c95fd6d91cd7@6c48a": {
-    "url": "db://assets/img/taycan-f.png@6c48a",
+    "url": "db://assets/img/cars/taycan-f.png@6c48a",
     "value": {
       "depends": [
         "a9e97b11-149f-46e6-a990-c95fd6d91cd7"
@@ -607,7 +615,7 @@
     "versionCode": 1
   },
   "35990206-f1f7-49c0-91d6-a50921fc8128@f9941": {
-    "url": "db://assets/img/mini-f.png@f9941",
+    "url": "db://assets/img/cars/mini-f.png@f9941",
     "value": {
       "depends": [
         "35990206-f1f7-49c0-91d6-a50921fc8128@6c48a"
@@ -623,7 +631,7 @@
     "versionCode": 1
   },
   "d6c5db05-a7b5-4c39-b29f-89c86c315dcf@6c48a": {
-    "url": "db://assets/img/taycan-t.png@6c48a",
+    "url": "db://assets/img/cars/taycan-t.png@6c48a",
     "value": {
       "depends": [
         "d6c5db05-a7b5-4c39-b29f-89c86c315dcf"
@@ -632,7 +640,7 @@
     "versionCode": 1
   },
   "b9e95f02-4aec-4c01-8343-1c6ce036b0c6@6c48a": {
-    "url": "db://assets/img/z370-t.png@6c48a",
+    "url": "db://assets/img/cars/z370-t.png@6c48a",
     "value": {
       "depends": [
         "b9e95f02-4aec-4c01-8343-1c6ce036b0c6"
@@ -641,7 +649,7 @@
     "versionCode": 1
   },
   "5308cc80-fcde-4667-baa6-dbcdc87fd132@6c48a": {
-    "url": "db://assets/img/z370.png@6c48a",
+    "url": "db://assets/img/cars/z370.png@6c48a",
     "value": {
       "depends": [
         "5308cc80-fcde-4667-baa6-dbcdc87fd132"
@@ -650,7 +658,7 @@
     "versionCode": 1
   },
   "d6c5db05-a7b5-4c39-b29f-89c86c315dcf@f9941": {
-    "url": "db://assets/img/taycan-t.png@f9941",
+    "url": "db://assets/img/cars/taycan-t.png@f9941",
     "value": {
       "depends": [
         "d6c5db05-a7b5-4c39-b29f-89c86c315dcf@6c48a"
@@ -675,7 +683,7 @@
     "versionCode": 1
   },
   "a9e97b11-149f-46e6-a990-c95fd6d91cd7@f9941": {
-    "url": "db://assets/img/taycan-f.png@f9941",
+    "url": "db://assets/img/cars/taycan-f.png@f9941",
     "value": {
       "depends": [
         "a9e97b11-149f-46e6-a990-c95fd6d91cd7@6c48a"
@@ -691,7 +699,7 @@
     "versionCode": 1
   },
   "5308cc80-fcde-4667-baa6-dbcdc87fd132@f9941": {
-    "url": "db://assets/img/z370.png@f9941",
+    "url": "db://assets/img/cars/z370.png@f9941",
     "value": {
       "depends": [
         "5308cc80-fcde-4667-baa6-dbcdc87fd132@6c48a"
@@ -707,7 +715,7 @@
     "versionCode": 1
   },
   "b9e95f02-4aec-4c01-8343-1c6ce036b0c6@f9941": {
-    "url": "db://assets/img/z370-t.png@f9941",
+    "url": "db://assets/img/cars/z370-t.png@f9941",
     "value": {
       "depends": [
         "b9e95f02-4aec-4c01-8343-1c6ce036b0c6@6c48a"
@@ -717,9 +725,7 @@
   },
   "8e4b7ec0-ba7e-4952-bd46-9750970405c6": {
     "url": "db://assets/img/menu/Design Racing Game Logo-3.png",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "807a7b47-3819-4529-931c-683fbcf44eb0@6c48a": {
@@ -917,6 +923,9 @@
         "49e36654-b2c3-47d9-afeb-5db28286a1b0@f9941",
         "a238f344-7c25-4d83-a0ec-8c85e46d3ec8@f9941",
         "b71c19d0-4ac9-4dcb-aa32-b65fde2c406a",
+        "16a505c9-a5e1-44f4-b3f9-2a0745a3776c",
+        "35418bab-1e0a-4108-a267-ce8c8c2422c3",
+        "4666d6c8-2376-4df4-be28-d66e383baace",
         "0bfa81f7-9b43-4f2a-bc44-2375066c8694@f9941"
       ],
       "dependScripts": [
@@ -1067,14 +1076,14 @@
     "versionCode": 1
   },
   "4cf1948a-ffca-426e-9c43-1e7c864a1b60": {
-    "url": "db://assets/img/menu/red.png",
+    "url": "db://assets/img/menu/UI/red.png",
     "value": {
       "depends": []
     },
     "versionCode": 1
   },
   "4cf1948a-ffca-426e-9c43-1e7c864a1b60@6c48a": {
-    "url": "db://assets/img/menu/red.png@6c48a",
+    "url": "db://assets/img/menu/UI/red.png@6c48a",
     "value": {
       "depends": [
         "4cf1948a-ffca-426e-9c43-1e7c864a1b60"
@@ -1083,7 +1092,7 @@
     "versionCode": 1
   },
   "4cf1948a-ffca-426e-9c43-1e7c864a1b60@f9941": {
-    "url": "db://assets/img/menu/red.png@f9941",
+    "url": "db://assets/img/menu/UI/red.png@f9941",
     "value": {
       "depends": [
         "4cf1948a-ffca-426e-9c43-1e7c864a1b60@6c48a"
@@ -1092,14 +1101,14 @@
     "versionCode": 1
   },
   "593904f2-fa85-498f-9b0e-9f79890c24fd": {
-    "url": "db://assets/img/menu/yellow.png",
+    "url": "db://assets/img/menu/UI/yellow.png",
     "value": {
       "depends": []
     },
     "versionCode": 1
   },
   "593904f2-fa85-498f-9b0e-9f79890c24fd@6c48a": {
-    "url": "db://assets/img/menu/yellow.png@6c48a",
+    "url": "db://assets/img/menu/UI/yellow.png@6c48a",
     "value": {
       "depends": [
         "593904f2-fa85-498f-9b0e-9f79890c24fd"
@@ -1108,7 +1117,7 @@
     "versionCode": 1
   },
   "593904f2-fa85-498f-9b0e-9f79890c24fd@f9941": {
-    "url": "db://assets/img/menu/yellow.png@f9941",
+    "url": "db://assets/img/menu/UI/yellow.png@f9941",
     "value": {
       "depends": [
         "593904f2-fa85-498f-9b0e-9f79890c24fd@6c48a"
@@ -1117,14 +1126,14 @@
     "versionCode": 1
   },
   "1c18f6e7-3b13-401b-85a1-746bf7284949": {
-    "url": "db://assets/img/menu/green.png",
+    "url": "db://assets/img/menu/UI/green.png",
     "value": {
       "depends": []
     },
     "versionCode": 1
   },
   "1c18f6e7-3b13-401b-85a1-746bf7284949@6c48a": {
-    "url": "db://assets/img/menu/green.png@6c48a",
+    "url": "db://assets/img/menu/UI/green.png@6c48a",
     "value": {
       "depends": [
         "1c18f6e7-3b13-401b-85a1-746bf7284949"
@@ -1133,7 +1142,7 @@
     "versionCode": 1
   },
   "1c18f6e7-3b13-401b-85a1-746bf7284949@f9941": {
-    "url": "db://assets/img/menu/green.png@f9941",
+    "url": "db://assets/img/menu/UI/green.png@f9941",
     "value": {
       "depends": [
         "1c18f6e7-3b13-401b-85a1-746bf7284949@6c48a"
@@ -1240,14 +1249,14 @@
     "versionCode": 1
   },
   "a50181e9-ecbd-4d36-bf53-3db514f24fee": {
-    "url": "db://assets/img/menu/purchase.png",
+    "url": "db://assets/img/menu/UI/purchase.png",
     "value": {
       "depends": []
     },
     "versionCode": 1
   },
   "a50181e9-ecbd-4d36-bf53-3db514f24fee@6c48a": {
-    "url": "db://assets/img/menu/purchase.png@6c48a",
+    "url": "db://assets/img/menu/UI/purchase.png@6c48a",
     "value": {
       "depends": [
         "a50181e9-ecbd-4d36-bf53-3db514f24fee"
@@ -1256,7 +1265,7 @@
     "versionCode": 1
   },
   "a50181e9-ecbd-4d36-bf53-3db514f24fee@f9941": {
-    "url": "db://assets/img/menu/purchase.png@f9941",
+    "url": "db://assets/img/menu/UI/purchase.png@f9941",
     "value": {
       "depends": [
         "a50181e9-ecbd-4d36-bf53-3db514f24fee@6c48a"
@@ -1265,14 +1274,14 @@
     "versionCode": 1
   },
   "8e2f4297-91a6-47cc-8cd7-438a85e78d5b": {
-    "url": "db://assets/img/menu/restart.png",
+    "url": "db://assets/img/menu/UI/restart.png",
     "value": {
       "depends": []
     },
     "versionCode": 1
   },
   "8e2f4297-91a6-47cc-8cd7-438a85e78d5b@6c48a": {
-    "url": "db://assets/img/menu/restart.png@6c48a",
+    "url": "db://assets/img/menu/UI/restart.png@6c48a",
     "value": {
       "depends": [
         "8e2f4297-91a6-47cc-8cd7-438a85e78d5b"
@@ -1281,7 +1290,7 @@
     "versionCode": 1
   },
   "8e2f4297-91a6-47cc-8cd7-438a85e78d5b@f9941": {
-    "url": "db://assets/img/menu/restart.png@f9941",
+    "url": "db://assets/img/menu/UI/restart.png@f9941",
     "value": {
       "depends": [
         "8e2f4297-91a6-47cc-8cd7-438a85e78d5b@6c48a"
@@ -1290,14 +1299,14 @@
     "versionCode": 1
   },
   "f2a743f7-c00a-4610-b94b-5374123d572e": {
-    "url": "db://assets/img/menu/back.png",
+    "url": "db://assets/img/menu/UI/back.png",
     "value": {
       "depends": []
     },
     "versionCode": 1
   },
   "f2a743f7-c00a-4610-b94b-5374123d572e@6c48a": {
-    "url": "db://assets/img/menu/back.png@6c48a",
+    "url": "db://assets/img/menu/UI/back.png@6c48a",
     "value": {
       "depends": [
         "f2a743f7-c00a-4610-b94b-5374123d572e"
@@ -1306,7 +1315,7 @@
     "versionCode": 1
   },
   "f2a743f7-c00a-4610-b94b-5374123d572e@f9941": {
-    "url": "db://assets/img/menu/back.png@f9941",
+    "url": "db://assets/img/menu/UI/back.png@f9941",
     "value": {
       "depends": [
         "f2a743f7-c00a-4610-b94b-5374123d572e@6c48a"
@@ -1315,14 +1324,14 @@
     "versionCode": 1
   },
   "a426c2c8-58b1-4e5a-a16c-e75061a2d034": {
-    "url": "db://assets/img/menu/close.png",
+    "url": "db://assets/img/menu/UI/close.png",
     "value": {
       "depends": []
     },
     "versionCode": 1
   },
   "a426c2c8-58b1-4e5a-a16c-e75061a2d034@6c48a": {
-    "url": "db://assets/img/menu/close.png@6c48a",
+    "url": "db://assets/img/menu/UI/close.png@6c48a",
     "value": {
       "depends": [
         "a426c2c8-58b1-4e5a-a16c-e75061a2d034"
@@ -1331,14 +1340,14 @@
     "versionCode": 1
   },
   "4befdd25-e632-4e7e-aa34-819783640186": {
-    "url": "db://assets/img/menu/select.png",
+    "url": "db://assets/img/menu/UI/select.png",
     "value": {
       "depends": []
     },
     "versionCode": 1
   },
   "a426c2c8-58b1-4e5a-a16c-e75061a2d034@f9941": {
-    "url": "db://assets/img/menu/close.png@f9941",
+    "url": "db://assets/img/menu/UI/close.png@f9941",
     "value": {
       "depends": [
         "a426c2c8-58b1-4e5a-a16c-e75061a2d034@6c48a"
@@ -1347,7 +1356,7 @@
     "versionCode": 1
   },
   "4befdd25-e632-4e7e-aa34-819783640186@6c48a": {
-    "url": "db://assets/img/menu/select.png@6c48a",
+    "url": "db://assets/img/menu/UI/select.png@6c48a",
     "value": {
       "depends": [
         "4befdd25-e632-4e7e-aa34-819783640186"
@@ -1356,7 +1365,7 @@
     "versionCode": 1
   },
   "4befdd25-e632-4e7e-aa34-819783640186@f9941": {
-    "url": "db://assets/img/menu/select.png@f9941",
+    "url": "db://assets/img/menu/UI/select.png@f9941",
     "value": {
       "depends": [
         "4befdd25-e632-4e7e-aa34-819783640186@6c48a"
@@ -1365,14 +1374,14 @@
     "versionCode": 1
   },
   "fe4c58f2-8b33-45e3-9dfa-f37dfb272443": {
-    "url": "db://assets/img/menu/setting.png",
+    "url": "db://assets/img/menu/UI/setting.png",
     "value": {
       "depends": []
     },
     "versionCode": 1
   },
   "fe4c58f2-8b33-45e3-9dfa-f37dfb272443@6c48a": {
-    "url": "db://assets/img/menu/setting.png@6c48a",
+    "url": "db://assets/img/menu/UI/setting.png@6c48a",
     "value": {
       "depends": [
         "fe4c58f2-8b33-45e3-9dfa-f37dfb272443"
@@ -1381,7 +1390,7 @@
     "versionCode": 1
   },
   "fe4c58f2-8b33-45e3-9dfa-f37dfb272443@f9941": {
-    "url": "db://assets/img/menu/setting.png@f9941",
+    "url": "db://assets/img/menu/UI/setting.png@f9941",
     "value": {
       "depends": [
         "fe4c58f2-8b33-45e3-9dfa-f37dfb272443@6c48a"
@@ -1477,14 +1486,14 @@
     "versionCode": 1
   },
   "a47a6013-b8ef-4f76-8a70-0a5d0f2ba81b": {
-    "url": "db://assets/img/menu/helmet.png",
+    "url": "db://assets/img/menu/UI/helmet.png",
     "value": {
       "depends": []
     },
     "versionCode": 1
   },
   "a47a6013-b8ef-4f76-8a70-0a5d0f2ba81b@6c48a": {
-    "url": "db://assets/img/menu/helmet.png@6c48a",
+    "url": "db://assets/img/menu/UI/helmet.png@6c48a",
     "value": {
       "depends": [
         "a47a6013-b8ef-4f76-8a70-0a5d0f2ba81b"
@@ -1493,7 +1502,7 @@
     "versionCode": 1
   },
   "a47a6013-b8ef-4f76-8a70-0a5d0f2ba81b@f9941": {
-    "url": "db://assets/img/menu/helmet.png@f9941",
+    "url": "db://assets/img/menu/UI/helmet.png@f9941",
     "value": {
       "depends": [
         "a47a6013-b8ef-4f76-8a70-0a5d0f2ba81b@6c48a"
@@ -1502,14 +1511,14 @@
     "versionCode": 1
   },
   "cff45180-1973-4a53-8d9e-791cf8f042d8": {
-    "url": "db://assets/img/menu/moeny.png",
+    "url": "db://assets/img/menu/UI/moeny.png",
     "value": {
       "depends": []
     },
     "versionCode": 1
   },
   "cff45180-1973-4a53-8d9e-791cf8f042d8@6c48a": {
-    "url": "db://assets/img/menu/moeny.png@6c48a",
+    "url": "db://assets/img/menu/UI/moeny.png@6c48a",
     "value": {
       "depends": [
         "cff45180-1973-4a53-8d9e-791cf8f042d8"
@@ -1518,7 +1527,7 @@
     "versionCode": 1
   },
   "cff45180-1973-4a53-8d9e-791cf8f042d8@f9941": {
-    "url": "db://assets/img/menu/moeny.png@f9941",
+    "url": "db://assets/img/menu/UI/moeny.png@f9941",
     "value": {
       "depends": [
         "cff45180-1973-4a53-8d9e-791cf8f042d8@6c48a"
@@ -1527,14 +1536,14 @@
     "versionCode": 1
   },
   "5c270278-c097-4dba-9f15-f3886683bff7": {
-    "url": "db://assets/img/menu/lock.png",
+    "url": "db://assets/img/menu/UI/lock.png",
     "value": {
       "depends": []
     },
     "versionCode": 1
   },
   "5c270278-c097-4dba-9f15-f3886683bff7@6c48a": {
-    "url": "db://assets/img/menu/lock.png@6c48a",
+    "url": "db://assets/img/menu/UI/lock.png@6c48a",
     "value": {
       "depends": [
         "5c270278-c097-4dba-9f15-f3886683bff7"
@@ -1543,7 +1552,7 @@
     "versionCode": 1
   },
   "5c270278-c097-4dba-9f15-f3886683bff7@f9941": {
-    "url": "db://assets/img/menu/lock.png@f9941",
+    "url": "db://assets/img/menu/UI/lock.png@f9941",
     "value": {
       "depends": [
         "5c270278-c097-4dba-9f15-f3886683bff7@6c48a"
@@ -1552,14 +1561,14 @@
     "versionCode": 1
   },
   "9368a3e2-29bf-4ad3-a422-77a08242544b": {
-    "url": "db://assets/img/menu/select2.png",
+    "url": "db://assets/img/menu/UI/select2.png",
     "value": {
       "depends": []
     },
     "versionCode": 1
   },
   "9368a3e2-29bf-4ad3-a422-77a08242544b@6c48a": {
-    "url": "db://assets/img/menu/select2.png@6c48a",
+    "url": "db://assets/img/menu/UI/select2.png@6c48a",
     "value": {
       "depends": [
         "9368a3e2-29bf-4ad3-a422-77a08242544b"
@@ -1568,7 +1577,7 @@
     "versionCode": 1
   },
   "9368a3e2-29bf-4ad3-a422-77a08242544b@f9941": {
-    "url": "db://assets/img/menu/select2.png@f9941",
+    "url": "db://assets/img/menu/UI/select2.png@f9941",
     "value": {
       "depends": [
         "9368a3e2-29bf-4ad3-a422-77a08242544b@6c48a"
@@ -1768,14 +1777,14 @@
     "versionCode": 1
   },
   "eea97c99-7110-4239-a1cd-e97b3b5441c3": {
-    "url": "db://assets/img/paint_blue.png",
+    "url": "db://assets/img/paint/paint_blue.png",
     "value": {
       "depends": []
     },
     "versionCode": 1
   },
   "eea97c99-7110-4239-a1cd-e97b3b5441c3@6c48a": {
-    "url": "db://assets/img/paint_blue.png@6c48a",
+    "url": "db://assets/img/paint/paint_blue.png@6c48a",
     "value": {
       "depends": [
         "eea97c99-7110-4239-a1cd-e97b3b5441c3"
@@ -1784,7 +1793,7 @@
     "versionCode": 1
   },
   "eea97c99-7110-4239-a1cd-e97b3b5441c3@f9941": {
-    "url": "db://assets/img/paint_blue.png@f9941",
+    "url": "db://assets/img/paint/paint_blue.png@f9941",
     "value": {
       "depends": [
         "eea97c99-7110-4239-a1cd-e97b3b5441c3@6c48a"
@@ -1805,14 +1814,14 @@
     "versionCode": 1
   },
   "8cc3d7a6-bdc6-4872-af88-7b99795e09c3": {
-    "url": "db://assets/img/paint_orange.png",
+    "url": "db://assets/img/paint/paint_orange.png",
     "value": {
       "depends": []
     },
     "versionCode": 1
   },
   "8cc3d7a6-bdc6-4872-af88-7b99795e09c3@6c48a": {
-    "url": "db://assets/img/paint_orange.png@6c48a",
+    "url": "db://assets/img/paint/paint_orange.png@6c48a",
     "value": {
       "depends": [
         "8cc3d7a6-bdc6-4872-af88-7b99795e09c3"
@@ -1821,7 +1830,7 @@
     "versionCode": 1
   },
   "8cc3d7a6-bdc6-4872-af88-7b99795e09c3@f9941": {
-    "url": "db://assets/img/paint_orange.png@f9941",
+    "url": "db://assets/img/paint/paint_orange.png@f9941",
     "value": {
       "depends": [
         "8cc3d7a6-bdc6-4872-af88-7b99795e09c3@6c48a"
@@ -1852,6 +1861,347 @@
       "depends": [],
       "dependScripts": [
         "7dd7ac9d-7d90-4745-bb56-3c99a1d345df"
+      ]
+    },
+    "versionCode": 1
+  },
+  "41215272-73c9-4fb3-9263-b76927c4d527": {
+    "url": "db://assets/img/cars",
+    "value": {},
+    "versionCode": 1
+  },
+  "2398cf68-c464-466d-9c17-c2be447e298a": {
+    "url": "db://assets/img/menu/UI",
+    "value": {},
+    "versionCode": 1
+  },
+  "40424df1-20d9-4c1a-b530-455872b99284": {
+    "url": "db://assets/img/paint",
+    "value": {},
+    "versionCode": 1
+  },
+  "95d9aa7c-c5ca-43b2-9a9a-84fbe4094e69": {
+    "url": "db://assets/img/paint/panit_green.png",
+    "value": {},
+    "versionCode": 1
+  },
+  "95d9aa7c-c5ca-43b2-9a9a-84fbe4094e69@6c48a": {
+    "url": "db://assets/img/paint/panit_green.png@6c48a",
+    "value": {
+      "depends": [
+        "95d9aa7c-c5ca-43b2-9a9a-84fbe4094e69"
+      ]
+    },
+    "versionCode": 1
+  },
+  "95d9aa7c-c5ca-43b2-9a9a-84fbe4094e69@f9941": {
+    "url": "db://assets/img/paint/panit_green.png@f9941",
+    "value": {
+      "depends": [
+        "95d9aa7c-c5ca-43b2-9a9a-84fbe4094e69@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "16a505c9-a5e1-44f4-b3f9-2a0745a3776c": {
+    "url": "db://assets/resources/prefab/paints/paint_green.prefab",
+    "value": {},
+    "versionCode": 1
+  },
+  "e2c578aa-a0c8-46be-bcd6-f1cdb818f1ba": {
+    "url": "db://assets/img/paint/paint_red.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "e2c578aa-a0c8-46be-bcd6-f1cdb818f1ba@6c48a": {
+    "url": "db://assets/img/paint/paint_red.png@6c48a",
+    "value": {
+      "depends": [
+        "e2c578aa-a0c8-46be-bcd6-f1cdb818f1ba"
+      ]
+    },
+    "versionCode": 1
+  },
+  "e2c578aa-a0c8-46be-bcd6-f1cdb818f1ba@f9941": {
+    "url": "db://assets/img/paint/paint_red.png@f9941",
+    "value": {
+      "depends": [
+        "e2c578aa-a0c8-46be-bcd6-f1cdb818f1ba@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "4d4e7195-6c84-4621-8d3c-37fb67732162": {
+    "url": "db://assets/img/paint/paint_yellow.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "4d4e7195-6c84-4621-8d3c-37fb67732162@6c48a": {
+    "url": "db://assets/img/paint/paint_yellow.png@6c48a",
+    "value": {
+      "depends": [
+        "4d4e7195-6c84-4621-8d3c-37fb67732162"
+      ]
+    },
+    "versionCode": 1
+  },
+  "4d4e7195-6c84-4621-8d3c-37fb67732162@f9941": {
+    "url": "db://assets/img/paint/paint_yellow.png@f9941",
+    "value": {
+      "depends": [
+        "4d4e7195-6c84-4621-8d3c-37fb67732162@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "765da6a8-e074-4a3b-81b7-ca9710f9c2d3": {
+    "url": "db://assets/img/paint/paint_pink.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "765da6a8-e074-4a3b-81b7-ca9710f9c2d3@6c48a": {
+    "url": "db://assets/img/paint/paint_pink.png@6c48a",
+    "value": {
+      "depends": [
+        "765da6a8-e074-4a3b-81b7-ca9710f9c2d3"
+      ]
+    },
+    "versionCode": 1
+  },
+  "a2a3e90c-937f-4ef9-a2da-f20d445d214a": {
+    "url": "db://assets/img/paint/paint_purple.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "765da6a8-e074-4a3b-81b7-ca9710f9c2d3@f9941": {
+    "url": "db://assets/img/paint/paint_pink.png@f9941",
+    "value": {
+      "depends": [
+        "765da6a8-e074-4a3b-81b7-ca9710f9c2d3@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "a2a3e90c-937f-4ef9-a2da-f20d445d214a@6c48a": {
+    "url": "db://assets/img/paint/paint_purple.png@6c48a",
+    "value": {
+      "depends": [
+        "a2a3e90c-937f-4ef9-a2da-f20d445d214a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "a2a3e90c-937f-4ef9-a2da-f20d445d214a@f9941": {
+    "url": "db://assets/img/paint/paint_purple.png@f9941",
+    "value": {
+      "depends": [
+        "a2a3e90c-937f-4ef9-a2da-f20d445d214a@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "ac4c6226-b5ca-40aa-8e65-d953ab93c6b4": {
+    "url": "db://assets/img/menu/gameover.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "ac4c6226-b5ca-40aa-8e65-d953ab93c6b4@6c48a": {
+    "url": "db://assets/img/menu/gameover.png@6c48a",
+    "value": {
+      "depends": [
+        "ac4c6226-b5ca-40aa-8e65-d953ab93c6b4"
+      ]
+    },
+    "versionCode": 1
+  },
+  "ac4c6226-b5ca-40aa-8e65-d953ab93c6b4@f9941": {
+    "url": "db://assets/img/menu/gameover.png@f9941",
+    "value": {
+      "depends": [
+        "ac4c6226-b5ca-40aa-8e65-d953ab93c6b4@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "357cb1fb-4427-4677-aebe-aa3cf9f9df55": {
+    "url": "db://assets/img/menu/UI/pause.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "357cb1fb-4427-4677-aebe-aa3cf9f9df55@6c48a": {
+    "url": "db://assets/img/menu/UI/pause.png@6c48a",
+    "value": {
+      "depends": [
+        "357cb1fb-4427-4677-aebe-aa3cf9f9df55"
+      ]
+    },
+    "versionCode": 1
+  },
+  "357cb1fb-4427-4677-aebe-aa3cf9f9df55@f9941": {
+    "url": "db://assets/img/menu/UI/pause.png@f9941",
+    "value": {
+      "depends": [
+        "357cb1fb-4427-4677-aebe-aa3cf9f9df55@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "ff4b1155-db8b-4cda-9bc0-6e743e5710bc": {
+    "url": "db://assets/img/menu/UI/star.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "ff4b1155-db8b-4cda-9bc0-6e743e5710bc@6c48a": {
+    "url": "db://assets/img/menu/UI/star.png@6c48a",
+    "value": {
+      "depends": [
+        "ff4b1155-db8b-4cda-9bc0-6e743e5710bc"
+      ]
+    },
+    "versionCode": 1
+  },
+  "ff4b1155-db8b-4cda-9bc0-6e743e5710bc@f9941": {
+    "url": "db://assets/img/menu/UI/star.png@f9941",
+    "value": {
+      "depends": [
+        "ff4b1155-db8b-4cda-9bc0-6e743e5710bc@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "35418bab-1e0a-4108-a267-ce8c8c2422c3": {
+    "url": "db://assets/resources/prefab/paints/paint_pink.prefab",
+    "value": {
+      "depends": [
+        "765da6a8-e074-4a3b-81b7-ca9710f9c2d3@f9941"
+      ],
+      "dependScripts": [
+        "e9c7f25f-e46f-4cf1-9025-dae477143ca9"
+      ]
+    },
+    "versionCode": 1
+  },
+  "a46287ff-f74b-4075-a483-08b1027fe72d": {
+    "url": "db://assets/resources/prefab/paints/paint_purple.prefab",
+    "value": {
+      "depends": [
+        "a2a3e90c-937f-4ef9-a2da-f20d445d214a@f9941"
+      ],
+      "dependScripts": [
+        "e9c7f25f-e46f-4cf1-9025-dae477143ca9"
+      ]
+    },
+    "versionCode": 1
+  },
+  "e7d9af4d-540d-4efb-8ab7-30ad25e31221": {
+    "url": "db://assets/resources/prefab/paints/paint_red.prefab",
+    "value": {
+      "depends": [
+        "e2c578aa-a0c8-46be-bcd6-f1cdb818f1ba@f9941"
+      ],
+      "dependScripts": [
+        "e9c7f25f-e46f-4cf1-9025-dae477143ca9"
+      ]
+    },
+    "versionCode": 1
+  },
+  "4666d6c8-2376-4df4-be28-d66e383baace": {
+    "url": "db://assets/resources/prefab/paints/paint_yellow.prefab",
+    "value": {
+      "depends": [
+        "4d4e7195-6c84-4621-8d3c-37fb67732162@f9941"
+      ],
+      "dependScripts": [
+        "e9c7f25f-e46f-4cf1-9025-dae477143ca9"
+      ]
+    },
+    "versionCode": 1
+  },
+  "b510303d-c68c-4e1b-8073-6a16eb4df9f8": {
+    "url": "db://assets/img/menu/UI/pause_bt.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "b510303d-c68c-4e1b-8073-6a16eb4df9f8@6c48a": {
+    "url": "db://assets/img/menu/UI/pause_bt.png@6c48a",
+    "value": {
+      "depends": [
+        "b510303d-c68c-4e1b-8073-6a16eb4df9f8"
+      ]
+    },
+    "versionCode": 1
+  },
+  "b510303d-c68c-4e1b-8073-6a16eb4df9f8@f9941": {
+    "url": "db://assets/img/menu/UI/pause_bt.png@f9941",
+    "value": {
+      "depends": [
+        "b510303d-c68c-4e1b-8073-6a16eb4df9f8@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "dcb5adf7-9474-4ec2-bac1-fefc5f844ea7": {
+    "url": "db://assets/img/menu/UI/backtoselect.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "dcb5adf7-9474-4ec2-bac1-fefc5f844ea7@6c48a": {
+    "url": "db://assets/img/menu/UI/backtoselect.png@6c48a",
+    "value": {
+      "depends": [
+        "dcb5adf7-9474-4ec2-bac1-fefc5f844ea7"
+      ]
+    },
+    "versionCode": 1
+  },
+  "dcb5adf7-9474-4ec2-bac1-fefc5f844ea7@f9941": {
+    "url": "db://assets/img/menu/UI/backtoselect.png@f9941",
+    "value": {
+      "depends": [
+        "dcb5adf7-9474-4ec2-bac1-fefc5f844ea7@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "37e04c65-4ac4-41b8-8169-a266f40e9fa8": {
+    "url": "db://assets/img/menu/UI/resume.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "37e04c65-4ac4-41b8-8169-a266f40e9fa8@6c48a": {
+    "url": "db://assets/img/menu/UI/resume.png@6c48a",
+    "value": {
+      "depends": [
+        "37e04c65-4ac4-41b8-8169-a266f40e9fa8"
+      ]
+    },
+    "versionCode": 1
+  },
+  "37e04c65-4ac4-41b8-8169-a266f40e9fa8@f9941": {
+    "url": "db://assets/img/menu/UI/resume.png@f9941",
+    "value": {
+      "depends": [
+        "37e04c65-4ac4-41b8-8169-a266f40e9fa8@6c48a"
       ]
     },
     "versionCode": 1
