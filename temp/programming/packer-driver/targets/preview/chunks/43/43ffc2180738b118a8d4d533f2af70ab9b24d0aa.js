@@ -471,19 +471,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           } // 禁用输入控制
 
 
-          this.disableInput(); // 开始摧毁动画
+          this.disableInput(); // 开始摧毁动画，并在动画完成后触发游戏结束
 
-          this.startDestroyAnimation(); // 玩家摧毁时可以触发游戏结束
-
-          var gameManager = (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
-            error: Error()
-          }), GameManager) : GameManager).getInstance();
-
-          if (gameManager) {// 可以在这里调用游戏结束逻辑
-            // gameManager.gameOver(false); // false表示玩家失败
-          } // 延迟移除节点（可选，通常玩家车辆不移除）
+          this.startDestroyAnimation(); // 延迟移除节点（可选，通常玩家车辆不移除）
           // this.scheduleRemoveNode();
-
         }
         /**
          * 禁用输入控制
@@ -522,7 +513,25 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
               // 稍微缩小
               angle: this.node.angle + 180 // 旋转180度
 
+            }).call(() => {
+              // 动画完成后触发游戏结束
+              this.onDestroyAnimationComplete();
             }).start();
+          }
+        }
+        /**
+         * 摧毁动画完成回调
+         */
+
+
+        onDestroyAnimationComplete() {
+          console.log('玩家车辆摧毁动画完成，触发游戏结束');
+          var gameManager = (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+            error: Error()
+          }), GameManager) : GameManager).getInstance();
+
+          if (gameManager) {
+            gameManager.gameOver(false); // false表示玩家失败
           }
         } // ==================== 公共方法 ====================
 

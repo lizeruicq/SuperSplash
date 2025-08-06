@@ -52,8 +52,8 @@ export class GameManager extends Component {
     @property(Button)
     resumeButton: Button = null!; // 继续游戏按钮
 
-    @property(Button)
-    mainMenuButton2: Button = null!; // 重新开始按钮
+    // @property(Button)
+    // mainMenuButton2: Button = null!; // 
 
     @property(Button)
     mainMenuButton: Button = null!; // 返回主菜单按钮
@@ -169,14 +169,13 @@ export class GameManager extends Component {
             this.resumeButton.node.on(Button.EventType.CLICK, this.resumeGame, this);
         }
 
-        // 重新开始按钮
-        if (this.mainMenuButton2) {
-            this.mainMenuButton2.node.on(Button.EventType.CLICK, this.returnToMainMenu, this);
-        }
+        // if (this.mainMenuButton2) {
+        //     this.mainMenuButton2.node.on(Button.EventType.CLICK, this.returnToLevelSelect, this);
+        // }
 
         // 返回主菜单按钮
         if (this.mainMenuButton) {
-            this.mainMenuButton.node.on(Button.EventType.CLICK, this.returnToMainMenu, this);
+            this.mainMenuButton.node.on(Button.EventType.CLICK, this.returnToLevelSelect, this);
         }
     }
 
@@ -325,9 +324,11 @@ export class GameManager extends Component {
         this.playerHP = Math.max(0, this.playerHP - amount);
         this.refreshPlayerHealthBar();
 
-        // 检查玩家是否死亡
+        // 检查玩家是否死亡，但不立即触发游戏结束
+        // 游戏结束将由玩家车辆的摧毁动画完成后触发
         if (this.playerHP <= 0 && this.currentState === GameState.RUNNING) {
-            this.gameOver(false); // 玩家死亡，游戏失败
+            console.log('玩家血量归零，等待摧毁动画完成');
+            // 不在这里调用 gameOver，让 player.ts 的动画完成后调用
         }
     }
 
@@ -339,9 +340,11 @@ export class GameManager extends Component {
             this.playerHP = this.playerComponent.getCurrentHealth();
             this.refreshPlayerHealthBar();
 
-            // 检查玩家是否死亡
+            // 检查玩家是否死亡，但不立即触发游戏结束
+            // 游戏结束将由玩家车辆的摧毁动画完成后触发
             if (this.playerHP <= 0 && this.currentState === GameState.RUNNING) {
-                this.gameOver(false); // 玩家死亡，游戏失败
+                console.log('玩家血量归零，等待摧毁动画完成');
+                // 不在这里调用 gameOver，让 player.ts 的动画完成后调用
             }
         }
     }
@@ -373,11 +376,13 @@ export class GameManager extends Component {
     public refreshEnemyCount(count: number) {
         this.enemyCount = count;
         if (this.enemyCountLabel) {
-            this.enemyCountLabel.string = `敌人剩余: ${this.enemyCount}`;
+            this.enemyCountLabel.string = `opponent: ${this.enemyCount}`;
         }
 
         // 检查是否所有敌人都被消灭
+        // 这个方法现在由AI车辆摧毁动画完成后调用，所以可以立即触发游戏结束
         if (this.enemyCount <= 0 && this.currentState === GameState.RUNNING && this.initialEnemyCount > 0) {
+            console.log('所有AI车辆摧毁动画完成，触发游戏胜利');
             this.gameOver(true); // 敌人全部消灭，游戏胜利
         }
     }
@@ -441,10 +446,12 @@ export class GameManager extends Component {
         // 显示游戏结束面板并传递数据
         if (this.gameOverPanel) {
             this.gameOverPanel.active = true;
+            
 
             // 获取GameOverPanel组件并设置数据
             const gameOverPanelComponent = this.gameOverPanel.getComponent(GameOverPanel);
             if (gameOverPanelComponent) {
+                gameOverPanelComponent.bindButtonEvents();
                 gameOverPanelComponent.setGameOverInfo(
                     isVictory,
                     gameResult.performance,
@@ -508,7 +515,7 @@ export class GameManager extends Component {
         if (!isVictory) {
             // 失败时返回基础数据
             return {
-                performance: '失败',
+                performance: 'failure',
                 reward: 10,
                 gameTime: gameTimeSec,
                 healthPercentage: healthPercentage,

@@ -72,14 +72,15 @@ export class GameOverPanel extends Component {
     LevelSelectButton: Button = null!; // 返回主菜单按钮
 
     start() {
-        this.bindButtonEvents();
+
+        // this.bindButtonEvents();
         // 注意：不在start中更新数据，而是等待GameManager调用setGameOverInfo
     }
 
     /**
      * 绑定按钮事件
      */
-    private bindButtonEvents() {
+    public bindButtonEvents() {
         if (this.restartButton) {
             this.restartButton.node.on(Button.EventType.CLICK, this.onRestartClick, this);
         }
@@ -222,7 +223,7 @@ export class GameOverPanel extends Component {
 
         // 更新游戏时长
         if (this.gameTimeLabel) {
-            this.gameTimeLabel.string = `time: ${gameTime.toFixed(1)}秒`;
+            this.gameTimeLabel.string = `time: ${gameTime.toFixed(1)}S`;
         }
 
         // 更新星星精灵显示

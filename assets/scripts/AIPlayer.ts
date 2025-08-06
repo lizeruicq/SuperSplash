@@ -1,6 +1,7 @@
-import { _decorator, Component, Vec2, Vec3, RigidBody2D, ERigidBody2DType, BoxCollider2D, Contact2DType, ProgressBar, Sprite, SpriteFrame, tween, Prefab } from 'cc';
+import { _decorator, Component, Vec2, Vec3, RigidBody2D, ERigidBody2DType, BoxCollider2D, Contact2DType, ProgressBar, Sprite, SpriteFrame, tween, Prefab, Layers, find } from 'cc';
 import { player } from './player';
 import { GameManager } from './GameManager';
+import { AIController } from './AIController'; // 添加AIController导入
 const { ccclass, property } = _decorator;
 import { SoundManager } from './SoundManager';
 
@@ -309,16 +310,59 @@ export class AIPlayer extends Component {
     /**
      * 碰撞事件处理
      */
-    onCollisionEnter(other: BoxCollider2D, _self: BoxCollider2D) {
-        console.log('AIPlayer collided with something');
+    onCollisionEnter(self: BoxCollider2D, other: BoxCollider2D) {
+        // console.log('AIPlayer collided with something', other.node.name);
+        
+        // 获取碰撞对象的层级
+        const otherLayer = other.node.layer;
+        const blockLayer = Layers.nameToLayer('Block');
+        console.log('otherLayer', otherLayer);
+        console.log('blockLayer', blockLayer);
+        // 检查是否与Block层碰撞
+        if (otherLayer === blockLayer) {
+            // 获取AIController实例
+            const aiControllerNode = find('AIController');
+            if (aiControllerNode) {
+                const aiController = aiControllerNode.getComponent(AIController);
+                if (aiController) {
+                    // 检查AI是否处于边界转向状态，如果是则不处理Block碰撞
+                    if (aiController.isAIBoundaryTurning(this)) {
+                        return;
+                    }
+                    
+                    console.log('AIPlayer collided with Block, turning around');
+                    
+                    // 随机选择向左或向右掉头
+                    const turnDirection = Math.random() < 0.5 ? -1 : 1;
+                    
+                    // 随机选择掉头角度(130-180度)
+                    const turnAngle = 130 + Math.random() * 50;
+                    
+                    // 计算当前角度
+                    const currentAngle = this.getCurrentAngle();
+                    
+                    // 计算目标角度
+                    const targetAngle = turnDirection > 0 ? 
+                        currentAngle + turnAngle : 
+                        currentAngle - turnAngle;
+                        
+                    // 设置目标角度
+                    this.setTargetAngle(targetAngle);
+                    this.setDirection(turnDirection);
+                    this.setAccel(1);
+                }
+            }
+            return; // Block碰撞处理完成，直接返回
+        }
+        
         const playerComponent = other.node.getComponent<player>(player);
         if (playerComponent) {
             console.log('AIPlayer 被玩家车辆撞击');
             const playerRigidBody = playerComponent.getRigidBody();
-            if (playerRigidBody) {
+            if (playerRigidBody && !this.isDestroyed) {
                 const impactForce = new Vec2(playerRigidBody.linearVelocity.x, playerRigidBody.linearVelocity.y);
                 impactForce.normalize(); // 归一化方向
-                impactForce.multiplyScalar(100); // 增加冲力强度
+                impactForce.multiplyScalar(10); // 增加冲力强度
                 this._rigidBody.linearVelocity = impactForce;
             }
 

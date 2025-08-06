@@ -404,4 +404,17 @@ export class AIController extends Component {
         }
         return true;
     }
+
+    /**
+     * 检查指定AI是否处于边界转向状态
+     * @param aiPlayer AI玩家实例
+     * @returns 是否处于边界转向状态
+     */
+    public isAIBoundaryTurning(aiPlayer: AIPlayer): boolean {
+        const index = this.aiPlayers.indexOf(aiPlayer);
+        if (index === -1) {
+            return false;
+        }
+        return this.aiStates[index] === AIState.BoundaryTurning;
+    }
 } 

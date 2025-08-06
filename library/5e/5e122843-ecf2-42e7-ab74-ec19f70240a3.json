@@ -648,7 +648,7 @@
     "maxHealth": 30,
     "healthBar": null,
     "destroyedSprite": {
-      "__uuid__": "a238f344-7c25-4d83-a0ec-8c85e46d3ec8@f9941",
+      "__uuid__": "86087b4b-4284-4b91-8707-fa1f71406ea1@f9941",
       "__expectedType__": "cc.SpriteFrame"
     },
     "removeDelay": 3,
@@ -1055,12 +1055,12 @@
     "maxHealth": 30,
     "healthBar": null,
     "destroyedSprite": {
-      "__uuid__": "a238f344-7c25-4d83-a0ec-8c85e46d3ec8@f9941",
+      "__uuid__": "86087b4b-4284-4b91-8707-fa1f71406ea1@f9941",
       "__expectedType__": "cc.SpriteFrame"
     },
     "removeDelay": 3,
     "paintPrefab": {
-      "__uuid__": "16a505c9-a5e1-44f4-b3f9-2a0745a3776c",
+      "__uuid__": "a46287ff-f74b-4075-a483-08b1027fe72d",
       "__expectedType__": "cc.Prefab"
     },
     "paintSprayInterval": 0.05,
@@ -1462,7 +1462,7 @@
     "maxHealth": 30,
     "healthBar": null,
     "destroyedSprite": {
-      "__uuid__": "a238f344-7c25-4d83-a0ec-8c85e46d3ec8@f9941",
+      "__uuid__": "86087b4b-4284-4b91-8707-fa1f71406ea1@f9941",
       "__expectedType__": "cc.SpriteFrame"
     },
     "removeDelay": 3,
@@ -1869,7 +1869,7 @@
     "maxHealth": 30,
     "healthBar": null,
     "destroyedSprite": {
-      "__uuid__": "a238f344-7c25-4d83-a0ec-8c85e46d3ec8@f9941",
+      "__uuid__": "86087b4b-4284-4b91-8707-fa1f71406ea1@f9941",
       "__expectedType__": "cc.SpriteFrame"
     },
     "removeDelay": 3,

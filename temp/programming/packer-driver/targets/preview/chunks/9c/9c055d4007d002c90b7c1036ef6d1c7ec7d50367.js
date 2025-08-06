@@ -117,8 +117,7 @@ System.register(["cc"], function (_export, _context) {
             ownerId: ownerId,
             timestamp: Date.now()
           };
-          this.paintMap.set(paintId, paintData);
-          console.log("\u6DFB\u52A0\u989C\u6599: \u62E5\u6709\u8005=" + ownerId + ", \u4F4D\u7F6E=(" + position2D.x.toFixed(1) + ", " + position2D.y.toFixed(1) + ")");
+          this.paintMap.set(paintId, paintData); // console.log(`添加颜料: 拥有者=${ownerId}, 位置=(${position2D.x.toFixed(1)}, ${position2D.y.toFixed(1)})`);
         }
         /**
          * 检查并移除重叠的颜料
@@ -141,8 +140,7 @@ System.register(["cc"], function (_export, _context) {
             this.removePaint(paintId);
           });
 
-          if (toRemove.length > 0) {
-            console.log("\u79FB\u9664\u4E86 " + toRemove.length + " \u4E2A\u91CD\u53E0\u7684\u989C\u6599");
+          if (toRemove.length > 0) {// console.log(`移除了 ${toRemove.length} 个重叠的颜料`);
           }
         }
         /**

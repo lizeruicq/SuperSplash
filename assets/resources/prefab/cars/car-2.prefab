@@ -183,8 +183,16 @@
     "friction": 1.2,
     "initAngle": 0,
     "maxHealth": 200,
-    "destroyedSprite": null,
+    "destroyedSprite": {
+      "__uuid__": "86087b4b-4284-4b91-8707-fa1f71406ea1@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
     "removeDelay": 3,
+    "paintPrefab": {
+      "__uuid__": "e7d9af4d-540d-4efb-8ab7-30ad25e31221",
+      "__expectedType__": "cc.Prefab"
+    },
+    "paintSprayInterval": 0.2,
     "_id": ""
   },
   {

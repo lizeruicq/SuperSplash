@@ -118,7 +118,7 @@ export class GameHUD extends Component {
         const percentage = Math.round(ratio * 100);
         
         if (this.playerRatioLabel) {
-            this.playerRatioLabel.string = `玩家: ${percentage}%`;
+            this.playerRatioLabel.string = `player: ${percentage}%`;
         }
         
         // if (this.playerRatioBar) {
@@ -201,7 +201,7 @@ export class GameHUD extends Component {
         }
 
         if (this.playerRatioLabel) {
-            this.playerRatioLabel.string = "玩家: 0%";
+            this.playerRatioLabel.string = "player: 0%";
         }
 
         this.initializeAIRatioDisplay();
