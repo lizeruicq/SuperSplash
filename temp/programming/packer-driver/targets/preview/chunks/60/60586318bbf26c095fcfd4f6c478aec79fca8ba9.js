@@ -104,8 +104,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
         }
 
         // 返回主菜单按钮
-        start() {
-          this.bindButtonEvents(); // 注意：不在start中更新数据，而是等待GameManager调用setGameOverInfo
+        start() {// this.bindButtonEvents();
+          // 注意：不在start中更新数据，而是等待GameManager调用setGameOverInfo
         }
         /**
          * 绑定按钮事件
@@ -255,7 +255,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
 
           if (this.gameTimeLabel) {
-            this.gameTimeLabel.string = "time: " + gameTime.toFixed(1) + "\u79D2";
+            this.gameTimeLabel.string = "time: " + gameTime.toFixed(1) + "S";
           } // 更新星星精灵显示
 
 

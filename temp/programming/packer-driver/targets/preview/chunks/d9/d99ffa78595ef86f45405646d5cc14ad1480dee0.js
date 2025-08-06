@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8", "__unresolved_9", "__unresolved_10", "__unresolved_11"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Node, Prefab, instantiate, resources, UITransform, director, ProgressBar, Label, Button, TempData, CameraFollow, player, AIController, AIPlayer, PlayerManager, SceneTransition, SoundManager, PaintManager, GameOverPanel, GameHUD, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _dec10, _dec11, _dec12, _dec13, _dec14, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _descriptor12, _descriptor13, _class3, _crd, ccclass, property, GameState, GameManager;
+  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Node, Prefab, instantiate, resources, UITransform, director, ProgressBar, Label, Button, TempData, CameraFollow, player, AIController, AIPlayer, PlayerManager, SceneTransition, SoundManager, PaintManager, GameOverPanel, GameHUD, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _dec10, _dec11, _dec12, _dec13, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _descriptor12, _class3, _crd, ccclass, property, GameState, GameManager;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -113,7 +113,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         return GameState;
       }({}));
 
-      _export("GameManager", GameManager = (_dec = ccclass('GameManager'), _dec2 = property(Node), _dec3 = property(Node), _dec4 = property(Node), _dec5 = property(Node), _dec6 = property(ProgressBar), _dec7 = property(Label), _dec8 = property(Button), _dec9 = property(Node), _dec10 = property(Node), _dec11 = property(Button), _dec12 = property(Button), _dec13 = property(Button), _dec14 = property(_crd && GameHUD === void 0 ? (_reportPossibleCrUseOfGameHUD({
+      _export("GameManager", GameManager = (_dec = ccclass('GameManager'), _dec2 = property(Node), _dec3 = property(Node), _dec4 = property(Node), _dec5 = property(Node), _dec6 = property(ProgressBar), _dec7 = property(Label), _dec8 = property(Button), _dec9 = property(Node), _dec10 = property(Node), _dec11 = property(Button), _dec12 = property(Button), _dec13 = property(_crd && GameHUD === void 0 ? (_reportPossibleCrUseOfGameHUD({
         error: Error()
       }), GameHUD) : GameHUD), _dec(_class = (_class2 = (_class3 = class GameManager extends Component {
         constructor() {
@@ -149,10 +149,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           _initializerDefineProperty(this, "resumeButton", _descriptor10, this);
 
           // 继续游戏按钮
-          _initializerDefineProperty(this, "mainMenuButton2", _descriptor11, this);
-
-          // 重新开始按钮
-          _initializerDefineProperty(this, "mainMenuButton", _descriptor12, this);
+          // @property(Button)
+          // mainMenuButton2: Button = null!; // 
+          _initializerDefineProperty(this, "mainMenuButton", _descriptor11, this);
 
           this.aiPlayers = [];
           // 游戏状态相关
@@ -178,7 +177,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           // @property(PaintManager)
           // paintManager: PaintManager = null!;
           // HUD界面
-          _initializerDefineProperty(this, "gameHUD", _descriptor13, this);
+          _initializerDefineProperty(this, "gameHUD", _descriptor12, this);
         }
 
         // // 游戏结束面板颜料占比显示
@@ -259,16 +258,14 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           if (this.resumeButton) {
             this.resumeButton.node.on(Button.EventType.CLICK, this.resumeGame, this);
-          } // 重新开始按钮
-
-
-          if (this.mainMenuButton2) {
-            this.mainMenuButton2.node.on(Button.EventType.CLICK, this.returnToMainMenu, this);
-          } // 返回主菜单按钮
+          } // if (this.mainMenuButton2) {
+          //     this.mainMenuButton2.node.on(Button.EventType.CLICK, this.returnToLevelSelect, this);
+          // }
+          // 返回主菜单按钮
 
 
           if (this.mainMenuButton) {
-            this.mainMenuButton.node.on(Button.EventType.CLICK, this.returnToMainMenu, this);
+            this.mainMenuButton.node.on(Button.EventType.CLICK, this.returnToLevelSelect, this);
           }
         }
 
@@ -442,10 +439,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         reducePlayerHP(amount) {
           console.log('减少玩家血量:', amount);
           this.playerHP = Math.max(0, this.playerHP - amount);
-          this.refreshPlayerHealthBar(); // 检查玩家是否死亡
+          this.refreshPlayerHealthBar(); // 检查玩家是否死亡，但不立即触发游戏结束
+          // 游戏结束将由玩家车辆的摧毁动画完成后触发
 
           if (this.playerHP <= 0 && this.currentState === GameState.RUNNING) {
-            this.gameOver(false); // 玩家死亡，游戏失败
+            console.log('玩家血量归零，等待摧毁动画完成'); // 不在这里调用 gameOver，让 player.ts 的动画完成后调用
           }
         }
         /**
@@ -456,10 +454,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         syncPlayerHealth() {
           if (this.playerComponent) {
             this.playerHP = this.playerComponent.getCurrentHealth();
-            this.refreshPlayerHealthBar(); // 检查玩家是否死亡
+            this.refreshPlayerHealthBar(); // 检查玩家是否死亡，但不立即触发游戏结束
+            // 游戏结束将由玩家车辆的摧毁动画完成后触发
 
             if (this.playerHP <= 0 && this.currentState === GameState.RUNNING) {
-              this.gameOver(false); // 玩家死亡，游戏失败
+              console.log('玩家血量归零，等待摧毁动画完成'); // 不在这里调用 gameOver，让 player.ts 的动画完成后调用
             }
           }
         }
@@ -496,11 +495,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.enemyCount = count;
 
           if (this.enemyCountLabel) {
-            this.enemyCountLabel.string = "\u654C\u4EBA\u5269\u4F59: " + this.enemyCount;
+            this.enemyCountLabel.string = "opponent: " + this.enemyCount;
           } // 检查是否所有敌人都被消灭
+          // 这个方法现在由AI车辆摧毁动画完成后调用，所以可以立即触发游戏结束
 
 
           if (this.enemyCount <= 0 && this.currentState === GameState.RUNNING && this.initialEnemyCount > 0) {
+            console.log('所有AI车辆摧毁动画完成，触发游戏胜利');
             this.gameOver(true); // 敌人全部消灭，游戏胜利
           }
         } // ==================== 游戏状态管理方法 ====================
@@ -562,6 +563,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             }), GameOverPanel) : GameOverPanel);
 
             if (gameOverPanelComponent) {
+              gameOverPanelComponent.bindButtonEvents();
               gameOverPanelComponent.setGameOverInfo(isVictory, gameResult.performance, gameResult.reward, gameResult.gameTime, gameResult.healthPercentage, gameResult.stars);
             }
           } // 给予玩家奖励
@@ -616,7 +618,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           if (!isVictory) {
             // 失败时返回基础数据
             return {
-              performance: '失败',
+              performance: 'failure',
               reward: 10,
               gameTime: gameTimeSec,
               healthPercentage: healthPercentage,
@@ -1009,21 +1011,14 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         initializer: function initializer() {
           return null;
         }
-      }), _descriptor11 = _applyDecoratedDescriptor(_class2.prototype, "mainMenuButton2", [_dec12], {
+      }), _descriptor11 = _applyDecoratedDescriptor(_class2.prototype, "mainMenuButton", [_dec12], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: function initializer() {
           return null;
         }
-      }), _descriptor12 = _applyDecoratedDescriptor(_class2.prototype, "mainMenuButton", [_dec13], {
-        configurable: true,
-        enumerable: true,
-        writable: true,
-        initializer: function initializer() {
-          return null;
-        }
-      }), _descriptor13 = _applyDecoratedDescriptor(_class2.prototype, "gameHUD", [_dec14], {
+      }), _descriptor12 = _applyDecoratedDescriptor(_class2.prototype, "gameHUD", [_dec13], {
         configurable: true,
         enumerable: true,
         writable: true,

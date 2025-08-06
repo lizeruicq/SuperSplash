@@ -5,7 +5,8 @@
         "version": "Darwin Kernel Version 24.5.0: Tue Apr 22 19:54:43 PDT 2025; root:xnu-11417.121.6~2/RELEASE_ARM64_T8132"
     },
     "sceneListMap": {
-        "1563d039-d898-4d8f-9415-9f1da853b8a3": "/Users/zeruili/projects/cocos_project/driftClash/assets/Scenes/gamescene.scene"
+        "1563d039-d898-4d8f-9415-9f1da853b8a3": "/Users/zeruili/projects/cocos_project/driftClash/assets/Scenes/gamescene.scene",
+        "8d8867cd-f591-45fa-8564-e435fcdb1847": "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/levels/level-3.prefab"
     },
     "deviceMd5": "ccd89e07890f9829b71e5e8b305741b3"
 }

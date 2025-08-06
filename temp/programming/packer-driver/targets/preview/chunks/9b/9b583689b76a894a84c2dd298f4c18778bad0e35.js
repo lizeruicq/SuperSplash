@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Vec2, Vec3, RigidBody2D, ERigidBody2DType, BoxCollider2D, Contact2DType, ProgressBar, Sprite, SpriteFrame, tween, Prefab, player, GameManager, SoundManager, _dec, _dec2, _dec3, _dec4, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _descriptor12, _crd, ccclass, property, AIPlayer;
+  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Vec2, Vec3, RigidBody2D, ERigidBody2DType, BoxCollider2D, Contact2DType, ProgressBar, Sprite, SpriteFrame, tween, Prefab, Layers, find, player, GameManager, AIController, SoundManager, _dec, _dec2, _dec3, _dec4, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _descriptor12, _crd, ccclass, property, AIPlayer;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -15,6 +15,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
   function _reportPossibleCrUseOfGameManager(extras) {
     _reporterNs.report("GameManager", "./GameManager", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfAIController(extras) {
+    _reporterNs.report("AIController", "./AIController", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfSoundManager(extras) {
@@ -41,20 +45,25 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       SpriteFrame = _cc.SpriteFrame;
       tween = _cc.tween;
       Prefab = _cc.Prefab;
+      Layers = _cc.Layers;
+      find = _cc.find;
     }, function (_unresolved_2) {
       player = _unresolved_2.player;
     }, function (_unresolved_3) {
       GameManager = _unresolved_3.GameManager;
     }, function (_unresolved_4) {
-      SoundManager = _unresolved_4.SoundManager;
+      AIController = _unresolved_4.AIController;
+    }, function (_unresolved_5) {
+      SoundManager = _unresolved_5.SoundManager;
     }],
     execute: function () {
       _crd = true;
 
-      _cclegacy._RF.push({}, "ff4775+zu9CyIBPyXgDNpx7", "AIPlayer", undefined);
+      _cclegacy._RF.push({}, "91c082Rgh1HBbV2vKQl2J1W", "AIPlayer", undefined);
 
-      __checkObsolete__(['_decorator', 'Component', 'Vec2', 'Vec3', 'RigidBody2D', 'ERigidBody2DType', 'BoxCollider2D', 'Contact2DType', 'ProgressBar', 'Sprite', 'SpriteFrame', 'tween', 'Prefab']);
+      __checkObsolete__(['_decorator', 'Component', 'Vec2', 'Vec3', 'RigidBody2D', 'ERigidBody2DType', 'BoxCollider2D', 'Contact2DType', 'ProgressBar', 'Sprite', 'SpriteFrame', 'tween', 'Prefab', 'Layers', 'find']);
 
+      // 添加AIController导入
       ({
         ccclass,
         property
@@ -370,8 +379,48 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
          */
 
 
-        onCollisionEnter(other, _self) {
-          console.log('AIPlayer collided with something');
+        onCollisionEnter(self, other) {
+          // console.log('AIPlayer collided with something', other.node.name);
+          // 获取碰撞对象的层级
+          var otherLayer = other.node.layer;
+          var blockLayer = Layers.nameToLayer('Block');
+          console.log('otherLayer', otherLayer);
+          console.log('blockLayer', blockLayer); // 检查是否与Block层碰撞
+
+          if (otherLayer === blockLayer) {
+            // 获取AIController实例
+            var aiControllerNode = find('AIController');
+
+            if (aiControllerNode) {
+              var aiController = aiControllerNode.getComponent(_crd && AIController === void 0 ? (_reportPossibleCrUseOfAIController({
+                error: Error()
+              }), AIController) : AIController);
+
+              if (aiController) {
+                // 检查AI是否处于边界转向状态，如果是则不处理Block碰撞
+                if (aiController.isAIBoundaryTurning(this)) {
+                  return;
+                }
+
+                console.log('AIPlayer collided with Block, turning around'); // 随机选择向左或向右掉头
+
+                var turnDirection = Math.random() < 0.5 ? -1 : 1; // 随机选择掉头角度(130-180度)
+
+                var turnAngle = 130 + Math.random() * 50; // 计算当前角度
+
+                var currentAngle = this.getCurrentAngle(); // 计算目标角度
+
+                var targetAngle = turnDirection > 0 ? currentAngle + turnAngle : currentAngle - turnAngle; // 设置目标角度
+
+                this.setTargetAngle(targetAngle);
+                this.setDirection(turnDirection);
+                this.setAccel(1);
+              }
+            }
+
+            return; // Block碰撞处理完成，直接返回
+          }
+
           var playerComponent = other.node.getComponent(_crd && player === void 0 ? (_reportPossibleCrUseOfplayer({
             error: Error()
           }), player) : player);
@@ -380,11 +429,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             console.log('AIPlayer 被玩家车辆撞击');
             var playerRigidBody = playerComponent.getRigidBody();
 
-            if (playerRigidBody) {
+            if (playerRigidBody && !this.isDestroyed) {
               var impactForce = new Vec2(playerRigidBody.linearVelocity.x, playerRigidBody.linearVelocity.y);
               impactForce.normalize(); // 归一化方向
 
-              impactForce.multiplyScalar(100); // 增加冲力强度
+              impactForce.multiplyScalar(10); // 增加冲力强度
 
               this._rigidBody.linearVelocity = impactForce;
             }

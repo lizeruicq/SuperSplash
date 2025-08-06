@@ -104,7 +104,7 @@ export class PaintManager extends Component {
 
         this.paintMap.set(paintId, paintData);
 
-        console.log(`添加颜料: 拥有者=${ownerId}, 位置=(${position2D.x.toFixed(1)}, ${position2D.y.toFixed(1)})`);
+        // console.log(`添加颜料: 拥有者=${ownerId}, 位置=(${position2D.x.toFixed(1)}, ${position2D.y.toFixed(1)})`);
     }
 
     /**
@@ -131,7 +131,7 @@ export class PaintManager extends Component {
         });
         
         if (toRemove.length > 0) {
-            console.log(`移除了 ${toRemove.length} 个重叠的颜料`);
+            // console.log(`移除了 ${toRemove.length} 个重叠的颜料`);
         }
     }
 

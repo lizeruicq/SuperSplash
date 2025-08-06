@@ -33,7 +33,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
     execute: function () {
       _crd = true;
 
-      _cclegacy._RF.push({}, "922b02JTO5KDrBy9ZPUoXjD", "AIController", undefined);
+      _cclegacy._RF.push({}, "f2409Jfl1NKgaxzoqghBXWi", "AIController", undefined);
 
       __checkObsolete__(['_decorator', 'Component', 'Node', 'Vec2', 'math', 'SkeletalAnimationComponent']);
 
@@ -474,6 +474,22 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
           }
 
           return true;
+        }
+        /**
+         * 检查指定AI是否处于边界转向状态
+         * @param aiPlayer AI玩家实例
+         * @returns 是否处于边界转向状态
+         */
+
+
+        isAIBoundaryTurning(aiPlayer) {
+          const index = this.aiPlayers.indexOf(aiPlayer);
+
+          if (index === -1) {
+            return false;
+          }
+
+          return this.aiStates[index] === AIState.BoundaryTurning;
         }
 
       }, (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "sceneMinX", [property], {

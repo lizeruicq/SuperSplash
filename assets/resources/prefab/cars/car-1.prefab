@@ -184,7 +184,7 @@
     "initAngle": 0,
     "maxHealth": 200,
     "destroyedSprite": {
-      "__uuid__": "a238f344-7c25-4d83-a0ec-8c85e46d3ec8@f9941",
+      "__uuid__": "86087b4b-4284-4b91-8707-fa1f71406ea1@f9941",
       "__expectedType__": "cc.SpriteFrame"
     },
     "removeDelay": 3,
