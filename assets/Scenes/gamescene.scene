@@ -5254,6 +5254,9 @@
     "ai4RatioLabel": {
       "__id__": 123
     },
+    "shootButton": null,
+    "ammoLabel": null,
+    "reloadProgressBar": null,
     "updateInterval": 0.1,
     "_id": "ad8M4ODwZA5aQ7sNKR3SlS"
   },

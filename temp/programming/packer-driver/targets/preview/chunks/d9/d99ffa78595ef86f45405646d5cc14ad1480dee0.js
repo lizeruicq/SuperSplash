@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8", "__unresolved_9", "__unresolved_10", "__unresolved_11"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8", "__unresolved_9", "__unresolved_10", "__unresolved_11", "__unresolved_12"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Node, Prefab, instantiate, resources, UITransform, director, ProgressBar, Label, Button, TempData, CameraFollow, player, AIController, AIPlayer, PlayerManager, SceneTransition, SoundManager, PaintManager, GameOverPanel, GameHUD, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _dec10, _dec11, _dec12, _dec13, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _descriptor12, _class3, _crd, ccclass, property, GameState, GameManager;
+  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Node, Prefab, instantiate, resources, UITransform, director, ProgressBar, Label, Button, TempData, CameraFollow, player, AIController, AIPlayer, PlayerManager, SceneTransition, SoundManager, PaintManager, GameOverPanel, GameHUD, Bullet, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _dec10, _dec11, _dec12, _dec13, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _descriptor12, _class3, _crd, ccclass, property, GameState, GameManager;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -53,6 +53,14 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("GameHUD", "./GameHUD", _context.meta, extras);
   }
 
+  function _reportPossibleCrUseOfBullet(extras) {
+    _reporterNs.report("Bullet", "./Bullet", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfWeaponType(extras) {
+    _reporterNs.report("WeaponType", "./Bullet", _context.meta, extras);
+  }
+
   return {
     setters: [function (_unresolved_) {
       _reporterNs = _unresolved_;
@@ -93,13 +101,15 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       GameOverPanel = _unresolved_11.GameOverPanel;
     }, function (_unresolved_12) {
       GameHUD = _unresolved_12.GameHUD;
+    }, function (_unresolved_13) {
+      Bullet = _unresolved_13.Bullet;
     }],
     execute: function () {
       _crd = true;
 
       _cclegacy._RF.push({}, "b67f4UjjapGSoVG2Jvvuyl3", "GameManager", undefined);
 
-      __checkObsolete__(['_decorator', 'Component', 'Node', 'Prefab', 'instantiate', 'resources', 'UITransform', 'director', 'ProgressBar', 'Label', 'Button', 'Vec3']);
+      __checkObsolete__(['_decorator', 'Component', 'Node', 'Prefab', 'instantiate', 'resources', 'UITransform', 'director', 'ProgressBar', 'Label', 'Button', 'Vec3', 'Vec2']);
 
       ({
         ccclass,
@@ -178,6 +188,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           // paintManager: PaintManager = null!;
           // HUD界面
           _initializerDefineProperty(this, "gameHUD", _descriptor12, this);
+
+          // 子弹根节点
+          this.bulletRoot = null;
         }
 
         // // 游戏结束面板颜料占比显示
@@ -287,7 +300,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
                 this.playGround.addChild(mapNode); // 场景预制体加载完成，查找AI车辆
 
                 this.autoFindAIPlayers();
-                this.notifyAIControllers(); // 初始化敌人数量
+                this.notifyAIControllers(); // 查找BulletRoot节点
+
+                this.findBulletRoot(); // 初始化敌人数量
 
                 this.initialEnemyCount = this.aiPlayers.length;
                 this.refreshEnemyCount(this.initialEnemyCount); // 2. 加载并实例化车辆
@@ -403,6 +418,49 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
         getAIPlayers() {
           return this.aiPlayers;
+        }
+        /**
+         * 查找BulletRoot节点
+         */
+
+
+        findBulletRoot() {
+          // 直接在场景中搜索BulletRoot节点（递归搜索所有子节点）
+          var scene = this.node.scene;
+
+          if (!scene) {
+            console.warn('场景未找到');
+            return;
+          } // 使用find方法递归查找BulletRoot节点
+
+
+          this.bulletRoot = scene.getChildByName('BulletRoot') || this.findNodeRecursively(scene, 'BulletRoot');
+
+          if (this.bulletRoot) {
+            console.log('BulletRoot节点找到:', this.bulletRoot.name);
+          } else {
+            console.warn('BulletRoot节点未找到，子弹将添加到场景根节点');
+          }
+        }
+        /**
+         * 递归查找指定名称的节点
+         */
+
+
+        findNodeRecursively(parent, name) {
+          for (var child of parent.children) {
+            if (child.name === name) {
+              return child;
+            }
+
+            var found = this.findNodeRecursively(child, name);
+
+            if (found) {
+              return found;
+            }
+          }
+
+          return null;
         }
         /**
          * 通知所有AIController组件场景预制体已加载完成
@@ -939,6 +997,74 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           var minutesStr = minutes < 10 ? '0' + minutes : minutes.toString();
           var secondsStr = seconds < 10 ? '0' + seconds : seconds.toString();
           return minutesStr + ":" + secondsStr;
+        } // ==================== 射击系统 ====================
+
+        /**
+         * 玩家射击
+         */
+
+
+        playerShoot() {
+          if (this.playerComponent) {
+            this.playerComponent.shoot();
+          }
+        }
+        /**
+         * 发射子弹
+         * @param bulletPrefab 子弹预制体
+         * @param position 发射位置
+         * @param direction 发射方向
+         * @param shooterId 发射者ID
+         * @param weaponType 武器类型
+         */
+
+
+        fireBullet(bulletPrefab, position, direction, shooterId, weaponType) {
+          // 实例化子弹
+          var bulletNode = instantiate(bulletPrefab); // 获取子弹组件
+
+          var bulletComponent = bulletNode.getComponent(_crd && Bullet === void 0 ? (_reportPossibleCrUseOfBullet({
+            error: Error()
+          }), Bullet) : Bullet);
+
+          if (bulletComponent) {
+            // 初始化子弹
+            bulletComponent.init(direction, shooterId); // 设置子弹类型（WeaponType和BulletType值相同）
+
+            bulletComponent.bulletType = weaponType;
+          } // 将子弹添加到BulletRoot节点或场景中
+
+
+          if (this.bulletRoot) {
+            var _this$bulletRoot$getC;
+
+            // 转换世界坐标到BulletRoot的本地坐标
+            var localPos = (_this$bulletRoot$getC = this.bulletRoot.getComponent(UITransform)) == null ? void 0 : _this$bulletRoot$getC.convertToNodeSpaceAR(position);
+
+            if (localPos) {
+              bulletNode.setPosition(localPos);
+            } else {
+              bulletNode.setWorldPosition(position);
+            }
+
+            this.bulletRoot.addChild(bulletNode);
+            console.log('子弹已添加到BulletRoot节点');
+          } else {
+            var _director$getScene;
+
+            // 如果没有找到BulletRoot，添加到场景根节点
+            bulletNode.setWorldPosition(position);
+            (_director$getScene = director.getScene()) == null || _director$getScene.addChild(bulletNode);
+            console.log('子弹已添加到场景根节点');
+          }
+        }
+        /**
+         * 获取玩家组件
+         */
+
+
+        getPlayerComponent() {
+          return this.playerComponent;
         }
 
       }, _class3._instance = null, _class3), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "playGround", [_dec2], {

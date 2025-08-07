@@ -193,6 +193,17 @@
       "__expectedType__": "cc.Prefab"
     },
     "paintSprayInterval": 0.05,
+    "normalBulletPrefab": {
+      "__uuid__": "ffdc0091-02b5-47e9-9cba-752ad0f7f260",
+      "__expectedType__": "cc.Prefab"
+    },
+    "flamePrefab": null,
+    "rocketPrefab": null,
+    "fireRate": 2,
+    "weaponType": 0,
+    "weaponDamage": 30,
+    "maxAmmo": 20,
+    "ammoReloadTime": 10,
     "_id": ""
   },
   {

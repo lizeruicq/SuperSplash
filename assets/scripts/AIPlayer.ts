@@ -54,6 +54,10 @@ export class AIPlayer extends Component {
     private _paintTimer: number = 0; // 颜料喷洒计时器
     private _vehicleId: string = ''; // 车辆唯一ID
 
+    // Block碰撞冷却时间相关
+    private _blockCollisionCooldown: number = 0; // Block碰撞冷却时间计时器
+    private _blockCollisionCooldownDuration: number = 3.0; // Block碰撞冷却时间(秒)
+
     onLoad() {
         this._rigidBody = null!;
         this._direction = 0;
@@ -68,6 +72,9 @@ export class AIPlayer extends Component {
         // 初始化颜料喷洒相关
         this._paintTimer = 0;
         this._vehicleId = `ai_${this.node.name}_${Date.now()}`; // 生成唯一ID
+        
+        // 初始化Block碰撞冷却时间
+        this._blockCollisionCooldown = 0;
     }
 
     start() {
@@ -135,6 +142,11 @@ export class AIPlayer extends Component {
 
     update(deltaTime: number) {
         if (!this._rigidBody || !this.node || !this.node.isValid) return;
+
+        // 更新Block碰撞冷却时间计时器
+        if (this._blockCollisionCooldown > 0) {
+            this._blockCollisionCooldown -= deltaTime;
+        }
 
         // 如果车辆已摧毁，执行摧毁动画逻辑
         if (this._isDestroyed) {
@@ -311,15 +323,20 @@ export class AIPlayer extends Component {
      * 碰撞事件处理
      */
     onCollisionEnter(self: BoxCollider2D, other: BoxCollider2D) {
-        // console.log('AIPlayer collided with something', other.node.name);
+        console.log('AIPlayer collided with something', other.node.name);
         
         // 获取碰撞对象的层级
         const otherLayer = other.node.layer;
         const blockLayer = Layers.nameToLayer('Block');
-        console.log('otherLayer', otherLayer);
-        console.log('blockLayer', blockLayer);
+        
         // 检查是否与Block层碰撞
         if (otherLayer === blockLayer) {
+            // 检查冷却时间
+            if (this._blockCollisionCooldown > 0) {
+                console.log('AIPlayer collided with Block but is in cooldown');
+                return; // 冷却时间内，不执行任何操作
+            }
+            
             // 获取AIController实例
             const aiControllerNode = find('AIController');
             if (aiControllerNode) {
@@ -331,6 +348,9 @@ export class AIPlayer extends Component {
                     }
                     
                     console.log('AIPlayer collided with Block, turning around');
+                    
+                    // 设置冷却时间
+                    this._blockCollisionCooldown = this._blockCollisionCooldownDuration;
                     
                     // 随机选择向左或向右掉头
                     const turnDirection = Math.random() < 0.5 ? -1 : 1;

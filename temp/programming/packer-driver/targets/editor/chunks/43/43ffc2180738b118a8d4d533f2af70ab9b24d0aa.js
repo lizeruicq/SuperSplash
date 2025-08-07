@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, input, Input, KeyCode, Vec2, Vec3, RigidBody2D, ERigidBody2DType, Contact2DType, BoxCollider2D, Sprite, SpriteFrame, tween, Prefab, AIPlayer, GameManager, SoundManager, _dec, _dec2, _dec3, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _crd, ccclass, property, player;
+  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, input, Input, KeyCode, Vec2, Vec3, RigidBody2D, ERigidBody2DType, Contact2DType, BoxCollider2D, Sprite, SpriteFrame, tween, Prefab, AIPlayer, GameManager, SoundManager, WeaponType, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _dec10, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _descriptor12, _descriptor13, _descriptor14, _descriptor15, _descriptor16, _descriptor17, _descriptor18, _crd, ccclass, property, player;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -19,6 +19,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
   function _reportPossibleCrUseOfSoundManager(extras) {
     _reporterNs.report("SoundManager", "./SoundManager", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfWeaponType(extras) {
+    _reporterNs.report("WeaponType", "./Bullet", _context.meta, extras);
   }
 
   return {
@@ -49,6 +53,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       GameManager = _unresolved_3.GameManager;
     }, function (_unresolved_4) {
       SoundManager = _unresolved_4.SoundManager;
+    }, function (_unresolved_5) {
+      WeaponType = _unresolved_5.WeaponType;
     }],
     execute: function () {
       _crd = true;
@@ -62,7 +68,27 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         property
       } = _decorator);
 
-      _export("player", player = (_dec = ccclass('player'), _dec2 = property(SpriteFrame), _dec3 = property(Prefab), _dec(_class = (_class2 = class player extends Component {
+      _export("player", player = (_dec = ccclass('player'), _dec2 = property(SpriteFrame), _dec3 = property(Prefab), _dec4 = property({
+        type: Prefab,
+        tooltip: "普通子弹预制体"
+      }), _dec5 = property({
+        type: Prefab,
+        tooltip: "火焰预制体"
+      }), _dec6 = property({
+        type: Prefab,
+        tooltip: "火箭弹预制体"
+      }), _dec7 = property({
+        tooltip: "射速（发/秒）"
+      }), _dec8 = property({
+        type: _crd && WeaponType === void 0 ? (_reportPossibleCrUseOfWeaponType({
+          error: Error()
+        }), WeaponType) : WeaponType,
+        tooltip: "武器类型"
+      }), _dec9 = property({
+        tooltip: "最大弹药数量"
+      }), _dec10 = property({
+        tooltip: "弹药补充时间（秒）"
+      }), _dec(_class = (_class2 = class player extends Component {
         constructor(...args) {
           super(...args);
 
@@ -100,6 +126,21 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           _initializerDefineProperty(this, "paintSprayInterval", _descriptor11, this);
 
           // 颜料喷洒间隔（秒）
+          // 武器系统相关属性
+          _initializerDefineProperty(this, "normalBulletPrefab", _descriptor12, this);
+
+          _initializerDefineProperty(this, "flamePrefab", _descriptor13, this);
+
+          _initializerDefineProperty(this, "rocketPrefab", _descriptor14, this);
+
+          _initializerDefineProperty(this, "fireRate", _descriptor15, this);
+
+          _initializerDefineProperty(this, "weaponType", _descriptor16, this);
+
+          _initializerDefineProperty(this, "maxAmmo", _descriptor17, this);
+
+          _initializerDefineProperty(this, "ammoReloadTime", _descriptor18, this);
+
           this._rigidBody = null;
           this._direction = 0;
           // -1:左, 0:不转, 1:右
@@ -122,9 +163,20 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this._paintTimer = 0;
           // 颜料喷洒计时器
           this._vehicleId = 'player';
+          // 车辆唯一ID
+          // 武器系统相关私有变量
+          this._canFire = true;
+          // 是否可以射击
+          this._fireTimer = 0;
+          // 射击计时器
+          this._currentAmmo = 20;
+          // 当前弹药数量
+          this._isReloading = false;
+          // 是否正在补充弹药
+          this._reloadTimer = 0;
         }
 
-        // 车辆唯一ID
+        // 弹药补充计时器
         onLoad() {
           // 确保在组件加载时初始化
           this._rigidBody = null;
@@ -138,7 +190,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this._isDestroyed = false; // 初始化颜料喷洒相关
 
           this._paintTimer = 0;
-          this._vehicleId = 'player';
+          this._vehicleId = 'player'; // 初始化武器系统相关
+
+          this._canFire = true;
+          this._fireTimer = 0;
+          this._currentAmmo = this.maxAmmo;
+          this._isReloading = false;
+          this._reloadTimer = 0;
         }
 
         onEnable() {
@@ -232,6 +290,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
                 error: Error()
               }), SoundManager) : SoundManager).instance.playSoundEffect('carDrift');
               this._direction = 1;
+              break;
+
+            case KeyCode.SPACE:
+              this.shoot();
               break;
           }
         }
@@ -348,7 +410,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           } // 更新颜料喷洒
 
 
-          this.updatePaintSpray(deltaTime);
+          this.updatePaintSpray(deltaTime); // 更新武器系统
+
+          this.updateWeaponSystem(deltaTime);
         }
 
         init(angle) {
@@ -625,6 +689,166 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           const worldPosition = this.node.getWorldPosition(); // 通过GameManager喷洒颜料
 
           gameManager.sprayPaint(this.paintPrefab, worldPosition, this._vehicleId);
+        } // ==================== 武器系统 ====================
+
+        /**
+         * 更新武器系统
+         * @param deltaTime 帧时间间隔
+         */
+
+
+        updateWeaponSystem(deltaTime) {
+          if (this._isDestroyed) return; // 更新射击计时器
+
+          this._fireTimer += deltaTime; // 检查是否可以射击
+
+          const fireInterval = 1 / this.fireRate;
+
+          if (this._fireTimer >= fireInterval) {
+            this._canFire = true;
+          } // 更新弹药补充
+
+
+          this.updateAmmoReload(deltaTime);
+        }
+        /**
+         * 更新弹药补充
+         * @param deltaTime 帧时间间隔
+         */
+
+
+        updateAmmoReload(deltaTime) {
+          if (!this._isReloading) return;
+          this._reloadTimer += deltaTime;
+
+          if (this._reloadTimer >= this.ammoReloadTime) {
+            // 补充完成
+            this._currentAmmo = this.maxAmmo;
+            this._isReloading = false;
+            this._reloadTimer = 0;
+            console.log('弹药补充完成！');
+          }
+        }
+        /**
+         * 射击方法
+         */
+
+
+        shoot() {
+          if (!this._canFire || this._isDestroyed) return; // 检查弹药
+
+          if (this._currentAmmo <= 0) {
+            if (!this._isReloading) {
+              this.startReload();
+            }
+
+            return;
+          } // 重置射击状态
+
+
+          this._canFire = false;
+          this._fireTimer = 0;
+          this._currentAmmo--; // 根据武器类型选择子弹预制体
+
+          let bulletPrefab = null;
+
+          switch (this.weaponType) {
+            case (_crd && WeaponType === void 0 ? (_reportPossibleCrUseOfWeaponType({
+              error: Error()
+            }), WeaponType) : WeaponType).NORMAL:
+              console.log('发射普通子弹');
+              bulletPrefab = this.normalBulletPrefab;
+              break;
+
+            case (_crd && WeaponType === void 0 ? (_reportPossibleCrUseOfWeaponType({
+              error: Error()
+            }), WeaponType) : WeaponType).FLAME:
+              bulletPrefab = this.flamePrefab;
+              break;
+
+            case (_crd && WeaponType === void 0 ? (_reportPossibleCrUseOfWeaponType({
+              error: Error()
+            }), WeaponType) : WeaponType).ROCKET:
+              bulletPrefab = this.rocketPrefab;
+              break;
+          } // 检查预制体是否存在
+
+
+          if (!bulletPrefab) {
+            console.warn('子弹预制体未设置'); // 允许重新射击
+
+            this._canFire = true;
+            return;
+          } // 获取当前车辆的朝向
+
+
+          const rad = (this._angle + 90) * Math.PI / 180;
+          const direction = new Vec2(Math.cos(rad), Math.sin(rad)); // 计算子弹发射位置（车辆正前方）
+
+          const vehicleWorldPos = this.node.worldPosition;
+          const offsetDistance = 50; // 子弹发射偏移距离（像素）
+
+          const bulletStartPos = new Vec3(vehicleWorldPos.x + direction.x * offsetDistance, vehicleWorldPos.y + direction.y * offsetDistance, vehicleWorldPos.z); // 获取GameManager实例并发射子弹
+
+          const gameManager = (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+            error: Error()
+          }), GameManager) : GameManager).getInstance();
+
+          if (gameManager) {
+            gameManager.fireBullet(bulletPrefab, bulletStartPos, direction, this._vehicleId, this.weaponType);
+          } // 播放射击音效
+
+
+          (_crd && SoundManager === void 0 ? (_reportPossibleCrUseOfSoundManager({
+            error: Error()
+          }), SoundManager) : SoundManager).instance.playSoundEffect('weaponFire'); // 检查是否需要开始补充弹药
+
+          if (this._currentAmmo <= 0 && !this._isReloading) {
+            this.startReload();
+          }
+        }
+        /**
+         * 开始补充弹药
+         */
+
+
+        startReload() {
+          this._isReloading = true;
+          this._reloadTimer = 0;
+          console.log('开始补充弹药...');
+        }
+        /**
+         * 获取当前弹药数量
+         */
+
+
+        getCurrentAmmo() {
+          return this._currentAmmo;
+        }
+        /**
+         * 获取最大弹药数量
+         */
+
+
+        getMaxAmmo() {
+          return this.maxAmmo;
+        }
+        /**
+         * 是否正在补充弹药
+         */
+
+
+        isReloading() {
+          return this._isReloading;
+        }
+        /**
+         * 获取弹药补充进度（0-1）
+         */
+
+
+        getReloadProgress() {
+          if (!this._isReloading) return 1;
+          return this._reloadTimer / this.ammoReloadTime;
         }
 
       }, (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "maxSpeed", [property], {
@@ -703,6 +927,57 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         writable: true,
         initializer: function () {
           return 0.2;
+        }
+      }), _descriptor12 = _applyDecoratedDescriptor(_class2.prototype, "normalBulletPrefab", [_dec4], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function () {
+          return null;
+        }
+      }), _descriptor13 = _applyDecoratedDescriptor(_class2.prototype, "flamePrefab", [_dec5], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function () {
+          return null;
+        }
+      }), _descriptor14 = _applyDecoratedDescriptor(_class2.prototype, "rocketPrefab", [_dec6], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function () {
+          return null;
+        }
+      }), _descriptor15 = _applyDecoratedDescriptor(_class2.prototype, "fireRate", [_dec7], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function () {
+          return 2.0;
+        }
+      }), _descriptor16 = _applyDecoratedDescriptor(_class2.prototype, "weaponType", [_dec8], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function () {
+          return (_crd && WeaponType === void 0 ? (_reportPossibleCrUseOfWeaponType({
+            error: Error()
+          }), WeaponType) : WeaponType).NORMAL;
+        }
+      }), _descriptor17 = _applyDecoratedDescriptor(_class2.prototype, "maxAmmo", [_dec9], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function () {
+          return 20;
+        }
+      }), _descriptor18 = _applyDecoratedDescriptor(_class2.prototype, "ammoReloadTime", [_dec10], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function () {
+          return 10.0;
         }
       })), _class2)) || _class));
 
