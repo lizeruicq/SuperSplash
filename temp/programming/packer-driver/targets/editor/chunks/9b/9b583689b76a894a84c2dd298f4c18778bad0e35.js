@@ -121,9 +121,14 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this._paintTimer = 0;
           // 颜料喷洒计时器
           this._vehicleId = '';
+          // 车辆唯一ID
+          // Block碰撞冷却时间相关
+          this._blockCollisionCooldown = 0;
+          // Block碰撞冷却时间计时器
+          this._blockCollisionCooldownDuration = 3.0;
         }
 
-        // 车辆唯一ID
+        // Block碰撞冷却时间(秒)
         onLoad() {
           this._rigidBody = null;
           this._direction = 0;
@@ -136,6 +141,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           this._paintTimer = 0;
           this._vehicleId = `ai_${this.node.name}_${Date.now()}`; // 生成唯一ID
+          // 初始化Block碰撞冷却时间
+
+          this._blockCollisionCooldown = 0;
         }
 
         start() {
@@ -200,7 +208,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         update(deltaTime) {
-          if (!this._rigidBody || !this.node || !this.node.isValid) return; // 如果车辆已摧毁，执行摧毁动画逻辑
+          if (!this._rigidBody || !this.node || !this.node.isValid) return; // 更新Block碰撞冷却时间计时器
+
+          if (this._blockCollisionCooldown > 0) {
+            this._blockCollisionCooldown -= deltaTime;
+          } // 如果车辆已摧毁，执行摧毁动画逻辑
+
 
           if (this._isDestroyed) {
             return;
@@ -379,15 +392,19 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
 
         onCollisionEnter(self, other) {
-          // console.log('AIPlayer collided with something', other.node.name);
-          // 获取碰撞对象的层级
+          console.log('AIPlayer collided with something', other.node.name); // 获取碰撞对象的层级
+
           const otherLayer = other.node.layer;
-          const blockLayer = Layers.nameToLayer('Block');
-          console.log('otherLayer', otherLayer);
-          console.log('blockLayer', blockLayer); // 检查是否与Block层碰撞
+          const blockLayer = Layers.nameToLayer('Block'); // 检查是否与Block层碰撞
 
           if (otherLayer === blockLayer) {
-            // 获取AIController实例
+            // 检查冷却时间
+            if (this._blockCollisionCooldown > 0) {
+              console.log('AIPlayer collided with Block but is in cooldown');
+              return; // 冷却时间内，不执行任何操作
+            } // 获取AIController实例
+
+
             const aiControllerNode = find('AIController');
 
             if (aiControllerNode) {
@@ -401,7 +418,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
                   return;
                 }
 
-                console.log('AIPlayer collided with Block, turning around'); // 随机选择向左或向右掉头
+                console.log('AIPlayer collided with Block, turning around'); // 设置冷却时间
+
+                this._blockCollisionCooldown = this._blockCollisionCooldownDuration; // 随机选择向左或向右掉头
 
                 const turnDirection = Math.random() < 0.5 ? -1 : 1; // 随机选择掉头角度(130-180度)
 

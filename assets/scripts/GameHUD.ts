@@ -1,4 +1,4 @@
-import { _decorator, Component, Label } from 'cc';
+import { _decorator, Component, Label, Button, ProgressBar } from 'cc';
 const { ccclass, property } = _decorator;
 import { GameManager } from './GameManager';
 
@@ -41,6 +41,25 @@ export class GameHUD extends Component {
         tooltip: 'AI车辆4的颜料占比显示标签'
     })
     ai4RatioLabel: Label = null!;
+
+    // 射击系统UI
+    @property({
+        type: Button,
+        tooltip: '射击按钮'
+    })
+    shootButton: Button = null!;
+
+    @property({
+        type: Label,
+        tooltip: '弹药数量显示标签'
+    })
+    ammoLabel: Label = null!;
+
+    @property({
+        type: ProgressBar,
+        tooltip: '弹药补充进度条'
+    })
+    reloadProgressBar: ProgressBar = null!;
     
     // 更新频率控制
     @property
@@ -62,6 +81,9 @@ export class GameHUD extends Component {
 
         // 初始化AI占比显示
         this.initializeAIRatioDisplay();
+
+        // 初始化射击按钮
+        this.initializeShootButton();
     }
 
     update(deltaTime: number) {
@@ -73,6 +95,7 @@ export class GameHUD extends Component {
         if (this.updateTimer >= this.updateInterval) {
             this.updateCountdownDisplay();
             this.updatePaintRatioDisplay();
+            this.updateAmmoDisplay();
             this.updateTimer = 0;
         }
     }
@@ -205,5 +228,55 @@ export class GameHUD extends Component {
         }
 
         this.initializeAIRatioDisplay();
+    }
+
+    // ==================== 射击系统UI ====================
+
+    /**
+     * 初始化射击按钮
+     */
+    private initializeShootButton(): void {
+        if (this.shootButton) {
+            this.shootButton.node.on(Button.EventType.CLICK, this.onShootButtonClicked, this);
+        } else {
+            console.warn('GameHUD: 射击按钮未设置');
+        }
+    }
+
+    /**
+     * 射击按钮点击事件处理
+     */
+    private onShootButtonClicked(): void {
+        // 通知GameManager执行射击
+        if (this.gameManager) {
+            this.gameManager.playerShoot();
+        }
+    }
+
+    /**
+     * 更新弹药显示
+     */
+    private updateAmmoDisplay(): void {
+        if (!this.gameManager) return;
+
+        const playerComponent = this.gameManager.getPlayerComponent();
+        if (!playerComponent) return;
+
+        // 更新弹药数量显示
+        if (this.ammoLabel) {
+            const currentAmmo = playerComponent.getCurrentAmmo();
+            const maxAmmo = playerComponent.getMaxAmmo();
+            this.ammoLabel.string = `${currentAmmo}/${maxAmmo}`;
+        }
+
+        // 更新弹药补充进度条
+        if (this.reloadProgressBar) {
+            if (playerComponent.isReloading()) {
+                this.reloadProgressBar.node.active = true;
+                this.reloadProgressBar.progress = playerComponent.getReloadProgress();
+            } else {
+                this.reloadProgressBar.node.active = false;
+            }
+        }
     }
 }

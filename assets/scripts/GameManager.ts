@@ -1,4 +1,4 @@
-import { _decorator, Component, Node, Prefab, instantiate, resources, UITransform, director, ProgressBar, Label, Button, Vec3 } from 'cc';
+import { _decorator, Component, Node, Prefab, instantiate, resources, UITransform, director, ProgressBar, Label, Button, Vec3, Vec2 } from 'cc';
 import { TempData } from './TempData';
 import { CameraFollow } from './camera_follow';
 import { player } from './player';
@@ -10,6 +10,7 @@ import { SoundManager } from './SoundManager';
 import { PaintManager } from './PaintManager';
 import { GameOverPanel } from './GameOverPanel';
 import { GameHUD } from './GameHUD';
+import { Bullet, WeaponType } from './Bullet';
 
 const { ccclass, property } = _decorator;
 
@@ -87,6 +88,9 @@ export class GameManager extends Component {
     // HUD界面
     @property(GameHUD)
     gameHUD: GameHUD = null!;
+
+    // 子弹根节点
+    private bulletRoot: Node | null = null;
 
     // // 游戏结束面板颜料占比显示
     // @property(Node)
@@ -196,6 +200,9 @@ export class GameManager extends Component {
                     this.autoFindAIPlayers();
                     this.notifyAIControllers();
 
+                    // 查找BulletRoot节点
+                    this.findBulletRoot();
+
                     // 初始化敌人数量
                     this.initialEnemyCount = this.aiPlayers.length;
                     this.refreshEnemyCount(this.initialEnemyCount);
@@ -290,6 +297,43 @@ export class GameManager extends Component {
      */
     public getAIPlayers(): AIPlayer[] {
         return this.aiPlayers;
+    }
+
+    /**
+     * 查找BulletRoot节点
+     */
+    private findBulletRoot(): void {
+        // 直接在场景中搜索BulletRoot节点（递归搜索所有子节点）
+        const scene = this.node.scene;
+        if (!scene) {
+            console.warn('场景未找到');
+            return;
+        }
+
+        // 使用find方法递归查找BulletRoot节点
+        this.bulletRoot = scene.getChildByName('BulletRoot') || this.findNodeRecursively(scene, 'BulletRoot');
+
+        if (this.bulletRoot) {
+            console.log('BulletRoot节点找到:', this.bulletRoot.name);
+        } else {
+            console.warn('BulletRoot节点未找到，子弹将添加到场景根节点');
+        }
+    }
+
+    /**
+     * 递归查找指定名称的节点
+     */
+    private findNodeRecursively(parent: Node, name: string): Node | null {
+        for (const child of parent.children) {
+            if (child.name === name) {
+                return child;
+            }
+            const found = this.findNodeRecursively(child, name);
+            if (found) {
+                return found;
+            }
+        }
+        return null;
     }
 
     /**
@@ -820,6 +864,62 @@ export class GameManager extends Component {
         return `${minutesStr}:${secondsStr}`;
     }
 
+    // ==================== 射击系统 ====================
 
+    /**
+     * 玩家射击
+     */
+    public playerShoot(): void {
+        if (this.playerComponent) {
+            this.playerComponent.shoot();
+        }
+    }
+
+    /**
+     * 发射子弹
+     * @param bulletPrefab 子弹预制体
+     * @param position 发射位置
+     * @param direction 发射方向
+     * @param shooterId 发射者ID
+     * @param weaponType 武器类型
+     */
+    public fireBullet(bulletPrefab: Prefab, position: Vec3, direction: Vec2, shooterId: string, weaponType: WeaponType): void {
+        // 实例化子弹
+        const bulletNode = instantiate(bulletPrefab);
+
+        // 获取子弹组件
+        const bulletComponent = bulletNode.getComponent(Bullet);
+        if (bulletComponent) {
+            // 初始化子弹
+            bulletComponent.init(direction, shooterId);
+            // 设置子弹类型（WeaponType和BulletType值相同）
+            bulletComponent.bulletType = weaponType as any;
+        }
+
+        // 将子弹添加到BulletRoot节点或场景中
+        if (this.bulletRoot) {
+            // 转换世界坐标到BulletRoot的本地坐标
+            const localPos = this.bulletRoot.getComponent(UITransform)?.convertToNodeSpaceAR(position);
+            if (localPos) {
+                bulletNode.setPosition(localPos);
+            } else {
+                bulletNode.setWorldPosition(position);
+            }
+            this.bulletRoot.addChild(bulletNode);
+            console.log('子弹已添加到BulletRoot节点');
+        } else {
+            // 如果没有找到BulletRoot，添加到场景根节点
+            bulletNode.setWorldPosition(position);
+            director.getScene()?.addChild(bulletNode);
+            console.log('子弹已添加到场景根节点');
+        }
+    }
+
+    /**
+     * 获取玩家组件
+     */
+    public getPlayerComponent(): player | null {
+        return this.playerComponent;
+    }
 
 }

@@ -120,7 +120,7 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": 640,
-      "y": 359.99999999999994,
+      "y": 360.00000000000006,
       "z": 0
     },
     "_lrot": {
@@ -954,7 +954,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "multyplayer",
+    "_name": "gamehelp",
     "_objFlags": 0,
     "__editorExtras__": {},
     "_parent": {
@@ -1097,7 +1097,7 @@
       "b": 27,
       "a": 255
     },
-    "_string": "多人游戏",
+    "_string": "游戏说明",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
     "_actualFontSize": 30,
@@ -1283,7 +1283,7 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": 573.1739999999998,
-      "y": 294.0469999999998,
+      "y": 294.0469999999999,
       "z": 0
     },
     "_lrot": {
@@ -2266,7 +2266,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 1280,
-      "height": 719.9999999999998
+      "height": 720
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",

@@ -3,6 +3,7 @@ const { ccclass, property } = _decorator;
 import { AIPlayer } from './AIPlayer';
 import { GameManager } from './GameManager';
 import { SoundManager } from './SoundManager';
+import { WeaponType } from './Bullet';
 
 @ccclass('player')
 export class player extends Component {
@@ -35,6 +36,48 @@ export class player extends Component {
     @property
     paintSprayInterval: number = 0.2; // 颜料喷洒间隔（秒）
 
+    // 武器系统相关属性
+    @property({
+        type: Prefab,
+        tooltip: "普通子弹预制体"
+    })
+    normalBulletPrefab: Prefab = null!;
+
+    @property({
+        type: Prefab,
+        tooltip: "火焰预制体"
+    })
+    flamePrefab: Prefab = null!;
+
+    @property({
+        type: Prefab,
+        tooltip: "火箭弹预制体"
+    })
+    rocketPrefab: Prefab = null!;
+
+    @property({
+        tooltip: "射速（发/秒）"
+    })
+    fireRate: number = 2.0;
+
+    @property({
+        type: WeaponType,
+        tooltip: "武器类型"
+    })
+    weaponType: WeaponType = WeaponType.NORMAL;
+
+
+
+    @property({
+        tooltip: "最大弹药数量"
+    })
+    maxAmmo: number = 20;
+
+    @property({
+        tooltip: "弹药补充时间（秒）"
+    })
+    ammoReloadTime: number = 10.0;
+
     protected _rigidBody: RigidBody2D = null!;
     private _direction: number = 0; // -1:左, 0:不转, 1:右
     private _accel: number = 0; // -1:刹车, 0:无, 1:加速
@@ -52,6 +95,13 @@ export class player extends Component {
     private _paintTimer: number = 0; // 颜料喷洒计时器
     private _vehicleId: string = 'player'; // 车辆唯一ID
 
+    // 武器系统相关私有变量
+    private _canFire: boolean = true; // 是否可以射击
+    private _fireTimer: number = 0; // 射击计时器
+    private _currentAmmo: number = 20; // 当前弹药数量
+    private _isReloading: boolean = false; // 是否正在补充弹药
+    private _reloadTimer: number = 0; // 弹药补充计时器
+
     onLoad() {
         // 确保在组件加载时初始化
         this._rigidBody = null!;
@@ -68,6 +118,13 @@ export class player extends Component {
         // 初始化颜料喷洒相关
         this._paintTimer = 0;
         this._vehicleId = 'player';
+
+        // 初始化武器系统相关
+        this._canFire = true;
+        this._fireTimer = 0;
+        this._currentAmmo = this.maxAmmo;
+        this._isReloading = false;
+        this._reloadTimer = 0;
     }
 
     onEnable() {
@@ -150,6 +207,9 @@ export class player extends Component {
             case KeyCode.ARROW_RIGHT:
                 SoundManager.instance.playSoundEffect('carDrift');
                 this._direction = 1;
+                break;
+            case KeyCode.SPACE:
+                this.shoot();
                 break;
         }
     }
@@ -265,6 +325,9 @@ export class player extends Component {
 
         // 更新颜料喷洒
         this.updatePaintSpray(deltaTime);
+
+        // 更新武器系统
+        this.updateWeaponSystem(deltaTime);
     }
 
     public init(angle: number) {
@@ -528,6 +591,153 @@ export class player extends Component {
 
         // 通过GameManager喷洒颜料
         gameManager.sprayPaint(this.paintPrefab, worldPosition, this._vehicleId);
+    }
+
+    // ==================== 武器系统 ====================
+
+    /**
+     * 更新武器系统
+     * @param deltaTime 帧时间间隔
+     */
+    private updateWeaponSystem(deltaTime: number): void {
+        if (this._isDestroyed) return;
+
+        // 更新射击计时器
+        this._fireTimer += deltaTime;
+
+        // 检查是否可以射击
+        const fireInterval = 1 / this.fireRate;
+        if (this._fireTimer >= fireInterval) {
+            this._canFire = true;
+        }
+
+        // 更新弹药补充
+        this.updateAmmoReload(deltaTime);
+    }
+
+    /**
+     * 更新弹药补充
+     * @param deltaTime 帧时间间隔
+     */
+    private updateAmmoReload(deltaTime: number): void {
+        if (!this._isReloading) return;
+
+        this._reloadTimer += deltaTime;
+        if (this._reloadTimer >= this.ammoReloadTime) {
+            // 补充完成
+            this._currentAmmo = this.maxAmmo;
+            this._isReloading = false;
+            this._reloadTimer = 0;
+            console.log('弹药补充完成！');
+        }
+    }
+
+    /**
+     * 射击方法
+     */
+    public shoot(): void {
+        if (!this._canFire || this._isDestroyed) return;
+
+        // 检查弹药
+        if (this._currentAmmo <= 0) {
+            if (!this._isReloading) {
+                this.startReload();
+            }
+            return;
+        }
+
+        // 重置射击状态
+        this._canFire = false;
+        this._fireTimer = 0;
+        this._currentAmmo--;
+
+        // 根据武器类型选择子弹预制体
+        let bulletPrefab: Prefab | null = null;
+        switch (this.weaponType) {
+            case WeaponType.NORMAL:
+                console.log('发射普通子弹');
+                bulletPrefab = this.normalBulletPrefab;
+                break;
+            case WeaponType.FLAME:
+                bulletPrefab = this.flamePrefab;
+                break;
+            case WeaponType.ROCKET:
+                bulletPrefab = this.rocketPrefab;
+                break;
+        }
+
+        // 检查预制体是否存在
+        if (!bulletPrefab) {
+            console.warn('子弹预制体未设置');
+            // 允许重新射击
+            this._canFire = true;
+            return;
+        }
+
+        // 获取当前车辆的朝向
+        const rad = (this._angle + 90) * Math.PI / 180;
+        const direction = new Vec2(Math.cos(rad), Math.sin(rad));
+
+        // 计算子弹发射位置（车辆正前方）
+        const vehicleWorldPos = this.node.worldPosition;
+        const offsetDistance = 50; // 子弹发射偏移距离（像素）
+        const bulletStartPos = new Vec3(
+            vehicleWorldPos.x + direction.x * offsetDistance,
+            vehicleWorldPos.y + direction.y * offsetDistance,
+            vehicleWorldPos.z
+        );
+
+        // 获取GameManager实例并发射子弹
+        const gameManager = GameManager.getInstance();
+        if (gameManager) {
+            gameManager.fireBullet(bulletPrefab, bulletStartPos, direction, this._vehicleId, this.weaponType);
+        }
+
+        // 播放射击音效
+        SoundManager.instance.playSoundEffect('weaponFire');
+
+        // 检查是否需要开始补充弹药
+        if (this._currentAmmo <= 0 && !this._isReloading) {
+            this.startReload();
+        }
+    }
+
+    /**
+     * 开始补充弹药
+     */
+    private startReload(): void {
+        this._isReloading = true;
+        this._reloadTimer = 0;
+        console.log('开始补充弹药...');
+    }
+
+    /**
+     * 获取当前弹药数量
+     */
+    public getCurrentAmmo(): number {
+        return this._currentAmmo;
+    }
+
+    /**
+     * 获取最大弹药数量
+     */
+    public getMaxAmmo(): number {
+        return this.maxAmmo;
+    }
+
+    /**
+     * 是否正在补充弹药
+     */
+    public isReloading(): boolean {
+        return this._isReloading;
+    }
+
+    /**
+     * 获取弹药补充进度（0-1）
+     */
+    public getReloadProgress(): number {
+        if (!this._isReloading) return 1;
+        return this._reloadTimer / this.ammoReloadTime;
     }
 
 }

@@ -809,6 +809,7 @@
       "depends": [
         "86087b4b-4284-4b91-8707-fa1f71406ea1@f9941",
         "d1312f02-4e7f-4f9f-aed7-f255abb6e7f8",
+        "ffdc0091-02b5-47e9-9cba-752ad0f7f260",
         "49e36654-b2c3-47d9-afeb-5db28286a1b0@f9941"
       ],
       "dependScripts": [
@@ -2294,6 +2295,58 @@
   "91c08d91-821d-4705-b576-bca425d89d56": {
     "url": "db://assets/scripts/AIPlayer.ts",
     "value": {},
+    "versionCode": 1
+  },
+  "91ffccd6-b692-4a87-a2fe-51adeaa3b229": {
+    "url": "db://assets/scripts/Bullet.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "1ee9f941-ce0c-4508-b98b-c2c209f8155b": {
+    "url": "db://assets/resources/prefab/weapons",
+    "value": {},
+    "versionCode": 1
+  },
+  "fe3cb3bb-8e0d-46e7-8ece-3490aea9da1a": {
+    "url": "db://assets/img/weapons",
+    "value": {},
+    "versionCode": 1
+  },
+  "2e63d6db-c814-4994-99aa-22ba87c907be": {
+    "url": "db://assets/img/weapons/bullet.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "2e63d6db-c814-4994-99aa-22ba87c907be@6c48a": {
+    "url": "db://assets/img/weapons/bullet.png@6c48a",
+    "value": {
+      "depends": [
+        "2e63d6db-c814-4994-99aa-22ba87c907be"
+      ]
+    },
+    "versionCode": 1
+  },
+  "2e63d6db-c814-4994-99aa-22ba87c907be@f9941": {
+    "url": "db://assets/img/weapons/bullet.png@f9941",
+    "value": {
+      "depends": [
+        "2e63d6db-c814-4994-99aa-22ba87c907be@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "ffdc0091-02b5-47e9-9cba-752ad0f7f260": {
+    "url": "db://assets/resources/prefab/weapons/bullet.prefab",
+    "value": {
+      "depends": [
+        "2e63d6db-c814-4994-99aa-22ba87c907be@f9941"
+      ],
+      "dependScripts": [
+        "91ffccd6-b692-4a87-a2fe-51adeaa3b229"
+      ]
+    },
     "versionCode": 1
   }
 }

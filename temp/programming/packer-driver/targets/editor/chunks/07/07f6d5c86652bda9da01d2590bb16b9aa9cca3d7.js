@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Label, GameManager, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _crd, ccclass, property, GameHUD;
+  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Label, Button, ProgressBar, GameManager, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _dec10, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _crd, ccclass, property, GameHUD;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -23,6 +23,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
       _decorator = _cc._decorator;
       Component = _cc.Component;
       Label = _cc.Label;
+      Button = _cc.Button;
+      ProgressBar = _cc.ProgressBar;
     }, function (_unresolved_2) {
       GameManager = _unresolved_2.GameManager;
     }],
@@ -31,7 +33,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
       _cclegacy._RF.push({}, "8d994pxBTRN65Jo2JjZ4MAH", "GameHUD", undefined);
 
-      __checkObsolete__(['_decorator', 'Component', 'Label']);
+      __checkObsolete__(['_decorator', 'Component', 'Label', 'Button', 'ProgressBar']);
 
       ({
         ccclass,
@@ -54,6 +56,15 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
       }), _dec7 = property({
         type: Label,
         tooltip: 'AI车辆4的颜料占比显示标签'
+      }), _dec8 = property({
+        type: Button,
+        tooltip: '射击按钮'
+      }), _dec9 = property({
+        type: Label,
+        tooltip: '弹药数量显示标签'
+      }), _dec10 = property({
+        type: ProgressBar,
+        tooltip: '弹药补充进度条'
       }), _dec(_class = (_class2 = class GameHUD extends Component {
         constructor(...args) {
           super(...args);
@@ -73,8 +84,15 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
           _initializerDefineProperty(this, "ai4RatioLabel", _descriptor6, this);
 
+          // 射击系统UI
+          _initializerDefineProperty(this, "shootButton", _descriptor7, this);
+
+          _initializerDefineProperty(this, "ammoLabel", _descriptor8, this);
+
+          _initializerDefineProperty(this, "reloadProgressBar", _descriptor9, this);
+
           // 更新频率控制
-          _initializerDefineProperty(this, "updateInterval", _descriptor7, this);
+          _initializerDefineProperty(this, "updateInterval", _descriptor10, this);
 
           // 每0.1秒更新一次
           this.updateTimer = 0;
@@ -96,7 +114,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
           } // 初始化AI占比显示
 
 
-          this.initializeAIRatioDisplay();
+          this.initializeAIRatioDisplay(); // 初始化射击按钮
+
+          this.initializeShootButton();
         }
 
         update(deltaTime) {
@@ -106,6 +126,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
           if (this.updateTimer >= this.updateInterval) {
             this.updateCountdownDisplay();
             this.updatePaintRatioDisplay();
+            this.updateAmmoDisplay();
             this.updateTimer = 0;
           }
         }
@@ -234,6 +255,56 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
           }
 
           this.initializeAIRatioDisplay();
+        } // ==================== 射击系统UI ====================
+
+        /**
+         * 初始化射击按钮
+         */
+
+
+        initializeShootButton() {
+          if (this.shootButton) {
+            this.shootButton.node.on(Button.EventType.CLICK, this.onShootButtonClicked, this);
+          } else {
+            console.warn('GameHUD: 射击按钮未设置');
+          }
+        }
+        /**
+         * 射击按钮点击事件处理
+         */
+
+
+        onShootButtonClicked() {
+          // 通知GameManager执行射击
+          if (this.gameManager) {
+            this.gameManager.playerShoot();
+          }
+        }
+        /**
+         * 更新弹药显示
+         */
+
+
+        updateAmmoDisplay() {
+          if (!this.gameManager) return;
+          const playerComponent = this.gameManager.getPlayerComponent();
+          if (!playerComponent) return; // 更新弹药数量显示
+
+          if (this.ammoLabel) {
+            const currentAmmo = playerComponent.getCurrentAmmo();
+            const maxAmmo = playerComponent.getMaxAmmo();
+            this.ammoLabel.string = `${currentAmmo}/${maxAmmo}`;
+          } // 更新弹药补充进度条
+
+
+          if (this.reloadProgressBar) {
+            if (playerComponent.isReloading()) {
+              this.reloadProgressBar.node.active = true;
+              this.reloadProgressBar.progress = playerComponent.getReloadProgress();
+            } else {
+              this.reloadProgressBar.node.active = false;
+            }
+          }
         }
 
       }, (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "countdownLabel", [_dec2], {
@@ -278,7 +349,28 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
         initializer: function () {
           return null;
         }
-      }), _descriptor7 = _applyDecoratedDescriptor(_class2.prototype, "updateInterval", [property], {
+      }), _descriptor7 = _applyDecoratedDescriptor(_class2.prototype, "shootButton", [_dec8], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function () {
+          return null;
+        }
+      }), _descriptor8 = _applyDecoratedDescriptor(_class2.prototype, "ammoLabel", [_dec9], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function () {
+          return null;
+        }
+      }), _descriptor9 = _applyDecoratedDescriptor(_class2.prototype, "reloadProgressBar", [_dec10], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function () {
+          return null;
+        }
+      }), _descriptor10 = _applyDecoratedDescriptor(_class2.prototype, "updateInterval", [property], {
         configurable: true,
         enumerable: true,
         writable: true,
