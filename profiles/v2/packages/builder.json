@@ -22,7 +22,8 @@
         "uuid": "091c5c0e-b72a-4cad-ab68-635bc57ff236"
       }
     ],
-    "name": "driftClash"
+    "name": "driftClash",
+    "buildPath": "/Users/zeruili/Desktop"
   },
   "BuildTaskManager": {
     "taskMap": {}

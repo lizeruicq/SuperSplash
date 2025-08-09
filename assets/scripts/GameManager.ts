@@ -773,6 +773,13 @@ export class GameManager extends Component {
         return [];
     }
 
+    /**
+     * 获取颜料管理器
+     */
+    public getPaintManager(): PaintManager | null {
+        return this.paintManager;
+    }
+
     // ==================== 倒计时系统 ====================
 
     /**

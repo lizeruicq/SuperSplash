@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Vec2, RigidBody2D, Contact2DType, Collider2D, Enum, instantiate, Prefab, tween, Vec3, Animation, director, Director, player, AIPlayer, SoundManager, _dec, _dec2, _dec3, _dec4, _dec5, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _crd, ccclass, property, WeaponType, BulletType, Bullet;
+  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Vec2, RigidBody2D, Contact2DType, Collider2D, Enum, instantiate, Prefab, tween, Vec3, Animation, director, Director, player, AIPlayer, SoundManager, GameManager, _dec, _dec2, _dec3, _dec4, _dec5, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _crd, ccclass, property, WeaponType, BulletType, Bullet;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -19,6 +19,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
   function _reportPossibleCrUseOfSoundManager(extras) {
     _reporterNs.report("SoundManager", "./SoundManager", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfGameManager(extras) {
+    _reporterNs.report("GameManager", "./GameManager", _context.meta, extras);
   }
 
   return {
@@ -48,6 +52,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       AIPlayer = _unresolved_3.AIPlayer;
     }, function (_unresolved_4) {
       SoundManager = _unresolved_4.SoundManager;
+    }, function (_unresolved_5) {
+      GameManager = _unresolved_5.GameManager;
     }],
     execute: function () {
       _crd = true;
@@ -221,8 +227,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           switch (this.bulletType) {
             case BulletType.NORMAL:
-              this.handleNormalBulletHit(playerComponent, aiPlayerComponent);
-              break;
+              this.handleNormalBulletHit(playerComponent, aiPlayerComponent); // 普通子弹碰撞后也产生爆炸效果
+
+              this.handleBulletExplosion();
+              return;
             // case BulletType.FLAME:
             //     this.handleFlameHit(aiPlayerComponent);
             //     return;
@@ -231,12 +239,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
               this.handleRocketHit(vehicleNode); // 火箭弹由 handleRocketHit 方法负责销毁，这里直接返回
 
               return;
-          } // 播放音效
+          } // // 播放音效
+          // this.playHitSound();
+          // // 销毁子弹（仅适用于普通子弹和火焰子弹）
+          // this.destroyBullet();
 
-
-          this.playHitSound(); // 销毁子弹（仅适用于普通子弹和火焰子弹）
-
-          this.destroyBullet();
         }
         /**
          * 处理普通子弹碰撞
@@ -249,12 +256,24 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           } else if (aiPlayerComponent) {
             aiPlayerComponent.takeDamage(this.damage);
           }
-        } // /**
-        //  * 处理火焰碰撞
-        //  */
-        // private handleFlameHit(aiPlayerComponent: AIPlayer | null) {
-        // }
+        }
+        /**
+         * 处理子弹爆炸效果（普通子弹使用）
+         */
 
+
+        handleBulletExplosion() {
+          // 设置爆炸标志
+          this._isExploding = true; // 停止移动
+
+          this.stopMovement(); // 创建爆炸效果
+
+          this.createBulletExplosion(); // 播放音效
+
+          (_crd && SoundManager === void 0 ? (_reportPossibleCrUseOfSoundManager({
+            error: Error()
+          }), SoundManager) : SoundManager).instance.playSoundEffect('bulletHit');
+        }
         /**
          * 处理火箭弹碰撞
          */
@@ -266,9 +285,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           this.stopMovement(); // 创建爆炸效果
 
-          this.createExplosion(); // 范围伤害
+          this.createRocketExplosion(); // 范围伤害
 
-          this.dealExplosionDamage(); // 播放音效
+          this.dealExplosionDamage(); // 清除爆炸范围内的颜料
+
+          this.clearPaintInRange(); // 播放音效
 
           (_crd && SoundManager === void 0 ? (_reportPossibleCrUseOfSoundManager({
             error: Error()
@@ -285,7 +306,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           this.stopMovement(); // 创建爆炸效果
 
-          this.createExplosion(); // 范围伤害
+          this.createRocketExplosion(); // 清除爆炸范围内的颜料
+
+          this.clearPaintInRange(); // 范围伤害
 
           this.dealExplosionDamage(); // 播放音效
 
@@ -294,11 +317,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           }), SoundManager) : SoundManager).instance.playSoundEffect('explosion');
         }
         /**
-         * 创建爆炸效果
+         * 创建普通子弹爆炸效果
          */
 
 
-        createExplosion() {
+        createBulletExplosion() {
           if (this.explosionPrefab) {
             const explosion = instantiate(this.explosionPrefab); // 将爆炸效果添加为子弹节点的子节点
 
@@ -309,7 +332,49 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             const animationComponent = explosion.getComponent(Animation);
 
             if (animationComponent) {
-              // 播放动画并在1秒后销毁
+              // 播放动画并在0.3秒后销毁
+              animationComponent.play('explosion');
+              this.scheduleOnce(() => {
+                if (explosion && explosion.isValid) {
+                  explosion.destroy();
+                }
+
+                this.destroyBullet();
+              }, 0.3);
+            } else {
+              // 如果没有动画组件，使用tween动画
+              tween(explosion).to(0.3, {
+                scale: new Vec3(1.5, 1.5, 1)
+              }).delay(0.3).call(() => {
+                if (explosion && explosion.isValid) {
+                  explosion.destroy();
+                }
+
+                this.destroyBullet();
+              }).start();
+            }
+          } else {
+            // 如果没有爆炸预制体，直接销毁子弹
+            this.destroyBullet();
+          }
+        }
+        /**
+         * 创建火箭弹爆炸效果
+         */
+
+
+        createRocketExplosion() {
+          if (this.explosionPrefab) {
+            const explosion = instantiate(this.explosionPrefab); // 将爆炸效果添加为子弹节点的子节点
+
+            this.node.addChild(explosion); // 重置位置，使其与子弹节点重合
+
+            explosion.setPosition(Vec3.ZERO); // 获取动画组件并播放动画
+
+            const animationComponent = explosion.getComponent(Animation);
+
+            if (animationComponent) {
+              // 播放动画并在0.5秒后销毁
               animationComponent.play('explosion');
               this.scheduleOnce(() => {
                 if (explosion && explosion.isValid) {
@@ -353,6 +418,36 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
               vehicle.takeDamage(actualDamage);
             }
           });
+        }
+        /**
+         * 清除爆炸范围内的颜料
+         */
+
+
+        clearPaintInRange() {
+          // 获取GameManager单例
+          const gameManager = (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+            error: Error()
+          }), GameManager) : GameManager).getInstance();
+
+          if (!gameManager) {
+            console.warn('Bullet: 无法获取GameManager单例');
+            return;
+          } // 通过GameManager获取PaintManager实例
+
+
+          const paintManager = gameManager.getPaintManager();
+
+          if (!paintManager) {
+            console.warn('Bullet: 无法获取PaintManager实例');
+            return;
+          } // 获取爆炸中心位置
+
+
+          const explosionCenter = new Vec2(this.node.worldPosition.x, this.node.worldPosition.y); // 使用PaintManager的公共方法清除范围内的颜料
+
+          const removedCount = paintManager.clearPaintInRange(explosionCenter, this.explosionRadius);
+          console.log(`火箭弹爆炸清除了 ${removedCount} 个颜料`);
         }
         /**
          * 获取范围内的所有车辆

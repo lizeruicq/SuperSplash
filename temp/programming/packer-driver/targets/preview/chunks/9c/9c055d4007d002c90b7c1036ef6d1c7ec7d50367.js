@@ -1,7 +1,7 @@
 System.register(["cc"], function (_export, _context) {
   "use strict";
 
-  var _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Node, instantiate, Vec2, Layers, _dec, _class, _class2, _descriptor, _class3, _crd, ccclass, property, PaintManager;
+  var _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Node, instantiate, Vec2, Vec3, Layers, UITransform, _dec, _class, _class2, _descriptor, _class3, _crd, ccclass, property, PaintManager;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -19,14 +19,16 @@ System.register(["cc"], function (_export, _context) {
       Node = _cc.Node;
       instantiate = _cc.instantiate;
       Vec2 = _cc.Vec2;
+      Vec3 = _cc.Vec3;
       Layers = _cc.Layers;
+      UITransform = _cc.UITransform;
     }],
     execute: function () {
       _crd = true;
 
       _cclegacy._RF.push({}, "7dd7aydfZBHRbtWPJmh00Xf", "PaintManager", undefined);
 
-      __checkObsolete__(['_decorator', 'Component', 'Node', 'Prefab', 'instantiate', 'Vec2', 'Vec3', 'Layers']);
+      __checkObsolete__(['_decorator', 'Component', 'Node', 'Prefab', 'instantiate', 'Vec2', 'Vec3', 'Layers', 'UITransform', 'Canvas', 'view']);
 
       ({
         ccclass,
@@ -64,11 +66,12 @@ System.register(["cc"], function (_export, _context) {
             return;
           }
 
-          PaintManager._instance = this; // 创建颜料容器节点
+          PaintManager._instance = this; // 创建颜料容器节点，保持在PaintManager节点下
 
           this.paintContainer = new Node('PaintContainer'); // 设置容器节点的层级为UI_2D，确保颜料固定在游戏世界坐标中
 
-          this.paintContainer.layer = Layers.Enum.UI_2D;
+          this.paintContainer.layer = Layers.Enum.UI_2D; // 将颜料容器添加到PaintManager节点下，保持项目层次结构
+
           this.node.addChild(this.paintContainer);
           console.log('PaintManager初始化完成');
         }
@@ -91,9 +94,21 @@ System.register(["cc"], function (_export, _context) {
           if (!paintPrefab || !this.paintContainer) {
             console.warn('PaintManager: 颜料预制体或容器为空');
             return;
-          }
+          } // 将世界坐标转换为paintContainer的本地坐标
+          // 这样可以保持节点层次结构，同时确保坐标正确
 
-          var position2D = new Vec2(worldPosition.x, worldPosition.y); // 检查是否在同一拥有者的颜料附近，如果是则不喷洒
+
+          var paintContainerTransform = this.paintContainer.getComponent(UITransform);
+
+          if (!paintContainerTransform) {
+            // 如果paintContainer没有UITransform，添加一个
+            var uiTransform = this.paintContainer.addComponent(UITransform);
+            uiTransform.setContentSize(1280, 720); // 设置为设计分辨率大小
+          } // 转换世界坐标到paintContainer的本地坐标
+
+
+          var localPosition = this.paintContainer.getComponent(UITransform).convertToNodeSpaceAR(worldPosition);
+          var position2D = new Vec2(localPosition.x, localPosition.y); // 检查是否在同一拥有者的颜料附近，如果是则不喷洒
 
           if (this.isNearOwnPaint(position2D, ownerId)) {
             // console.log(`跳过颜料喷洒: 拥有者=${ownerId}, 位置附近已有自己的颜料`);
@@ -103,13 +118,14 @@ System.register(["cc"], function (_export, _context) {
 
           this.checkAndRemoveOverlappingPaint(position2D, ownerId); // 创建新颜料节点
 
-          var paintNode = instantiate(paintPrefab);
-          paintNode.setWorldPosition(worldPosition); // 设置颜料节点的层级为UI_2D，确保它固定在游戏世界坐标中
+          var paintNode = instantiate(paintPrefab); // 设置颜料节点的本地位置（相对于paintContainer）
+
+          paintNode.setPosition(localPosition); // 设置颜料节点的层级为UI_2D，确保它固定在游戏世界坐标中
 
           paintNode.layer = Layers.Enum.UI_2D;
           this.paintContainer.addChild(paintNode); // 生成唯一ID
 
-          var paintId = this.generatePaintId(position2D, ownerId); // 存储颜料数据
+          var paintId = this.generatePaintId(position2D, ownerId); // 存储颜料数据（使用本地坐标）
 
           var paintData = {
             node: paintNode,
@@ -161,6 +177,15 @@ System.register(["cc"], function (_export, _context) {
 
             this.paintMap.delete(paintId);
           }
+        }
+        /**
+         * 公开方法：移除指定的颜料（供外部调用）
+         * @param paintId 颜料ID
+         */
+
+
+        removePaintById(paintId) {
+          this.removePaint(paintId);
         }
         /**
          * 检查指定位置是否在同一拥有者的颜料附近
@@ -300,6 +325,46 @@ System.register(["cc"], function (_export, _context) {
 
           result.sort((a, b) => b.ratio - a.ratio);
           return result;
+        }
+        /**
+         * 清除指定范围内的颜料
+         * @param center 爆炸中心位置（世界坐标）
+         * @param radius 爆炸半径
+         * @returns 被清除的颜料数量
+         */
+
+
+        clearPaintInRange(center, radius) {
+          if (!this.paintContainer) {
+            console.warn('PaintManager: 颜料容器未初始化');
+            return 0;
+          }
+
+          var paintContainerTransform = this.paintContainer.getComponent(UITransform);
+
+          if (!paintContainerTransform) {
+            console.warn('PaintManager: 颜料容器缺少UITransform组件');
+            return 0;
+          } // 将世界坐标转换为paintContainer本地坐标
+
+
+          var worldPos = new Vec3(center.x, center.y, 0);
+          var localCenter = paintContainerTransform.convertToNodeSpaceAR(worldPos);
+          var localCenter2D = new Vec2(localCenter.x, localCenter.y);
+          var toRemove = [];
+          this.paintMap.forEach((paintData, paintId) => {
+            var distance = Vec2.distance(paintData.position, localCenter2D); // 如果颜料在爆炸范围内，则标记为需要移除
+
+            if (distance <= radius) {
+              toRemove.push(paintId);
+            }
+          }); // 移除范围内的颜料
+
+          toRemove.forEach(paintId => {
+            this.removePaint(paintId); // 使用现有的私有方法
+          });
+          console.log("\u6E05\u9664\u4E86 " + toRemove.length + " \u4E2A\u8303\u56F4\u5185\u7684\u989C\u6599");
+          return toRemove.length;
         }
 
       }, _class3._instance = null, _class3), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "coverageRadius", [property], {

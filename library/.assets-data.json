@@ -198,6 +198,11 @@
         "ff4b1155-db8b-4cda-9bc0-6e743e5710bc@f9941",
         "8e2f4297-91a6-47cc-8cd7-438a85e78d5b@f9941",
         "ac4c6226-b5ca-40aa-8e65-d953ab93c6b4@f9941",
+        "70958428-2d80-45d2-be19-959fe20eda20@f9941",
+        "8be1a880-6cc0-49ef-97ed-9792b9660f07@f9941",
+        "f1dc3119-9b7d-4a05-abb6-2617840a906b@f9941",
+        "a181abe3-561c-494c-9952-aa30d8e497fc@f9941",
+        "73d6b5b9-dc56-44d9-9b17-80a95b7bdd49@f9941",
         "24a704da-2867-446d-8d1a-5e920c75e09d@f9941",
         "9fd900dd-221b-4f89-8f2c-fba34243c835@f9941"
       ],
@@ -2342,7 +2347,8 @@
     "url": "db://assets/resources/prefab/weapons/bullet.prefab",
     "value": {
       "depends": [
-        "2e63d6db-c814-4994-99aa-22ba87c907be@f9941"
+        "2e63d6db-c814-4994-99aa-22ba87c907be@f9941",
+        "124515d6-c01d-4b24-a978-eefc47e30c4d"
       ],
       "dependScripts": [
         "91ffccd6-b692-4a87-a2fe-51adeaa3b229"
@@ -2776,6 +2782,212 @@
         "595a0063-a88e-4e29-839e-62bf089ab55e@f9941"
       ]
     },
+    "versionCode": 1
+  },
+  "dbd3f203-748c-4c30-b8c3-8b6c6d403a4b": {
+    "url": "db://assets/img/weapons/bulletexplosion",
+    "value": {},
+    "versionCode": 1
+  },
+  "397a0ece-b137-474f-89ed-de23addacf36": {
+    "url": "db://assets/img/weapons/bulletexplosion/bex1.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "397a0ece-b137-474f-89ed-de23addacf36@6c48a": {
+    "url": "db://assets/img/weapons/bulletexplosion/bex1.png@6c48a",
+    "value": {
+      "depends": [
+        "397a0ece-b137-474f-89ed-de23addacf36"
+      ]
+    },
+    "versionCode": 1
+  },
+  "397a0ece-b137-474f-89ed-de23addacf36@f9941": {
+    "url": "db://assets/img/weapons/bulletexplosion/bex1.png@f9941",
+    "value": {
+      "depends": [
+        "397a0ece-b137-474f-89ed-de23addacf36@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "d5f59f10-43ce-42e5-9e56-f5218f429ca9": {
+    "url": "db://assets/img/weapons/bulletexplosion/bex2.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "d5f59f10-43ce-42e5-9e56-f5218f429ca9@6c48a": {
+    "url": "db://assets/img/weapons/bulletexplosion/bex2.png@6c48a",
+    "value": {
+      "depends": [
+        "d5f59f10-43ce-42e5-9e56-f5218f429ca9"
+      ]
+    },
+    "versionCode": 1
+  },
+  "d5f59f10-43ce-42e5-9e56-f5218f429ca9@f9941": {
+    "url": "db://assets/img/weapons/bulletexplosion/bex2.png@f9941",
+    "value": {
+      "depends": [
+        "d5f59f10-43ce-42e5-9e56-f5218f429ca9@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "0ae27a3b-2d37-4978-96ea-626bbece40f5": {
+    "url": "db://assets/img/weapons/bulletexplosion/bulletexpolsion.anim",
+    "value": {
+      "depends": [
+        "397a0ece-b137-474f-89ed-de23addacf36@f9941",
+        "d5f59f10-43ce-42e5-9e56-f5218f429ca9@f9941"
+      ]
+    },
+    "versionCode": 1
+  },
+  "124515d6-c01d-4b24-a978-eefc47e30c4d": {
+    "url": "db://assets/resources/prefab/weapons/explosion/bulletexplosion.prefab",
+    "value": {
+      "depends": [
+        "397a0ece-b137-474f-89ed-de23addacf36@f9941",
+        "0ae27a3b-2d37-4978-96ea-626bbece40f5"
+      ],
+      "dependScripts": []
+    },
+    "versionCode": 1
+  },
+  "70958428-2d80-45d2-be19-959fe20eda20": {
+    "url": "db://assets/img/menu/UI/shoot.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "70958428-2d80-45d2-be19-959fe20eda20@6c48a": {
+    "url": "db://assets/img/menu/UI/shoot.png@6c48a",
+    "value": {
+      "depends": [
+        "70958428-2d80-45d2-be19-959fe20eda20"
+      ]
+    },
+    "versionCode": 1
+  },
+  "70958428-2d80-45d2-be19-959fe20eda20@f9941": {
+    "url": "db://assets/img/menu/UI/shoot.png@f9941",
+    "value": {
+      "depends": [
+        "70958428-2d80-45d2-be19-959fe20eda20@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "8be1a880-6cc0-49ef-97ed-9792b9660f07": {
+    "url": "db://assets/img/menu/UI/shangxiazuoyouTriangle17-2.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "8be1a880-6cc0-49ef-97ed-9792b9660f07@6c48a": {
+    "url": "db://assets/img/menu/UI/shangxiazuoyouTriangle17-2.png@6c48a",
+    "value": {
+      "depends": [
+        "8be1a880-6cc0-49ef-97ed-9792b9660f07"
+      ]
+    },
+    "versionCode": 1
+  },
+  "8be1a880-6cc0-49ef-97ed-9792b9660f07@f9941": {
+    "url": "db://assets/img/menu/UI/shangxiazuoyouTriangle17-2.png@f9941",
+    "value": {
+      "depends": [
+        "8be1a880-6cc0-49ef-97ed-9792b9660f07@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "f1dc3119-9b7d-4a05-abb6-2617840a906b": {
+    "url": "db://assets/img/menu/UI/shangxiazuoyouTriangle15.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "f1dc3119-9b7d-4a05-abb6-2617840a906b@6c48a": {
+    "url": "db://assets/img/menu/UI/shangxiazuoyouTriangle15.png@6c48a",
+    "value": {
+      "depends": [
+        "f1dc3119-9b7d-4a05-abb6-2617840a906b"
+      ]
+    },
+    "versionCode": 1
+  },
+  "f1dc3119-9b7d-4a05-abb6-2617840a906b@f9941": {
+    "url": "db://assets/img/menu/UI/shangxiazuoyouTriangle15.png@f9941",
+    "value": {
+      "depends": [
+        "f1dc3119-9b7d-4a05-abb6-2617840a906b@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "73d6b5b9-dc56-44d9-9b17-80a95b7bdd49": {
+    "url": "db://assets/img/menu/UI/shangxiazuoyouTriangle16.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "73d6b5b9-dc56-44d9-9b17-80a95b7bdd49@6c48a": {
+    "url": "db://assets/img/menu/UI/shangxiazuoyouTriangle16.png@6c48a",
+    "value": {
+      "depends": [
+        "73d6b5b9-dc56-44d9-9b17-80a95b7bdd49"
+      ]
+    },
+    "versionCode": 1
+  },
+  "73d6b5b9-dc56-44d9-9b17-80a95b7bdd49@f9941": {
+    "url": "db://assets/img/menu/UI/shangxiazuoyouTriangle16.png@f9941",
+    "value": {
+      "depends": [
+        "73d6b5b9-dc56-44d9-9b17-80a95b7bdd49@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "a181abe3-561c-494c-9952-aa30d8e497fc": {
+    "url": "db://assets/img/menu/UI/shangxiazuoyouTriangle18.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "a181abe3-561c-494c-9952-aa30d8e497fc@6c48a": {
+    "url": "db://assets/img/menu/UI/shangxiazuoyouTriangle18.png@6c48a",
+    "value": {
+      "depends": [
+        "a181abe3-561c-494c-9952-aa30d8e497fc"
+      ]
+    },
+    "versionCode": 1
+  },
+  "a181abe3-561c-494c-9952-aa30d8e497fc@f9941": {
+    "url": "db://assets/img/menu/UI/shangxiazuoyouTriangle18.png@f9941",
+    "value": {
+      "depends": [
+        "a181abe3-561c-494c-9952-aa30d8e497fc@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "949304f8-d71e-4d74-96be-bba313c71dbd": {
+    "url": "db://assets/scripts/PaintCoordinateTest.ts",
+    "value": {},
     "versionCode": 1
   }
 }

@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Label, Button, ProgressBar, GameManager, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _dec10, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _crd, ccclass, property, GameHUD;
+  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Label, Button, ProgressBar, Node, GameManager, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _dec10, _dec11, _dec12, _dec13, _dec14, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _descriptor12, _descriptor13, _descriptor14, _crd, ccclass, property, GameHUD;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -25,6 +25,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
       Label = _cc.Label;
       Button = _cc.Button;
       ProgressBar = _cc.ProgressBar;
+      Node = _cc.Node;
     }, function (_unresolved_2) {
       GameManager = _unresolved_2.GameManager;
     }],
@@ -33,7 +34,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
       _cclegacy._RF.push({}, "8d994pxBTRN65Jo2JjZ4MAH", "GameHUD", undefined);
 
-      __checkObsolete__(['_decorator', 'Component', 'Label', 'Button', 'ProgressBar']);
+      __checkObsolete__(['_decorator', 'Component', 'Label', 'Button', 'ProgressBar', 'Node']);
 
       ({
         ccclass,
@@ -65,6 +66,18 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
       }), _dec10 = property({
         type: ProgressBar,
         tooltip: '弹药补充进度条'
+      }), _dec11 = property({
+        type: Button,
+        tooltip: '向上移动按钮'
+      }), _dec12 = property({
+        type: Button,
+        tooltip: '向下移动按钮'
+      }), _dec13 = property({
+        type: Button,
+        tooltip: '向左移动按钮'
+      }), _dec14 = property({
+        type: Button,
+        tooltip: '向右移动按钮'
       }), _dec(_class = (_class2 = class GameHUD extends Component {
         constructor() {
           super(...arguments);
@@ -91,8 +104,17 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
           _initializerDefineProperty(this, "reloadProgressBar", _descriptor9, this);
 
+          // 触摸控制按钮
+          _initializerDefineProperty(this, "upButton", _descriptor10, this);
+
+          _initializerDefineProperty(this, "downButton", _descriptor11, this);
+
+          _initializerDefineProperty(this, "leftButton", _descriptor12, this);
+
+          _initializerDefineProperty(this, "rightButton", _descriptor13, this);
+
           // 更新频率控制
-          _initializerDefineProperty(this, "updateInterval", _descriptor10, this);
+          _initializerDefineProperty(this, "updateInterval", _descriptor14, this);
 
           // 每0.1秒更新一次
           this.updateTimer = 0;
@@ -116,7 +138,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
           this.initializeAIRatioDisplay(); // 初始化射击按钮
 
-          this.initializeShootButton();
+          this.initializeShootButton(); // 初始化触摸控制按钮
+
+          this.initializeTouchControlButtons();
         }
 
         update(deltaTime) {
@@ -305,6 +329,217 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
               this.reloadProgressBar.node.active = false;
             }
           }
+        } // ==================== 触摸控制系统 ====================
+
+        /**
+         * 初始化触摸控制按钮
+         */
+
+
+        initializeTouchControlButtons() {
+          // 初始化上移按钮
+          if (this.upButton) {
+            this.upButton.node.on(Node.EventType.TOUCH_START, this.onUpButtonPressed, this);
+            this.upButton.node.on(Node.EventType.TOUCH_END, this.onUpButtonReleased, this);
+            this.upButton.node.on(Node.EventType.TOUCH_CANCEL, this.onUpButtonReleased, this);
+          } else {
+            console.warn('GameHUD: 上移按钮未设置');
+          } // 初始化下移按钮
+
+
+          if (this.downButton) {
+            this.downButton.node.on(Node.EventType.TOUCH_START, this.onDownButtonPressed, this);
+            this.downButton.node.on(Node.EventType.TOUCH_END, this.onDownButtonReleased, this);
+            this.downButton.node.on(Node.EventType.TOUCH_CANCEL, this.onDownButtonReleased, this);
+          } else {
+            console.warn('GameHUD: 下移按钮未设置');
+          } // 初始化左移按钮
+
+
+          if (this.leftButton) {
+            this.leftButton.node.on(Node.EventType.TOUCH_START, this.onLeftButtonPressed, this);
+            this.leftButton.node.on(Node.EventType.TOUCH_END, this.onLeftButtonReleased, this);
+            this.leftButton.node.on(Node.EventType.TOUCH_CANCEL, this.onLeftButtonReleased, this);
+          } else {
+            console.warn('GameHUD: 左移按钮未设置');
+          } // 初始化右移按钮
+
+
+          if (this.rightButton) {
+            this.rightButton.node.on(Node.EventType.TOUCH_START, this.onRightButtonPressed, this);
+            this.rightButton.node.on(Node.EventType.TOUCH_END, this.onRightButtonReleased, this);
+            this.rightButton.node.on(Node.EventType.TOUCH_CANCEL, this.onRightButtonReleased, this);
+          } else {
+            console.warn('GameHUD: 右移按钮未设置');
+          }
+        }
+        /**
+         * 上移按钮按下事件
+         */
+
+
+        onUpButtonPressed() {
+          console.log('GameHUD: 上移按钮被按下');
+
+          if (this.gameManager) {
+            var playerComponent = this.gameManager.getPlayerComponent();
+
+            if (playerComponent) {
+              console.log('GameHUD: 设置玩家加速度为1');
+              playerComponent.setAcceleration(1); // 向前加速
+            } else {
+              console.warn('GameHUD: 无法获取玩家组件');
+            }
+          } else {
+            console.warn('GameHUD: GameManager未找到');
+          }
+        }
+        /**
+         * 上移按钮释放事件
+         */
+
+
+        onUpButtonReleased() {
+          console.log('GameHUD: 上移按钮被释放');
+
+          if (this.gameManager) {
+            var playerComponent = this.gameManager.getPlayerComponent();
+
+            if (playerComponent) {
+              console.log('GameHUD: 设置玩家加速度为0');
+              playerComponent.setAcceleration(0); // 停止加速
+            } else {
+              console.warn('GameHUD: 无法获取玩家组件');
+            }
+          } else {
+            console.warn('GameHUD: GameManager未找到');
+          }
+        }
+        /**
+         * 下移按钮按下事件
+         */
+
+
+        onDownButtonPressed() {
+          console.log('GameHUD: 下移按钮被按下');
+
+          if (this.gameManager) {
+            var playerComponent = this.gameManager.getPlayerComponent();
+
+            if (playerComponent) {
+              console.log('GameHUD: 设置玩家加速度为-1');
+              playerComponent.setAcceleration(-1); // 向后减速
+            } else {
+              console.warn('GameHUD: 无法获取玩家组件');
+            }
+          } else {
+            console.warn('GameHUD: GameManager未找到');
+          }
+        }
+        /**
+         * 下移按钮释放事件
+         */
+
+
+        onDownButtonReleased() {
+          console.log('GameHUD: 下移按钮被释放');
+
+          if (this.gameManager) {
+            var playerComponent = this.gameManager.getPlayerComponent();
+
+            if (playerComponent) {
+              console.log('GameHUD: 设置玩家加速度为0');
+              playerComponent.setAcceleration(0); // 停止减速
+            } else {
+              console.warn('GameHUD: 无法获取玩家组件');
+            }
+          } else {
+            console.warn('GameHUD: GameManager未找到');
+          }
+        }
+        /**
+         * 左移按钮按下事件
+         */
+
+
+        onLeftButtonPressed() {
+          console.log('GameHUD: 左移按钮被按下');
+
+          if (this.gameManager) {
+            var playerComponent = this.gameManager.getPlayerComponent();
+
+            if (playerComponent) {
+              console.log('GameHUD: 设置玩家转向为-1');
+              playerComponent.setDirection(-1); // 向左转向
+            } else {
+              console.warn('GameHUD: 无法获取玩家组件');
+            }
+          } else {
+            console.warn('GameHUD: GameManager未找到');
+          }
+        }
+        /**
+         * 左移按钮释放事件
+         */
+
+
+        onLeftButtonReleased() {
+          console.log('GameHUD: 左移按钮被释放');
+
+          if (this.gameManager) {
+            var playerComponent = this.gameManager.getPlayerComponent();
+
+            if (playerComponent) {
+              console.log('GameHUD: 设置玩家转向为0');
+              playerComponent.setDirection(0); // 停止转向
+            } else {
+              console.warn('GameHUD: 无法获取玩家组件');
+            }
+          } else {
+            console.warn('GameHUD: GameManager未找到');
+          }
+        }
+        /**
+         * 右移按钮按下事件
+         */
+
+
+        onRightButtonPressed() {
+          console.log('GameHUD: 右移按钮被按下');
+
+          if (this.gameManager) {
+            var playerComponent = this.gameManager.getPlayerComponent();
+
+            if (playerComponent) {
+              console.log('GameHUD: 设置玩家转向为1');
+              playerComponent.setDirection(1); // 向右转向
+            } else {
+              console.warn('GameHUD: 无法获取玩家组件');
+            }
+          } else {
+            console.warn('GameHUD: GameManager未找到');
+          }
+        }
+        /**
+         * 右移按钮释放事件
+         */
+
+
+        onRightButtonReleased() {
+          console.log('GameHUD: 右移按钮被释放');
+
+          if (this.gameManager) {
+            var playerComponent = this.gameManager.getPlayerComponent();
+
+            if (playerComponent) {
+              console.log('GameHUD: 设置玩家转向为0');
+              playerComponent.setDirection(0); // 停止转向
+            } else {
+              console.warn('GameHUD: 无法获取玩家组件');
+            }
+          } else {
+            console.warn('GameHUD: GameManager未找到');
+          }
         }
 
       }, (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "countdownLabel", [_dec2], {
@@ -370,7 +605,35 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
         initializer: function initializer() {
           return null;
         }
-      }), _descriptor10 = _applyDecoratedDescriptor(_class2.prototype, "updateInterval", [property], {
+      }), _descriptor10 = _applyDecoratedDescriptor(_class2.prototype, "upButton", [_dec11], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function initializer() {
+          return null;
+        }
+      }), _descriptor11 = _applyDecoratedDescriptor(_class2.prototype, "downButton", [_dec12], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function initializer() {
+          return null;
+        }
+      }), _descriptor12 = _applyDecoratedDescriptor(_class2.prototype, "leftButton", [_dec13], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function initializer() {
+          return null;
+        }
+      }), _descriptor13 = _applyDecoratedDescriptor(_class2.prototype, "rightButton", [_dec14], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function initializer() {
+          return null;
+        }
+      }), _descriptor14 = _applyDecoratedDescriptor(_class2.prototype, "updateInterval", [property], {
         configurable: true,
         enumerable: true,
         writable: true,

@@ -1,4 +1,4 @@
-import { _decorator, Component, Node, Prefab, instantiate, Vec2, Vec3, Layers } from 'cc';
+import { _decorator, Component, Node, Prefab, instantiate, Vec2, Vec3, Layers, UITransform, Canvas, view } from 'cc';
 const { ccclass, property } = _decorator;
 
 /**
@@ -40,15 +40,16 @@ export class PaintManager extends Component {
             return;
         }
         PaintManager._instance = this;
-        
-        // 创建颜料容器节点
+
+        // 创建颜料容器节点，保持在PaintManager节点下
         this.paintContainer = new Node('PaintContainer');
 
         // 设置容器节点的层级为UI_2D，确保颜料固定在游戏世界坐标中
         this.paintContainer.layer = Layers.Enum.UI_2D;
 
+        // 将颜料容器添加到PaintManager节点下，保持项目层次结构
         this.node.addChild(this.paintContainer);
-        
+
         console.log('PaintManager初始化完成');
     }
 
@@ -71,7 +72,18 @@ export class PaintManager extends Component {
             return;
         }
 
-        const position2D = new Vec2(worldPosition.x, worldPosition.y);
+        // 将世界坐标转换为paintContainer的本地坐标
+        // 这样可以保持节点层次结构，同时确保坐标正确
+        const paintContainerTransform = this.paintContainer.getComponent(UITransform);
+        if (!paintContainerTransform) {
+            // 如果paintContainer没有UITransform，添加一个
+            const uiTransform = this.paintContainer.addComponent(UITransform);
+            uiTransform.setContentSize(1280, 720); // 设置为设计分辨率大小
+        }
+
+        // 转换世界坐标到paintContainer的本地坐标
+        const localPosition = this.paintContainer.getComponent(UITransform)!.convertToNodeSpaceAR(worldPosition);
+        const position2D = new Vec2(localPosition.x, localPosition.y);
 
         // 检查是否在同一拥有者的颜料附近，如果是则不喷洒
         if (this.isNearOwnPaint(position2D, ownerId)) {
@@ -84,7 +96,9 @@ export class PaintManager extends Component {
 
         // 创建新颜料节点
         const paintNode = instantiate(paintPrefab);
-        paintNode.setWorldPosition(worldPosition);
+
+        // 设置颜料节点的本地位置（相对于paintContainer）
+        paintNode.setPosition(localPosition);
 
         // 设置颜料节点的层级为UI_2D，确保它固定在游戏世界坐标中
         paintNode.layer = Layers.Enum.UI_2D;
@@ -94,7 +108,7 @@ export class PaintManager extends Component {
         // 生成唯一ID
         const paintId = this.generatePaintId(position2D, ownerId);
 
-        // 存储颜料数据
+        // 存储颜料数据（使用本地坐标）
         const paintData: PaintData = {
             node: paintNode,
             position: position2D,
@@ -150,6 +164,14 @@ export class PaintManager extends Component {
             // 从映射中移除
             this.paintMap.delete(paintId);
         }
+    }
+
+    /**
+     * 公开方法：移除指定的颜料（供外部调用）
+     * @param paintId 颜料ID
+     */
+    public removePaintById(paintId: string): void {
+        this.removePaint(paintId);
     }
 
     /**
@@ -283,5 +305,48 @@ export class PaintManager extends Component {
         result.sort((a, b) => b.ratio - a.ratio);
 
         return result;
+    }
+
+    /**
+     * 清除指定范围内的颜料
+     * @param center 爆炸中心位置（世界坐标）
+     * @param radius 爆炸半径
+     * @returns 被清除的颜料数量
+     */
+    public clearPaintInRange(center: Vec2, radius: number): number {
+        if (!this.paintContainer) {
+            console.warn('PaintManager: 颜料容器未初始化');
+            return 0;
+        }
+
+        const paintContainerTransform = this.paintContainer.getComponent(UITransform);
+        if (!paintContainerTransform) {
+            console.warn('PaintManager: 颜料容器缺少UITransform组件');
+            return 0;
+        }
+
+        // 将世界坐标转换为paintContainer本地坐标
+        const worldPos = new Vec3(center.x, center.y, 0);
+        const localCenter = paintContainerTransform.convertToNodeSpaceAR(worldPos);
+        const localCenter2D = new Vec2(localCenter.x, localCenter.y);
+
+        const toRemove: string[] = [];
+
+        this.paintMap.forEach((paintData, paintId) => {
+            const distance = Vec2.distance(paintData.position, localCenter2D);
+
+            // 如果颜料在爆炸范围内，则标记为需要移除
+            if (distance <= radius) {
+                toRemove.push(paintId);
+            }
+        });
+
+        // 移除范围内的颜料
+        toRemove.forEach(paintId => {
+            this.removePaint(paintId); // 使用现有的私有方法
+        });
+
+        console.log(`清除了 ${toRemove.length} 个范围内的颜料`);
+        return toRemove.length;
     }
 }

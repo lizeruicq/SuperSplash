@@ -2,6 +2,7 @@ import { _decorator, Component, Vec2, RigidBody2D, Contact2DType, IPhysics2DCont
 import { player } from './player';
 import { AIPlayer } from './AIPlayer';
 import { SoundManager } from './SoundManager';
+import { GameManager } from './GameManager';
 
 const { ccclass, property } = _decorator;
 
@@ -158,7 +159,9 @@ export class Bullet extends Component {
         switch (this.bulletType) {
             case BulletType.NORMAL:
                 this.handleNormalBulletHit(playerComponent, aiPlayerComponent);
-                break;
+                // 普通子弹碰撞后也产生爆炸效果
+                this.handleBulletExplosion();
+                return;
             // case BulletType.FLAME:
             //     this.handleFlameHit(aiPlayerComponent);
             //     return;
@@ -168,11 +171,11 @@ export class Bullet extends Component {
                 return;
         }
 
-        // 播放音效
-        this.playHitSound();
+        // // 播放音效
+        // this.playHitSound();
         
-        // 销毁子弹（仅适用于普通子弹和火焰子弹）
-        this.destroyBullet();
+        // // 销毁子弹（仅适用于普通子弹和火焰子弹）
+        // this.destroyBullet();
     }
 
     /**
@@ -186,14 +189,22 @@ export class Bullet extends Component {
         }
     }
 
-    // /**
-    //  * 处理火焰碰撞
-    //  */
-    // private handleFlameHit(aiPlayerComponent: AIPlayer | null) {
-
-       
+    /**
+     * 处理子弹爆炸效果（普通子弹使用）
+     */
+    private handleBulletExplosion() {
+        // 设置爆炸标志
+        this._isExploding = true;
         
-    // }
+        // 停止移动
+        this.stopMovement();
+        
+        // 创建爆炸效果
+        this.createBulletExplosion();
+        
+        // 播放音效
+        SoundManager.instance.playSoundEffect('bulletHit');
+    }
 
     /**
      * 处理火箭弹碰撞
@@ -206,10 +217,13 @@ export class Bullet extends Component {
         this.stopMovement();
         
         // 创建爆炸效果
-        this.createExplosion();
+        this.createRocketExplosion();
 
         // 范围伤害
         this.dealExplosionDamage();
+        
+        // 清除爆炸范围内的颜料
+        this.clearPaintInRange();
         
         // 播放音效
         SoundManager.instance.playSoundEffect('explosion');
@@ -226,7 +240,10 @@ export class Bullet extends Component {
         this.stopMovement();
         
         // 创建爆炸效果
-        this.createExplosion();
+        this.createRocketExplosion();
+
+        // 清除爆炸范围内的颜料
+        this.clearPaintInRange();
 
         // 范围伤害
         this.dealExplosionDamage();
@@ -236,9 +253,9 @@ export class Bullet extends Component {
     }
 
     /**
-     * 创建爆炸效果
+     * 创建普通子弹爆炸效果
      */
-    private createExplosion() {
+    private createBulletExplosion() {
         if (this.explosionPrefab) {
             const explosion = instantiate(this.explosionPrefab);
             // 将爆炸效果添加为子弹节点的子节点
@@ -249,7 +266,48 @@ export class Bullet extends Component {
             // 获取动画组件并播放动画
             const animationComponent = explosion.getComponent(Animation);
             if (animationComponent) {
-                // 播放动画并在1秒后销毁
+                // 播放动画并在0.3秒后销毁
+                animationComponent.play('explosion');
+                this.scheduleOnce(() => {
+                    if (explosion && explosion.isValid) {
+                        explosion.destroy();
+                    }
+                    this.destroyBullet();
+                }, 0.3);
+            } else {
+                // 如果没有动画组件，使用tween动画
+                tween(explosion)
+                    .to(0.3, { scale: new Vec3(1.5, 1.5, 1) })
+                    .delay(0.3)
+                    .call(() => {
+                        if (explosion && explosion.isValid) {
+                            explosion.destroy();
+                        }
+                        this.destroyBullet();
+                    })
+                    .start();
+            }
+        } else {
+            // 如果没有爆炸预制体，直接销毁子弹
+            this.destroyBullet();
+        }
+    }
+
+    /**
+     * 创建火箭弹爆炸效果
+     */
+    private createRocketExplosion() {
+        if (this.explosionPrefab) {
+            const explosion = instantiate(this.explosionPrefab);
+            // 将爆炸效果添加为子弹节点的子节点
+            this.node.addChild(explosion);
+            // 重置位置，使其与子弹节点重合
+            explosion.setPosition(Vec3.ZERO);
+
+            // 获取动画组件并播放动画
+            const animationComponent = explosion.getComponent(Animation);
+            if (animationComponent) {
+                // 播放动画并在0.5秒后销毁
                 animationComponent.play('explosion');
                 this.scheduleOnce(() => {
                     if (explosion && explosion.isValid) {
@@ -297,6 +355,33 @@ export class Bullet extends Component {
                 vehicle.takeDamage(actualDamage);
             }
         });
+    }
+
+    /**
+     * 清除爆炸范围内的颜料
+     */
+    private clearPaintInRange() {
+        // 获取GameManager单例
+        const gameManager = GameManager.getInstance();
+        if (!gameManager) {
+            console.warn('Bullet: 无法获取GameManager单例');
+            return;
+        }
+
+        // 通过GameManager获取PaintManager实例
+        const paintManager = gameManager.getPaintManager();
+        if (!paintManager) {
+            console.warn('Bullet: 无法获取PaintManager实例');
+            return;
+        }
+
+        // 获取爆炸中心位置
+        const explosionCenter = new Vec2(this.node.worldPosition.x, this.node.worldPosition.y);
+        
+        // 使用PaintManager的公共方法清除范围内的颜料
+        const removedCount = paintManager.clearPaintInRange(explosionCenter, this.explosionRadius);
+        
+        console.log(`火箭弹爆炸清除了 ${removedCount} 个颜料`);
     }
 
     /**
