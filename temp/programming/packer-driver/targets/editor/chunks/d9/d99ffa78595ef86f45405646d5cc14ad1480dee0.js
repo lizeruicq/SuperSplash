@@ -906,6 +906,14 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           }
 
           return [];
+        }
+        /**
+         * 获取颜料管理器
+         */
+
+
+        getPaintManager() {
+          return this.paintManager;
         } // ==================== 倒计时系统 ====================
 
         /**

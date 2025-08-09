@@ -157,9 +157,11 @@
     "damage": 2,
     "bulletType": 0,
     "lifeTime": 1,
-    "explosionPrefab": null,
+    "explosionPrefab": {
+      "__uuid__": "124515d6-c01d-4b24-a978-eefc47e30c4d",
+      "__expectedType__": "cc.Prefab"
+    },
     "explosionRadius": 0,
-    "flameDuration": 0,
     "_id": ""
   },
   {
@@ -243,6 +245,7 @@
       "__id__": 0
     },
     "fileId": "81/HPjmJ1Mz7rPzVFz0YOJ",
-    "instance": null
+    "instance": null,
+    "targetOverrides": null
   }
 ]

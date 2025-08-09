@@ -739,5 +739,43 @@ export class player extends Component {
         return this._reloadTimer / this.ammoReloadTime;
     }
 
+    // ==================== 外部控制接口 ====================
+
+    /**
+     * 设置加速度（外部控制接口）
+     * @param accel 加速度值：1为前进，-1为后退，0为停止
+     */
+    public setAcceleration(accel: number): void {
+        console.log(`Player: 设置加速度为 ${accel}`);
+        this._accel = accel;
+    }
+
+    /**
+     * 设置转向（外部控制接口）
+     * @param direction 转向值：1为右转，-1为左转，0为直行
+     */
+    public setDirection(direction: number): void {
+        console.log(`Player: 设置转向为 ${direction}`);
+        // 如果开始转向，播放漂移音效
+        if (direction !== 0 && this._direction === 0) {
+            SoundManager.instance.playSoundEffect('carDrift');
+        }
+        this._direction = direction;
+    }
+
+    /**
+     * 获取当前加速度状态
+     */
+    public getAcceleration(): number {
+        return this._accel;
+    }
+
+    /**
+     * 获取当前转向状态
+     */
+    public getDirection(): number {
+        return this._direction;
+    }
+
 }
 

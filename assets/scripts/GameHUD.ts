@@ -1,4 +1,4 @@
-import { _decorator, Component, Label, Button, ProgressBar } from 'cc';
+import { _decorator, Component, Label, Button, ProgressBar, Node } from 'cc';
 const { ccclass, property } = _decorator;
 import { GameManager } from './GameManager';
 
@@ -8,11 +8,11 @@ import { GameManager } from './GameManager';
  */
 @ccclass('GameHUD')
 export class GameHUD extends Component {
-    
+
     // 倒计时显示
     @property(Label)
     countdownLabel: Label = null!;
-    
+
     // 玩家颜料占比显示
     @property(Label)
     playerRatioLabel: Label = null!;
@@ -60,6 +60,31 @@ export class GameHUD extends Component {
         tooltip: '弹药补充进度条'
     })
     reloadProgressBar: ProgressBar = null!;
+
+    // 触摸控制按钮
+    @property({
+        type: Button,
+        tooltip: '向上移动按钮'
+    })
+    upButton: Button = null!;
+
+    @property({
+        type: Button,
+        tooltip: '向下移动按钮'
+    })
+    downButton: Button = null!;
+
+    @property({
+        type: Button,
+        tooltip: '向左移动按钮'
+    })
+    leftButton: Button = null!;
+
+    @property({
+        type: Button,
+        tooltip: '向右移动按钮'
+    })
+    rightButton: Button = null!;
     
     // 更新频率控制
     @property
@@ -84,6 +109,9 @@ export class GameHUD extends Component {
 
         // 初始化射击按钮
         this.initializeShootButton();
+
+        // 初始化触摸控制按钮
+        this.initializeTouchControlButtons();
     }
 
     update(deltaTime: number) {
@@ -277,6 +305,193 @@ export class GameHUD extends Component {
             } else {
                 this.reloadProgressBar.node.active = false;
             }
+        }
+    }
+
+    // ==================== 触摸控制系统 ====================
+
+    /**
+     * 初始化触摸控制按钮
+     */
+    private initializeTouchControlButtons(): void {
+        // 初始化上移按钮
+        if (this.upButton) {
+            this.upButton.node.on(Node.EventType.TOUCH_START, this.onUpButtonPressed, this);
+            this.upButton.node.on(Node.EventType.TOUCH_END, this.onUpButtonReleased, this);
+            this.upButton.node.on(Node.EventType.TOUCH_CANCEL, this.onUpButtonReleased, this);
+        } else {
+            console.warn('GameHUD: 上移按钮未设置');
+        }
+
+        // 初始化下移按钮
+        if (this.downButton) {
+            this.downButton.node.on(Node.EventType.TOUCH_START, this.onDownButtonPressed, this);
+            this.downButton.node.on(Node.EventType.TOUCH_END, this.onDownButtonReleased, this);
+            this.downButton.node.on(Node.EventType.TOUCH_CANCEL, this.onDownButtonReleased, this);
+        } else {
+            console.warn('GameHUD: 下移按钮未设置');
+        }
+
+        // 初始化左移按钮
+        if (this.leftButton) {
+            this.leftButton.node.on(Node.EventType.TOUCH_START, this.onLeftButtonPressed, this);
+            this.leftButton.node.on(Node.EventType.TOUCH_END, this.onLeftButtonReleased, this);
+            this.leftButton.node.on(Node.EventType.TOUCH_CANCEL, this.onLeftButtonReleased, this);
+        } else {
+            console.warn('GameHUD: 左移按钮未设置');
+        }
+
+        // 初始化右移按钮
+        if (this.rightButton) {
+            this.rightButton.node.on(Node.EventType.TOUCH_START, this.onRightButtonPressed, this);
+            this.rightButton.node.on(Node.EventType.TOUCH_END, this.onRightButtonReleased, this);
+            this.rightButton.node.on(Node.EventType.TOUCH_CANCEL, this.onRightButtonReleased, this);
+        } else {
+            console.warn('GameHUD: 右移按钮未设置');
+        }
+    }
+
+    /**
+     * 上移按钮按下事件
+     */
+    private onUpButtonPressed(): void {
+        console.log('GameHUD: 上移按钮被按下');
+        if (this.gameManager) {
+            const playerComponent = this.gameManager.getPlayerComponent();
+            if (playerComponent) {
+                console.log('GameHUD: 设置玩家加速度为1');
+                playerComponent.setAcceleration(1); // 向前加速
+            } else {
+                console.warn('GameHUD: 无法获取玩家组件');
+            }
+        } else {
+            console.warn('GameHUD: GameManager未找到');
+        }
+    }
+
+    /**
+     * 上移按钮释放事件
+     */
+    private onUpButtonReleased(): void {
+        console.log('GameHUD: 上移按钮被释放');
+        if (this.gameManager) {
+            const playerComponent = this.gameManager.getPlayerComponent();
+            if (playerComponent) {
+                console.log('GameHUD: 设置玩家加速度为0');
+                playerComponent.setAcceleration(0); // 停止加速
+            } else {
+                console.warn('GameHUD: 无法获取玩家组件');
+            }
+        } else {
+            console.warn('GameHUD: GameManager未找到');
+        }
+    }
+
+    /**
+     * 下移按钮按下事件
+     */
+    private onDownButtonPressed(): void {
+        console.log('GameHUD: 下移按钮被按下');
+        if (this.gameManager) {
+            const playerComponent = this.gameManager.getPlayerComponent();
+            if (playerComponent) {
+                console.log('GameHUD: 设置玩家加速度为-1');
+                playerComponent.setAcceleration(-1); // 向后减速
+            } else {
+                console.warn('GameHUD: 无法获取玩家组件');
+            }
+        } else {
+            console.warn('GameHUD: GameManager未找到');
+        }
+    }
+
+    /**
+     * 下移按钮释放事件
+     */
+    private onDownButtonReleased(): void {
+        console.log('GameHUD: 下移按钮被释放');
+        if (this.gameManager) {
+            const playerComponent = this.gameManager.getPlayerComponent();
+            if (playerComponent) {
+                console.log('GameHUD: 设置玩家加速度为0');
+                playerComponent.setAcceleration(0); // 停止减速
+            } else {
+                console.warn('GameHUD: 无法获取玩家组件');
+            }
+        } else {
+            console.warn('GameHUD: GameManager未找到');
+        }
+    }
+
+    /**
+     * 左移按钮按下事件
+     */
+    private onLeftButtonPressed(): void {
+        console.log('GameHUD: 左移按钮被按下');
+        if (this.gameManager) {
+            const playerComponent = this.gameManager.getPlayerComponent();
+            if (playerComponent) {
+                console.log('GameHUD: 设置玩家转向为-1');
+                playerComponent.setDirection(-1); // 向左转向
+            } else {
+                console.warn('GameHUD: 无法获取玩家组件');
+            }
+        } else {
+            console.warn('GameHUD: GameManager未找到');
+        }
+    }
+
+    /**
+     * 左移按钮释放事件
+     */
+    private onLeftButtonReleased(): void {
+        console.log('GameHUD: 左移按钮被释放');
+        if (this.gameManager) {
+            const playerComponent = this.gameManager.getPlayerComponent();
+            if (playerComponent) {
+                console.log('GameHUD: 设置玩家转向为0');
+                playerComponent.setDirection(0); // 停止转向
+            } else {
+                console.warn('GameHUD: 无法获取玩家组件');
+            }
+        } else {
+            console.warn('GameHUD: GameManager未找到');
+        }
+    }
+
+    /**
+     * 右移按钮按下事件
+     */
+    private onRightButtonPressed(): void {
+        console.log('GameHUD: 右移按钮被按下');
+        if (this.gameManager) {
+            const playerComponent = this.gameManager.getPlayerComponent();
+            if (playerComponent) {
+                console.log('GameHUD: 设置玩家转向为1');
+                playerComponent.setDirection(1); // 向右转向
+            } else {
+                console.warn('GameHUD: 无法获取玩家组件');
+            }
+        } else {
+            console.warn('GameHUD: GameManager未找到');
+        }
+    }
+
+    /**
+     * 右移按钮释放事件
+     */
+    private onRightButtonReleased(): void {
+        console.log('GameHUD: 右移按钮被释放');
+        if (this.gameManager) {
+            const playerComponent = this.gameManager.getPlayerComponent();
+            if (playerComponent) {
+                console.log('GameHUD: 设置玩家转向为0');
+                playerComponent.setDirection(0); // 停止转向
+            } else {
+                console.warn('GameHUD: 无法获取玩家组件');
+            }
+        } else {
+            console.warn('GameHUD: GameManager未找到');
         }
     }
 }
