@@ -224,7 +224,7 @@ export class AIPlayer extends Component {
             const distanceToLastPos = Vec2.distance(currentPos, this._lastValidPosition);
             if (distanceToLastPos > 50) { // 如果偏离太远
                 this.node.setWorldPosition(this._lastValidPosition.x, this._lastValidPosition.y, this.node.worldPosition.z);
-                this._rigidBody.linearVelocity = Vec2.ZERO;
+                this._rigidBody.linearVelocity = new Vec2(0, 0);
             }
         } else {
             // 更新有效位置
@@ -323,7 +323,7 @@ export class AIPlayer extends Component {
      * 碰撞事件处理
      */
     onCollisionEnter(self: BoxCollider2D, other: BoxCollider2D) {
-        console.log('AIPlayer collided with something', other.node.name);
+        // console.log('AIPlayer collided with something', other.node.name);
         
         // 获取碰撞对象的层级
         const otherLayer = other.node.layer;
@@ -333,7 +333,7 @@ export class AIPlayer extends Component {
         if (otherLayer === blockLayer) {
             // 检查冷却时间
             if (this._blockCollisionCooldown > 0) {
-                console.log('AIPlayer collided with Block but is in cooldown');
+                // console.log('AIPlayer collided with Block but is in cooldown');
                 return; // 冷却时间内，不执行任何操作
             }
             
@@ -347,7 +347,7 @@ export class AIPlayer extends Component {
                         return;
                     }
                     
-                    console.log('AIPlayer collided with Block, turning around');
+                    // console.log('AIPlayer collided with Block, turning around');
                     
                     // 设置冷却时间
                     this._blockCollisionCooldown = this._blockCollisionCooldownDuration;

@@ -1049,14 +1049,14 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
             this.bulletRoot.addChild(bulletNode);
             console.log('子弹已添加到BulletRoot节点');
-          } else {
-            var _director$getScene;
+          } // } else {
+          //     const localPos = this.playerComponent.node.getComponent(UITransform)?.convertToNodeSpaceAR(position);
+          //     // 如果没有找到BulletRoot，添加到场景根节点
+          //     bulletNode.setWorldPosition(localPos);
+          //     this.playerComponent.node.addChild(bulletNode);
+          //     console.log('子弹已添加到wa玩家车辆根节点');
+          // }
 
-            // 如果没有找到BulletRoot，添加到场景根节点
-            bulletNode.setWorldPosition(position);
-            (_director$getScene = director.getScene()) == null || _director$getScene.addChild(bulletNode);
-            console.log('子弹已添加到场景根节点');
-          }
         }
         /**
          * 获取玩家组件

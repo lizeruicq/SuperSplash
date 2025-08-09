@@ -810,6 +810,7 @@
         "86087b4b-4284-4b91-8707-fa1f71406ea1@f9941",
         "d1312f02-4e7f-4f9f-aed7-f255abb6e7f8",
         "ffdc0091-02b5-47e9-9cba-752ad0f7f260",
+        "7fe3a2c1-44e3-45ed-a3a4-81e90a6994c7",
         "49e36654-b2c3-47d9-afeb-5db28286a1b0@f9941"
       ],
       "dependScripts": [
@@ -2345,6 +2346,434 @@
       ],
       "dependScripts": [
         "91ffccd6-b692-4a87-a2fe-51adeaa3b229"
+      ]
+    },
+    "versionCode": 1
+  },
+  "92e549b4-41e4-4aad-8357-285d7c900d95": {
+    "url": "db://assets/img/weapons/explosion",
+    "value": {},
+    "versionCode": 1
+  },
+  "fc931ecf-e981-48cc-999f-132edca72fa6": {
+    "url": "db://assets/img/weapons/explosion/Effect-5.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "fc931ecf-e981-48cc-999f-132edca72fa6@6c48a": {
+    "url": "db://assets/img/weapons/explosion/Effect-5.png@6c48a",
+    "value": {
+      "depends": [
+        "fc931ecf-e981-48cc-999f-132edca72fa6"
+      ]
+    },
+    "versionCode": 1
+  },
+  "fc931ecf-e981-48cc-999f-132edca72fa6@f9941": {
+    "url": "db://assets/img/weapons/explosion/Effect-5.png@f9941",
+    "value": {
+      "depends": [
+        "fc931ecf-e981-48cc-999f-132edca72fa6@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "7b3a54f4-3125-441b-a76e-6a0810ddb098": {
+    "url": "db://assets/img/weapons/explosion/Effect-3.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "7b3a54f4-3125-441b-a76e-6a0810ddb098@6c48a": {
+    "url": "db://assets/img/weapons/explosion/Effect-3.png@6c48a",
+    "value": {
+      "depends": [
+        "7b3a54f4-3125-441b-a76e-6a0810ddb098"
+      ]
+    },
+    "versionCode": 1
+  },
+  "7b3a54f4-3125-441b-a76e-6a0810ddb098@f9941": {
+    "url": "db://assets/img/weapons/explosion/Effect-3.png@f9941",
+    "value": {
+      "depends": [
+        "7b3a54f4-3125-441b-a76e-6a0810ddb098@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "0162263e-21bb-48c5-b6c0-6d97af2328db": {
+    "url": "db://assets/img/weapons/explosion/Effect-4.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "0162263e-21bb-48c5-b6c0-6d97af2328db@6c48a": {
+    "url": "db://assets/img/weapons/explosion/Effect-4.png@6c48a",
+    "value": {
+      "depends": [
+        "0162263e-21bb-48c5-b6c0-6d97af2328db"
+      ]
+    },
+    "versionCode": 1
+  },
+  "0162263e-21bb-48c5-b6c0-6d97af2328db@f9941": {
+    "url": "db://assets/img/weapons/explosion/Effect-4.png@f9941",
+    "value": {
+      "depends": [
+        "0162263e-21bb-48c5-b6c0-6d97af2328db@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "7c7529e4-5710-4e94-ad74-45ccf3f84bbc": {
+    "url": "db://assets/img/weapons/explosion/Effect-6.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "7c7529e4-5710-4e94-ad74-45ccf3f84bbc@6c48a": {
+    "url": "db://assets/img/weapons/explosion/Effect-6.png@6c48a",
+    "value": {
+      "depends": [
+        "7c7529e4-5710-4e94-ad74-45ccf3f84bbc"
+      ]
+    },
+    "versionCode": 1
+  },
+  "7c7529e4-5710-4e94-ad74-45ccf3f84bbc@f9941": {
+    "url": "db://assets/img/weapons/explosion/Effect-6.png@f9941",
+    "value": {
+      "depends": [
+        "7c7529e4-5710-4e94-ad74-45ccf3f84bbc@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "1935062c-ea1c-43a3-9e21-c964c071ecec": {
+    "url": "db://assets/img/weapons/explosion/Effect-9.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "1935062c-ea1c-43a3-9e21-c964c071ecec@6c48a": {
+    "url": "db://assets/img/weapons/explosion/Effect-9.png@6c48a",
+    "value": {
+      "depends": [
+        "1935062c-ea1c-43a3-9e21-c964c071ecec"
+      ]
+    },
+    "versionCode": 1
+  },
+  "1935062c-ea1c-43a3-9e21-c964c071ecec@f9941": {
+    "url": "db://assets/img/weapons/explosion/Effect-9.png@f9941",
+    "value": {
+      "depends": [
+        "1935062c-ea1c-43a3-9e21-c964c071ecec@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "80d65b5e-2b49-4010-99da-69256f876ad5": {
+    "url": "db://assets/img/weapons/explosion/Effect-11.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "80d65b5e-2b49-4010-99da-69256f876ad5@6c48a": {
+    "url": "db://assets/img/weapons/explosion/Effect-11.png@6c48a",
+    "value": {
+      "depends": [
+        "80d65b5e-2b49-4010-99da-69256f876ad5"
+      ]
+    },
+    "versionCode": 1
+  },
+  "80d65b5e-2b49-4010-99da-69256f876ad5@f9941": {
+    "url": "db://assets/img/weapons/explosion/Effect-11.png@f9941",
+    "value": {
+      "depends": [
+        "80d65b5e-2b49-4010-99da-69256f876ad5@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "91cc176a-7fae-4efa-a97b-53ccb18d63f9": {
+    "url": "db://assets/img/weapons/explosion/Effect-8.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "91cc176a-7fae-4efa-a97b-53ccb18d63f9@6c48a": {
+    "url": "db://assets/img/weapons/explosion/Effect-8.png@6c48a",
+    "value": {
+      "depends": [
+        "91cc176a-7fae-4efa-a97b-53ccb18d63f9"
+      ]
+    },
+    "versionCode": 1
+  },
+  "91cc176a-7fae-4efa-a97b-53ccb18d63f9@f9941": {
+    "url": "db://assets/img/weapons/explosion/Effect-8.png@f9941",
+    "value": {
+      "depends": [
+        "91cc176a-7fae-4efa-a97b-53ccb18d63f9@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "0ac23244-9b49-4e66-b826-aba411c9a168": {
+    "url": "db://assets/img/weapons/explosion/Effect-10.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "0ac23244-9b49-4e66-b826-aba411c9a168@6c48a": {
+    "url": "db://assets/img/weapons/explosion/Effect-10.png@6c48a",
+    "value": {
+      "depends": [
+        "0ac23244-9b49-4e66-b826-aba411c9a168"
+      ]
+    },
+    "versionCode": 1
+  },
+  "0ac23244-9b49-4e66-b826-aba411c9a168@f9941": {
+    "url": "db://assets/img/weapons/explosion/Effect-10.png@f9941",
+    "value": {
+      "depends": [
+        "0ac23244-9b49-4e66-b826-aba411c9a168@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "08078969-ceec-46d6-b660-82dd792138d6": {
+    "url": "db://assets/img/weapons/explosion/Effect-7.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "08078969-ceec-46d6-b660-82dd792138d6@6c48a": {
+    "url": "db://assets/img/weapons/explosion/Effect-7.png@6c48a",
+    "value": {
+      "depends": [
+        "08078969-ceec-46d6-b660-82dd792138d6"
+      ]
+    },
+    "versionCode": 1
+  },
+  "08078969-ceec-46d6-b660-82dd792138d6@f9941": {
+    "url": "db://assets/img/weapons/explosion/Effect-7.png@f9941",
+    "value": {
+      "depends": [
+        "08078969-ceec-46d6-b660-82dd792138d6@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "9d731ae3-af25-407f-b588-4a7b062c376d": {
+    "url": "db://assets/img/weapons/explosion/explosion.anim",
+    "value": {
+      "depends": [
+        "7b3a54f4-3125-441b-a76e-6a0810ddb098@f9941",
+        "0162263e-21bb-48c5-b6c0-6d97af2328db@f9941",
+        "fc931ecf-e981-48cc-999f-132edca72fa6@f9941",
+        "7c7529e4-5710-4e94-ad74-45ccf3f84bbc@f9941",
+        "08078969-ceec-46d6-b660-82dd792138d6@f9941",
+        "91cc176a-7fae-4efa-a97b-53ccb18d63f9@f9941",
+        "1935062c-ea1c-43a3-9e21-c964c071ecec@f9941",
+        "0ac23244-9b49-4e66-b826-aba411c9a168@f9941",
+        "80d65b5e-2b49-4010-99da-69256f876ad5@f9941"
+      ]
+    },
+    "versionCode": 1
+  },
+  "9db1701a-e1c8-4824-8c03-8ed3c79247d8": {
+    "url": "db://assets/resources/prefab/weapons/explosion",
+    "value": {},
+    "versionCode": 1
+  },
+  "e107910c-0ef8-4a6b-8eb5-46d2b0965f23": {
+    "url": "db://assets/resources/prefab/weapons/explosion/explosion.prefab",
+    "value": {
+      "depends": [
+        "7b3a54f4-3125-441b-a76e-6a0810ddb098@f9941",
+        "9d731ae3-af25-407f-b588-4a7b062c376d"
+      ],
+      "dependScripts": []
+    },
+    "versionCode": 1
+  },
+  "0c2ffa44-c525-4224-94f2-895505bebe2f": {
+    "url": "db://assets/img/weapons/missile.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "0c2ffa44-c525-4224-94f2-895505bebe2f@6c48a": {
+    "url": "db://assets/img/weapons/missile.png@6c48a",
+    "value": {
+      "depends": [
+        "0c2ffa44-c525-4224-94f2-895505bebe2f"
+      ]
+    },
+    "versionCode": 1
+  },
+  "0c2ffa44-c525-4224-94f2-895505bebe2f@f9941": {
+    "url": "db://assets/img/weapons/missile.png@f9941",
+    "value": {
+      "depends": [
+        "0c2ffa44-c525-4224-94f2-895505bebe2f@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "a4ad5fc0-34d1-445f-b25f-f92963f2c8c7": {
+    "url": "db://assets/resources/prefab/weapons/missile.prefab",
+    "value": {},
+    "versionCode": 1
+  },
+  "7fe3a2c1-44e3-45ed-a3a4-81e90a6994c7": {
+    "url": "db://assets/resources/prefab/weapons/rocket.prefab",
+    "value": {
+      "depends": [
+        "0c2ffa44-c525-4224-94f2-895505bebe2f@f9941",
+        "e107910c-0ef8-4a6b-8eb5-46d2b0965f23"
+      ],
+      "dependScripts": [
+        "91ffccd6-b692-4a87-a2fe-51adeaa3b229"
+      ]
+    },
+    "versionCode": 1
+  },
+  "796537c4-5a1e-4a92-81e7-7385e3b72bff": {
+    "url": "db://assets/resources/prefab/weapons/flame.prefab",
+    "value": {},
+    "versionCode": 1
+  },
+  "be5ded66-4142-4dcd-8732-97168d114bbe": {
+    "url": "db://assets/img/weapons/flame",
+    "value": {},
+    "versionCode": 1
+  },
+  "0d854dfe-e5ef-4ff7-8b3a-2c63f57b4063": {
+    "url": "db://assets/img/weapons/flame/efecto_fuego_00008.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "0d854dfe-e5ef-4ff7-8b3a-2c63f57b4063@6c48a": {
+    "url": "db://assets/img/weapons/flame/efecto_fuego_00008.png@6c48a",
+    "value": {
+      "depends": [
+        "0d854dfe-e5ef-4ff7-8b3a-2c63f57b4063"
+      ]
+    },
+    "versionCode": 1
+  },
+  "0d854dfe-e5ef-4ff7-8b3a-2c63f57b4063@f9941": {
+    "url": "db://assets/img/weapons/flame/efecto_fuego_00008.png@f9941",
+    "value": {
+      "depends": [
+        "0d854dfe-e5ef-4ff7-8b3a-2c63f57b4063@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "71dbdcd5-d564-4005-92f8-f1b61c4ace2e": {
+    "url": "db://assets/img/weapons/flame/efecto_fuego_00010.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "595a0063-a88e-4e29-839e-62bf089ab55e": {
+    "url": "db://assets/img/weapons/flame/efecto_fuego_00011.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "e8b2fdf0-9c75-487c-a066-fcd5b64b7378": {
+    "url": "db://assets/img/weapons/flame/efecto_fuego_00009.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "71dbdcd5-d564-4005-92f8-f1b61c4ace2e@6c48a": {
+    "url": "db://assets/img/weapons/flame/efecto_fuego_00010.png@6c48a",
+    "value": {
+      "depends": [
+        "71dbdcd5-d564-4005-92f8-f1b61c4ace2e"
+      ]
+    },
+    "versionCode": 1
+  },
+  "e8b2fdf0-9c75-487c-a066-fcd5b64b7378@6c48a": {
+    "url": "db://assets/img/weapons/flame/efecto_fuego_00009.png@6c48a",
+    "value": {
+      "depends": [
+        "e8b2fdf0-9c75-487c-a066-fcd5b64b7378"
+      ]
+    },
+    "versionCode": 1
+  },
+  "71dbdcd5-d564-4005-92f8-f1b61c4ace2e@f9941": {
+    "url": "db://assets/img/weapons/flame/efecto_fuego_00010.png@f9941",
+    "value": {
+      "depends": [
+        "71dbdcd5-d564-4005-92f8-f1b61c4ace2e@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "595a0063-a88e-4e29-839e-62bf089ab55e@6c48a": {
+    "url": "db://assets/img/weapons/flame/efecto_fuego_00011.png@6c48a",
+    "value": {
+      "depends": [
+        "595a0063-a88e-4e29-839e-62bf089ab55e"
+      ]
+    },
+    "versionCode": 1
+  },
+  "e8b2fdf0-9c75-487c-a066-fcd5b64b7378@f9941": {
+    "url": "db://assets/img/weapons/flame/efecto_fuego_00009.png@f9941",
+    "value": {
+      "depends": [
+        "e8b2fdf0-9c75-487c-a066-fcd5b64b7378@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "595a0063-a88e-4e29-839e-62bf089ab55e@f9941": {
+    "url": "db://assets/img/weapons/flame/efecto_fuego_00011.png@f9941",
+    "value": {
+      "depends": [
+        "595a0063-a88e-4e29-839e-62bf089ab55e@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "7b41546a-ca0c-4f94-a5e6-cd439b89de6e": {
+    "url": "db://assets/img/weapons/flame/flame.anim",
+    "value": {
+      "depends": [
+        "0d854dfe-e5ef-4ff7-8b3a-2c63f57b4063@f9941",
+        "e8b2fdf0-9c75-487c-a066-fcd5b64b7378@f9941",
+        "71dbdcd5-d564-4005-92f8-f1b61c4ace2e@f9941",
+        "595a0063-a88e-4e29-839e-62bf089ab55e@f9941"
       ]
     },
     "versionCode": 1
