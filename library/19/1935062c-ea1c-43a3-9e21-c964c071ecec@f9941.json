@@ -1,0 +1,90 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "Effect-9",
+    "atlas": "",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 300,
+      "height": 294
+    },
+    "offset": {
+      "x": 0,
+      "y": 3
+    },
+    "originalSize": {
+      "width": 300,
+      "height": 300
+    },
+    "rotated": false,
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "vertices": {
+      "rawPosition": [
+        -150,
+        -147,
+        0,
+        150,
+        -147,
+        0,
+        -150,
+        147,
+        0,
+        150,
+        147,
+        0
+      ],
+      "indexes": [
+        0,
+        1,
+        2,
+        2,
+        1,
+        3
+      ],
+      "uv": [
+        0,
+        300,
+        300,
+        300,
+        0,
+        6,
+        300,
+        6
+      ],
+      "nuv": [
+        0,
+        0.02,
+        1,
+        0.02,
+        0,
+        1,
+        1,
+        1
+      ],
+      "minPos": {
+        "x": -150,
+        "y": -147,
+        "z": 0
+      },
+      "maxPos": {
+        "x": 150,
+        "y": 147,
+        "z": 0
+      }
+    },
+    "texture": "1935062c-ea1c-43a3-9e21-c964c071ecec@6c48a",
+    "packable": true,
+    "pixelsToUnit": 100,
+    "pivot": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "meshType": 0
+  }
+}

@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Vec2, RigidBody2D, Contact2DType, Collider2D, Enum, instantiate, Prefab, tween, Vec3, player, AIPlayer, SoundManager, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _crd, ccclass, property, WeaponType, BulletType, Bullet;
+  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Vec2, RigidBody2D, Contact2DType, Collider2D, Enum, instantiate, Prefab, tween, Vec3, Animation, director, Director, player, AIPlayer, SoundManager, _dec, _dec2, _dec3, _dec4, _dec5, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _crd, ccclass, property, WeaponType, BulletType, Bullet;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -39,6 +39,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       Prefab = _cc.Prefab;
       tween = _cc.tween;
       Vec3 = _cc.Vec3;
+      Animation = _cc.Animation;
+      director = _cc.director;
+      Director = _cc.Director;
     }, function (_unresolved_2) {
       player = _unresolved_2.player;
     }, function (_unresolved_3) {
@@ -51,7 +54,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
       _cclegacy._RF.push({}, "91ffczWtpJKh6L+Ua3qo7Ip", "Bullet", undefined);
 
-      __checkObsolete__(['_decorator', 'Component', 'Vec2', 'RigidBody2D', 'Contact2DType', 'IPhysics2DContact', 'Collider2D', 'Enum', 'instantiate', 'Prefab', 'tween', 'Vec3']);
+      __checkObsolete__(['_decorator', 'Component', 'Vec2', 'RigidBody2D', 'Contact2DType', 'IPhysics2DContact', 'Collider2D', 'Enum', 'instantiate', 'Prefab', 'tween', 'Vec3', 'Animation', 'AnimationEventType', 'director', 'Director']);
 
       ({
         ccclass,
@@ -60,7 +63,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
       _export("WeaponType", WeaponType = /*#__PURE__*/function (WeaponType) {
         WeaponType[WeaponType["NORMAL"] = 0] = "NORMAL";
-        WeaponType[WeaponType["FLAME"] = 1] = "FLAME";
         WeaponType[WeaponType["ROCKET"] = 2] = "ROCKET";
         return WeaponType;
       }({})); // 定义子弹类型枚举
@@ -68,7 +70,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
       _export("BulletType", BulletType = /*#__PURE__*/function (BulletType) {
         BulletType[BulletType["NORMAL"] = 0] = "NORMAL";
-        BulletType[BulletType["FLAME"] = 1] = "FLAME";
         BulletType[BulletType["ROCKET"] = 2] = "ROCKET";
         return BulletType;
       }({})); // 将枚举注册到Cocos Creator中
@@ -87,8 +88,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         tooltip: "爆炸效果预制体（火箭弹专用）"
       }), _dec5 = property({
         tooltip: "爆炸范围（火箭弹专用）"
-      }), _dec6 = property({
-        tooltip: "火焰持续时间（火焰专用）"
       }), _dec(_class = (_class2 = class Bullet extends Component {
         constructor(...args) {
           super(...args);
@@ -107,8 +106,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           _initializerDefineProperty(this, "explosionRadius", _descriptor6, this);
 
-          _initializerDefineProperty(this, "flameDuration", _descriptor7, this);
-
           this._shooterId = '';
           // 发射者ID
           this._rigidBody = null;
@@ -116,13 +113,19 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           // 默认向上
           this._velocity = new Vec2(0, 0);
           this._timer = 0;
+          this._isExploding = false;
+          // 是否正在爆炸
+          this._pendingDestroy = false;
         }
 
+        // 延迟销毁标记，避免在物理回调中立刻销毁
         onLoad() {
+          // if(this.bulletType!= BulletType.FLAME)
+          // {
           this._rigidBody = this.getComponent(RigidBody2D);
 
           if (!this._rigidBody) {
-            console.error('Bullet: RigidBody2D组件未找到');
+            console.error('Bullet: RigidBody2D组件未找到'); // }
           } // 注册碰撞回调
 
 
@@ -138,9 +141,20 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         update(deltaTime) {
+          // 如果正在爆炸，则不再更新位置
+          if (this._isExploding) {
+            return;
+          }
+
           this._timer += deltaTime; // 检查是否超过存活时间
 
           if (this._timer >= this.lifeTime) {
+            // 火箭弹超时爆炸
+            if (this.bulletType === BulletType.ROCKET) {
+              this.handleTimeoutExplosion();
+              return;
+            }
+
             this.destroyBullet();
             return;
           } // 更新位置
@@ -161,10 +175,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
         init(direction, shooterId) {
           this._direction = direction.normalize();
-          this._shooterId = shooterId; // 设置初始旋转角度
+          this._shooterId = shooterId; //     if(this.bulletType!= BulletType.FLAME)
+          //     {
+          // // 设置初始旋转角度
 
           const angle = Math.atan2(direction.y, direction.x) * 180 / Math.PI;
-          this.node.setRotationFromEuler(0, 0, angle - 90);
+          this.node.setRotationFromEuler(0, 0, angle - 90); // }
         }
         /**
          * 碰撞回调
@@ -201,22 +217,24 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
 
         handleVehicleHit(vehicleNode, playerComponent, aiPlayerComponent) {
+          console.log('子弹撞击类型', this.bulletType);
+
           switch (this.bulletType) {
             case BulletType.NORMAL:
               this.handleNormalBulletHit(playerComponent, aiPlayerComponent);
               break;
-
-            case BulletType.FLAME:
-              this.handleFlameHit(vehicleNode, playerComponent, aiPlayerComponent);
-              break;
+            // case BulletType.FLAME:
+            //     this.handleFlameHit(aiPlayerComponent);
+            //     return;
 
             case BulletType.ROCKET:
-              this.handleRocketHit(vehicleNode);
-              break;
+              this.handleRocketHit(vehicleNode); // 火箭弹由 handleRocketHit 方法负责销毁，这里直接返回
+
+              return;
           } // 播放音效
 
 
-          this.playHitSound(); // 销毁子弹
+          this.playHitSound(); // 销毁子弹（仅适用于普通子弹和火焰子弹）
 
           this.destroyBullet();
         }
@@ -231,55 +249,91 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           } else if (aiPlayerComponent) {
             aiPlayerComponent.takeDamage(this.damage);
           }
-        }
-        /**
-         * 处理火焰碰撞
-         */
+        } // /**
+        //  * 处理火焰碰撞
+        //  */
+        // private handleFlameHit(aiPlayerComponent: AIPlayer | null) {
+        // }
 
-
-        handleFlameHit(vehicleNode, playerComponent, aiPlayerComponent) {
-          // 火焰造成持续伤害
-          const damagePerTick = this.damage / 5; // 分5次造成伤害
-
-          const tickInterval = this.flameDuration / 5;
-
-          for (let i = 0; i < 5; i++) {
-            this.scheduleOnce(() => {
-              if (vehicleNode && vehicleNode.isValid) {
-                if (playerComponent && playerComponent.isValid) {
-                  playerComponent.takeDamage(damagePerTick);
-                } else if (aiPlayerComponent && aiPlayerComponent.isValid) {
-                  aiPlayerComponent.takeDamage(damagePerTick);
-                }
-              }
-            }, tickInterval * i);
-          }
-        }
         /**
          * 处理火箭弹碰撞
          */
 
 
         handleRocketHit(hitVehicleNode) {
-          // 创建爆炸效果
+          // 设置爆炸标志
+          this._isExploding = true; // 停止移动
+
+          this.stopMovement(); // 创建爆炸效果
+
+          this.createExplosion(); // 范围伤害
+
+          this.dealExplosionDamage(); // 播放音效
+
+          (_crd && SoundManager === void 0 ? (_reportPossibleCrUseOfSoundManager({
+            error: Error()
+          }), SoundManager) : SoundManager).instance.playSoundEffect('explosion');
+        }
+        /**
+         * 处理火箭弹超时爆炸
+         */
+
+
+        handleTimeoutExplosion() {
+          // 设置爆炸标志
+          this._isExploding = true; // 停止移动
+
+          this.stopMovement(); // 创建爆炸效果
+
+          this.createExplosion(); // 范围伤害
+
+          this.dealExplosionDamage(); // 播放音效
+
+          (_crd && SoundManager === void 0 ? (_reportPossibleCrUseOfSoundManager({
+            error: Error()
+          }), SoundManager) : SoundManager).instance.playSoundEffect('explosion');
+        }
+        /**
+         * 创建爆炸效果
+         */
+
+
+        createExplosion() {
           if (this.explosionPrefab) {
-            var _this$node$parent;
+            const explosion = instantiate(this.explosionPrefab); // 将爆炸效果添加为子弹节点的子节点
 
-            const explosion = instantiate(this.explosionPrefab);
-            explosion.setWorldPosition(this.node.worldPosition);
-            (_this$node$parent = this.node.parent) == null || _this$node$parent.addChild(explosion); // 爆炸动画
+            this.node.addChild(explosion); // 重置位置，使其与子弹节点重合
 
-            tween(explosion).to(0.5, {
-              scale: new Vec3(2, 2, 1)
-            }).call(() => {
-              if (explosion && explosion.isValid) {
-                explosion.destroy();
-              }
-            }).start();
-          } // 范围伤害
+            explosion.setPosition(Vec3.ZERO); // 获取动画组件并播放动画
 
+            const animationComponent = explosion.getComponent(Animation);
 
-          this.dealExplosionDamage();
+            if (animationComponent) {
+              // 播放动画并在1秒后销毁
+              animationComponent.play('explosion');
+              this.scheduleOnce(() => {
+                if (explosion && explosion.isValid) {
+                  explosion.destroy();
+                }
+
+                this.destroyBullet();
+              }, 0.5);
+            } else {
+              // 如果没有动画组件，使用tween动画
+              tween(explosion).to(0.5, {
+                scale: new Vec3(2, 2, 1)
+              }).delay(0.5).call(() => {
+                if (explosion && explosion.isValid) {
+                  explosion.destroy();
+                }
+
+                this.destroyBullet();
+              }).start();
+            }
+          } else {
+            // 如果没有爆炸预制体，直接销毁子弹
+            this.destroyBullet();
+          }
         }
         /**
          * 处理爆炸范围伤害
@@ -338,28 +392,24 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           if (this.bulletType === BulletType.ROCKET) {
             // 火箭弹碰撞障碍物也会爆炸
             this.handleRocketHit(null);
-          }
+            return;
+          } // 播放音效并销毁普通子弹
+
+
+          this.playHitSound();
+          this.destroyBullet();
         }
         /**
-         * 根据子弹类型调整属性
+         * 停止移动
          */
-        // private adjustBulletProperties() {
-        //     switch (this.bulletType) {
-        //         case BulletType.NORMAL:
-        //             this.speed = 400;
-        //             this.lifeTime = 3.0;
-        //             break;
-        //         case BulletType.FLAME:
-        //             this.speed = 200;
-        //             this.lifeTime = 1.5;
-        //             break;
-        //         case BulletType.ROCKET:
-        //             this.speed = 300;
-        //             this.lifeTime = 4.0;
-        //             break;
-        //     }
-        // }
 
+
+        stopMovement() {
+          if (this._rigidBody) {
+            this._rigidBody.linearVelocity = Vec2.ZERO; // 同时清空_velocity，防止其他地方误用
+            // this._velocity.set(0, 0);
+          }
+        }
         /**
          * 获取车辆ID
          */
@@ -393,12 +443,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
                 error: Error()
               }), SoundManager) : SoundManager).instance.playSoundEffect('bulletHit');
               break;
-
-            case BulletType.FLAME:
-              (_crd && SoundManager === void 0 ? (_reportPossibleCrUseOfSoundManager({
-                error: Error()
-              }), SoundManager) : SoundManager).instance.playSoundEffect('flameHit');
-              break;
+            // case BulletType.FLAME:
+            //     SoundManager.instance.playSoundEffect('flameHit');
+            //     break;
 
             case BulletType.ROCKET:
               (_crd && SoundManager === void 0 ? (_reportPossibleCrUseOfSoundManager({
@@ -413,9 +460,21 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
 
         destroyBullet() {
-          if (this.node && this.node.isValid) {
-            this.node.destroy();
+          if (!this.node || !this.node.isValid) {
+            return;
           }
+
+          if (this._pendingDestroy) {
+            return;
+          }
+
+          this._pendingDestroy = true; // 不能在物理接触回调中直接销毁刚体/节点，延迟到本帧物理步之后
+
+          director.once(Director.EVENT_AFTER_PHYSICS, () => {
+            if (this.node && this.node.isValid) {
+              this.node.destroy();
+            }
+          });
         }
 
       }, (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "speed", [property], {
@@ -458,14 +517,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         enumerable: true,
         writable: true,
         initializer: function () {
-          return 100;
-        }
-      }), _descriptor7 = _applyDecoratedDescriptor(_class2.prototype, "flameDuration", [_dec6], {
-        configurable: true,
-        enumerable: true,
-        writable: true,
-        initializer: function () {
-          return 1.0;
+          return 300;
         }
       })), _class2)) || _class));
 

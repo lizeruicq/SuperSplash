@@ -1,7 +1,7 @@
 {
   "modules": {
     "cce:/internal/x/cc": {
-      "mTimestamp": 2586.175792,
+      "mTimestamp": 3697.303458,
       "chunkId": "93ba276ea7b26ffcdc433fab14afc1ed6f05647b",
       "imports": [
         {
@@ -976,7 +976,7 @@
       ]
     },
     "cce:/internal/x/prerequisite-imports": {
-      "mTimestamp": 354800.848042,
+      "mTimestamp": 361461.722583,
       "chunkId": "6d8fd2b0177941b032ddc0733af48a561fb60657",
       "imports": [
         {
@@ -2220,7 +2220,7 @@
     },
     "file:///Users/zeruili/projects/cocos_project/driftClash/assets/scripts/AIPlayer.ts": {
       "mTimestamp": {
-        "mtime": 1754495342479.705,
+        "mtime": 1754714635562.5679,
         "uuid": "91c08d91-821d-4705-b576-bca425d89d56"
       },
       "chunkId": "9b583689b76a894a84c2dd298f4c18778bad0e35",
@@ -2472,7 +2472,7 @@
     },
     "file:///Users/zeruili/projects/cocos_project/driftClash/assets/scripts/GameManager.ts": {
       "mTimestamp": {
-        "mtime": 1754580089732.083,
+        "mtime": 1754719640111.3154,
         "uuid": "b67f4523-8daa-464a-8546-d89befbb2977"
       },
       "chunkId": "d99ffa78595ef86f45405646d5cc14ad1480dee0",
@@ -3883,7 +3883,7 @@
     },
     "file:///Users/zeruili/projects/cocos_project/driftClash/assets/scripts/player.ts": {
       "mTimestamp": {
-        "mtime": 1754580108976.2993,
+        "mtime": 1754719556463.77,
         "uuid": "b3924dc4-f7fe-491c-9736-a65419c312f5"
       },
       "chunkId": "43ffc2180738b118a8d4d533f2af70ab9b24d0aa",
@@ -4029,7 +4029,7 @@
       ]
     },
     "cce:/internal/code-quality/cr.mjs": {
-      "mTimestamp": 1754579770746,
+      "mTimestamp": 1754719304824,
       "chunkId": "6a5019a719a9014c047e67aa1cf34453ab8392ce",
       "imports": [],
       "type": "esm",
@@ -5873,7 +5873,7 @@
     },
     "file:///Users/zeruili/projects/cocos_project/driftClash/assets/scripts/Bullet.ts": {
       "mTimestamp": {
-        "mtime": 1754580068580.948,
+        "mtime": 1754719665496.5632,
         "uuid": "91ffccd6-b692-4a87-a2fe-51adeaa3b229"
       },
       "chunkId": "d90bd5f660cca2468e55c522be6e08ed7db4093d",
@@ -5893,11 +5893,11 @@
           "loc": {
             "start": {
               "line": 1,
-              "column": 143
+              "column": 194
             },
             "end": {
               "line": 1,
-              "column": 147
+              "column": 198
             }
           }
         },

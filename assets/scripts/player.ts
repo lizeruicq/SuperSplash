@@ -43,11 +43,11 @@ export class player extends Component {
     })
     normalBulletPrefab: Prefab = null!;
 
-    @property({
-        type: Prefab,
-        tooltip: "火焰预制体"
-    })
-    flamePrefab: Prefab = null!;
+    // @property({
+    //     type: Prefab,
+    //     tooltip: "火焰预制体"
+    // })
+    // flamePrefab: Prefab = null!;
 
     @property({
         type: Prefab,
@@ -310,7 +310,7 @@ export class player extends Component {
             const distanceToLastPos = Vec2.distance(currentPos, this._lastValidPosition);
             if (distanceToLastPos > 50) { // 如果偏离太远
                 this.node.setWorldPosition(this._lastValidPosition.x, this._lastValidPosition.y, this.node.worldPosition.z);
-                this._rigidBody.linearVelocity = Vec2.ZERO;
+                this._rigidBody.linearVelocity = new Vec2(0, 0);
             }
         } else {
             // 更新有效位置
@@ -380,7 +380,6 @@ export class player extends Component {
             const mySpeed = this._rigidBody.linearVelocity.length();
             const damageFactor = 0.3; // 地图边界碰撞的伤害系数
             const boundaryDamage = Math.round(mySpeed * damageFactor);
-            console.log(`玩家车辆与地图边界碰撞，速度: ${mySpeed}, 伤害: ${boundaryDamage}`);
             
             // 施加反作用力
             const recoilForce = new Vec2(this._rigidBody.linearVelocity.x, this._rigidBody.linearVelocity.y);
@@ -551,7 +550,7 @@ export class player extends Component {
 
         // 重置速度
         if (this._rigidBody) {
-            this._rigidBody.linearVelocity = Vec2.ZERO;
+            this._rigidBody.linearVelocity = new Vec2(0, 0);
         }
 
         console.log('玩家车辆已恢复');
@@ -658,9 +657,9 @@ export class player extends Component {
                 console.log('发射普通子弹');
                 bulletPrefab = this.normalBulletPrefab;
                 break;
-            case WeaponType.FLAME:
-                bulletPrefab = this.flamePrefab;
-                break;
+            // case WeaponType.FLAME:
+            //     bulletPrefab = this.flamePrefab;
+            //     break;
             case WeaponType.ROCKET:
                 bulletPrefab = this.rocketPrefab;
                 break;
@@ -680,7 +679,7 @@ export class player extends Component {
 
         // 计算子弹发射位置（车辆正前方）
         const vehicleWorldPos = this.node.worldPosition;
-        const offsetDistance = 50; // 子弹发射偏移距离（像素）
+        const offsetDistance = 30; // 子弹发射偏移距离（像素）
         const bulletStartPos = new Vec3(
             vehicleWorldPos.x + direction.x * offsetDistance,
             vehicleWorldPos.y + direction.y * offsetDistance,

@@ -289,7 +289,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             if (distanceToLastPos > 50) {
               // 如果偏离太远
               this.node.setWorldPosition(this._lastValidPosition.x, this._lastValidPosition.y, this.node.worldPosition.z);
-              this._rigidBody.linearVelocity = Vec2.ZERO;
+              this._rigidBody.linearVelocity = new Vec2(0, 0);
             }
           } else {
             // 更新有效位置
@@ -393,15 +393,15 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
 
         onCollisionEnter(self, other) {
-          console.log('AIPlayer collided with something', other.node.name); // 获取碰撞对象的层级
-
+          // console.log('AIPlayer collided with something', other.node.name);
+          // 获取碰撞对象的层级
           var otherLayer = other.node.layer;
           var blockLayer = Layers.nameToLayer('Block'); // 检查是否与Block层碰撞
 
           if (otherLayer === blockLayer) {
             // 检查冷却时间
             if (this._blockCollisionCooldown > 0) {
-              console.log('AIPlayer collided with Block but is in cooldown');
+              // console.log('AIPlayer collided with Block but is in cooldown');
               return; // 冷却时间内，不执行任何操作
             } // 获取AIController实例
 
@@ -417,9 +417,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
                 // 检查AI是否处于边界转向状态，如果是则不处理Block碰撞
                 if (aiController.isAIBoundaryTurning(this)) {
                   return;
-                }
+                } // console.log('AIPlayer collided with Block, turning around');
+                // 设置冷却时间
 
-                console.log('AIPlayer collided with Block, turning around'); // 设置冷却时间
 
                 this._blockCollisionCooldown = this._blockCollisionCooldownDuration; // 随机选择向左或向右掉头
 

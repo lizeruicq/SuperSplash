@@ -897,7 +897,7 @@ export class GameManager extends Component {
         }
 
         // 将子弹添加到BulletRoot节点或场景中
-        if (this.bulletRoot) {
+        if (this.bulletRoot  ) {
             // 转换世界坐标到BulletRoot的本地坐标
             const localPos = this.bulletRoot.getComponent(UITransform)?.convertToNodeSpaceAR(position);
             if (localPos) {
@@ -907,12 +907,14 @@ export class GameManager extends Component {
             }
             this.bulletRoot.addChild(bulletNode);
             console.log('子弹已添加到BulletRoot节点');
-        } else {
-            // 如果没有找到BulletRoot，添加到场景根节点
-            bulletNode.setWorldPosition(position);
-            director.getScene()?.addChild(bulletNode);
-            console.log('子弹已添加到场景根节点');
         }
+        // } else {
+        //     const localPos = this.playerComponent.node.getComponent(UITransform)?.convertToNodeSpaceAR(position);
+        //     // 如果没有找到BulletRoot，添加到场景根节点
+        //     bulletNode.setWorldPosition(localPos);
+        //     this.playerComponent.node.addChild(bulletNode);
+        //     console.log('子弹已添加到wa玩家车辆根节点');
+        // }
     }
 
     /**
