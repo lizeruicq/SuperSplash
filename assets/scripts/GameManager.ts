@@ -69,9 +69,9 @@ export class GameManager extends Component {
 
     // 倒计时相关
   
-    gameDuration: number = 120; // 游戏时长（秒），默认2分钟
+    gameDuration: number = 90; // 游戏时长（秒），默认2分钟
 
-    private remainingTime: number = 120; // 剩余时间
+    private remainingTime: number = 90; // 剩余时间
 
     // 玩家数据
     private playerHP: number = 0; // 将在player加载完成后初始化

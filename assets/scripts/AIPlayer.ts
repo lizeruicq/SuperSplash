@@ -382,7 +382,7 @@ export class AIPlayer extends Component {
             if (playerRigidBody && !this.isDestroyed) {
                 const impactForce = new Vec2(playerRigidBody.linearVelocity.x, playerRigidBody.linearVelocity.y);
                 impactForce.normalize(); // 归一化方向
-                impactForce.multiplyScalar(10); // 增加冲力强度
+                impactForce.multiplyScalar(20); // 增加冲力强度
                 this._rigidBody.linearVelocity = impactForce;
             }
 

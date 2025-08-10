@@ -2288,8 +2288,8 @@
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 21.627264754183088,
-      "y": -7.971650789554921,
+      "x": 21.627,
+      "y": 0.529,
       "z": 0
     },
     "_lrot": {
@@ -2630,8 +2630,8 @@
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 0.186,
-      "y": -27.443,
+      "x": 5.428,
+      "y": -21.068,
       "z": 0
     },
     "_lrot": {
@@ -2669,8 +2669,8 @@
     "__prefab": null,
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 754,
-      "height": 454.4
+      "width": 779.6208437500001,
+      "height": 473.404
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -2694,19 +2694,19 @@
     "_dstBlendFactor": 4,
     "_color": {
       "__type__": "cc.Color",
-      "r": 185,
-      "g": 199,
-      "b": 29,
+      "r": 212,
+      "g": 167,
+      "b": 218,
       "a": 255
     },
-    "_string": "不同的车辆拥有不同特性和武器，\n用出色的驾驶和甩尾技术在有限的时间内喷洒更多颜料！\n必要时，可使用车辆的专属武器攻击\n对手/移除对手已喷洒的燃料\n\nDifferent cars have different features and weapons. \nUse your excellent driving and drifting skills \nto spray more paint within the limited time! \nWhen necessary, \nuse the exclusive weapon to attack your opponents \nor remove the fuel they have sprayed.",
+    "_string": "不同的车辆拥有不同特性和武器，用出色的驾驶和甩尾技术在有限的时间内喷洒更多颜料！\n必要时，可使用车辆的专属武器攻击对手/移除对手已喷洒的燃料\n倒计时结束后，依据玩家颜料占比进行评分\nA：45% B：35% C：25% F：<25%或玩家车辆摧毁\nDifferent cars have different features and weapons. \nUse your excellent driving and drifting skills \nto spray more paint within the limited time! \nWhen necessary, use the exclusive weapon to attack your opponents or remove the fuel they have sprayed.\nAfter the countdown ends, players will be scored based on their proportion of paint. \nA: 45% B: 35% C: 25% F: < 25% or player's vehicle destroyed",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
-    "_actualFontSize": 30,
-    "_fontSize": 30,
+    "_actualFontSize": 25.6,
+    "_fontSize": 25.6,
     "_fontFamily": "Arial",
-    "_lineHeight": 40,
-    "_overflow": 0,
+    "_lineHeight": 35.4,
+    "_overflow": 3,
     "_enableWrapText": true,
     "_font": null,
     "_isSystemFontUsed": true,

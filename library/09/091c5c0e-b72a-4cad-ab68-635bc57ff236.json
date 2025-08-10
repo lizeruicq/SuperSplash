@@ -8460,7 +8460,7 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": 167.512,
+      "y": 204.572,
       "z": 0
     },
     "_lrot": {
@@ -8591,8 +8591,8 @@
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 79.565,
+      "x": 2.697,
+      "y": 81.515,
       "z": 0
     },
     "_lrot": {
@@ -8630,8 +8630,8 @@
     "__prefab": null,
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 284.86864013671874,
-      "height": 77.068
+      "width": 482.38964013671875,
+      "height": 140.66799999999998
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -8660,7 +8660,7 @@
       "b": 182,
       "a": 255
     },
-    "_string": "该车辆价格为：1000\n是否确认购买？",
+    "_string": "This super maneuverable car is equipped with a bullet launcher. When you hit your opponent, you can cause damage.",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
     "_actualFontSize": 25,

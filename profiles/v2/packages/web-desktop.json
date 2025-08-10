@@ -20,8 +20,11 @@
           "uuid": "091c5c0e-b72a-4cad-ab68-635bc57ff236"
         }
       ],
-      "name": "driftClash",
-      "buildPath": "/Users/zeruili/Desktop"
+      "name": "SuperSplash",
+      "buildPath": "/Users/zeruili/Desktop",
+      "outputName": "web-desktop",
+      "mainBundleCompressionType": "merge_dep",
+      "platform": "web-desktop"
     },
     "taskOptionsMap": {
       "1754729577999": {
@@ -31,8 +34,42 @@
           "designHeight": 960
         },
         "__version__": "1.0.1"
+      },
+      "1754796652802": {
+        "useWebGPU": false,
+        "resolution": {
+          "designWidth": 1280,
+          "designHeight": 960
+        },
+        "__version__": "1.0.1"
+      },
+      "1754796712646": {
+        "useWebGPU": false,
+        "resolution": {
+          "designWidth": 1280,
+          "designHeight": 720
+        },
+        "__version__": "1.0.1"
+      },
+      "1754797776377": {
+        "useWebGPU": false,
+        "resolution": {
+          "designWidth": 1280,
+          "designHeight": 720
+        },
+        "__version__": "1.0.1"
       }
     },
-    "__version__": "1.3.9"
+    "__version__": "1.3.9",
+    "options": {
+      "web-desktop": {
+        "useWebGPU": false,
+        "resolution": {
+          "designWidth": 1280,
+          "designHeight": 720
+        },
+        "__version__": "1.0.1"
+      }
+    }
   }
 }

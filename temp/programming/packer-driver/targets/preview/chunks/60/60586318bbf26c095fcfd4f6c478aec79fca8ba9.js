@@ -266,11 +266,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
         onDestroy() {
           // 清理事件监听
-          if (this.restartButton) {
+          if (this.restartButton && this.restartButton.node) {
             this.restartButton.node.off(Button.EventType.CLICK, this.onRestartClick, this);
           }
 
-          if (this.LevelSelectButton) {
+          if (this.LevelSelectButton && this.LevelSelectButton.node) {
             this.LevelSelectButton.node.off(Button.EventType.CLICK, this.onLevelSelectClick, this);
           }
         }

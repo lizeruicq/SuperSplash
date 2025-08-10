@@ -60,11 +60,11 @@ export class SelectManager extends Component {
 
     // 车辆价格配置
     private carInfos: CarinfoConfig = {
-        'car-1': '操控性超强小车，武器配备为子弹发射器，击中对手你可造成伤害',      
-        'car-2': '经典跑车,具有坚固的车身,武器配备为火箭炮，爆炸后会清除附近的颜料',    
-        'car-3': '现代化的超级跑车，速度与转向均衡，配备武器为机炮，击中后可造成伤害',   
-        'car-4': '甩尾加速犹如闪电，武器配备为火箭炮，爆炸后会清除附近的颜料',   
-        'car-5': '送豆腐专用，即使在狭窄的山路也灵活穿梭，武器配备为火箭炮，爆炸后会清除附近的颜料',   
+        'car-1': '操控性超强小车，武器配备为子弹发射器，击中对手你可造成伤害 \n This super maneuverable car is equipped with a bullet launcher. When you hit your opponent, you can cause damage.',      
+        'car-2': '经典跑车,具有坚固的车身,武器配备为火箭炮，爆炸后会清除附近的颜料 \nClassic sports car, with a sturdy body, equipped with  a rocket launcher. After explosion, it will clear the nearby paint.',    
+        'car-3': '现代化的超级跑车，速度与转向均衡，配备武器为机炮，击中后可造成伤害 \nA modern supercar with balanced speed and steering, equipped with a bullet launcher. When you hit your opponent, you can cause damage.',   
+        'car-4': '甩尾加速犹如闪电，武器配备为火箭炮，爆炸后会清除附近的颜料\nThe drift and acceleration is like lightning, equipped with a rocket launcher. After explosion, it will clear the nearby paint.',   
+        'car-5': '送豆腐专用，即使在狭窄的山路也灵活穿梭，武器配备为火箭炮，爆炸后会清除附近的颜料\n It is specially designed for delivering tofu and can move flexibly even on narrow mountain roads. equipped with a rocket launcher. ',   
     };
 
     private insufficientMoneyTimer: number = 0; // 金币不足提示计时器

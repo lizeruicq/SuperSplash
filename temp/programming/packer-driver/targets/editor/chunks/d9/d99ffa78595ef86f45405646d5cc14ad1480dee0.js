@@ -169,9 +169,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.gameStartTime = 0;
           this.gameEndTime = 0;
           // 倒计时相关
-          this.gameDuration = 120;
+          this.gameDuration = 90;
           // 游戏时长（秒），默认2分钟
-          this.remainingTime = 120;
+          this.remainingTime = 90;
           // 剩余时间
           // 玩家数据
           this.playerHP = 0;
