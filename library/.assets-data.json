@@ -222,6 +222,7 @@
       "depends": [
         "9a4dce19-24b9-4d46-b38f-ef49f2287dcb",
         "1c5052fa-8819-46bc-bb95-1aa90b873e2e@f9941",
+        "dddb3d97-5b9e-4cc8-acdf-f9e4453ac948@f9941",
         "4cf1948a-ffca-426e-9c43-1e7c864a1b60@f9941",
         "593904f2-fa85-498f-9b0e-9f79890c24fd@f9941",
         "1c18f6e7-3b13-401b-85a1-746bf7284949@f9941",
@@ -848,6 +849,8 @@
       "depends": [
         "86087b4b-4284-4b91-8707-fa1f71406ea1@f9941",
         "e7d9af4d-540d-4efb-8ab7-30ad25e31221",
+        "ffdc0091-02b5-47e9-9cba-752ad0f7f260",
+        "7fe3a2c1-44e3-45ed-a3a4-81e90a6994c7",
         "b9e95f02-4aec-4c01-8343-1c6ce036b0c6@f9941"
       ],
       "dependScripts": [
@@ -869,7 +872,11 @@
     "url": "db://assets/resources/prefab/cars/car-3.prefab",
     "value": {
       "depends": [
-        "d6c5db05-a7b5-4c39-b29f-89c86c315dcf@f9941"
+        "d6c5db05-a7b5-4c39-b29f-89c86c315dcf@f9941",
+        "86087b4b-4284-4b91-8707-fa1f71406ea1@f9941",
+        "e7d9af4d-540d-4efb-8ab7-30ad25e31221",
+        "ffdc0091-02b5-47e9-9cba-752ad0f7f260",
+        "7fe3a2c1-44e3-45ed-a3a4-81e90a6994c7"
       ],
       "dependScripts": [
         "b3924dc4-f7fe-491c-9736-a65419c312f5"
@@ -890,7 +897,11 @@
     "url": "db://assets/resources/prefab/cars/car-4.prefab",
     "value": {
       "depends": [
-        "38414c6f-ce08-40c3-b0a0-4f24ce1031de@f9941"
+        "38414c6f-ce08-40c3-b0a0-4f24ce1031de@f9941",
+        "86087b4b-4284-4b91-8707-fa1f71406ea1@f9941",
+        "e7d9af4d-540d-4efb-8ab7-30ad25e31221",
+        "ffdc0091-02b5-47e9-9cba-752ad0f7f260",
+        "7fe3a2c1-44e3-45ed-a3a4-81e90a6994c7"
       ],
       "dependScripts": [
         "b3924dc4-f7fe-491c-9736-a65419c312f5"
@@ -902,7 +913,11 @@
     "url": "db://assets/resources/prefab/cars/car-5.prefab",
     "value": {
       "depends": [
-        "ed611db6-e51e-4a53-b624-848dd45ace21@f9941"
+        "ed611db6-e51e-4a53-b624-848dd45ace21@f9941",
+        "86087b4b-4284-4b91-8707-fa1f71406ea1@f9941",
+        "e7d9af4d-540d-4efb-8ab7-30ad25e31221",
+        "ffdc0091-02b5-47e9-9cba-752ad0f7f260",
+        "7fe3a2c1-44e3-45ed-a3a4-81e90a6994c7"
       ],
       "dependScripts": [
         "b3924dc4-f7fe-491c-9736-a65419c312f5"
@@ -939,7 +954,7 @@
       ],
       "dependScripts": [
         "CC3eba29-7abb-723a-f7ab-ae275e2277e8",
-        "ff477e7e-ceef-42c8-804f-c97803369c7b"
+        "91c08d91-821d-4705-b576-bca425d89d56"
       ]
     },
     "versionCode": 1
@@ -948,14 +963,19 @@
     "url": "db://assets/resources/prefab/levels/level-2.prefab",
     "value": {
       "depends": [
+        "4d5329e9-8f67-43e3-a399-e0fa9a5ad5f4",
         "5fa4a020-ad12-4d51-9e7d-57cecdc056ca",
         "49e36654-b2c3-47d9-afeb-5db28286a1b0@f9941",
-        "a238f344-7c25-4d83-a0ec-8c85e46d3ec8@f9941",
+        "86087b4b-4284-4b91-8707-fa1f71406ea1@f9941",
+        "b71c19d0-4ac9-4dcb-aa32-b65fde2c406a",
+        "a46287ff-f74b-4075-a483-08b1027fe72d",
+        "35418bab-1e0a-4108-a267-ce8c8c2422c3",
+        "4666d6c8-2376-4df4-be28-d66e383baace",
         "807a7b47-3819-4529-931c-683fbcf44eb0@f9941"
       ],
       "dependScripts": [
         "CC3eba29-7abb-723a-f7ab-ae275e2277e8",
-        "ff477e7e-ceef-42c8-804f-c97803369c7b"
+        "91c08d91-821d-4705-b576-bca425d89d56"
       ]
     },
     "versionCode": 1
@@ -2988,6 +3008,31 @@
   "949304f8-d71e-4d74-96be-bba313c71dbd": {
     "url": "db://assets/scripts/PaintCoordinateTest.ts",
     "value": {},
+    "versionCode": 1
+  },
+  "dddb3d97-5b9e-4cc8-acdf-f9e4453ac948": {
+    "url": "db://assets/img/menu/logo.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "dddb3d97-5b9e-4cc8-acdf-f9e4453ac948@6c48a": {
+    "url": "db://assets/img/menu/logo.png@6c48a",
+    "value": {
+      "depends": [
+        "dddb3d97-5b9e-4cc8-acdf-f9e4453ac948"
+      ]
+    },
+    "versionCode": 1
+  },
+  "dddb3d97-5b9e-4cc8-acdf-f9e4453ac948@f9941": {
+    "url": "db://assets/img/menu/logo.png@f9941",
+    "value": {
+      "depends": [
+        "dddb3d97-5b9e-4cc8-acdf-f9e4453ac948@6c48a"
+      ]
+    },
     "versionCode": 1
   }
 }

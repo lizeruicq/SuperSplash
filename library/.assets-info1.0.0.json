@@ -26,7 +26,7 @@
       "uuid": "6e03cd48-8a60-412f-b20f-82f4e1b5b329"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu": {
-      "time": 1754197577882.6467,
+      "time": 1754747189626.6821,
       "uuid": "b3322b39-4b8e-4556-8194-a14dbd5f51a9"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab": {
@@ -42,15 +42,15 @@
       "uuid": "c23f290e-b5e8-46ea-bf20-d18ab9b6705f"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/scripts/MainMenuController.ts": {
-      "time": 1753194937209.4482,
+      "time": 1754749081581.368,
       "uuid": "0cf6405c-918a-40f1-b383-68a9fc739b7f"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/scripts/PlayerManager.ts": {
-      "time": 1753194224217.759,
+      "time": 1754792198729.9653,
       "uuid": "1b6d6687-2973-4618-af7b-db52ef67b8c1"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/scripts/SelectManager.ts": {
-      "time": 1753289009987.578,
+      "time": 1754792502998.2266,
       "uuid": "be7b2dc0-da35-4de9-a81c-30690fdcd28f"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/scripts/TempData.ts": {
@@ -100,15 +100,15 @@
       "time": 1751382441481.8594
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/Scenes/LevelSelect.scene": {
-      "time": 1754495343857.4705,
+      "time": 1754792544727.7139,
       "uuid": "091c5c0e-b72a-4cad-ab68-635bc57ff236"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/Scenes/gamescene.scene": {
-      "time": 1754729501430.3792,
+      "time": 1754756178702.5474,
       "uuid": "1563d039-d898-4d8f-9415-9f1da853b8a3"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/Scenes/mainmenu.scene": {
-      "time": 1754724158039.8728,
+      "time": 1754749190656.2642,
       "uuid": "9a4dce19-24b9-4d46-b38f-ef49f2287dcb"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/TiledMap/City_tiles.png": {
@@ -172,23 +172,23 @@
       "uuid": "f07db45e-fa1a-499c-b315-fc3e50f3aafa"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/cars/car-1.prefab": {
-      "time": 1754727048837.9307,
+      "time": 1754755706465.1807,
       "uuid": "37fef8d9-5917-47b3-a40f-4e2ace6bf328"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/cars/car-2.prefab": {
-      "time": 1754407484097.543,
+      "time": 1754757098998.3623,
       "uuid": "87676691-0988-4a4f-823c-9ede01a40e1c"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/cars/car-3.prefab": {
-      "time": 1752898225901.786,
+      "time": 1754757104146.4385,
       "uuid": "48fa46bf-e334-4f77-b8e5-b81b32cc3846"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/cars/car-4.prefab": {
-      "time": 1752898194696.021,
+      "time": 1754757109592.7437,
       "uuid": "471a5567-970e-4fc0-9056-614a089c850d"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/cars/car-5.prefab": {
-      "time": 1752898179226.7686,
+      "time": 1754757130177.7778,
       "uuid": "642f4c4e-3979-4274-9594-3c8286a57fb2"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/cars/healthBar.prefab": {
@@ -196,11 +196,11 @@
       "uuid": "5fa4a020-ad12-4d51-9e7d-57cecdc056ca"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/levels/level-1.prefab": {
-      "time": 1754404272183.78,
+      "time": 1754756921352.0964,
       "uuid": "5e122843-ecf2-42e7-ab74-ec19f70240a3"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/levels/level-2.prefab": {
-      "time": 1751950113187.6118,
+      "time": 1754791965250.0989,
       "uuid": "cf804555-7d75-4720-8a54-4f8a1348275f"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/levels/level-3.prefab": {
@@ -348,7 +348,7 @@
       "time": 1752984207646.1838
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/scripts/PurchasePanel.ts": {
-      "time": 1752985191970.8643,
+      "time": 1754791136160.962,
       "uuid": "c4e943de-6ca3-46a0-9231-17cb43e8e456"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/sound.meta": {
@@ -498,7 +498,7 @@
       "time": 1753710897296.1187
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/scripts/PaintManager.ts": {
-      "time": 1754731095750.7974,
+      "time": 1754746550522.3418,
       "uuid": "7dd7ac9d-7d90-4745-bb56-3c99a1d345df"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/scripts/PaintSpot.ts": {
@@ -915,7 +915,7 @@
       "time": 1754576936763.6355
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/weapons/bullet.prefab": {
-      "time": 1754722567162.762,
+      "time": 1754755927584.0754,
       "uuid": "ffdc0091-02b5-47e9-9cba-752ad0f7f260"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/img/weapons/explosion.meta": {
@@ -992,7 +992,7 @@
       "time": 1754663240676.204
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/img/weapons/explosion/explosion.anim": {
-      "time": 1754674464335.8274,
+      "time": 1754755428076.766,
       "uuid": "9d731ae3-af25-407f-b588-4a7b062c376d"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/weapons/explosion.meta": {
@@ -1006,7 +1006,7 @@
       "time": 1754663478737.978
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/weapons/explosion/explosion.prefab": {
-      "time": 1754674531696.3914,
+      "time": 1754755459879.0972,
       "uuid": "e107910c-0ef8-4a6b-8eb5-46d2b0965f23"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/img/weapons/missile.png.meta": {
@@ -1020,7 +1020,7 @@
       "time": 1754664593799.1123
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/weapons/rocket.prefab": {
-      "time": 1754674126278.6455,
+      "time": 1754755506814.947,
       "uuid": "7fe3a2c1-44e3-45ed-a3a4-81e90a6994c7"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/img/weapons/flame.meta": {
@@ -1134,6 +1134,13 @@
     "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/UI/shangxiazuoyouTriangle18.png": {
       "time": 1754727819294.3228,
       "uuid": "a181abe3-561c-494c-9952-aa30d8e497fc"
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/logo.png.meta": {
+      "time": 1754747189722.522
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/logo.png": {
+      "time": 1754747189625.1716,
+      "uuid": "dddb3d97-5b9e-4cc8-acdf-f9e4453ac948"
     }
   },
   "missing": {

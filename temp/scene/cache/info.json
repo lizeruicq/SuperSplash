@@ -10,7 +10,11 @@
         "ffdc0091-02b5-47e9-9cba-752ad0f7f260": "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/weapons/bullet.prefab",
         "7fe3a2c1-44e3-45ed-a3a4-81e90a6994c7": "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/weapons/rocket.prefab",
         "796537c4-5a1e-4a92-81e7-7385e3b72bff": "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/weapons/flame.prefab",
-        "37fef8d9-5917-47b3-a40f-4e2ace6bf328": "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/cars/car-1.prefab"
+        "37fef8d9-5917-47b3-a40f-4e2ace6bf328": "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/cars/car-1.prefab",
+        "9a4dce19-24b9-4d46-b38f-ef49f2287dcb": "/Users/zeruili/projects/cocos_project/driftClash/assets/Scenes/mainmenu.scene",
+        "091c5c0e-b72a-4cad-ab68-635bc57ff236": "/Users/zeruili/projects/cocos_project/driftClash/assets/Scenes/LevelSelect.scene",
+        "cf804555-7d75-4720-8a54-4f8a1348275f": "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/levels/level-2.prefab",
+        "5e122843-ecf2-42e7-ab74-ec19f70240a3": "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/levels/level-1.prefab"
     },
     "deviceMd5": "4ade0bf3b465c2d387bbf6f072cc7f7e"
 }

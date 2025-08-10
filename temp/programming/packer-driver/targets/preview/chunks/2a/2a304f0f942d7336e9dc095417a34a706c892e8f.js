@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Button, Node, Label, SceneTransition, SoundManager, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _crd, ccclass, property, MainMenuController;
+  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Button, Node, Label, SceneTransition, SoundManager, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _dec10, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _crd, ccclass, property, MainMenuController;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -46,7 +46,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
         property
       } = _decorator);
 
-      _export("MainMenuController", MainMenuController = (_dec = ccclass('MainMenuController'), _dec2 = property(Button), _dec3 = property(Button), _dec4 = property(Button), _dec5 = property(Button), _dec6 = property(Node), _dec7 = property(Label), _dec(_class = (_class2 = class MainMenuController extends Component {
+      _export("MainMenuController", MainMenuController = (_dec = ccclass('MainMenuController'), _dec2 = property(Button), _dec3 = property(Button), _dec4 = property(Button), _dec5 = property(Button), _dec6 = property(Node), _dec7 = property(Label), _dec8 = property(Button), _dec9 = property(Button), _dec10 = property(Node), _dec(_class = (_class2 = class MainMenuController extends Component {
         constructor() {
           super(...arguments);
 
@@ -63,9 +63,16 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
 
           // 拖拽你的设置面板节点到这里
           _initializerDefineProperty(this, "audioLabel", _descriptor6, this);
+
+          // 拖拽音效按钮的Label组件到这里
+          _initializerDefineProperty(this, "helpButton", _descriptor7, this);
+
+          _initializerDefineProperty(this, "closehelpBtn", _descriptor8, this);
+
+          _initializerDefineProperty(this, "helpPanel", _descriptor9, this);
         }
 
-        // 拖拽音效按钮的Label组件到这里
+        // 拖拽你的设置面板节点到这里
         start() {
           if (this.startGameBtn) {
             this.startGameBtn.node.on(Button.EventType.CLICK, this.onStartGame, this);
@@ -77,6 +84,14 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
 
           if (this.closesettingBtn) {
             this.closesettingBtn.node.on(Button.EventType.CLICK, this.hideSettingPanel, this);
+          }
+
+          if (this.helpButton) {
+            this.helpButton.node.on(Button.EventType.CLICK, this.displayHelpPanel, this);
+          }
+
+          if (this.closehelpBtn) {
+            this.closehelpBtn.node.on(Button.EventType.CLICK, this.hideHelpPanel, this);
           }
 
           if (this.audioBtn) {
@@ -92,6 +107,14 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
 
         hideSettingPanel() {
           this.settingPanel.active = false;
+        }
+
+        displayHelpPanel() {
+          this.helpPanel.active = true;
+        }
+
+        hideHelpPanel() {
+          this.helpPanel.active = false;
         }
 
         onAudioClick() {
@@ -154,6 +177,27 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           return null;
         }
       }), _descriptor6 = _applyDecoratedDescriptor(_class2.prototype, "audioLabel", [_dec7], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function initializer() {
+          return null;
+        }
+      }), _descriptor7 = _applyDecoratedDescriptor(_class2.prototype, "helpButton", [_dec8], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function initializer() {
+          return null;
+        }
+      }), _descriptor8 = _applyDecoratedDescriptor(_class2.prototype, "closehelpBtn", [_dec9], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function initializer() {
+          return null;
+        }
+      }), _descriptor9 = _applyDecoratedDescriptor(_class2.prototype, "helpPanel", [_dec10], {
         configurable: true,
         enumerable: true,
         writable: true,

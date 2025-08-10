@@ -147,7 +147,7 @@ System.register(["cc"], function (_export, _context) {
             level: 1,
             money: 10000,
             experience: 0,
-            unlockedCars: ['car-1'],
+            unlockedCars: [],
             // 默认解锁第一辆车
             currentCar: 'car-1',
             carUpgrades: {

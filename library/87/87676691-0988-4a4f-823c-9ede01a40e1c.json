@@ -192,7 +192,19 @@
       "__uuid__": "e7d9af4d-540d-4efb-8ab7-30ad25e31221",
       "__expectedType__": "cc.Prefab"
     },
-    "paintSprayInterval": 0.2,
+    "paintSprayInterval": 0.1,
+    "normalBulletPrefab": {
+      "__uuid__": "ffdc0091-02b5-47e9-9cba-752ad0f7f260",
+      "__expectedType__": "cc.Prefab"
+    },
+    "rocketPrefab": {
+      "__uuid__": "7fe3a2c1-44e3-45ed-a3a4-81e90a6994c7",
+      "__expectedType__": "cc.Prefab"
+    },
+    "fireRate": 2,
+    "weaponType": 2,
+    "maxAmmo": 10,
+    "ammoReloadTime": 10,
     "_id": ""
   },
   {

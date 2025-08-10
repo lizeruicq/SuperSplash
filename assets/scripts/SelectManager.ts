@@ -14,6 +14,10 @@ interface CarPriceConfig {
     [carId: string]: number;
 }
 
+interface CarinfoConfig {
+    [carId: string]: string;
+}
+
 @ccclass('SelectManager')
 export class SelectManager extends Component {
     @property(ToggleContainer)
@@ -24,6 +28,9 @@ export class SelectManager extends Component {
 
     @property(Button)
     startButton: Button = null!;
+
+    @property(Button)
+    backButton: Button = null!;
 
     @property(Label)
     insufficientMoneyLabel: Label = null!; // 金币不足提示标签
@@ -49,6 +56,15 @@ export class SelectManager extends Component {
         'car-3': 1000,   // 第三辆车1000金币
         'car-4': 1500,   // 第四辆车1500金币
         'car-5': 2000,   // 第五辆车2000金币
+    };
+
+    // 车辆价格配置
+    private carInfos: CarinfoConfig = {
+        'car-1': '操控性超强小车，武器配备为子弹发射器，击中对手你可造成伤害',      
+        'car-2': '经典跑车,具有坚固的车身,武器配备为火箭炮，爆炸后会清除附近的颜料',    
+        'car-3': '现代化的超级跑车，速度与转向均衡，配备武器为机炮，击中后可造成伤害',   
+        'car-4': '甩尾加速犹如闪电，武器配备为火箭炮，爆炸后会清除附近的颜料',   
+        'car-5': '送豆腐专用，即使在狭窄的山路也灵活穿梭，武器配备为火箭炮，爆炸后会清除附近的颜料',   
     };
 
     private insufficientMoneyTimer: number = 0; // 金币不足提示计时器
@@ -163,6 +179,9 @@ export class SelectManager extends Component {
         if (this.startButton) {
             this.startButton.node.on(Button.EventType.CLICK, this.onStartGame, this);
         }
+         if (this.backButton) {
+            this.backButton.node.on(Button.EventType.CLICK, this.onBackButton, this);
+        }
     }
 
     onStartGame() {
@@ -184,6 +203,11 @@ export class SelectManager extends Component {
 
         // 切换到游戏场景
         SceneTransition.loadScene('gamescene');
+    }
+
+    onBackButton()
+    {
+        SceneTransition.loadScene('mainmenu');
     }
 
 
@@ -228,7 +252,7 @@ export class SelectManager extends Component {
                     button.node.off(Button.EventType.CLICK);
                     button.node.on(Button.EventType.CLICK, () => {
                         this.pendingCarId = carId;
-                        this.showPurchasePanel(this.carPrices[carId]);
+                        this.showPurchasePanel(this.carPrices[carId], this.carInfos[carId]);
                     }, this);
                 }
             }
@@ -243,7 +267,7 @@ export class SelectManager extends Component {
     /**
      * 显示购买面板
      */
-    private showPurchasePanel(price: number) {
+    private showPurchasePanel(price: number, info: string) {
         if (!this.purchasePanelNode) {
             console.error('购买面板节点未配置');
             return;
@@ -259,7 +283,7 @@ export class SelectManager extends Component {
         // this.purchasePanelNode.setSiblingIndex(Number.MAX_SAFE_INTEGER);
 
         // 显示面板
-        purchasePanel.show(price, (purchasePrice) => {
+        purchasePanel.show(price, info, (purchasePrice) => {
             // 确认购买后的回调
             this.processPurchase(purchasePrice);
         });
