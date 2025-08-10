@@ -5,8 +5,8 @@
       "polyfills": {
         "asyncFunctions": true
       },
-      "buildPath": "/Users/zeruili/Desktop",
-      "outputName": "web-mobile",
+      "buildPath": "project://build",
+      "outputName": "SuperSplash-mobile",
       "mainBundleCompressionType": "merge_dep",
       "platform": "web-mobile",
       "name": "SuperSplash",
@@ -54,6 +54,12 @@
         "__version__": "1.0.1"
       },
       "1754798781613": {
+        "useWebGPU": false,
+        "orientation": "landscape",
+        "embedWebDebugger": false,
+        "__version__": "1.0.1"
+      },
+      "1754805683813": {
         "useWebGPU": false,
         "orientation": "landscape",
         "embedWebDebugger": false,

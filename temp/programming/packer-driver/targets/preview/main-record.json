@@ -514,7 +514,7 @@
       ]
     },
     "cce:/internal/x/prerequisite-imports": {
-      "mTimestamp": 75934573.708042,
+      "mTimestamp": 82138557.363375,
       "chunkId": "6d8fd2b0177941b032ddc0733af48a561fb60657",
       "imports": [
         {
@@ -2844,7 +2844,7 @@
     },
     "file:///Users/zeruili/projects/cocos_project/driftClash/assets/scripts/PlayerInfoUI.ts": {
       "mTimestamp": {
-        "mtime": 1751376224317.8184,
+        "mtime": 1754804331628.4446,
         "uuid": "66fbc94f-5230-4bee-8600-db121d4f07fe"
       },
       "chunkId": "5747e286ea7bb225640df61cf460ffb63f9b975e",
