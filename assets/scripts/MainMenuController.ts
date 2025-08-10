@@ -24,6 +24,16 @@ export class MainMenuController extends Component {
     audioLabel: Label = null!; // 拖拽音效按钮的Label组件到这里
 
 
+    @property(Button)
+    helpButton: Button = null!; 
+
+    @property(Button)
+    closehelpBtn: Button = null!; 
+
+    @property(Node)
+    helpPanel: Node = null!; // 拖拽你的设置面板节点到这里
+
+
 
     start() {
         if (this.startGameBtn) {
@@ -35,6 +45,14 @@ export class MainMenuController extends Component {
         if(this.closesettingBtn){
             this.closesettingBtn.node.on(Button.EventType.CLICK, this.hideSettingPanel, this);
         }
+
+        if(this.helpButton){
+            this.helpButton.node.on(Button.EventType.CLICK, this.displayHelpPanel, this);
+        }
+        if(this.closehelpBtn){
+            this.closehelpBtn.node.on(Button.EventType.CLICK, this.hideHelpPanel, this);
+        }
+
         if(this.audioBtn){
             this.audioBtn.node.on(Button.EventType.CLICK, this.onAudioClick, this);
         }
@@ -48,6 +66,15 @@ export class MainMenuController extends Component {
     hideSettingPanel() {
         this.settingPanel.active = false;
     }
+
+    displayHelpPanel() {
+        this.helpPanel.active = true;
+    }
+
+    hideHelpPanel() {
+        this.helpPanel.active = false;
+    }
+
 
     onAudioClick() {
        SoundManager.instance.toggleAudio();

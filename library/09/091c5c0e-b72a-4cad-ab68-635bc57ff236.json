@@ -20,16 +20,16 @@
         "__id__": 2
       },
       {
-        "__id__": 237
+        "__id__": 240
       },
       {
-        "__id__": 239
+        "__id__": 242
       }
     ],
     "_active": true,
     "_components": [],
     "_prefab": {
-      "__id__": 241
+      "__id__": 244
     },
     "_lpos": {
       "__type__": "cc.Vec3",
@@ -60,7 +60,7 @@
     },
     "autoReleaseAssets": true,
     "_globals": {
-      "__id__": 242
+      "__id__": 245
     },
     "_id": "091c5c0e-b72a-4cad-ab68-635bc57ff236"
   },
@@ -101,22 +101,22 @@
         "__id__": 198
       },
       {
-        "__id__": 216
+        "__id__": 219
       },
       {
-        "__id__": 219
+        "__id__": 222
       }
     ],
     "_active": true,
     "_components": [
       {
-        "__id__": 234
+        "__id__": 237
       },
       {
-        "__id__": 235
+        "__id__": 238
       },
       {
-        "__id__": 236
+        "__id__": 239
       }
     ],
     "_prefab": null,
@@ -208,7 +208,7 @@
     "_priority": 0,
     "_fov": 45,
     "_fovAxis": 0,
-    "_orthoHeight": 373.4663341645885,
+    "_orthoHeight": 360,
     "_near": 0,
     "_far": 2000,
     "_color": {
@@ -817,8 +817,8 @@
     "__prefab": null,
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 80.0859375,
-      "height": 50.4
+      "width": 84.0859375,
+      "height": 54.4
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -842,9 +842,9 @@
     "_dstBlendFactor": 4,
     "_color": {
       "__type__": "cc.Color",
-      "r": 219,
-      "g": 202,
-      "b": 111,
+      "r": 255,
+      "g": 235,
+      "b": 128,
       "a": 247
     },
     "_string": "9999",
@@ -864,7 +864,7 @@
     "_isUnderline": false,
     "_underlineHeight": 2,
     "_cacheMode": 0,
-    "_enableOutline": false,
+    "_enableOutline": true,
     "_outlineColor": {
       "__type__": "cc.Color",
       "r": 0,
@@ -873,7 +873,7 @@
       "a": 255
     },
     "_outlineWidth": 2,
-    "_enableShadow": false,
+    "_enableShadow": true,
     "_shadowColor": {
       "__type__": "cc.Color",
       "r": 0,
@@ -1277,7 +1277,7 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": 129.724,
-      "y": -123.736,
+      "y": -114.263,
       "z": 0
     },
     "_lrot": {
@@ -1315,8 +1315,8 @@
     "__prefab": null,
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 40,
-      "height": 50.4
+      "width": 44,
+      "height": 54.4
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -1340,9 +1340,9 @@
     "_dstBlendFactor": 4,
     "_color": {
       "__type__": "cc.Color",
-      "r": 255,
+      "r": 169,
       "g": 255,
-      "b": 255,
+      "b": 59,
       "a": 255
     },
     "_string": "评价",
@@ -1358,11 +1358,11 @@
     "_isSystemFontUsed": true,
     "_spacingX": 0,
     "_isItalic": false,
-    "_isBold": false,
+    "_isBold": true,
     "_isUnderline": false,
     "_underlineHeight": 2,
     "_cacheMode": 0,
-    "_enableOutline": false,
+    "_enableOutline": true,
     "_outlineColor": {
       "__type__": "cc.Color",
       "r": 0,
@@ -1371,7 +1371,7 @@
       "a": 255
     },
     "_outlineWidth": 2,
-    "_enableShadow": false,
+    "_enableShadow": true,
     "_shadowColor": {
       "__type__": "cc.Color",
       "r": 0,
@@ -1873,7 +1873,7 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": 132.207,
-      "y": -123.692,
+      "y": -114.219,
       "z": 0
     },
     "_lrot": {
@@ -1911,8 +1911,8 @@
     "__prefab": null,
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 40,
-      "height": 50.4
+      "width": 44,
+      "height": 54.4
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -1936,9 +1936,9 @@
     "_dstBlendFactor": 4,
     "_color": {
       "__type__": "cc.Color",
-      "r": 255,
+      "r": 138,
       "g": 255,
-      "b": 255,
+      "b": 109,
       "a": 255
     },
     "_string": "评价",
@@ -1954,11 +1954,11 @@
     "_isSystemFontUsed": true,
     "_spacingX": 0,
     "_isItalic": false,
-    "_isBold": false,
+    "_isBold": true,
     "_isUnderline": false,
     "_underlineHeight": 2,
     "_cacheMode": 0,
-    "_enableOutline": false,
+    "_enableOutline": true,
     "_outlineColor": {
       "__type__": "cc.Color",
       "r": 0,
@@ -1967,7 +1967,7 @@
       "a": 255
     },
     "_outlineWidth": 2,
-    "_enableShadow": false,
+    "_enableShadow": true,
     "_shadowColor": {
       "__type__": "cc.Color",
       "r": 0,
@@ -2469,7 +2469,7 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": 130.409,
-      "y": -124.614,
+      "y": -112.772,
       "z": 0
     },
     "_lrot": {
@@ -2507,8 +2507,8 @@
     "__prefab": null,
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 40,
-      "height": 50.4
+      "width": 44,
+      "height": 54.4
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -2532,9 +2532,9 @@
     "_dstBlendFactor": 4,
     "_color": {
       "__type__": "cc.Color",
-      "r": 255,
+      "r": 190,
       "g": 255,
-      "b": 255,
+      "b": 129,
       "a": 255
     },
     "_string": "评价",
@@ -2550,11 +2550,11 @@
     "_isSystemFontUsed": true,
     "_spacingX": 0,
     "_isItalic": false,
-    "_isBold": false,
+    "_isBold": true,
     "_isUnderline": false,
     "_underlineHeight": 2,
     "_cacheMode": 0,
-    "_enableOutline": false,
+    "_enableOutline": true,
     "_outlineColor": {
       "__type__": "cc.Color",
       "r": 0,
@@ -2563,7 +2563,7 @@
       "a": 255
     },
     "_outlineWidth": 2,
-    "_enableShadow": false,
+    "_enableShadow": true,
     "_shadowColor": {
       "__type__": "cc.Color",
       "r": 0,
@@ -3128,7 +3128,7 @@
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": -159.769,
+      "x": -143.253,
       "y": -137.308,
       "z": 0
     },
@@ -5946,7 +5946,7 @@
     "_isUnderline": false,
     "_underlineHeight": 2,
     "_cacheMode": 0,
-    "_enableOutline": false,
+    "_enableOutline": true,
     "_outlineColor": {
       "__type__": "cc.Color",
       "r": 0,
@@ -6224,9 +6224,9 @@
     "_dstBlendFactor": 4,
     "_color": {
       "__type__": "cc.Color",
-      "r": 255,
-      "g": 12,
-      "b": 148,
+      "r": 234,
+      "g": 255,
+      "b": 122,
       "a": 255
     },
     "_string": "back",
@@ -6242,11 +6242,11 @@
     "_isSystemFontUsed": true,
     "_spacingX": 0,
     "_isItalic": false,
-    "_isBold": false,
+    "_isBold": true,
     "_isUnderline": false,
     "_underlineHeight": 2,
     "_cacheMode": 0,
-    "_enableOutline": false,
+    "_enableOutline": true,
     "_outlineColor": {
       "__type__": "cc.Color",
       "r": 0,
@@ -6255,7 +6255,7 @@
       "a": 255
     },
     "_outlineWidth": 2,
-    "_enableShadow": false,
+    "_enableShadow": true,
     "_shadowColor": {
       "__type__": "cc.Color",
       "r": 0,
@@ -6421,8 +6421,8 @@
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 380.0409999999999,
-      "y": -127.40700000000004,
+      "x": 430.4145,
+      "y": -135.665,
       "z": 0
     },
     "_lrot": {
@@ -6560,8 +6560,8 @@
     "__prefab": null,
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 94.4921875,
-      "height": 50.4
+      "width": 101.802734375,
+      "height": 54.4
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -6586,8 +6586,8 @@
     "_color": {
       "__type__": "cc.Color",
       "r": 255,
-      "g": 255,
-      "b": 255,
+      "g": 0,
+      "b": 0,
       "a": 255
     },
     "_string": "speed速度",
@@ -6603,11 +6603,11 @@
     "_isSystemFontUsed": true,
     "_spacingX": 0,
     "_isItalic": false,
-    "_isBold": false,
+    "_isBold": true,
     "_isUnderline": false,
     "_underlineHeight": 2,
     "_cacheMode": 0,
-    "_enableOutline": false,
+    "_enableOutline": true,
     "_outlineColor": {
       "__type__": "cc.Color",
       "r": 0,
@@ -6616,7 +6616,7 @@
       "a": 255
     },
     "_outlineWidth": 2,
-    "_enableShadow": false,
+    "_enableShadow": true,
     "_shadowColor": {
       "__type__": "cc.Color",
       "r": 0,
@@ -6772,9 +6772,9 @@
     "_dstBlendFactor": 4,
     "_color": {
       "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
+      "r": 250,
+      "g": 75,
+      "b": 75,
       "a": 255
     },
     "_spriteFrame": {
@@ -6833,9 +6833,9 @@
     "_dstBlendFactor": 4,
     "_color": {
       "__type__": "cc.Color",
-      "r": 255,
+      "r": 201,
       "g": 255,
-      "b": 255,
+      "b": 205,
       "a": 255
     },
     "_spriteFrame": {
@@ -7010,8 +7010,8 @@
     "__prefab": null,
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 74.462890625,
-      "height": 50.4
+      "width": 82.876953125,
+      "height": 54.4
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -7036,8 +7036,8 @@
     "_color": {
       "__type__": "cc.Color",
       "r": 255,
-      "g": 255,
-      "b": 255,
+      "g": 243,
+      "b": 102,
       "a": 255
     },
     "_string": "turn转向",
@@ -7053,11 +7053,11 @@
     "_isSystemFontUsed": true,
     "_spacingX": 0,
     "_isItalic": false,
-    "_isBold": false,
+    "_isBold": true,
     "_isUnderline": false,
     "_underlineHeight": 2,
     "_cacheMode": 0,
-    "_enableOutline": false,
+    "_enableOutline": true,
     "_outlineColor": {
       "__type__": "cc.Color",
       "r": 0,
@@ -7066,7 +7066,7 @@
       "a": 255
     },
     "_outlineWidth": 2,
-    "_enableShadow": false,
+    "_enableShadow": true,
     "_shadowColor": {
       "__type__": "cc.Color",
       "r": 0,
@@ -7223,8 +7223,8 @@
     "_color": {
       "__type__": "cc.Color",
       "r": 255,
-      "g": 255,
-      "b": 255,
+      "g": 251,
+      "b": 163,
       "a": 255
     },
     "_spriteFrame": {
@@ -7283,8 +7283,8 @@
     "_dstBlendFactor": 4,
     "_color": {
       "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
+      "r": 138,
+      "g": 138,
       "b": 255,
       "a": 255
     },
@@ -7460,8 +7460,8 @@
     "__prefab": null,
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 90.048828125,
-      "height": 50.4
+      "width": 99.52734375,
+      "height": 54.4
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -7485,9 +7485,9 @@
     "_dstBlendFactor": 4,
     "_color": {
       "__type__": "cc.Color",
-      "r": 255,
+      "r": 10,
       "g": 255,
-      "b": 255,
+      "b": 0,
       "a": 255
     },
     "_string": "tough坚硬",
@@ -7503,11 +7503,11 @@
     "_isSystemFontUsed": true,
     "_spacingX": 0,
     "_isItalic": false,
-    "_isBold": false,
+    "_isBold": true,
     "_isUnderline": false,
     "_underlineHeight": 2,
     "_cacheMode": 0,
-    "_enableOutline": false,
+    "_enableOutline": true,
     "_outlineColor": {
       "__type__": "cc.Color",
       "r": 0,
@@ -7516,7 +7516,7 @@
       "a": 255
     },
     "_outlineWidth": 2,
-    "_enableShadow": false,
+    "_enableShadow": true,
     "_shadowColor": {
       "__type__": "cc.Color",
       "r": 0,
@@ -7672,9 +7672,9 @@
     "_dstBlendFactor": 4,
     "_color": {
       "__type__": "cc.Color",
-      "r": 255,
+      "r": 154,
       "g": 255,
-      "b": 255,
+      "b": 107,
       "a": 255
     },
     "_spriteFrame": {
@@ -7734,8 +7734,8 @@
     "_color": {
       "__type__": "cc.Color",
       "r": 255,
-      "g": 255,
-      "b": 255,
+      "g": 221,
+      "b": 252,
       "a": 255
     },
     "_spriteFrame": {
@@ -7810,7 +7810,7 @@
     "__prefab": null,
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 300,
+      "width": 334.683,
       "height": 200
     },
     "_anchorPoint": {
@@ -7931,18 +7931,21 @@
       },
       {
         "__id__": 210
+      },
+      {
+        "__id__": 213
       }
     ],
     "_active": false,
     "_components": [
       {
-        "__id__": 213
+        "__id__": 216
       },
       {
-        "__id__": 214
+        "__id__": 217
       },
       {
-        "__id__": 215
+        "__id__": 218
       }
     ],
     "_prefab": null,
@@ -8457,7 +8460,7 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": 29.31,
+      "y": 167.512,
       "z": 0
     },
     "_lrot": {
@@ -8495,8 +8498,8 @@
     "__prefab": null,
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 284.86864013671874,
-      "height": 109.6
+      "width": 240.215234375,
+      "height": 99.99999999999999
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -8528,8 +8531,8 @@
     "_string": "该车辆价格为：1000\n是否确认购买？",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
-    "_actualFontSize": 28.8,
-    "_fontSize": 28.8,
+    "_actualFontSize": 25,
+    "_fontSize": 25,
     "_fontFamily": "Arial",
     "_lineHeight": 40,
     "_overflow": 0,
@@ -8550,7 +8553,7 @@
       "b": 204,
       "a": 255
     },
-    "_outlineWidth": 9.6,
+    "_outlineWidth": 4.8,
     "_enableShadow": true,
     "_shadowColor": {
       "__type__": "cc.Color",
@@ -8566,6 +8569,138 @@
     },
     "_shadowBlur": 2,
     "_id": "b9iPdSUBZL+aKmZvfWZG/J"
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "infoText",
+    "_objFlags": 0,
+    "__editorExtras__": {},
+    "_parent": {
+      "__id__": 198
+    },
+    "_children": [],
+    "_active": true,
+    "_components": [
+      {
+        "__id__": 214
+      },
+      {
+        "__id__": 215
+      }
+    ],
+    "_prefab": null,
+    "_lpos": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 79.565,
+      "z": 0
+    },
+    "_lrot": {
+      "__type__": "cc.Quat",
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "w": 1
+    },
+    "_lscale": {
+      "__type__": "cc.Vec3",
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "_mobility": 0,
+    "_layer": 33554432,
+    "_euler": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_id": "b5s06CHPpMYLsiN83hrpBF"
+  },
+  {
+    "__type__": "cc.UITransform",
+    "_name": "",
+    "_objFlags": 0,
+    "__editorExtras__": {},
+    "node": {
+      "__id__": 213
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 284.86864013671874,
+      "height": 77.068
+    },
+    "_anchorPoint": {
+      "__type__": "cc.Vec2",
+      "x": 0.5,
+      "y": 0.5
+    },
+    "_id": "ef4p/kGN9DZb45HLAdVL1f"
+  },
+  {
+    "__type__": "cc.Label",
+    "_name": "",
+    "_objFlags": 0,
+    "__editorExtras__": {},
+    "node": {
+      "__id__": 213
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "_customMaterial": null,
+    "_srcBlendFactor": 2,
+    "_dstBlendFactor": 4,
+    "_color": {
+      "__type__": "cc.Color",
+      "r": 216,
+      "g": 4,
+      "b": 182,
+      "a": 255
+    },
+    "_string": "该车辆价格为：1000\n是否确认购买？",
+    "_horizontalAlign": 1,
+    "_verticalAlign": 1,
+    "_actualFontSize": 25,
+    "_fontSize": 25,
+    "_fontFamily": "Arial",
+    "_lineHeight": 31.8,
+    "_overflow": 3,
+    "_enableWrapText": true,
+    "_font": null,
+    "_isSystemFontUsed": true,
+    "_spacingX": 0,
+    "_isItalic": false,
+    "_isBold": true,
+    "_isUnderline": false,
+    "_underlineHeight": 2,
+    "_cacheMode": 0,
+    "_enableOutline": true,
+    "_outlineColor": {
+      "__type__": "cc.Color",
+      "r": 238,
+      "g": 199,
+      "b": 44,
+      "a": 255
+    },
+    "_outlineWidth": 2.6,
+    "_enableShadow": true,
+    "_shadowColor": {
+      "__type__": "cc.Color",
+      "r": 0,
+      "g": 0,
+      "b": 0,
+      "a": 255
+    },
+    "_shadowOffset": {
+      "__type__": "cc.Vec2",
+      "x": 2,
+      "y": 2
+    },
+    "_shadowBlur": 2,
+    "_id": "9buTQi98RDZbZ7Cu4M5pxD"
   },
   {
     "__type__": "cc.UITransform",
@@ -8641,6 +8776,9 @@
     "priceLabel": {
       "__id__": 212
     },
+    "infoLabel": {
+      "__id__": 215
+    },
     "closeButton": {
       "__id__": 202
     },
@@ -8661,10 +8799,10 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 217
+        "__id__": 220
       },
       {
-        "__id__": 218
+        "__id__": 221
       }
     ],
     "_prefab": null,
@@ -8703,7 +8841,7 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "node": {
-      "__id__": 216
+      "__id__": 219
     },
     "_enabled": true,
     "__prefab": null,
@@ -8725,7 +8863,7 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "node": {
-      "__id__": 216
+      "__id__": 219
     },
     "_enabled": true,
     "__prefab": null,
@@ -8788,14 +8926,14 @@
       "__id__": 2
     },
     "_prefab": {
-      "__id__": 220
+      "__id__": 223
     },
     "__editorExtras__": {}
   },
   {
     "__type__": "cc.PrefabInfo",
     "root": {
-      "__id__": 219
+      "__id__": 222
     },
     "asset": {
       "__uuid__": "81520cf5-3a02-463b-b3ec-c8870a3f4940",
@@ -8803,7 +8941,7 @@
     },
     "fileId": "98m1scCCpHFaAD50RjkFIZ",
     "instance": {
-      "__id__": 221
+      "__id__": 224
     },
     "targetOverrides": null,
     "nestedPrefabInstanceRoots": null
@@ -8816,22 +8954,22 @@
     "mountedComponents": [],
     "propertyOverrides": [
       {
-        "__id__": 222
+        "__id__": 225
       },
       {
-        "__id__": 224
+        "__id__": 227
       },
       {
-        "__id__": 226
+        "__id__": 229
       },
       {
-        "__id__": 228
+        "__id__": 231
       },
       {
-        "__id__": 230
+        "__id__": 233
       },
       {
-        "__id__": 232
+        "__id__": 235
       }
     ],
     "removedComponents": []
@@ -8839,7 +8977,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 223
+      "__id__": 226
     },
     "propertyPath": [
       "_name"
@@ -8855,15 +8993,15 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 225
+      "__id__": 228
     },
     "propertyPath": [
       "_lpos"
     ],
     "value": {
       "__type__": "cc.Vec3",
-      "x": 1.6715000000000373,
-      "y": 0,
+      "x": 1.672,
+      "y": 16.154,
       "z": 0
     }
   },
@@ -8876,7 +9014,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 227
+      "__id__": 230
     },
     "propertyPath": [
       "_lrot"
@@ -8898,7 +9036,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 229
+      "__id__": 232
     },
     "propertyPath": [
       "_euler"
@@ -8919,7 +9057,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 231
+      "__id__": 234
     },
     "propertyPath": [
       "_color"
@@ -8941,7 +9079,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 233
+      "__id__": 236
     },
     "propertyPath": [
       "_active"
@@ -9034,7 +9172,7 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 238
+        "__id__": 241
       }
     ],
     "_prefab": null,
@@ -9073,7 +9211,7 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "node": {
-      "__id__": 237
+      "__id__": 240
     },
     "_enabled": true,
     "__prefab": null,
@@ -9095,7 +9233,7 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 240
+        "__id__": 243
       }
     ],
     "_prefab": null,
@@ -9134,7 +9272,7 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "node": {
-      "__id__": 239
+      "__id__": 242
     },
     "_enabled": true,
     "__prefab": null,
@@ -9147,8 +9285,11 @@
     "startButton": {
       "__id__": 149
     },
+    "backButton": {
+      "__id__": 156
+    },
     "insufficientMoneyLabel": {
-      "__id__": 218
+      "__id__": 221
     },
     "purchasePanelNode": {
       "__id__": 198
@@ -9167,35 +9308,35 @@
     "targetOverrides": null,
     "nestedPrefabInstanceRoots": [
       {
-        "__id__": 219
+        "__id__": 222
       }
     ]
   },
   {
     "__type__": "cc.SceneGlobals",
     "ambient": {
-      "__id__": 243
-    },
-    "shadows": {
-      "__id__": 244
-    },
-    "_skybox": {
-      "__id__": 245
-    },
-    "fog": {
       "__id__": 246
     },
-    "octree": {
+    "shadows": {
       "__id__": 247
     },
-    "skin": {
+    "_skybox": {
       "__id__": 248
     },
-    "lightProbeInfo": {
+    "fog": {
       "__id__": 249
     },
-    "postSettings": {
+    "octree": {
       "__id__": 250
+    },
+    "skin": {
+      "__id__": 251
+    },
+    "lightProbeInfo": {
+      "__id__": 252
+    },
+    "postSettings": {
+      "__id__": 253
     },
     "bakedWithStationaryMainLight": false,
     "bakedWithHighpLightmap": false

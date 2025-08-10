@@ -1,7 +1,7 @@
 System.register(["cc"], function (_export, _context) {
   "use strict";
 
-  var _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Label, Button, _dec, _dec2, _dec3, _dec4, _class, _class2, _descriptor, _descriptor2, _descriptor3, _crd, ccclass, property, PurchasePanel;
+  var _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Label, Button, _dec, _dec2, _dec3, _dec4, _dec5, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _crd, ccclass, property, PurchasePanel;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -37,9 +37,12 @@ System.register(["cc"], function (_export, _context) {
         type: Label,
         tooltip: '价格显示文本'
       }), _dec3 = property({
+        type: Label,
+        tooltip: '车辆介绍文本'
+      }), _dec4 = property({
         type: Button,
         tooltip: '关闭按钮'
-      }), _dec4 = property({
+      }), _dec5 = property({
         type: Button,
         tooltip: '购买确认按钮'
       }), _dec(_class = (_class2 = class PurchasePanel extends Component {
@@ -48,9 +51,11 @@ System.register(["cc"], function (_export, _context) {
 
           _initializerDefineProperty(this, "priceLabel", _descriptor, this);
 
-          _initializerDefineProperty(this, "closeButton", _descriptor2, this);
+          _initializerDefineProperty(this, "infoLabel", _descriptor2, this);
 
-          _initializerDefineProperty(this, "confirmButton", _descriptor3, this);
+          _initializerDefineProperty(this, "closeButton", _descriptor3, this);
+
+          _initializerDefineProperty(this, "confirmButton", _descriptor4, this);
 
           // @property({ type: Node, tooltip: '面板节点' })
           // private panelNode: Node = null!;
@@ -70,12 +75,16 @@ System.register(["cc"], function (_export, _context) {
         } // 显示面板
 
 
-        show(price, onConfirm) {
+        show(price, info, onConfirm) {
           this.currentPrice = price;
           this.onConfirmCallback = onConfirm;
 
           if (this.priceLabel) {
             this.priceLabel.string = "$" + price;
+          }
+
+          if (this.infoLabel) {
+            this.infoLabel.string = "" + info;
           } // 使用拖拽关联的节点控制显示
 
 
@@ -119,14 +128,21 @@ System.register(["cc"], function (_export, _context) {
         initializer: function initializer() {
           return null;
         }
-      }), _descriptor2 = _applyDecoratedDescriptor(_class2.prototype, "closeButton", [_dec3], {
+      }), _descriptor2 = _applyDecoratedDescriptor(_class2.prototype, "infoLabel", [_dec3], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: function initializer() {
           return null;
         }
-      }), _descriptor3 = _applyDecoratedDescriptor(_class2.prototype, "confirmButton", [_dec4], {
+      }), _descriptor3 = _applyDecoratedDescriptor(_class2.prototype, "closeButton", [_dec4], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function initializer() {
+          return null;
+        }
+      }), _descriptor4 = _applyDecoratedDescriptor(_class2.prototype, "confirmButton", [_dec5], {
         configurable: true,
         enumerable: true,
         writable: true,

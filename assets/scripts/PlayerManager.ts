@@ -185,7 +185,7 @@ export class PlayerManager extends Component {
             money: 10000,
             experience: 0,
             
-            unlockedCars: ['car-1'], // 默认解锁第一辆车
+            unlockedCars: [], // 默认解锁第一辆车
             currentCar: 'car-1',
             carUpgrades: {
                 'car-1': {

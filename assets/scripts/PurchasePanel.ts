@@ -9,6 +9,9 @@ export class PurchasePanel extends Component {
     @property({ type: Label, tooltip: '价格显示文本' })
     private priceLabel: Label = null!;
 
+    @property({ type: Label, tooltip: '车辆介绍文本' })
+    private infoLabel: Label = null!;
+
     @property({ type: Button, tooltip: '关闭按钮' })
     private closeButton: Button = null!;
 
@@ -33,12 +36,17 @@ export class PurchasePanel extends Component {
     }
 
     // 显示面板
-    public show(price: number, onConfirm: (price: number) => void) {
+    public show(price: number, info: string, onConfirm: (price: number) => void) {
         this.currentPrice = price;
+        
         this.onConfirmCallback = onConfirm;
         
         if (this.priceLabel) {
             this.priceLabel.string = `$${price}`;
+        }
+        if(this.infoLabel)
+        {
+            this.infoLabel.string = `${info}`;
         }
         
         // 使用拖拽关联的节点控制显示
