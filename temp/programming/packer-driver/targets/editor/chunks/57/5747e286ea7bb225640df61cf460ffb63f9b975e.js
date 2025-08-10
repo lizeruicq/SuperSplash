@@ -73,11 +73,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
         updateUI(data) {
           if (this.levelLabel) {
-            this.levelLabel.string = `等级: ${data.level}`;
+            this.levelLabel.string = `level: ${data.level}`;
           }
 
           if (this.moneyLabel) {
-            this.moneyLabel.string = `金钱: ${data.money}`;
+            this.moneyLabel.string = `money: ${data.money}`;
           }
         }
 

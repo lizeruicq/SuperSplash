@@ -27,10 +27,10 @@ export class PlayerInfoUI extends Component {
 
     updateUI(data: PlayerData) {
         if (this.levelLabel) {
-            this.levelLabel.string = `等级: ${data.level}`;
+            this.levelLabel.string = `level: ${data.level}`;
         }
         if (this.moneyLabel) {
-            this.moneyLabel.string = `金钱: ${data.money}`;
+            this.moneyLabel.string = `money: ${data.money}`;
         }
     }
 } 
