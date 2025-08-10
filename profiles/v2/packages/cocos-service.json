@@ -5,10 +5,47 @@
       "web-desktop": {
         "configID": "e495ea",
         "services": []
+      },
+      "mac": {
+        "configID": "e495ea",
+        "services": []
+      },
+      "web-mobile": {
+        "configID": "e495ea",
+        "services": []
       }
     },
     "taskOptionsMap": {
       "1754729577999": {
+        "configID": "e495ea",
+        "services": [],
+        "__version__": "3.0.9"
+      },
+      "1754796521852": {
+        "configID": "e495ea",
+        "services": []
+      },
+      "1754796652802": {
+        "configID": "e495ea",
+        "services": [],
+        "__version__": "3.0.9"
+      },
+      "1754796712646": {
+        "configID": "e495ea",
+        "services": [],
+        "__version__": "3.0.9"
+      },
+      "1754796833428": {
+        "configID": "e495ea",
+        "services": [],
+        "__version__": "3.0.9"
+      },
+      "1754797764344": {
+        "configID": "e495ea",
+        "services": [],
+        "__version__": "3.0.9"
+      },
+      "1754797776377": {
         "configID": "e495ea",
         "services": [],
         "__version__": "3.0.9"
