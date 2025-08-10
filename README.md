@@ -7,6 +7,13 @@
 - 目标平台：Web（Web Desktop/Preview）
 
 ---
+<img width="987" height="551" alt="WechatIMG133" src="https://github.com/user-attachments/assets/81cfb209-edcc-4c40-b19e-141a85e0b38c" />
+<img width="987" height="551" alt="WechatIMG133" src="https://github.com/user-attachments/assets/87a499ad-15ec-4e5d-b194-4730887878b1" />
+<img width="987" height="551" alt="WechatIMG133" src="https://github.com/user-attachments/assets/1db4e2ca-dc6a-44aa-a523-3a96a726504d" />
+<img width="987" height="551" alt="WechatIMG133" src="https://github.com/user-attachments/assets/bcc7a1b2-2e88-4853-80fa-e8d1fc7cd04a" />
+<img width="987" height="551" alt="WechatIMG133" src="https://github.com/user-attachments/assets/5df5624d-e270-420d-9fb4-2765d3c36b13" />
+<img width="987" height="551" alt="WechatIMG133" src="https://github.com/user-attachments/assets/905253ed-2f85-4308-a173-0250725b522e" />
+
 
 ### 游戏目标与玩法
 
