@@ -17,6 +17,10 @@
     {
       "name": "Block",
       "value": 2
+    },
+    {
+      "name": "Bullet",
+      "value": 4
     }
   ]
 }

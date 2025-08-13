@@ -29,9 +29,8 @@ System.register(["cc"], function (_export, _context) {
       ({
         ccclass,
         property
-      } = _decorator); // 声明微信小游戏全局变量
-      // 玩家数据结构
-      // 车辆升级数据
+      } = _decorator); // 玩家数据结构
+      // 移除CarUpgrade接口
       // 关卡进度数据
 
       // 评级枚举
@@ -45,9 +44,9 @@ System.register(["cc"], function (_export, _context) {
         return LevelGrade;
       }({})); // 游戏设置
       // 游戏统计
-      // 微信小游戏相关接口
 
 
+      // 移除微信小游戏相关接口
       _export("PlayerManager", PlayerManager = (_dec = ccclass('PlayerManager'), _dec(_class = (_class2 = class PlayerManager extends Component {
         constructor() {
           super(...arguments);
@@ -56,10 +55,10 @@ System.register(["cc"], function (_export, _context) {
           this.STORAGE_KEY_BACKUP = 'TopRacing_PlayerData_Backup';
           // 玩家数据
           this._playerData = null;
-          // 微信API
-          this._wechatAPI = null;
-          this._isWeChatMiniGame = false;
-          this._userId = '';
+          // 移除微信相关字段
+          // private _wechatAPI: WeChatAPI | null = null;
+          // private _isWeChatMiniGame = false;
+          // private _userId: string = '';
           // 自动保存相关
           this._autoSaveInterval = 30000;
           // 30秒自动保存
@@ -74,15 +73,14 @@ System.register(["cc"], function (_export, _context) {
 
         get playerData() {
           return this._playerData;
-        }
+        } // 移除微信相关属性
+        // public get isWeChatMiniGame(): boolean {
+        //     return this._isWeChatMiniGame;
+        // }
+        // public get userId(): string {
+        //     return this._userId;
+        // }
 
-        get isWeChatMiniGame() {
-          return this._isWeChatMiniGame;
-        }
-
-        get userId() {
-          return this._userId;
-        }
 
         onLoad() {
           // 单例模式
@@ -94,9 +92,8 @@ System.register(["cc"], function (_export, _context) {
           PlayerManager._instance = this; // 设置为常驻节点，不随场景切换而销毁
           // (this.node as any)._persistNode = true;
 
-          director.addPersistRootNode(this.node); // 检测运行环境
-
-          this._detectEnvironment();
+          director.addPersistRootNode(this.node); // 移除环境检测
+          // this._detectEnvironment();
 
           this.resetPlayerData(); // 初始化玩家数据
 
@@ -122,21 +119,20 @@ System.register(["cc"], function (_export, _context) {
           }
         }
         /**
-         * 检测运行环境
+         * 移除环境检测方法
          */
+        // private _detectEnvironment() {
+        //     // 检测是否在微信小游戏环境中
+        //     if (typeof wx !== 'undefined' && wx.setStorageSync) {
+        //         this._isWeChatMiniGame = true;
+        //         this._wechatAPI = wx as any;
+        //         console.log('检测到微信小游戏环境');
+        //     } else {
+        //         this._isWeChatMiniGame = false;
+        //         console.log('检测到普通游戏环境');
+        //     }
+        // }
 
-
-        _detectEnvironment() {
-          // 检测是否在微信小游戏环境中
-          if (typeof wx !== 'undefined' && wx.setStorageSync) {
-            this._isWeChatMiniGame = true;
-            this._wechatAPI = wx;
-            console.log('检测到微信小游戏环境');
-          } else {
-            this._isWeChatMiniGame = false;
-            console.log('检测到普通游戏环境');
-          }
-        }
         /**
          * 初始化玩家数据
          */
@@ -149,15 +145,8 @@ System.register(["cc"], function (_export, _context) {
             experience: 0,
             unlockedCars: [],
             // 默认解锁第一辆车
-            currentCar: 'car-1',
-            carUpgrades: {
-              'car-1': {
-                engine: 0,
-                tires: 0,
-                suspension: 0,
-                nitro: 0
-              }
-            },
+            currentCar: '',
+            // 移除车辆改装相关初始化
             unlockedLevels: ['level-1', 'level-2', 'level-3'],
             // 默认只解锁第一关
             currentLevel: 'level-1',
@@ -193,23 +182,12 @@ System.register(["cc"], function (_export, _context) {
 
           return _asyncToGenerator(function* () {
             try {
-              var _data = null;
+              var _data = null; // 移除微信相关代码，只保留普通环境的localStorage
 
-              if (_this._isWeChatMiniGame && _this._wechatAPI) {
-                // 微信小游戏环境
-                try {
-                  _data = _this._wechatAPI.getStorageSync(_this.STORAGE_KEY);
-                } catch (error) {
-                  console.warn('微信存储读取失败，尝试读取备份:', error);
-                  _data = _this._wechatAPI.getStorageSync(_this.STORAGE_KEY_BACKUP);
-                }
-              } else {
-                // 普通环境使用localStorage
-                var jsonData = sys.localStorage.getItem(_this.STORAGE_KEY);
+              var jsonData = sys.localStorage.getItem(_this.STORAGE_KEY);
 
-                if (jsonData) {
-                  _data = JSON.parse(jsonData);
-                }
+              if (jsonData) {
+                _data = JSON.parse(jsonData);
               }
 
               if (_data) {
@@ -237,25 +215,9 @@ System.register(["cc"], function (_export, _context) {
 
           return _asyncToGenerator(function* () {
             try {
-              _this2._playerData.lastSaveTime = Date.now();
+              _this2._playerData.lastSaveTime = Date.now(); // 移除微信相关代码，只保留普通环境的localStorage
 
-              if (_this2._isWeChatMiniGame && _this2._wechatAPI) {
-                // 微信小游戏环境
-                try {
-                  _this2._wechatAPI.setStorageSync(_this2.STORAGE_KEY, _this2._playerData); // 同时保存备份
-
-
-                  _this2._wechatAPI.setStorageSync(_this2.STORAGE_KEY_BACKUP, _this2._playerData);
-                } catch (error) {
-                  console.error('微信存储保存失败:', error); // 尝试云存储
-
-                  yield _this2._saveToWeChatCloud();
-                }
-              } else {
-                // 普通环境使用localStorage
-                sys.localStorage.setItem(_this2.STORAGE_KEY, JSON.stringify(_this2._playerData));
-              }
-
+              sys.localStorage.setItem(_this2.STORAGE_KEY, JSON.stringify(_this2._playerData));
               console.log('玩家数据保存成功');
             } catch (error) {
               console.error('保存玩家数据失败:', error);
@@ -271,12 +233,12 @@ System.register(["cc"], function (_export, _context) {
           var merged = _extends({}, defaultData); // 递归合并对象
 
 
-          for (var _key in savedData) {
-            if (savedData.hasOwnProperty(_key)) {
-              if (typeof savedData[_key] === 'object' && savedData[_key] !== null && !Array.isArray(savedData[_key])) {
-                merged[_key] = _extends({}, merged[_key], savedData[_key]);
+          for (var key in savedData) {
+            if (savedData.hasOwnProperty(key)) {
+              if (typeof savedData[key] === 'object' && savedData[key] !== null && !Array.isArray(savedData[key])) {
+                merged[key] = _extends({}, merged[key], savedData[key]);
               } else {
-                merged[_key] = savedData[_key];
+                merged[key] = savedData[key];
               }
             }
           }
@@ -284,85 +246,68 @@ System.register(["cc"], function (_export, _context) {
           return merged;
         }
         /**
-         * 微信云存储保存
+         * 移除微信云存储相关方法
          */
+        // private async _saveToWeChatCloud(): Promise<void> {
+        //     if (!this._wechatAPI || !this._userId) return;
+        //     
+        //     try {
+        //         await this._wechatAPI.cloudCallFunction('savePlayerData', {
+        //             userId: this._userId,
+        //             data: this._playerData
+        //         });
+        //         console.log('数据已保存到微信云存储');
+        //     } catch (error) {
+        //         console.error('微信云存储保存失败:', error);
+        //     }
+        // }
 
-
-        _saveToWeChatCloud() {
-          var _this3 = this;
-
-          return _asyncToGenerator(function* () {
-            if (!_this3._wechatAPI || !_this3._userId) return;
-
-            try {
-              yield _this3._wechatAPI.cloudCallFunction('savePlayerData', {
-                userId: _this3._userId,
-                data: _this3._playerData
-              });
-              console.log('数据已保存到微信云存储');
-            } catch (error) {
-              console.error('微信云存储保存失败:', error);
-            }
-          })();
-        }
         /**
-         * 微信登录
+         * 移除微信登录相关方法
          */
+        // public async wechatLogin(): Promise<boolean> {
+        //     if (!this._isWeChatMiniGame || !this._wechatAPI) {
+        //         return false;
+        //     }
+        //     
+        //     try {
+        //         const loginResult = await this._wechatAPI.login();
+        //         this._userId = loginResult.code || '';
+        //         
+        //         if (this._userId) {
+        //             console.log('微信登录成功');
+        //             // 登录后尝试从云端加载数据
+        //             await this._loadFromWeChatCloud();
+        //             return true;
+        //         }
+        //     } catch (error) {
+        //         console.error('微信登录失败:', error);
+        //     }
+        //     
+        //     return false;
+        // }
 
-
-        wechatLogin() {
-          var _this4 = this;
-
-          return _asyncToGenerator(function* () {
-            if (!_this4._isWeChatMiniGame || !_this4._wechatAPI) {
-              return false;
-            }
-
-            try {
-              var loginResult = yield _this4._wechatAPI.login();
-              _this4._userId = loginResult.code || '';
-
-              if (_this4._userId) {
-                console.log('微信登录成功'); // 登录后尝试从云端加载数据
-
-                yield _this4._loadFromWeChatCloud();
-                return true;
-              }
-            } catch (error) {
-              console.error('微信登录失败:', error);
-            }
-
-            return false;
-          })();
-        }
         /**
-         * 从微信云端加载数据
+         * 移除微信云端加载相关方法
          */
+        // private async _loadFromWeChatCloud(): Promise<void> {
+        //     if (!this._wechatAPI || !this._userId) return;
+        //     
+        //     try {
+        //         const result = await this._wechatAPI.cloudCallFunction('loadPlayerData', {
+        //             userId: this._userId
+        //         });
+        //         
+        //         if (result.data) {
+        //             this._playerData = this._mergePlayerData(this._playerData, result.data);
+        //             this._notifyDataChange();
+        //             console.log('从微信云端加载数据成功');
+        //         }
+        //     } catch (error) {
+        //         console.error('从微信云端加载数据失败:', error);
+        //     }
+        // }
 
-
-        _loadFromWeChatCloud() {
-          var _this5 = this;
-
-          return _asyncToGenerator(function* () {
-            if (!_this5._wechatAPI || !_this5._userId) return;
-
-            try {
-              var result = yield _this5._wechatAPI.cloudCallFunction('loadPlayerData', {
-                userId: _this5._userId
-              });
-
-              if (result.data) {
-                _this5._playerData = _this5._mergePlayerData(_this5._playerData, result.data);
-
-                _this5._notifyDataChange();
-
-                console.log('从微信云端加载数据成功');
-              }
-            } catch (error) {
-              console.error('从微信云端加载数据失败:', error);
-            }
-          })();
-        }
         /**
          * 添加数据变化监听
          */
@@ -450,14 +395,8 @@ System.register(["cc"], function (_export, _context) {
 
         unlockCar(carId) {
           if (this._playerData.unlockedCars.indexOf(carId) === -1) {
-            this._playerData.unlockedCars.push(carId);
+            this._playerData.unlockedCars.push(carId); // 移除车辆改装相关代码
 
-            this._playerData.carUpgrades[carId] = {
-              engine: 0,
-              tires: 0,
-              suspension: 0,
-              nitro: 0
-            };
 
             this._notifyDataChange();
 
@@ -491,24 +430,20 @@ System.register(["cc"], function (_export, _context) {
           return false;
         }
         /**
-         * 升级车辆部件
+         * 移除车辆升级相关方法
          */
+        // public upgradeCarPart(carId: string, part: keyof CarUpgrade): boolean {
+        //     if (!this._playerData.carUpgrades[carId]) return false;
+        //     
+        //     const upgrade = this._playerData.carUpgrades[carId];
+        //     if (upgrade[part] < 5) {
+        //         upgrade[part]++;
+        //         this._notifyDataChange();
+        //         return true;
+        //     }
+        //     return false;
+        // }
 
-
-        upgradeCarPart(carId, part) {
-          if (!this._playerData.carUpgrades[carId]) return false;
-          var upgrade = this._playerData.carUpgrades[carId];
-
-          if (upgrade[part] < 5) {
-            upgrade[part]++;
-
-            this._notifyDataChange();
-
-            return true;
-          }
-
-          return false;
-        }
         /**
          * 解锁关卡
          */
@@ -535,27 +470,80 @@ System.register(["cc"], function (_export, _context) {
         }
         /**
          * 更新关卡进度
+         * @param levelId 关卡ID
+         * @param stars 获得的星星数
+         * @param performance 表现评价（可选）
          */
 
 
-        updateLevelProgress(levelId, time, stars) {
-          // 计算评级
-          var grade = this.calculateLevelGrade(time, stars);
+        updateLevelProgress(levelId, stars, performance) {
+          var grade; // 如果提供了表现评价，则根据表现评价确定等级
+
+          if (performance) {
+            switch (performance) {
+              case 'A':
+                grade = LevelGrade.A;
+                break;
+
+              case 'B':
+                grade = LevelGrade.B;
+                break;
+
+              case 'C':
+                grade = LevelGrade.C;
+                break;
+
+              case 'F':
+              case 'failure':
+                grade = LevelGrade.F;
+                break;
+
+              default:
+                // 如果提供的表现评价无法识别，根据星星数确定等级
+                if (stars >= 3) {
+                  grade = LevelGrade.A;
+                } else if (stars >= 2) {
+                  grade = LevelGrade.B;
+                } else if (stars >= 1) {
+                  grade = LevelGrade.C;
+                } else {
+                  grade = LevelGrade.F;
+                }
+
+                break;
+            }
+          } else {
+            // 没有提供表现评价时，根据星星数确定等级
+            if (stars >= 3) {
+              grade = LevelGrade.A;
+            } else if (stars >= 2) {
+              grade = LevelGrade.B;
+            } else if (stars >= 1) {
+              grade = LevelGrade.C;
+            } else {
+              grade = LevelGrade.F;
+            }
+          } // 获取当前时间作为记录时间
+
+
+          var currentTime = Date.now();
 
           if (!this._playerData.levelProgress[levelId]) {
             this._playerData.levelProgress[levelId] = {
               stars: stars,
               completed: true,
-              bestTime: time,
+              bestTime: currentTime,
+              // 使用当前时间作为记录时间
               grade: grade,
               attempts: 1
             };
           } else {
-            var progress = this._playerData.levelProgress[levelId]; // 更新最佳成绩
+            var progress = this._playerData.levelProgress[levelId]; // 更新最佳成绩（仅基于星星数，不再考虑时间）
 
-            if (stars > progress.stars || stars === progress.stars && time < progress.bestTime) {
+            if (stars > progress.stars) {
               progress.stars = stars;
-              progress.bestTime = time;
+              progress.bestTime = currentTime; // 更新记录时间
+
               progress.grade = grade;
             }
 
@@ -567,26 +555,6 @@ System.register(["cc"], function (_export, _context) {
           this.checkAndUnlockNextLevel(levelId);
 
           this._notifyDataChange();
-        }
-        /**
-         * 计算关卡评级
-         */
-
-
-        calculateLevelGrade(time, stars) {
-          // 基于星星数和时间计算评级
-          if (stars === 3) {
-            if (time <= 30000) return LevelGrade.S; // 30秒内3星 = S
-            else if (time <= 45000) return LevelGrade.A; // 45秒内3星 = A
-            else return LevelGrade.B; // 超过45秒3星 = B
-          } else if (stars === 2) {
-            if (time <= 60000) return LevelGrade.C; // 60秒内2星 = C
-            else return LevelGrade.D; // 超过60秒2星 = D
-          } else if (stars === 1) {
-            return LevelGrade.D; // 1星 = D
-          } else {
-            return LevelGrade.F; // 0星 = F
-          }
         }
         /**
          * 检查并解锁下一关卡

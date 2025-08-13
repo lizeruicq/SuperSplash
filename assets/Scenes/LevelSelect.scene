@@ -3344,7 +3344,7 @@
       "__id__": 79
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 81
@@ -3732,7 +3732,7 @@
       "__id__": 79
     },
     "checkEvents": [],
-    "_isChecked": true,
+    "_isChecked": false,
     "_checkMark": {
       "__id__": 82
     },
