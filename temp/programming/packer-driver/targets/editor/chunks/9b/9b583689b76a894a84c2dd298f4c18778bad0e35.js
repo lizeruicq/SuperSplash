@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Vec2, Vec3, RigidBody2D, ERigidBody2DType, BoxCollider2D, Contact2DType, ProgressBar, Sprite, SpriteFrame, tween, Prefab, Layers, find, player, GameManager, AIController, SoundManager, _dec, _dec2, _dec3, _dec4, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _descriptor12, _crd, ccclass, property, AIPlayer;
+  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Vec2, Vec3, RigidBody2D, ERigidBody2DType, BoxCollider2D, Contact2DType, ProgressBar, Sprite, SpriteFrame, tween, Prefab, Layers, find, player, GameManager, AIController, WeaponType, SoundManager, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _descriptor12, _descriptor13, _descriptor14, _descriptor15, _descriptor16, _crd, ccclass, property, AIPlayer;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -19,6 +19,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
   function _reportPossibleCrUseOfAIController(extras) {
     _reporterNs.report("AIController", "./AIController", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfWeaponType(extras) {
+    _reporterNs.report("WeaponType", "./Bullet", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfSoundManager(extras) {
@@ -54,22 +58,38 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     }, function (_unresolved_4) {
       AIController = _unresolved_4.AIController;
     }, function (_unresolved_5) {
-      SoundManager = _unresolved_5.SoundManager;
+      WeaponType = _unresolved_5.WeaponType;
+    }, function (_unresolved_6) {
+      SoundManager = _unresolved_6.SoundManager;
     }],
     execute: function () {
       _crd = true;
 
       _cclegacy._RF.push({}, "91c082Rgh1HBbV2vKQl2J1W", "AIPlayer", undefined);
 
-      __checkObsolete__(['_decorator', 'Component', 'Vec2', 'Vec3', 'RigidBody2D', 'ERigidBody2DType', 'BoxCollider2D', 'Contact2DType', 'ProgressBar', 'Sprite', 'SpriteFrame', 'tween', 'Prefab', 'Layers', 'find']);
+      __checkObsolete__(['_decorator', 'Component', 'Vec2', 'Vec3', 'RigidBody2D', 'ERigidBody2DType', 'BoxCollider2D', 'Contact2DType', 'ProgressBar', 'Sprite', 'SpriteFrame', 'tween', 'Prefab', 'Layers', 'find']); // 添加AIController导入
 
-      // 添加AIController导入
+
+      // 导入武器类型枚举
       ({
         ccclass,
         property
       } = _decorator);
 
-      _export("AIPlayer", AIPlayer = (_dec = ccclass('AIPlayer'), _dec2 = property(ProgressBar), _dec3 = property(SpriteFrame), _dec4 = property(Prefab), _dec(_class = (_class2 = class AIPlayer extends Component {
+      _export("AIPlayer", AIPlayer = (_dec = ccclass('AIPlayer'), _dec2 = property(ProgressBar), _dec3 = property(SpriteFrame), _dec4 = property(Prefab), _dec5 = property({
+        type: Prefab,
+        tooltip: "普通子弹预制体"
+      }), _dec6 = property({
+        type: Prefab,
+        tooltip: "火箭弹预制体"
+      }), _dec7 = property({
+        tooltip: "射速（发/秒）"
+      }), _dec8 = property({
+        type: _crd && WeaponType === void 0 ? (_reportPossibleCrUseOfWeaponType({
+          error: Error()
+        }), WeaponType) : WeaponType,
+        tooltip: "武器类型"
+      }), _dec(_class = (_class2 = class AIPlayer extends Component {
         constructor(...args) {
           super(...args);
 
@@ -104,6 +124,15 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           _initializerDefineProperty(this, "paintSprayInterval", _descriptor12, this);
 
           // 颜料喷洒间隔（秒）
+          // 武器系统相关属性
+          _initializerDefineProperty(this, "normalBulletPrefab", _descriptor13, this);
+
+          _initializerDefineProperty(this, "rocketPrefab", _descriptor14, this);
+
+          _initializerDefineProperty(this, "fireRate", _descriptor15, this);
+
+          _initializerDefineProperty(this, "weaponType", _descriptor16, this);
+
           this._rigidBody = null;
           this._direction = 0;
           // -1:左, 0:不转, 1:右
@@ -126,9 +155,14 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this._blockCollisionCooldown = 0;
           // Block碰撞冷却时间计时器
           this._blockCollisionCooldownDuration = 3.0;
+          // Block碰撞冷却时间(秒)
+          // 武器系统相关私有变量
+          this._canFire = true;
+          // 是否可以射击
+          this._fireTimer = 0;
         }
 
-        // Block碰撞冷却时间(秒)
+        // 射击计时器
         onLoad() {
           this._rigidBody = null;
           this._direction = 0;
@@ -143,7 +177,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this._vehicleId = `ai_${this.node.name}_${Date.now()}`; // 生成唯一ID
           // 初始化Block碰撞冷却时间
 
-          this._blockCollisionCooldown = 0;
+          this._blockCollisionCooldown = 0; // 初始化武器系统相关
+
+          this._canFire = true;
+          this._fireTimer = 0;
         }
 
         start() {
@@ -302,7 +339,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           } // 更新颜料喷洒
 
 
-          this.updatePaintSpray(deltaTime);
+          this.updatePaintSpray(deltaTime); // 更新武器系统
+
+          this.updateWeaponSystem(deltaTime);
         } // 供AI控制器调用的接口
 
 
@@ -578,6 +617,14 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           return this._isDestroyed;
         }
         /**
+         * 获取车辆ID
+         */
+
+
+        getVehicleId() {
+          return this._vehicleId;
+        }
+        /**
          * 恢复车辆（用于重新开始游戏）
          */
         // public restoreVehicle() {
@@ -646,6 +693,119 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           const worldPosition = this.node.getWorldPosition(); // 通过GameManager喷洒颜料
 
           gameManager.sprayPaint(this.paintPrefab, worldPosition, this._vehicleId);
+        } // ==================== 武器系统 ====================
+
+        /**
+         * 更新武器系统
+         * @param deltaTime 帧时间间隔
+         */
+
+
+        updateWeaponSystem(deltaTime) {
+          if (this._isDestroyed) return; // 更新射击计时器
+
+          this._fireTimer += deltaTime; // 检查是否可以射击
+
+          const fireInterval = 1 / this.fireRate;
+
+          if (this._fireTimer >= fireInterval) {
+            this._canFire = true;
+          } // 检查是否应该射击
+
+
+          this.checkAndShoot();
+        }
+        /**
+         * 检查是否应该射击
+         */
+
+
+        checkAndShoot() {
+          if (!this._canFire) return; // 获取玩家位置
+
+          const gameManager = (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+            error: Error()
+          }), GameManager) : GameManager).getInstance();
+          if (!gameManager) return;
+          const playerComponent = gameManager.getPlayerComponent();
+          if (!playerComponent || !playerComponent.node) return; // 获取玩家和AI的位置
+
+          const playerPos = playerComponent.node.getWorldPosition();
+          const aiPos = this.node.getWorldPosition(); // 计算玩家相对于AI的方向向量
+
+          const toPlayer = new Vec2(playerPos.x - aiPos.x, playerPos.y - aiPos.y); // 计算玩家相对于AI的角度
+
+          const angleToPlayer = Math.atan2(toPlayer.y, toPlayer.x) * 180 / Math.PI; // 获取AI车辆的正前方角度（AI的角度+90度，因为车辆默认朝向是-90度）
+
+          const aiForwardAngle = this._angle + 90; // 计算角度差
+
+          let angleDiff = angleToPlayer - aiForwardAngle; // 将角度差标准化到-180到180度范围内
+
+          while (angleDiff > 180) angleDiff -= 360;
+
+          while (angleDiff < -180) angleDiff += 360; // 检查玩家是否在AI车辆正前方的-90度到90度范围内
+
+
+          if (Math.abs(angleDiff) <= 90) {
+            this.shoot();
+          }
+        }
+        /**
+         * 射击方法
+         */
+
+
+        shoot() {
+          if (!this._canFire || this._isDestroyed) return; // 重置射击状态
+
+          this._canFire = false;
+          this._fireTimer = 0; // 根据武器类型选择子弹预制体
+
+          let bulletPrefab = null;
+
+          switch (this.weaponType) {
+            case (_crd && WeaponType === void 0 ? (_reportPossibleCrUseOfWeaponType({
+              error: Error()
+            }), WeaponType) : WeaponType).NORMAL:
+              bulletPrefab = this.normalBulletPrefab;
+              break;
+
+            case (_crd && WeaponType === void 0 ? (_reportPossibleCrUseOfWeaponType({
+              error: Error()
+            }), WeaponType) : WeaponType).ROCKET:
+              bulletPrefab = this.rocketPrefab;
+              break;
+          } // 检查预制体是否存在
+
+
+          if (!bulletPrefab) {
+            console.warn('AI子弹预制体未设置'); // 允许重新射击
+
+            this._canFire = true;
+            return;
+          } // 获取当前车辆的朝向
+
+
+          const rad = (this._angle + 90) * Math.PI / 180;
+          const direction = new Vec2(Math.cos(rad), Math.sin(rad)); // 计算子弹发射位置（车辆正前方）
+
+          const vehicleWorldPos = this.node.worldPosition;
+          const offsetDistance = 30; // 子弹发射偏移距离（像素）
+
+          const bulletStartPos = new Vec3(vehicleWorldPos.x + direction.x * offsetDistance, vehicleWorldPos.y + direction.y * offsetDistance, vehicleWorldPos.z); // 获取GameManager实例并发射子弹
+
+          const gameManager = (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+            error: Error()
+          }), GameManager) : GameManager).getInstance();
+
+          if (gameManager) {
+            gameManager.fireBullet(bulletPrefab, bulletStartPos, direction, this._vehicleId, this.weaponType);
+          } // 播放射击音效
+
+
+          (_crd && SoundManager === void 0 ? (_reportPossibleCrUseOfSoundManager({
+            error: Error()
+          }), SoundManager) : SoundManager).instance.playSoundEffect('weaponFire');
         }
 
       }, (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "maxSpeed", [property], {
@@ -731,6 +891,36 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         writable: true,
         initializer: function () {
           return 0.2;
+        }
+      }), _descriptor13 = _applyDecoratedDescriptor(_class2.prototype, "normalBulletPrefab", [_dec5], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function () {
+          return null;
+        }
+      }), _descriptor14 = _applyDecoratedDescriptor(_class2.prototype, "rocketPrefab", [_dec6], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function () {
+          return null;
+        }
+      }), _descriptor15 = _applyDecoratedDescriptor(_class2.prototype, "fireRate", [_dec7], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function () {
+          return 1.5;
+        }
+      }), _descriptor16 = _applyDecoratedDescriptor(_class2.prototype, "weaponType", [_dec8], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function () {
+          return (_crd && WeaponType === void 0 ? (_reportPossibleCrUseOfWeaponType({
+            error: Error()
+          }), WeaponType) : WeaponType).NORMAL;
         }
       })), _class2)) || _class));
 

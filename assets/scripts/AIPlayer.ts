@@ -2,6 +2,7 @@ import { _decorator, Component, Vec2, Vec3, RigidBody2D, ERigidBody2DType, BoxCo
 import { player } from './player';
 import { GameManager } from './GameManager';
 import { AIController } from './AIController'; // 添加AIController导入
+import { WeaponType } from './Bullet'; // 导入武器类型枚举
 const { ccclass, property } = _decorator;
 import { SoundManager } from './SoundManager';
 
@@ -39,6 +40,30 @@ export class AIPlayer extends Component {
     @property
     paintSprayInterval: number = 0.2; // 颜料喷洒间隔（秒）
 
+    // 武器系统相关属性
+    @property({
+        type: Prefab,
+        tooltip: "普通子弹预制体"
+    })
+    normalBulletPrefab: Prefab = null!;
+
+    @property({
+        type: Prefab,
+        tooltip: "火箭弹预制体"
+    })
+    rocketPrefab: Prefab = null!;
+
+    @property({
+        tooltip: "射速（发/秒）"
+    })
+    fireRate: number = 1.5;
+
+    @property({
+        type: WeaponType,
+        tooltip: "武器类型"
+    })
+    weaponType: WeaponType = WeaponType.NORMAL;
+
     private _rigidBody: RigidBody2D = null!;
     private _direction: number = 0; // -1:左, 0:不转, 1:右
     private _accel: number = 0; // -1:刹车, 0:无, 1:加速
@@ -58,6 +83,10 @@ export class AIPlayer extends Component {
     private _blockCollisionCooldown: number = 0; // Block碰撞冷却时间计时器
     private _blockCollisionCooldownDuration: number = 3.0; // Block碰撞冷却时间(秒)
 
+    // 武器系统相关私有变量
+    private _canFire: boolean = true; // 是否可以射击
+    private _fireTimer: number = 0; // 射击计时器
+
     onLoad() {
         this._rigidBody = null!;
         this._direction = 0;
@@ -75,6 +104,10 @@ export class AIPlayer extends Component {
         
         // 初始化Block碰撞冷却时间
         this._blockCollisionCooldown = 0;
+
+        // 初始化武器系统相关
+        this._canFire = true;
+        this._fireTimer = 0;
     }
 
     start() {
@@ -239,6 +272,9 @@ export class AIPlayer extends Component {
 
         // 更新颜料喷洒
         this.updatePaintSpray(deltaTime);
+
+        // 更新武器系统
+        this.updateWeaponSystem(deltaTime);
     }
 
     // 供AI控制器调用的接口
@@ -502,6 +538,13 @@ export class AIPlayer extends Component {
     }
 
     /**
+     * 获取车辆ID
+     */
+    public getVehicleId(): string {
+        return this._vehicleId;
+    }
+
+    /**
      * 恢复车辆（用于重新开始游戏）
      */
     // public restoreVehicle() {
@@ -575,6 +618,119 @@ export class AIPlayer extends Component {
 
         // 通过GameManager喷洒颜料
         gameManager.sprayPaint(this.paintPrefab, worldPosition, this._vehicleId);
+    }
+
+    // ==================== 武器系统 ====================
+
+    /**
+     * 更新武器系统
+     * @param deltaTime 帧时间间隔
+     */
+    private updateWeaponSystem(deltaTime: number): void {
+        if (this._isDestroyed) return;
+
+        // 更新射击计时器
+        this._fireTimer += deltaTime;
+
+        // 检查是否可以射击
+        const fireInterval = 1 / this.fireRate;
+        if (this._fireTimer >= fireInterval) {
+            this._canFire = true;
+        }
+
+        // 检查是否应该射击
+        this.checkAndShoot();
+    }
+
+    /**
+     * 检查是否应该射击
+     */
+    private checkAndShoot(): void {
+        if (!this._canFire) return;
+
+        // 获取玩家位置
+        const gameManager = GameManager.getInstance();
+        if (!gameManager) return;
+
+        const playerComponent = gameManager.getPlayerComponent();
+        if (!playerComponent || !playerComponent.node) return;
+
+        // 获取玩家和AI的位置
+        const playerPos = playerComponent.node.getWorldPosition();
+        const aiPos = this.node.getWorldPosition();
+
+        // 计算玩家相对于AI的方向向量
+        const toPlayer = new Vec2(playerPos.x - aiPos.x, playerPos.y - aiPos.y);
+
+        // 计算玩家相对于AI的角度
+        const angleToPlayer = Math.atan2(toPlayer.y, toPlayer.x) * 180 / Math.PI;
+
+        // 获取AI车辆的正前方角度（AI的角度+90度，因为车辆默认朝向是-90度）
+        const aiForwardAngle = this._angle + 90;
+
+        // 计算角度差
+        let angleDiff = angleToPlayer - aiForwardAngle;
+
+        // 将角度差标准化到-180到180度范围内
+        while (angleDiff > 180) angleDiff -= 360;
+        while (angleDiff < -180) angleDiff += 360;
+
+        // 检查玩家是否在AI车辆正前方的-90度到90度范围内
+        if (Math.abs(angleDiff) <= 90) {
+            this.shoot();
+        }
+    }
+
+    /**
+     * 射击方法
+     */
+    public shoot(): void {
+        if (!this._canFire || this._isDestroyed) return;
+
+        // 重置射击状态
+        this._canFire = false;
+        this._fireTimer = 0;
+
+        // 根据武器类型选择子弹预制体
+        let bulletPrefab: Prefab | null = null;
+        switch (this.weaponType) {
+            case WeaponType.NORMAL:
+                bulletPrefab = this.normalBulletPrefab;
+                break;
+            case WeaponType.ROCKET:
+                bulletPrefab = this.rocketPrefab;
+                break;
+        }
+
+        // 检查预制体是否存在
+        if (!bulletPrefab) {
+            console.warn('AI子弹预制体未设置');
+            // 允许重新射击
+            this._canFire = true;
+            return;
+        }
+
+        // 获取当前车辆的朝向
+        const rad = (this._angle + 90) * Math.PI / 180;
+        const direction = new Vec2(Math.cos(rad), Math.sin(rad));
+
+        // 计算子弹发射位置（车辆正前方）
+        const vehicleWorldPos = this.node.worldPosition;
+        const offsetDistance = 30; // 子弹发射偏移距离（像素）
+        const bulletStartPos = new Vec3(
+            vehicleWorldPos.x + direction.x * offsetDistance,
+            vehicleWorldPos.y + direction.y * offsetDistance,
+            vehicleWorldPos.z
+        );
+
+        // 获取GameManager实例并发射子弹
+        const gameManager = GameManager.getInstance();
+        if (gameManager) {
+            gameManager.fireBullet(bulletPrefab, bulletStartPos, direction, this._vehicleId, this.weaponType);
+        }
+
+        // 播放射击音效
+        SoundManager.instance.playSoundEffect('weaponFire');
     }
 
 }
