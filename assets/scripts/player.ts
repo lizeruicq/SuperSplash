@@ -3,7 +3,7 @@ const { ccclass, property } = _decorator;
 import { AIPlayer } from './AIPlayer';
 import { GameManager } from './GameManager';
 import { SoundManager } from './SoundManager';
-import { WeaponType } from './Bullet';
+import { Bullet, WeaponType } from './Bullet';
 
 @ccclass('player')
 export class player extends Component {
@@ -374,20 +374,46 @@ export class player extends Component {
             
             this.takeDamage(playerDamage);
         }
-        
-        // 检测与地图边界的碰撞
+        // 判断对方是否为子弹
         else {
-            const mySpeed = this._rigidBody.linearVelocity.length();
-            const damageFactor = 0.3; // 地图边界碰撞的伤害系数
-            const boundaryDamage = Math.round(mySpeed * damageFactor);
-            
-            // 施加反作用力
-            const recoilForce = new Vec2(this._rigidBody.linearVelocity.x, this._rigidBody.linearVelocity.y);
-            recoilForce.normalize(); // 归一化方向
-            recoilForce.multiplyScalar(-mySpeed * 0.05); // 根据速度大小施加反作用力
-            this._rigidBody.linearVelocity = recoilForce;
-            
-            this.takeDamage(boundaryDamage);
+            const bullet = otherNode.getComponent(Bullet);
+            if (bullet) {
+                // 检查是否为自己发射的子弹
+                if (bullet['_shooterId'] === 'player') {
+                    // 自己发射的子弹不造成伤害和反作用力
+                    console.log('玩家与自己发射的子弹碰撞，不造成伤害和反作用力');
+                    return;
+                } else {
+                    // 其他子弹造成伤害
+                    const bulletDamage = bullet['damage'] || 5;
+                    this.takeDamage(bulletDamage);
+                    
+                    // 施加反作用力（只有非普通子弹才施加物理推力）
+                    // 火焰子弹(FLAME)已被注释，所以只检查是否为普通子弹
+                    if (bullet['bulletType'] === 0) { // 0是NORMAL类型
+                        const recoilForce = new Vec2(this._rigidBody.linearVelocity.x, this._rigidBody.linearVelocity.y);
+                        recoilForce.normalize();
+                        recoilForce.multiplyScalar(-bulletDamage * 0.5); // 根据子弹伤害施加反作用力
+                        this._rigidBody.linearVelocity = recoilForce;
+                    }
+                    
+                    console.log('玩家被子弹击中，造成伤害:', bulletDamage);
+                }
+            }
+            // 检测与地图边界的碰撞
+            else {
+                const mySpeed = this._rigidBody.linearVelocity.length();
+                const damageFactor = 0.3; // 地图边界碰撞的伤害系数
+                const boundaryDamage = Math.round(mySpeed * damageFactor);
+                
+                // 施加反作用力
+                const recoilForce = new Vec2(this._rigidBody.linearVelocity.x, this._rigidBody.linearVelocity.y);
+                recoilForce.normalize(); // 归一化方向
+                recoilForce.multiplyScalar(-mySpeed * 0.05); // 根据速度大小施加反作用力
+                this._rigidBody.linearVelocity = recoilForce;
+                
+                this.takeDamage(boundaryDamage);
+            }
         }
     }
 

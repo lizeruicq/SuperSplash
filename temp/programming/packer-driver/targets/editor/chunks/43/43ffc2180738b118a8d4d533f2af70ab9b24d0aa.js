@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, input, Input, KeyCode, Vec2, Vec3, RigidBody2D, ERigidBody2DType, Contact2DType, BoxCollider2D, Sprite, SpriteFrame, tween, Prefab, AIPlayer, GameManager, SoundManager, WeaponType, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _descriptor12, _descriptor13, _descriptor14, _descriptor15, _descriptor16, _descriptor17, _crd, ccclass, property, player;
+  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, input, Input, KeyCode, Vec2, Vec3, RigidBody2D, ERigidBody2DType, Contact2DType, BoxCollider2D, Sprite, SpriteFrame, tween, Prefab, AIPlayer, GameManager, SoundManager, Bullet, WeaponType, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _descriptor12, _descriptor13, _descriptor14, _descriptor15, _descriptor16, _descriptor17, _crd, ccclass, property, player;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -19,6 +19,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
   function _reportPossibleCrUseOfSoundManager(extras) {
     _reporterNs.report("SoundManager", "./SoundManager", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfBullet(extras) {
+    _reporterNs.report("Bullet", "./Bullet", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfWeaponType(extras) {
@@ -54,6 +58,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     }, function (_unresolved_4) {
       SoundManager = _unresolved_4.SoundManager;
     }, function (_unresolved_5) {
+      Bullet = _unresolved_5.Bullet;
       WeaponType = _unresolved_5.WeaponType;
     }],
     execute: function () {
@@ -467,21 +472,51 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
             this._rigidBody.linearVelocity = recoilForce;
             this.takeDamage(playerDamage);
-          } // 检测与地图边界的碰撞
+          } // 判断对方是否为子弹
           else {
-            const mySpeed = this._rigidBody.linearVelocity.length();
+            const bullet = otherNode.getComponent(_crd && Bullet === void 0 ? (_reportPossibleCrUseOfBullet({
+              error: Error()
+            }), Bullet) : Bullet);
 
-            const damageFactor = 0.3; // 地图边界碰撞的伤害系数
+            if (bullet) {
+              // 检查是否为自己发射的子弹
+              if (bullet['_shooterId'] === 'player') {
+                // 自己发射的子弹不造成伤害和反作用力
+                console.log('玩家与自己发射的子弹碰撞，不造成伤害和反作用力');
+                return;
+              } else {
+                // 其他子弹造成伤害
+                const bulletDamage = bullet['damage'] || 5;
+                this.takeDamage(bulletDamage); // 施加反作用力（只有非普通子弹才施加物理推力）
+                // 火焰子弹(FLAME)已被注释，所以只检查是否为普通子弹
 
-            const boundaryDamage = Math.round(mySpeed * damageFactor); // 施加反作用力
+                if (bullet['bulletType'] === 0) {
+                  // 0是NORMAL类型
+                  const recoilForce = new Vec2(this._rigidBody.linearVelocity.x, this._rigidBody.linearVelocity.y);
+                  recoilForce.normalize();
+                  recoilForce.multiplyScalar(-bulletDamage * 0.5); // 根据子弹伤害施加反作用力
 
-            const recoilForce = new Vec2(this._rigidBody.linearVelocity.x, this._rigidBody.linearVelocity.y);
-            recoilForce.normalize(); // 归一化方向
+                  this._rigidBody.linearVelocity = recoilForce;
+                }
 
-            recoilForce.multiplyScalar(-mySpeed * 0.05); // 根据速度大小施加反作用力
+                console.log('玩家被子弹击中，造成伤害:', bulletDamage);
+              }
+            } // 检测与地图边界的碰撞
+            else {
+              const mySpeed = this._rigidBody.linearVelocity.length();
 
-            this._rigidBody.linearVelocity = recoilForce;
-            this.takeDamage(boundaryDamage);
+              const damageFactor = 0.3; // 地图边界碰撞的伤害系数
+
+              const boundaryDamage = Math.round(mySpeed * damageFactor); // 施加反作用力
+
+              const recoilForce = new Vec2(this._rigidBody.linearVelocity.x, this._rigidBody.linearVelocity.y);
+              recoilForce.normalize(); // 归一化方向
+
+              recoilForce.multiplyScalar(-mySpeed * 0.05); // 根据速度大小施加反作用力
+
+              this._rigidBody.linearVelocity = recoilForce;
+              this.takeDamage(boundaryDamage);
+            }
           }
         } // ==================== 生命值和摧毁系统 ====================
 

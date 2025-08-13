@@ -510,8 +510,8 @@ export class GameManager extends Component {
         // 给予玩家奖励
         PlayerManager.instance.addMoney(gameResult.reward);
 
-        // 更新关卡进度
-        this.updateLevelProgress(this.gameEndTime - this.gameStartTime, gameResult.stars);
+        // 更新关卡进度，不再传递时间参数
+        this.updateLevelProgress(gameResult.stars, gameResult.performance);
 
         console.log(isVictory ? '游戏胜利！' : '游戏失败！');
     }
@@ -620,8 +620,10 @@ export class GameManager extends Component {
 
     /**
      * 更新关卡进度
+     * @param stars 星星数
+     * @param performance 表现评价
      */
-    private updateLevelProgress(gameTimeMs: number, stars: number) {
+    private updateLevelProgress(stars: number, performance?: string) {
         // 获取当前关卡ID
         const currentLevelId = TempData.selectedLevel;
         if (!currentLevelId) {
@@ -629,10 +631,10 @@ export class GameManager extends Component {
             return;
         }
 
-        // 更新PlayerManager中的关卡进度
-        PlayerManager.instance.updateLevelProgress(currentLevelId, gameTimeMs, stars);
+        // 更新PlayerManager中的关卡进度（不再传递时间参数）
+        PlayerManager.instance.updateLevelProgress(currentLevelId, stars, performance);
 
-        console.log(`关卡进度已更新: ${currentLevelId}, 时间: ${gameTimeMs}ms, 星星: ${stars}`);
+        console.log(`关卡进度已更新: ${currentLevelId}, 星星: ${stars}`);
     }
 
     /**
@@ -910,6 +912,7 @@ export class GameManager extends Component {
             if (localPos) {
                 bulletNode.setPosition(localPos);
             } else {
+                console.warn('BulletRoot转换失败，请检查');
                 bulletNode.setWorldPosition(position);
             }
             this.bulletRoot.addChild(bulletNode);

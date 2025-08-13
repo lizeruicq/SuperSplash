@@ -629,9 +629,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           (_crd && PlayerManager === void 0 ? (_reportPossibleCrUseOfPlayerManager({
             error: Error()
-          }), PlayerManager) : PlayerManager).instance.addMoney(gameResult.reward); // 更新关卡进度
+          }), PlayerManager) : PlayerManager).instance.addMoney(gameResult.reward); // 更新关卡进度，不再传递时间参数
 
-          this.updateLevelProgress(this.gameEndTime - this.gameStartTime, gameResult.stars);
+          this.updateLevelProgress(gameResult.stars, gameResult.performance);
           console.log(isVictory ? '游戏胜利！' : '游戏失败！');
         }
         /**
@@ -735,10 +735,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
         /**
          * 更新关卡进度
+         * @param stars 星星数
+         * @param performance 表现评价
          */
 
 
-        updateLevelProgress(gameTimeMs, stars) {
+        updateLevelProgress(stars, performance) {
           // 获取当前关卡ID
           var currentLevelId = (_crd && TempData === void 0 ? (_reportPossibleCrUseOfTempData({
             error: Error()
@@ -747,13 +749,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           if (!currentLevelId) {
             console.warn('无法获取当前关卡ID');
             return;
-          } // 更新PlayerManager中的关卡进度
+          } // 更新PlayerManager中的关卡进度（不再传递时间参数）
 
 
           (_crd && PlayerManager === void 0 ? (_reportPossibleCrUseOfPlayerManager({
             error: Error()
-          }), PlayerManager) : PlayerManager).instance.updateLevelProgress(currentLevelId, gameTimeMs, stars);
-          console.log("\u5173\u5361\u8FDB\u5EA6\u5DF2\u66F4\u65B0: " + currentLevelId + ", \u65F6\u95F4: " + gameTimeMs + "ms, \u661F\u661F: " + stars);
+          }), PlayerManager) : PlayerManager).instance.updateLevelProgress(currentLevelId, stars, performance);
+          console.log("\u5173\u5361\u8FDB\u5EA6\u5DF2\u66F4\u65B0: " + currentLevelId + ", \u661F\u661F: " + stars);
         }
         /**
          * 计算表现评价（基于星星数）
@@ -1052,6 +1054,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             if (localPos) {
               bulletNode.setPosition(localPos);
             } else {
+              console.warn('BulletRoot转换失败，请检查');
               bulletNode.setWorldPosition(position);
             }
 
