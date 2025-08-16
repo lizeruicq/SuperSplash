@@ -46,11 +46,11 @@
       "uuid": "0cf6405c-918a-40f1-b383-68a9fc739b7f"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/scripts/PlayerManager.ts": {
-      "time": 1755097798535.1272,
+      "time": 1755318237927.8728,
       "uuid": "1b6d6687-2973-4618-af7b-db52ef67b8c1"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/scripts/SelectManager.ts": {
-      "time": 1754797699703.3787,
+      "time": 1755318344583.8123,
       "uuid": "be7b2dc0-da35-4de9-a81c-30690fdcd28f"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/scripts/TempData.ts": {
@@ -100,7 +100,7 @@
       "time": 1751382441481.8594
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/Scenes/LevelSelect.scene": {
-      "time": 1755100304544.3909,
+      "time": 1755318371561.331,
       "uuid": "091c5c0e-b72a-4cad-ab68-635bc57ff236"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/Scenes/gamescene.scene": {
@@ -884,7 +884,7 @@
       "uuid": "91c08d91-821d-4705-b576-bca425d89d56"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/scripts/Bullet.ts": {
-      "time": 1755094649955.9272,
+      "time": 1755318032964.4783,
       "uuid": "91ffccd6-b692-4a87-a2fe-51adeaa3b229"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/scripts/Bullet.ts.meta": {

@@ -364,7 +364,7 @@ export class SelectManager extends Component {
      */
     showInsufficientMoneyMessage() {
         if (this.insufficientMoneyLabel) {
-            this.insufficientMoneyLabel.string = '金币不足！';
+            this.insufficientMoneyLabel.string = '金币不足！\n your money is not enough';
             this.insufficientMoneyLabel.node.active = true;
             this.insufficientMoneyTimer = 3.0; // 3秒后隐藏
         }

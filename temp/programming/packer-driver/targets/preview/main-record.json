@@ -514,7 +514,7 @@
       ]
     },
     "cce:/internal/x/prerequisite-imports": {
-      "mTimestamp": 4012.742208,
+      "mTimestamp": 4135980.482917,
       "chunkId": "6d8fd2b0177941b032ddc0733af48a561fb60657",
       "imports": [
         {
@@ -2949,7 +2949,7 @@
     },
     "file:///Users/zeruili/projects/cocos_project/driftClash/assets/scripts/PlayerManager.ts": {
       "mTimestamp": {
-        "mtime": 1755097798535.1272,
+        "mtime": 1755318237927.8728,
         "uuid": "1b6d6687-2973-4618-af7b-db52ef67b8c1"
       },
       "chunkId": "0cef8fa3cb540388a42b92cbc6d47180cf46622f",
@@ -3085,7 +3085,7 @@
     },
     "file:///Users/zeruili/projects/cocos_project/driftClash/assets/scripts/SelectManager.ts": {
       "mTimestamp": {
-        "mtime": 1754797699703.3787,
+        "mtime": 1755318344583.8123,
         "uuid": "be7b2dc0-da35-4de9-a81c-30690fdcd28f"
       },
       "chunkId": "b9c16df5862bbcca6e642da38ede09779782ac3e",
@@ -5432,7 +5432,7 @@
     },
     "file:///Users/zeruili/projects/cocos_project/driftClash/assets/scripts/Bullet.ts": {
       "mTimestamp": {
-        "mtime": 1755094649955.9272,
+        "mtime": 1755318032964.4783,
         "uuid": "91ffccd6-b692-4a87-a2fe-51adeaa3b229"
       },
       "chunkId": "d90bd5f660cca2468e55c522be6e08ed7db4093d",
