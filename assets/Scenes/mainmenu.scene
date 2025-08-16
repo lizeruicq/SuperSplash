@@ -879,7 +879,7 @@
     "__prefab": null,
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 205.6357421875,
+      "width": 204.0537109375,
       "height": 41.8
     },
     "_anchorPoint": {
@@ -909,7 +909,7 @@
       "b": 89,
       "a": 255
     },
-    "_string": "尽情期待 to do",
+    "_string": "重制进度 reset",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
     "_actualFontSize": 30,
