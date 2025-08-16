@@ -166,14 +166,14 @@ export class PlayerManager extends Component {
     private _initPlayerData() {
         this._playerData = {
             level: 1,
-            money: 10000,
+            money: 0,
             experience: 0,
             
             unlockedCars: [], // 默认解锁第一辆车
             currentCar: '',
             // 移除车辆改装相关初始化
             
-            unlockedLevels: ['level-1','level-2','level-3'], // 默认只解锁第一关
+            unlockedLevels: ['level-1'], // 默认只解锁第一关
             currentLevel: 'level-1',
             levelProgress: {
                 'level-1': {

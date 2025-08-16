@@ -8847,8 +8847,8 @@
     "__prefab": null,
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 252.88671875,
-      "height": 94.39999999999999
+      "width": 370.26416015625,
+      "height": 94.852
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -8877,13 +8877,13 @@
       "b": 219,
       "a": 255
     },
-    "_string": "拥有的金币不够\nyout money is not enough",
+    "_string": "拥有的金币不够\nyour money is not enough",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
-    "_actualFontSize": 20,
-    "_fontSize": 20,
+    "_actualFontSize": 29.3,
+    "_fontSize": 29.3,
     "_fontFamily": "Arial",
-    "_lineHeight": 40,
+    "_lineHeight": 40.2,
     "_overflow": 0,
     "_enableWrapText": true,
     "_font": null,
