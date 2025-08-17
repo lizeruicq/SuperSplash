@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Vec2, Vec3, RigidBody2D, ERigidBody2DType, BoxCollider2D, Contact2DType, ProgressBar, Sprite, SpriteFrame, tween, Prefab, Layers, find, player, GameManager, AIController, WeaponType, SoundManager, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _descriptor12, _descriptor13, _descriptor14, _descriptor15, _descriptor16, _crd, ccclass, property, AIPlayer;
+  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Vec2, Vec3, RigidBody2D, ERigidBody2DType, BoxCollider2D, Contact2DType, ProgressBar, Sprite, SpriteFrame, tween, Prefab, Layers, find, player, GameManager, AIController, WeaponType, SoundManager, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _descriptor12, _descriptor13, _descriptor14, _descriptor15, _descriptor16, _descriptor17, _crd, ccclass, property, AIPlayer;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -81,10 +81,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         tooltip: "普通子弹预制体"
       }), _dec6 = property({
         type: Prefab,
-        tooltip: "火箭弹预制体"
+        tooltip: "飞镖预制体"
       }), _dec7 = property({
-        tooltip: "射速（发/秒）"
+        type: Prefab,
+        tooltip: "火箭弹预制体"
       }), _dec8 = property({
+        tooltip: "射速（发/秒）"
+      }), _dec9 = property({
         type: _crd && WeaponType === void 0 ? (_reportPossibleCrUseOfWeaponType({
           error: Error()
         }), WeaponType) : WeaponType,
@@ -127,11 +130,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           // 武器系统相关属性
           _initializerDefineProperty(this, "normalBulletPrefab", _descriptor13, this);
 
-          _initializerDefineProperty(this, "rocketPrefab", _descriptor14, this);
+          _initializerDefineProperty(this, "dartPrefab", _descriptor14, this);
 
-          _initializerDefineProperty(this, "fireRate", _descriptor15, this);
+          _initializerDefineProperty(this, "rocketPrefab", _descriptor15, this);
 
-          _initializerDefineProperty(this, "weaponType", _descriptor16, this);
+          _initializerDefineProperty(this, "fireRate", _descriptor16, this);
+
+          _initializerDefineProperty(this, "weaponType", _descriptor17, this);
 
           this._rigidBody = null;
           this._direction = 0;
@@ -772,6 +777,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
             case (_crd && WeaponType === void 0 ? (_reportPossibleCrUseOfWeaponType({
               error: Error()
+            }), WeaponType) : WeaponType).DART:
+              bulletPrefab = this.dartPrefab;
+              break;
+
+            case (_crd && WeaponType === void 0 ? (_reportPossibleCrUseOfWeaponType({
+              error: Error()
             }), WeaponType) : WeaponType).ROCKET:
               bulletPrefab = this.rocketPrefab;
               break;
@@ -899,21 +910,28 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         initializer: function () {
           return null;
         }
-      }), _descriptor14 = _applyDecoratedDescriptor(_class2.prototype, "rocketPrefab", [_dec6], {
+      }), _descriptor14 = _applyDecoratedDescriptor(_class2.prototype, "dartPrefab", [_dec6], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: function () {
           return null;
         }
-      }), _descriptor15 = _applyDecoratedDescriptor(_class2.prototype, "fireRate", [_dec7], {
+      }), _descriptor15 = _applyDecoratedDescriptor(_class2.prototype, "rocketPrefab", [_dec7], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function () {
+          return null;
+        }
+      }), _descriptor16 = _applyDecoratedDescriptor(_class2.prototype, "fireRate", [_dec8], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: function () {
           return 1.5;
         }
-      }), _descriptor16 = _applyDecoratedDescriptor(_class2.prototype, "weaponType", [_dec8], {
+      }), _descriptor17 = _applyDecoratedDescriptor(_class2.prototype, "weaponType", [_dec9], {
         configurable: true,
         enumerable: true,
         writable: true,

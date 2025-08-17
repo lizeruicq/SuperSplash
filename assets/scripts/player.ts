@@ -43,11 +43,11 @@ export class player extends Component {
     })
     normalBulletPrefab: Prefab = null!;
 
-    // @property({
-    //     type: Prefab,
-    //     tooltip: "火焰预制体"
-    // })
-    // flamePrefab: Prefab = null!;
+    @property({
+        type: Prefab,
+        tooltip: "火焰预制体"
+    })
+    dartPrefab: Prefab = null!;
 
     @property({
         type: Prefab,
@@ -376,7 +376,7 @@ export class player extends Component {
         }
         // 判断对方是否为子弹
         else {
-            const bullet = otherNode.getComponent(Bullet);
+            const bullet = otherNode.getComponent(Bullet) ;
             if (bullet) {
                 // 检查是否为自己发射的子弹
                 if (bullet['_shooterId'] === 'player') {
@@ -683,9 +683,9 @@ export class player extends Component {
                 console.log('发射普通子弹');
                 bulletPrefab = this.normalBulletPrefab;
                 break;
-            // case WeaponType.FLAME:
-            //     bulletPrefab = this.flamePrefab;
-            //     break;
+            case WeaponType.DART:
+                bulletPrefab = this.dartPrefab;
+                break;
             case WeaponType.ROCKET:
                 bulletPrefab = this.rocketPrefab;
                 break;

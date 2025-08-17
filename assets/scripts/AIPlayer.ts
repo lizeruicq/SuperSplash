@@ -49,6 +49,12 @@ export class AIPlayer extends Component {
 
     @property({
         type: Prefab,
+        tooltip: "飞镖预制体"
+    })
+    dartPrefab: Prefab = null!;
+
+    @property({
+        type: Prefab,
         tooltip: "火箭弹预制体"
     })
     rocketPrefab: Prefab = null!;
@@ -696,6 +702,9 @@ export class AIPlayer extends Component {
         switch (this.weaponType) {
             case WeaponType.NORMAL:
                 bulletPrefab = this.normalBulletPrefab;
+                break;
+            case WeaponType.DART:
+                bulletPrefab = this.dartPrefab;
                 break;
             case WeaponType.ROCKET:
                 bulletPrefab = this.rocketPrefab;

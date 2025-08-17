@@ -4,10 +4,6 @@
         "cpu": "Apple M4",
         "version": "Darwin Kernel Version 24.6.0: Mon Jul 14 11:30:40 PDT 2025; root:xnu-11417.140.69~1/RELEASE_ARM64_T8132"
     },
-    "sceneListMap": {
-        "ffdc0091-02b5-47e9-9cba-752ad0f7f260": "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/weapons/bullet.prefab",
-        "1563d039-d898-4d8f-9415-9f1da853b8a3": "/Users/zeruili/projects/cocos_project/driftClash/assets/Scenes/gamescene.scene",
-        "091c5c0e-b72a-4cad-ab68-635bc57ff236": "/Users/zeruili/projects/cocos_project/driftClash/assets/Scenes/LevelSelect.scene"
-    },
+    "sceneListMap": {},
     "deviceMd5": "4ade0bf3b465c2d387bbf6f072cc7f7e"
 }

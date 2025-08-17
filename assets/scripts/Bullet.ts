@@ -1,4 +1,4 @@
-import { _decorator, Component, Vec2, RigidBody2D, Contact2DType, IPhysics2DContact, Collider2D, Enum, instantiate, Prefab, tween, Vec3, Animation, AnimationEventType, director, Director } from 'cc';
+import { _decorator, Component, Vec2, RigidBody2D, Contact2DType, IPhysics2DContact, Collider2D, Enum, instantiate, Prefab, tween, Vec3, Animation, director, Director } from 'cc';
 import { player } from './player';
 import { AIPlayer } from './AIPlayer';
 import { SoundManager } from './SoundManager';
@@ -9,14 +9,14 @@ const { ccclass, property } = _decorator;
 // 定义武器类型枚举
 export enum WeaponType {
     NORMAL = 0,  // 普通子弹
-    // FLAME = 1,   // 火焰喷射
+    DART = 1,  // 飞镖
     ROCKET = 2   // 火箭弹
 }
 
 // 定义子弹类型枚举
 export enum BulletType {
     NORMAL = 0,  // 普通子弹
-    // FLAME = 1,   // 火焰
+    DART = 1,  // 飞镖
     ROCKET = 2   // 火箭弹
 }
 
@@ -139,6 +139,14 @@ export class Bullet extends Component {
             return;
         }
 
+        // 飞镖子弹之间不互相碰撞
+        if (this.bulletType === BulletType.DART) {
+            const otherBullet = otherNode.getComponent(Bullet);
+            if (otherBullet && otherBullet.bulletType === BulletType.DART) {
+                return;
+            }
+        }
+
         // 检查是否碰撞到车辆
         const playerComponent = otherNode.getComponent(player);
         const aiPlayerComponent = otherNode.getComponent(AIPlayer);
@@ -162,9 +170,13 @@ export class Bullet extends Component {
                 // 普通子弹碰撞后也产生爆炸效果
                 this.handleBulletExplosion();
                 return;
-            // case BulletType.FLAME:
-            //     this.handleFlameHit(aiPlayerComponent);
-            //     return;
+
+            case BulletType.DART:
+                this.handleDartHit(playerComponent, aiPlayerComponent);
+                // 飞镖子弹碰撞后产生爆炸效果
+                this.handleDartExplosion();
+                return;
+
             case BulletType.ROCKET:
                 this.handleRocketHit(vehicleNode);
                 // 火箭弹由 handleRocketHit 方法负责销毁，这里直接返回
@@ -204,6 +216,28 @@ export class Bullet extends Component {
         
         // 播放音效
         SoundManager.instance.playSoundEffect('bulletHit');
+    }
+
+    private handleDartHit(playerComponent: player | null, aiPlayerComponent: AIPlayer | null) {
+        if (playerComponent) {
+            playerComponent.takeDamage(this.damage);
+        } else if (aiPlayerComponent) {
+            aiPlayerComponent.takeDamage(this.damage);
+        }
+    }
+
+    private handleDartExplosion() {
+        // 设置爆炸标志
+        this._isExploding = true;
+        
+        // 停止移动
+        this.stopMovement();
+        
+        // 创建爆炸效果
+        this.createDartExplosion();
+        
+        // 播放音效
+        SoundManager.instance.playSoundEffect('DartHit');
     }
 
     /**
@@ -267,7 +301,7 @@ export class Bullet extends Component {
             const animationComponent = explosion.getComponent(Animation);
             if (animationComponent) {
                 // 播放动画并在0.3秒后销毁
-                animationComponent.play('explosion');
+                animationComponent.play('bulletexplosion');
                 this.scheduleOnce(() => {
                     if (explosion && explosion.isValid) {
                         explosion.destroy();
@@ -292,6 +326,45 @@ export class Bullet extends Component {
             this.destroyBullet();
         }
     }
+
+    private createDartExplosion() {
+        if (this.explosionPrefab) {
+            const explosion = instantiate(this.explosionPrefab);
+            // 将爆炸效果添加为子弹节点的子节点
+            this.node.addChild(explosion);
+            // 重置位置，使其与子弹节点重合
+            explosion.setPosition(Vec3.ZERO);
+
+            // 获取动画组件并播放动画
+            const animationComponent = explosion.getComponent(Animation);
+            if (animationComponent) {
+                // 播放动画并在0.3秒后销毁
+                animationComponent.play('dartexplosion');
+                this.scheduleOnce(() => {
+                    if (explosion && explosion.isValid) {
+                        explosion.destroy();
+                    }
+                    this.destroyBullet();
+                }, 0.3);
+            } else {
+                // 如果没有动画组件，使用tween动画
+                tween(explosion)
+                    .to(0.3, { scale: new Vec3(1.5, 1.5, 1) })
+                    .delay(0.3)
+                    .call(() => {
+                        if (explosion && explosion.isValid) {
+                            explosion.destroy();
+                        }
+                        this.destroyBullet();
+                    })
+                    .start();
+            }
+        } else {
+            // 如果没有爆炸预制体，直接销毁子弹
+            this.destroyBullet();
+        }
+    }
+
 
     /**
      * 创建火箭弹爆炸效果
@@ -418,10 +491,22 @@ export class Bullet extends Component {
             this.handleRocketHit(null);
             return;
         }
+        if (this.bulletType === BulletType.NORMAL) {
+            // 普通子弹碰撞障碍物则销毁
+            this.handleBulletExplosion();
+             return;
+        }
+        if (this.bulletType === BulletType.DART) {
+            // 镖弹碰撞障碍物则销毁
+            this.handleDartExplosion();
+             return;
+        }
+        
+
         
         // 播放音效并销毁普通子弹
-        this.playHitSound();
-        this.destroyBullet();
+        // this.playHitSound();
+        // this.destroyBullet();
     }
 
     /**
@@ -461,9 +546,9 @@ export class Bullet extends Component {
             case BulletType.NORMAL:
                 SoundManager.instance.playSoundEffect('bulletHit');
                 break;
-            // case BulletType.FLAME:
-            //     SoundManager.instance.playSoundEffect('flameHit');
-            //     break;
+            case BulletType.DART:
+                SoundManager.instance.playSoundEffect('dartHit');
+                break;
             case BulletType.ROCKET:
                 SoundManager.instance.playSoundEffect('explosion');
                 break;

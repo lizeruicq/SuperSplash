@@ -60,7 +60,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
       _cclegacy._RF.push({}, "91ffczWtpJKh6L+Ua3qo7Ip", "Bullet", undefined);
 
-      __checkObsolete__(['_decorator', 'Component', 'Vec2', 'RigidBody2D', 'Contact2DType', 'IPhysics2DContact', 'Collider2D', 'Enum', 'instantiate', 'Prefab', 'tween', 'Vec3', 'Animation', 'AnimationEventType', 'director', 'Director']);
+      __checkObsolete__(['_decorator', 'Component', 'Vec2', 'RigidBody2D', 'Contact2DType', 'IPhysics2DContact', 'Collider2D', 'Enum', 'instantiate', 'Prefab', 'tween', 'Vec3', 'Animation', 'director', 'Director']);
 
       ({
         ccclass,
@@ -69,6 +69,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
       _export("WeaponType", WeaponType = /*#__PURE__*/function (WeaponType) {
         WeaponType[WeaponType["NORMAL"] = 0] = "NORMAL";
+        WeaponType[WeaponType["DART"] = 1] = "DART";
         WeaponType[WeaponType["ROCKET"] = 2] = "ROCKET";
         return WeaponType;
       }({})); // 定义子弹类型枚举
@@ -76,6 +77,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
       _export("BulletType", BulletType = /*#__PURE__*/function (BulletType) {
         BulletType[BulletType["NORMAL"] = 0] = "NORMAL";
+        BulletType[BulletType["DART"] = 1] = "DART";
         BulletType[BulletType["ROCKET"] = 2] = "ROCKET";
         return BulletType;
       }({})); // 将枚举注册到Cocos Creator中
@@ -200,6 +202,15 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           if (otherVehicleId === this._shooterId) {
             return;
+          } // 飞镖子弹之间不互相碰撞
+
+
+          if (this.bulletType === BulletType.DART) {
+            const otherBullet = otherNode.getComponent(Bullet);
+
+            if (otherBullet && otherBullet.bulletType === BulletType.DART) {
+              return;
+            }
           } // 检查是否碰撞到车辆
 
 
@@ -231,9 +242,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
               this.handleBulletExplosion();
               return;
-            // case BulletType.FLAME:
-            //     this.handleFlameHit(aiPlayerComponent);
-            //     return;
+
+            case BulletType.DART:
+              this.handleDartHit(playerComponent, aiPlayerComponent); // 飞镖子弹碰撞后产生爆炸效果
+
+              this.handleDartExplosion();
+              return;
 
             case BulletType.ROCKET:
               this.handleRocketHit(vehicleNode); // 火箭弹由 handleRocketHit 方法负责销毁，这里直接返回
@@ -273,6 +287,27 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           (_crd && SoundManager === void 0 ? (_reportPossibleCrUseOfSoundManager({
             error: Error()
           }), SoundManager) : SoundManager).instance.playSoundEffect('bulletHit');
+        }
+
+        handleDartHit(playerComponent, aiPlayerComponent) {
+          if (playerComponent) {
+            playerComponent.takeDamage(this.damage);
+          } else if (aiPlayerComponent) {
+            aiPlayerComponent.takeDamage(this.damage);
+          }
+        }
+
+        handleDartExplosion() {
+          // 设置爆炸标志
+          this._isExploding = true; // 停止移动
+
+          this.stopMovement(); // 创建爆炸效果
+
+          this.createDartExplosion(); // 播放音效
+
+          (_crd && SoundManager === void 0 ? (_reportPossibleCrUseOfSoundManager({
+            error: Error()
+          }), SoundManager) : SoundManager).instance.playSoundEffect('DartHit');
         }
         /**
          * 处理火箭弹碰撞
@@ -333,7 +368,45 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
             if (animationComponent) {
               // 播放动画并在0.3秒后销毁
-              animationComponent.play('explosion');
+              animationComponent.play('bulletexplosion');
+              this.scheduleOnce(() => {
+                if (explosion && explosion.isValid) {
+                  explosion.destroy();
+                }
+
+                this.destroyBullet();
+              }, 0.3);
+            } else {
+              // 如果没有动画组件，使用tween动画
+              tween(explosion).to(0.3, {
+                scale: new Vec3(1.5, 1.5, 1)
+              }).delay(0.3).call(() => {
+                if (explosion && explosion.isValid) {
+                  explosion.destroy();
+                }
+
+                this.destroyBullet();
+              }).start();
+            }
+          } else {
+            // 如果没有爆炸预制体，直接销毁子弹
+            this.destroyBullet();
+          }
+        }
+
+        createDartExplosion() {
+          if (this.explosionPrefab) {
+            const explosion = instantiate(this.explosionPrefab); // 将爆炸效果添加为子弹节点的子节点
+
+            this.node.addChild(explosion); // 重置位置，使其与子弹节点重合
+
+            explosion.setPosition(Vec3.ZERO); // 获取动画组件并播放动画
+
+            const animationComponent = explosion.getComponent(Animation);
+
+            if (animationComponent) {
+              // 播放动画并在0.3秒后销毁
+              animationComponent.play('dartexplosion');
               this.scheduleOnce(() => {
                 if (explosion && explosion.isValid) {
                   explosion.destroy();
@@ -488,11 +561,22 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             // 火箭弹碰撞障碍物也会爆炸
             this.handleRocketHit(null);
             return;
+          }
+
+          if (this.bulletType === BulletType.NORMAL) {
+            // 普通子弹碰撞障碍物则销毁
+            this.handleBulletExplosion();
+            return;
+          }
+
+          if (this.bulletType === BulletType.DART) {
+            // 镖弹碰撞障碍物则销毁
+            this.handleDartExplosion();
+            return;
           } // 播放音效并销毁普通子弹
+          // this.playHitSound();
+          // this.destroyBullet();
 
-
-          this.playHitSound();
-          this.destroyBullet();
         }
         /**
          * 停止移动
@@ -538,9 +622,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
                 error: Error()
               }), SoundManager) : SoundManager).instance.playSoundEffect('bulletHit');
               break;
-            // case BulletType.FLAME:
-            //     SoundManager.instance.playSoundEffect('flameHit');
-            //     break;
+
+            case BulletType.DART:
+              (_crd && SoundManager === void 0 ? (_reportPossibleCrUseOfSoundManager({
+                error: Error()
+              }), SoundManager) : SoundManager).instance.playSoundEffect('dartHit');
+              break;
 
             case BulletType.ROCKET:
               (_crd && SoundManager === void 0 ? (_reportPossibleCrUseOfSoundManager({

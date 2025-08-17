@@ -147,7 +147,7 @@ System.register(["cc"], function (_export, _context) {
             // 默认解锁第一辆车
             currentCar: '',
             // 移除车辆改装相关初始化
-            unlockedLevels: ['level-1'],
+            unlockedLevels: ['level-1', 'level-2', 'level-3', 'level-4', 'level-5'],
             // 默认只解锁第一关
             currentLevel: 'level-1',
             levelProgress: {

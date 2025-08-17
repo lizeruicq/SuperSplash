@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8", "__unresolved_9", "__unresolved_10", "__unresolved_11", "__unresolved_12"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Node, Prefab, instantiate, resources, UITransform, director, ProgressBar, Label, Button, TempData, CameraFollow, player, AIController, AIPlayer, PlayerManager, SceneTransition, SoundManager, PaintManager, GameOverPanel, GameHUD, Bullet, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _dec10, _dec11, _dec12, _dec13, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _descriptor12, _class3, _crd, ccclass, property, GameState, GameManager;
+  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Node, Prefab, instantiate, resources, UITransform, director, ProgressBar, Label, Button, Vec2, TempData, CameraFollow, player, AIController, AIPlayer, PlayerManager, SceneTransition, SoundManager, PaintManager, GameOverPanel, GameHUD, Bullet, WeaponType, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _dec10, _dec11, _dec12, _dec13, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _descriptor12, _class3, _crd, ccclass, property, GameState, GameManager;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -79,6 +79,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       ProgressBar = _cc.ProgressBar;
       Label = _cc.Label;
       Button = _cc.Button;
+      Vec2 = _cc.Vec2;
     }, function (_unresolved_2) {
       TempData = _unresolved_2.TempData;
     }, function (_unresolved_3) {
@@ -103,6 +104,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       GameHUD = _unresolved_12.GameHUD;
     }, function (_unresolved_13) {
       Bullet = _unresolved_13.Bullet;
+      WeaponType = _unresolved_13.WeaponType;
     }],
     execute: function () {
       _crd = true;
@@ -676,7 +678,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           if (!isVictory) {
             // 失败时返回基础数据
             return {
-              performance: 'failure',
+              performance: '',
               reward: 10,
               gameTime: gameTimeSec,
               healthPercentage: healthPercentage,
@@ -1030,6 +1032,36 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
 
         fireBullet(bulletPrefab, position, direction, shooterId, weaponType) {
+          // 特殊处理DART类型子弹，生成4个分别向上下左右的子弹
+          if (weaponType === (_crd && WeaponType === void 0 ? (_reportPossibleCrUseOfWeaponType({
+            error: Error()
+          }), WeaponType) : WeaponType).DART) {
+            // 定义四个方向：上、右、下、左
+            const directions = [new Vec2(0, 1), // 上
+            new Vec2(1, 0), // 右
+            new Vec2(0, -1), // 下
+            new Vec2(-1, 0) // 左
+            ]; // 为每个方向创建一个子弹
+
+            for (const dir of directions) {
+              this.createSingleBullet(bulletPrefab, position, dir, shooterId, weaponType);
+            }
+          } else {
+            // 其他类型子弹按正常方式处理
+            this.createSingleBullet(bulletPrefab, position, direction, shooterId, weaponType);
+          }
+        }
+        /**
+         * 创建单个子弹
+         * @param bulletPrefab 子弹预制体
+         * @param position 发射位置
+         * @param direction 发射方向
+         * @param shooterId 发射者ID
+         * @param weaponType 武器类型
+         */
+
+
+        createSingleBullet(bulletPrefab, position, direction, shooterId, weaponType) {
           // 实例化子弹
           const bulletNode = instantiate(bulletPrefab); // 获取子弹组件
 
@@ -1060,14 +1092,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
             this.bulletRoot.addChild(bulletNode);
             console.log('子弹已添加到BulletRoot节点');
-          } // } else {
-          //     const localPos = this.playerComponent.node.getComponent(UITransform)?.convertToNodeSpaceAR(position);
-          //     // 如果没有找到BulletRoot，添加到场景根节点
-          //     bulletNode.setWorldPosition(localPos);
-          //     this.playerComponent.node.addChild(bulletNode);
-          //     console.log('子弹已添加到wa玩家车辆根节点');
-          // }
-
+          }
         }
         /**
          * 获取玩家组件

@@ -156,7 +156,7 @@
     "speed": 20,
     "damage": 5,
     "bulletType": 2,
-    "lifeTime": 0.5,
+    "lifeTime": 1,
     "explosionPrefab": {
       "__uuid__": "e107910c-0ef8-4a6b-8eb5-46d2b0965f23",
       "__expectedType__": "cc.Prefab"

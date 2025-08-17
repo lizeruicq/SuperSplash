@@ -559,7 +559,7 @@ export class GameManager extends Component {
         if (!isVictory) {
             // 失败时返回基础数据
             return {
-                performance: 'failure',
+                performance: '',
                 reward: 10,
                 gameTime: gameTimeSec,
                 healthPercentage: healthPercentage,
@@ -893,6 +893,35 @@ export class GameManager extends Component {
      * @param weaponType 武器类型
      */
     public fireBullet(bulletPrefab: Prefab, position: Vec3, direction: Vec2, shooterId: string, weaponType: WeaponType): void {
+        // 特殊处理DART类型子弹，生成4个分别向上下左右的子弹
+        if (weaponType === WeaponType.DART) {
+            // 定义四个方向：上、右、下、左
+            const directions = [
+                new Vec2(0, 1),   // 上
+                new Vec2(1, 0),   // 右
+                new Vec2(0, -1),  // 下
+                new Vec2(-1, 0)   // 左
+            ];
+
+            // 为每个方向创建一个子弹
+            for (const dir of directions) {
+                this.createSingleBullet(bulletPrefab, position, dir, shooterId, weaponType);
+            }
+        } else {
+            // 其他类型子弹按正常方式处理
+            this.createSingleBullet(bulletPrefab, position, direction, shooterId, weaponType);
+        }
+    }
+
+    /**
+     * 创建单个子弹
+     * @param bulletPrefab 子弹预制体
+     * @param position 发射位置
+     * @param direction 发射方向
+     * @param shooterId 发射者ID
+     * @param weaponType 武器类型
+     */
+    private createSingleBullet(bulletPrefab: Prefab, position: Vec3, direction: Vec2, shooterId: string, weaponType: WeaponType): void {
         // 实例化子弹
         const bulletNode = instantiate(bulletPrefab);
 
@@ -906,7 +935,7 @@ export class GameManager extends Component {
         }
 
         // 将子弹添加到BulletRoot节点或场景中
-        if (this.bulletRoot  ) {
+        if (this.bulletRoot) {
             // 转换世界坐标到BulletRoot的本地坐标
             const localPos = this.bulletRoot.getComponent(UITransform)?.convertToNodeSpaceAR(position);
             if (localPos) {
@@ -918,13 +947,6 @@ export class GameManager extends Component {
             this.bulletRoot.addChild(bulletNode);
             console.log('子弹已添加到BulletRoot节点');
         }
-        // } else {
-        //     const localPos = this.playerComponent.node.getComponent(UITransform)?.convertToNodeSpaceAR(position);
-        //     // 如果没有找到BulletRoot，添加到场景根节点
-        //     bulletNode.setWorldPosition(localPos);
-        //     this.playerComponent.node.addChild(bulletNode);
-        //     console.log('子弹已添加到wa玩家车辆根节点');
-        // }
     }
 
     /**

@@ -147,14 +147,17 @@
     "__prefab": {
       "__id__": 7
     },
-    "playOnLoad": false,
+    "playOnLoad": true,
     "_clips": [
       {
         "__uuid__": "0ae27a3b-2d37-4978-96ea-626bbece40f5",
         "__expectedType__": "cc.AnimationClip"
       }
     ],
-    "_defaultClip": null,
+    "_defaultClip": {
+      "__uuid__": "0ae27a3b-2d37-4978-96ea-626bbece40f5",
+      "__expectedType__": "cc.AnimationClip"
+    },
     "_id": ""
   },
   {
