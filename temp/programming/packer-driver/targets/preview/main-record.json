@@ -514,7 +514,7 @@
       ]
     },
     "cce:/internal/x/prerequisite-imports": {
-      "mTimestamp": 2984.953083,
+      "mTimestamp": 173253670.051958,
       "chunkId": "6d8fd2b0177941b032ddc0733af48a561fb60657",
       "imports": [
         {
@@ -1758,7 +1758,7 @@
     },
     "file:///Users/zeruili/projects/cocos_project/driftClash/assets/scripts/AIPlayer.ts": {
       "mTimestamp": {
-        "mtime": 1755355772577.1309,
+        "mtime": 1755579092415.3596,
         "uuid": "91c08d91-821d-4705-b576-bca425d89d56"
       },
       "chunkId": "9b583689b76a894a84c2dd298f4c18778bad0e35",
@@ -2970,7 +2970,7 @@
     },
     "file:///Users/zeruili/projects/cocos_project/driftClash/assets/scripts/PlayerManager.ts": {
       "mTimestamp": {
-        "mtime": 1755445973857.801,
+        "mtime": 1755613108310.2344,
         "uuid": "1b6d6687-2973-4618-af7b-db52ef67b8c1"
       },
       "chunkId": "0cef8fa3cb540388a42b92cbc6d47180cf46622f",
@@ -3106,7 +3106,7 @@
     },
     "file:///Users/zeruili/projects/cocos_project/driftClash/assets/scripts/SelectManager.ts": {
       "mTimestamp": {
-        "mtime": 1755318344583.8123,
+        "mtime": 1755611465763.6343,
         "uuid": "be7b2dc0-da35-4de9-a81c-30690fdcd28f"
       },
       "chunkId": "b9c16df5862bbcca6e642da38ede09779782ac3e",
@@ -3463,7 +3463,7 @@
     },
     "file:///Users/zeruili/projects/cocos_project/driftClash/assets/scripts/player.ts": {
       "mTimestamp": {
-        "mtime": 1755335114945.5671,
+        "mtime": 1755619268014.4219,
         "uuid": "b3924dc4-f7fe-491c-9736-a65419c312f5"
       },
       "chunkId": "43ffc2180738b118a8d4d533f2af70ab9b24d0aa",
@@ -3941,7 +3941,7 @@
     },
     "file:///Users/zeruili/projects/cocos_project/driftClash/assets/scripts/SoundManager.ts": {
       "mTimestamp": {
-        "mtime": 1753195607559.9182,
+        "mtime": 1755611718084.6843,
         "uuid": "7c385d18-836f-4804-ae30-5bd158cfb7f5"
       },
       "chunkId": "ab66a6622ee4b8eeb035aa78898b50aa594decd6",
@@ -4171,7 +4171,7 @@
     },
     "file:///Users/zeruili/projects/cocos_project/driftClash/assets/scripts/CarPropertyDisplay.ts": {
       "mTimestamp": {
-        "mtime": 1753289030110.355,
+        "mtime": 1755611467905.7456,
         "uuid": "add913cb-f124-45b3-9292-5dcf066e9b47"
       },
       "chunkId": "d1cee1a3354c09e396b1a69dbe10e9cb83fedf20",

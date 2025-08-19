@@ -22,11 +22,11 @@
       "uuid": "d4ffaca8-3516-4d6f-9187-e37ee8010ebd"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background": {
-      "time": 1755445031442.464,
+      "time": 1755609051690.2908,
       "uuid": "6e03cd48-8a60-412f-b20f-82f4e1b5b329"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu": {
-      "time": 1754747189626.6821,
+      "time": 1755610168458.9097,
       "uuid": "b3322b39-4b8e-4556-8194-a14dbd5f51a9"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab": {
@@ -46,11 +46,11 @@
       "uuid": "0cf6405c-918a-40f1-b383-68a9fc739b7f"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/scripts/PlayerManager.ts": {
-      "time": 1755445973857.801,
+      "time": 1755613108310.2344,
       "uuid": "1b6d6687-2973-4618-af7b-db52ef67b8c1"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/scripts/SelectManager.ts": {
-      "time": 1755318344583.8123,
+      "time": 1755611465763.6343,
       "uuid": "be7b2dc0-da35-4de9-a81c-30690fdcd28f"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/scripts/TempData.ts": {
@@ -100,7 +100,7 @@
       "time": 1751382441481.8594
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/Scenes/LevelSelect.scene": {
-      "time": 1755445964069.7676,
+      "time": 1755617679454.158,
       "uuid": "091c5c0e-b72a-4cad-ab68-635bc57ff236"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/Scenes/gamescene.scene": {
@@ -108,7 +108,7 @@
       "uuid": "1563d039-d898-4d8f-9415-9f1da853b8a3"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/Scenes/mainmenu.scene": {
-      "time": 1755446636382.9556,
+      "time": 1755611262309.5051,
       "uuid": "9a4dce19-24b9-4d46-b38f-ef49f2287dcb"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/TiledMap/City_tiles.png": {
@@ -151,44 +151,28 @@
       "time": 1750500622643.127,
       "uuid": "6fa4c070-0285-4d03-85b9-c31a736acbe7"
     },
-    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/jungle.png": {
-      "time": 1751987020018.4854,
-      "uuid": "d0ade2fb-557f-4edb-a96c-d68e19c7c942"
-    },
-    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/snow.png": {
-      "time": 1751949511624.504,
-      "uuid": "807a7b47-3819-4529-931c-683fbcf44eb0"
-    },
-    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/soccer_court.png": {
-      "time": 1751292845151.776,
-      "uuid": "c2ccf9a1-d5dc-451d-905f-387af1f12937"
-    },
-    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/soccor_court2.png": {
-      "time": 1751985647853.775,
-      "uuid": "0bfa81f7-9b43-4f2a-bc44-2375066c8694"
-    },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/shezhi.png": {
       "time": 1752505777785.0217,
       "uuid": "f07db45e-fa1a-499c-b315-fc3e50f3aafa"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/cars/car-1.prefab": {
-      "time": 1755334383934.8103,
+      "time": 1755615019698.567,
       "uuid": "37fef8d9-5917-47b3-a40f-4e2ace6bf328"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/cars/car-2.prefab": {
-      "time": 1755320804151.8708,
+      "time": 1755617619344.6255,
       "uuid": "87676691-0988-4a4f-823c-9ede01a40e1c"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/cars/car-3.prefab": {
-      "time": 1754757104146.4385,
+      "time": 1755617613070.9924,
       "uuid": "48fa46bf-e334-4f77-b8e5-b81b32cc3846"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/cars/car-4.prefab": {
-      "time": 1754757109592.7437,
+      "time": 1755617625531.5518,
       "uuid": "471a5567-970e-4fc0-9056-614a089c850d"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/cars/car-5.prefab": {
-      "time": 1754757130177.7778,
+      "time": 1755617631390.3625,
       "uuid": "642f4c4e-3979-4274-9594-3c8286a57fb2"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/cars/healthBar.prefab": {
@@ -196,15 +180,15 @@
       "uuid": "5fa4a020-ad12-4d51-9e7d-57cecdc056ca"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/levels/level-1.prefab": {
-      "time": 1755336170424.1362,
+      "time": 1755617108903.504,
       "uuid": "5e122843-ecf2-42e7-ab74-ec19f70240a3"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/levels/level-2.prefab": {
-      "time": 1755094482891.0774,
+      "time": 1755617126191.3994,
       "uuid": "cf804555-7d75-4720-8a54-4f8a1348275f"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/levels/level-3.prefab": {
-      "time": 1755094490584.1443,
+      "time": 1755618043516.772,
       "uuid": "8d8867cd-f591-45fa-8564-e435fcdb1847"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/Scenes/gamescene.scene.meta": {
@@ -246,17 +230,8 @@
     "/Users/zeruili/projects/cocos_project/driftClash/assets/TiledMap/smallburg_terrain_spring_with_shadows.png.meta": {
       "time": 1750498195834.9563
     },
-    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/jungle.png.meta": {
-      "time": 1751987020043.7673
-    },
-    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/snow.png.meta": {
-      "time": 1751949515843.4897
-    },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/cars/car-1.prefab.meta": {
       "time": 1751728591200.1184
-    },
-    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/soccor_court2.png.meta": {
-      "time": 1751985647884.53
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/shezhi.png.meta": {
       "time": 1752505794908.0308
@@ -285,22 +260,12 @@
     "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/levels/level-3.prefab.meta": {
       "time": 1751987027194.968
     },
-    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/soccer_court.png.meta": {
-      "time": 1751292845179.1672
-    },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/traffic.png.meta": {
       "time": 1752511920975.2095
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/traffic.png": {
       "time": 1752511662822.8542,
       "uuid": "83baeef7-746b-4f91-9a84-fd8a58d2b8b3"
-    },
-    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/settings.png.meta": {
-      "time": 1752666805719.1794
-    },
-    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/settings.png": {
-      "time": 1752666805611.1243,
-      "uuid": "4b2a90e7-9654-43f7-b19c-1929bfdc1fa9"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/panel2.png.meta": {
       "time": 1752672261206.9924
@@ -411,7 +376,7 @@
       "time": 1753111677334.4185
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/scripts/SoundManager.ts": {
-      "time": 1753195607559.9182,
+      "time": 1755611718084.6843,
       "uuid": "7c385d18-836f-4804-ae30-5bd158cfb7f5"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/sound/explode.mp3.meta": {
@@ -432,7 +397,7 @@
       "uuid": "796e3776-c599-4f75-9591-35aaeaae7fb6"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/scripts/CarPropertyDisplay.ts": {
-      "time": 1753289030110.355,
+      "time": 1755611467905.7456,
       "uuid": "add913cb-f124-45b3-9292-5dcf066e9b47"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/config.meta": {
@@ -474,7 +439,7 @@
       "time": 1750948553272.1372
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/scripts/player.ts": {
-      "time": 1755335114945.5671,
+      "time": 1755619268014.4219,
       "uuid": "b3924dc4-f7fe-491c-9736-a65419c312f5"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/scripts/PlayerInfoUI.ts.meta": {
@@ -642,7 +607,7 @@
       "time": 1754194921301.4258
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/UI": {
-      "time": 1754727819296.017,
+      "time": 1755610703939.459,
       "uuid": "2398cf68-c464-466d-9c17-c2be447e298a"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/UI/close.png.meta": {
@@ -681,10 +646,10 @@
       "uuid": "5c270278-c097-4dba-9f15-f3886683bff7"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/UI/purchase.png.meta": {
-      "time": 1754726611657.635
+      "time": 1755610235564.0547
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/UI/purchase.png": {
-      "time": 1752728148424.7473,
+      "time": 1755610235519.9146,
       "uuid": "a50181e9-ecbd-4d36-bf53-3db514f24fee"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/UI/moeny.png.meta": {
@@ -702,17 +667,17 @@
       "uuid": "4cf1948a-ffca-426e-9c43-1e7c864a1b60"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/UI/select2.png.meta": {
-      "time": 1752939687177.8015
+      "time": 1755610703960.7356
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/UI/select2.png": {
-      "time": 1752939687168.1555,
+      "time": 1755610703940.022,
       "uuid": "9368a3e2-29bf-4ad3-a422-77a08242544b"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/UI/select.png.meta": {
-      "time": 1754726611660.4326
+      "time": 1755609684355.5142
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/UI/select.png": {
-      "time": 1752728148426.2974,
+      "time": 1755609684273.4033,
       "uuid": "4befdd25-e632-4e7e-aa34-819783640186"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/UI/restart.png.meta": {
@@ -728,13 +693,6 @@
     "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/UI/yellow.png": {
       "time": 1752666966316.5176,
       "uuid": "593904f2-fa85-498f-9b0e-9f79890c24fd"
-    },
-    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/UI/setting.png.meta": {
-      "time": 1754403256370.7527
-    },
-    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/UI/setting.png": {
-      "time": 1752758444512.1648,
-      "uuid": "fe4c58f2-8b33-45e3-9dfa-f37dfb272443"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/img/paint.meta": {
       "time": 1754194959025.747
@@ -880,7 +838,7 @@
       "uuid": "f240925f-9753-4a81-ac73-a2a8210575a2"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/scripts/AIPlayer.ts": {
-      "time": 1755355772577.1309,
+      "time": 1755579092415.3596,
       "uuid": "91c08d91-821d-4705-b576-bca425d89d56"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/scripts/Bullet.ts": {
@@ -915,7 +873,7 @@
       "time": 1754576936763.6355
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/weapons/bullet.prefab": {
-      "time": 1755090706376.968,
+      "time": 1755613402298.7197,
       "uuid": "ffdc0091-02b5-47e9-9cba-752ad0f7f260"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/img/weapons/explosion.meta": {
@@ -1020,7 +978,7 @@
       "time": 1754664593799.1123
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/weapons/rocket.prefab": {
-      "time": 1755356670768.33,
+      "time": 1755613466947.4407,
       "uuid": "7fe3a2c1-44e3-45ed-a3a4-81e90a6994c7"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/img/weapons/flame.meta": {
@@ -1181,7 +1139,7 @@
       "time": 1755331180377.3962
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/weapons/dart.prefab": {
-      "time": 1755335622036.5837,
+      "time": 1755613420945.415,
       "uuid": "52e569f9-e5ef-4a7c-9807-cb29abc15d86"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/img/weapons/dartexplosion/dart.anim.meta": {
@@ -1195,29 +1153,99 @@
       "time": 1755354519549.1985
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/levels/level-4.prefab": {
-      "time": 1755356566524.4048,
+      "time": 1755618951462.8508,
       "uuid": "0e092c45-c659-4c70-a247-9fe66ddd6b14"
-    },
-    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/tennis_court.png.meta": {
-      "time": 1755354875959.6692
-    },
-    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/tennis_court.png": {
-      "time": 1755354875822.4595,
-      "uuid": "a2723755-c736-45cd-a99c-f74606e238aa"
-    },
-    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/arena.png.meta": {
-      "time": 1755445031576.1035
-    },
-    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/arena.png": {
-      "time": 1755445004187.877,
-      "uuid": "213dbf06-fb75-45f1-91c4-c90ce1823da4"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/levels/level-5.prefab.meta": {
       "time": 1755445040347.0764
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/levels/level-5.prefab": {
-      "time": 1755446505094.834,
+      "time": 1755619270625.7542,
       "uuid": "8bb5ad25-fb45-41ea-9b39-610d6d59157c"
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/soccor_court.jpg.meta": {
+      "time": 1755525211455.5298
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/soccor_court.jpg": {
+      "time": 1755525192219.7905,
+      "uuid": "7454f9f1-4796-405a-bd67-cce3835ce4a1"
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/snow.jpeg.meta": {
+      "time": 1755529367864.0046
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/snow.jpeg": {
+      "time": 1755529674024.0344,
+      "uuid": "02985efb-0217-4df8-b526-1375d8174925"
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/jungle.jpeg.meta": {
+      "time": 1755531835019.1963
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/jungle.jpeg": {
+      "time": 1755531814827.2332,
+      "uuid": "e8fb1513-1ca5-4f19-8b1e-a78941f4652c"
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/arena.jpeg.meta": {
+      "time": 1755532986770.0295
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/tennis_court.jpeg.meta": {
+      "time": 1755532986786.6084
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/arena.jpeg": {
+      "time": 1755532937018.0137,
+      "uuid": "b135840c-f427-4d30-be1f-895f2ae7c63c"
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/tennis_court.jpeg": {
+      "time": 1755532613717.7637,
+      "uuid": "0858485b-4b09-4b5e-9fc4-eafcbce6dc95"
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/图片风格转换-10.jpg.meta": {
+      "time": 1755609051732.0447
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/图片风格转换-11.jpg.meta": {
+      "time": 1755609051711.8196
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/图片风格转换-12.jpg.meta": {
+      "time": 1755609051712.0403
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/图片风格转换-8.jpg.meta": {
+      "time": 1755609051708.9426
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/图片风格转换-9.jpg.meta": {
+      "time": 1755609051709.1277
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/图片风格转换-8.jpg": {
+      "time": 1755533391118.1106,
+      "uuid": "423e1555-8406-458e-a55d-3f2e78f1b735"
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/图片风格转换-9.jpg": {
+      "time": 1755533273279.5054,
+      "uuid": "3418420c-6e30-4052-9518-882319cc0283"
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/图片风格转换-11.jpg": {
+      "time": 1755533405503.8784,
+      "uuid": "c07d4f01-abc9-4f64-8f43-33a6ce868509"
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/图片风格转换-12.jpg": {
+      "time": 1755533443476.6697,
+      "uuid": "a9ba508d-fd85-45b5-9fd2-d14875277c0c"
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/图片风格转换-10.jpg": {
+      "time": 1755533377885.2002,
+      "uuid": "78d77ff7-6930-4557-9736-dc3c53c2d458"
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/UI/Unknown-9.png.meta": {
+      "time": 1755609644417.5522
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/UI/Unknown-9.png": {
+      "time": 1755609644344.5847,
+      "uuid": "dc275c2e-8d36-4a6b-9d10-616cfc9049e6"
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/setting.png.meta": {
+      "time": 1755610289608.505
+    },
+    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/setting.png": {
+      "time": 1752666805611.1243,
+      "uuid": "4b2a90e7-9654-43f7-b19c-1929bfdc1fa9"
     }
   },
   "missing": {
@@ -1522,9 +1550,9 @@
       "removeTime": 1754194941459
     },
     "fe4c58f2-8b33-45e3-9dfa-f37dfb272443": {
-      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/setting.png",
+      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/UI/setting.png",
       "time": 1752758444512.1648,
-      "removeTime": 1754194941460
+      "removeTime": 1755610163500
     },
     "eea97c99-7110-4239-a1cd-e97b3b5441c3": {
       "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/img/paint_blue.png",
@@ -1652,9 +1680,109 @@
       "removeTime": 1755445027727
     },
     "213dbf06-fb75-45f1-91c4-c90ce1823da4": {
-      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/图片生成-3.png",
+      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/arena.png",
       "time": 1755445004187.877,
-      "removeTime": 1755445031443
+      "removeTime": 1755532986676
+    },
+    "661b8842-58f9-44b8-a449-6e44954736a8": {
+      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/water.jpeg",
+      "time": 1755492983151.5142,
+      "removeTime": 1755523238138
+    },
+    "c2ccf9a1-d5dc-451d-905f-387af1f12937": {
+      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/soccer_court.png",
+      "time": 1751292845151.776,
+      "removeTime": 1755523866618
+    },
+    "6f121691-4929-49ed-b949-7e2d17747ab9": {
+      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/soccor_court.jpeg",
+      "time": 1755523806923.464,
+      "removeTime": 1755525409248
+    },
+    "0bfa81f7-9b43-4f2a-bc44-2375066c8694": {
+      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/soccor_court2.png",
+      "time": 1751985647853.775,
+      "removeTime": 1755525411983
+    },
+    "1bc69057-5fff-421c-83e7-ee63fbe19401": {
+      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/snow.jpg",
+      "time": 1755528316023.4697,
+      "removeTime": 1755529367796
+    },
+    "a2723755-c736-45cd-a99c-f74606e238aa": {
+      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/tennis_court.png",
+      "time": 1755354875822.4595,
+      "removeTime": 1755532986676
+    },
+    "d222ba62-26a7-491e-8720-14b68d529add": {
+      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/a17599c65384a1b5d580d423d264ef0f.jpeg",
+      "time": 1755532613717.7637,
+      "removeTime": 1755532986676
+    },
+    "e4ba9bdc-6072-4287-be4e-aec1ca62c1c6": {
+      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/a1b2c322d0a2ae9db8a3752c7fc2d73a.jpeg",
+      "time": 1755532937018.0137,
+      "removeTime": 1755532986676
+    },
+    "4c5f60fc-d52e-4299-8835-3258f1216f38": {
+      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/arena.jpg",
+      "time": 1755532566691.1204,
+      "removeTime": 1755532986677
+    },
+    "b510af34-a80e-41e8-8de4-013de016e475": {
+      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/tennis_court.jpg",
+      "time": 1755532547345.524,
+      "removeTime": 1755532986677
+    },
+    "d0ade2fb-557f-4edb-a96c-d68e19c7c942": {
+      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/jungle.png",
+      "time": 1751987020018.4854,
+      "removeTime": 1755578537436
+    },
+    "807a7b47-3819-4529-931c-683fbcf44eb0": {
+      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/snow.png",
+      "time": 1751949511624.504,
+      "removeTime": 1755578555425
+    },
+    "0263e0fb-c2d8-4efc-a762-80de56c84367": {
+      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/图片风格转换-10.jpg",
+      "time": 1755533377885.2002,
+      "removeTime": 1755609045027
+    },
+    "ae4e8da8-9719-474f-94e1-b5386f484daa": {
+      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/图片风格转换-11.jpg",
+      "time": 1755533405503.8784,
+      "removeTime": 1755609045027
+    },
+    "c4385553-7d7e-4ba5-a376-28082180d745": {
+      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/图片风格转换-12.jpg",
+      "time": 1755533443476.6697,
+      "removeTime": 1755609045027
+    },
+    "24b34ce6-4b37-48bc-9ae3-9912429f0ded": {
+      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/图片风格转换-8.jpg",
+      "time": 1755533391118.1106,
+      "removeTime": 1755609045027
+    },
+    "17cb6c3f-cc10-4afd-90a5-6091c9d1d546": {
+      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/图片风格转换-9.jpg",
+      "time": 1755533273279.5054,
+      "removeTime": 1755609045027
+    },
+    "47dbacab-7e03-435b-a3aa-3f5961b0c468": {
+      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/UI/绘制游戏车辆选择标记-4.png",
+      "time": 1755608958769.585,
+      "removeTime": 1755609653330
+    },
+    "4b2a90e7-9654-43f7-b19c-1929bfdc1fa9": {
+      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/settings.png",
+      "time": 1752666805611.1243,
+      "removeTime": 1755610168459
+    },
+    "ed27f8f5-5371-4298-b296-b5088fe3bced": {
+      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/UI/purchase.jpg",
+      "time": 1755610150151.199,
+      "removeTime": 1755610184145
     }
   }
 }

@@ -4,6 +4,18 @@
         "cpu": "Apple M4",
         "version": "Darwin Kernel Version 24.6.0: Mon Jul 14 11:30:40 PDT 2025; root:xnu-11417.140.69~1/RELEASE_ARM64_T8132"
     },
-    "sceneListMap": {},
+    "sceneListMap": {
+        "5e122843-ecf2-42e7-ab74-ec19f70240a3": "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/levels/level-1.prefab",
+        "cf804555-7d75-4720-8a54-4f8a1348275f": "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/levels/level-2.prefab",
+        "091c5c0e-b72a-4cad-ab68-635bc57ff236": "/Users/zeruili/projects/cocos_project/driftClash/assets/Scenes/LevelSelect.scene",
+        "9a4dce19-24b9-4d46-b38f-ef49f2287dcb": "/Users/zeruili/projects/cocos_project/driftClash/assets/Scenes/mainmenu.scene",
+        "52e569f9-e5ef-4a7c-9807-cb29abc15d86": "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/weapons/dart.prefab",
+        "7fe3a2c1-44e3-45ed-a3a4-81e90a6994c7": "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/weapons/rocket.prefab",
+        "37fef8d9-5917-47b3-a40f-4e2ace6bf328": "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/cars/car-1.prefab",
+        "8d8867cd-f591-45fa-8564-e435fcdb1847": "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/levels/level-3.prefab",
+        "87676691-0988-4a4f-823c-9ede01a40e1c": "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/cars/car-2.prefab",
+        "0e092c45-c659-4c70-a247-9fe66ddd6b14": "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/levels/level-4.prefab",
+        "8bb5ad25-fb45-41ea-9b39-610d6d59157c": "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/prefab/levels/level-5.prefab"
+    },
     "deviceMd5": "4ade0bf3b465c2d387bbf6f072cc7f7e"
 }

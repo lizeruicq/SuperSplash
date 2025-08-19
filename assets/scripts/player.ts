@@ -705,7 +705,7 @@ export class player extends Component {
 
         // 计算子弹发射位置（车辆正前方）
         const vehicleWorldPos = this.node.worldPosition;
-        const offsetDistance = 30; // 子弹发射偏移距离（像素）
+        const offsetDistance = 50; // 子弹发射偏移距离（像素）
         const bulletStartPos = new Vec3(
             vehicleWorldPos.x + direction.x * offsetDistance,
             vehicleWorldPos.y + direction.y * offsetDistance,

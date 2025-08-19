@@ -157,7 +157,7 @@
       "__id__": 7
     },
     "speed": 20,
-    "damage": 5,
+    "damage": 2,
     "bulletType": 1,
     "lifeTime": 2,
     "explosionPrefab": {

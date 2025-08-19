@@ -121,7 +121,7 @@ export class PlayerManager extends Component {
         
         // 移除环境检测
         // this._detectEnvironment();
-        this.resetPlayerData();
+        // this.resetPlayerData();
         
         // 初始化玩家数据
         this._initPlayerData();
@@ -169,7 +169,7 @@ export class PlayerManager extends Component {
             money: 0,
             experience: 0,
             
-            unlockedCars: [], // 默认解锁第一辆车
+            unlockedCars: ['car-1','car-2','car-3','car-4','car-5'], // 默认解锁第一辆车
             currentCar: '',
             // 移除车辆改装相关初始化
             

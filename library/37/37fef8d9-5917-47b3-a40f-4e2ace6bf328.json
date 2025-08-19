@@ -189,7 +189,7 @@
     },
     "removeDelay": 3,
     "paintPrefab": {
-      "__uuid__": "d1312f02-4e7f-4f9f-aed7-f255abb6e7f8",
+      "__uuid__": "e7d9af4d-540d-4efb-8ab7-30ad25e31221",
       "__expectedType__": "cc.Prefab"
     },
     "paintSprayInterval": 0.05,
@@ -206,8 +206,8 @@
       "__expectedType__": "cc.Prefab"
     },
     "fireRate": 2,
-    "weaponType": 1,
-    "maxAmmo": 10,
+    "weaponType": 0,
+    "maxAmmo": 15,
     "ammoReloadTime": 5,
     "_id": ""
   },

@@ -1,7 +1,7 @@
 {
   "__type__": "cc.SpriteFrame",
   "content": {
-    "name": "settings",
+    "name": "setting",
     "atlas": "",
     "rect": {
       "x": 0,

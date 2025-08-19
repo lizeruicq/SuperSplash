@@ -77,9 +77,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
         onLoad() {
           // 自动查找进度条（如果没有手动设置）
-          this.autoFindProgressBars(); // 初始化时隐藏所有内容
-
-          this.hideAllProperties();
+          this.autoFindProgressBars(); // // 初始化时隐藏所有内容
+          // this.hideAllProperties();
         }
         /**
          * 自动查找进度条组件
@@ -123,8 +122,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
           }), CarProperties) : CarProperties).getCarProperty(carId);
 
           if (!carProperty) {
-            console.warn("\u672A\u627E\u5230\u8F66\u8F86 " + carId + " \u7684\u5C5E\u6027\u914D\u7F6E");
-            this.hideAllProperties();
+            console.warn("\u672A\u627E\u5230\u8F66\u8F86 " + carId + " \u7684\u5C5E\u6027\u914D\u7F6E"); // this.hideAllProperties();
+
             return;
           }
 

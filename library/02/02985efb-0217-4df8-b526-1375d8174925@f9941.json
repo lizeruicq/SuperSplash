@@ -1,0 +1,90 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "snow",
+    "atlas": "",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 4000,
+      "height": 3000
+    },
+    "offset": {
+      "x": 0,
+      "y": 0
+    },
+    "originalSize": {
+      "width": 4000,
+      "height": 3000
+    },
+    "rotated": false,
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "vertices": {
+      "rawPosition": [
+        -2000,
+        -1500,
+        0,
+        2000,
+        -1500,
+        0,
+        -2000,
+        1500,
+        0,
+        2000,
+        1500,
+        0
+      ],
+      "indexes": [
+        0,
+        1,
+        2,
+        2,
+        1,
+        3
+      ],
+      "uv": [
+        0,
+        3000,
+        4000,
+        3000,
+        0,
+        0,
+        4000,
+        0
+      ],
+      "nuv": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "minPos": {
+        "x": -2000,
+        "y": -1500,
+        "z": 0
+      },
+      "maxPos": {
+        "x": 2000,
+        "y": 1500,
+        "z": 0
+      }
+    },
+    "texture": "02985efb-0217-4df8-b526-1375d8174925@6c48a",
+    "packable": true,
+    "pixelsToUnit": 100,
+    "pivot": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "meshType": 0
+  }
+}

@@ -40,8 +40,8 @@ export class CarPropertyDisplay extends Component {
         // 自动查找进度条（如果没有手动设置）
         this.autoFindProgressBars();
 
-        // 初始化时隐藏所有内容
-        this.hideAllProperties();
+        // // 初始化时隐藏所有内容
+        // this.hideAllProperties();
     }
 
     /**
@@ -78,7 +78,7 @@ export class CarPropertyDisplay extends Component {
         const carProperty = CarProperties.getCarProperty(carId);
         if (!carProperty) {
             console.warn(`未找到车辆 ${carId} 的属性配置`);
-            this.hideAllProperties();
+            // this.hideAllProperties();
             return;
         }
 

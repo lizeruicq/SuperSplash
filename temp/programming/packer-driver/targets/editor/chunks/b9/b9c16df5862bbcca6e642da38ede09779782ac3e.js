@@ -546,12 +546,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           if (selectedToggle) {
             const carId = selectedToggle.node.name;
             this.showCarProperties(carId);
-          } else {
-            // 如果没有选中的车辆，隐藏属性显示
-            if (this.carPropertyDisplay) {
-              this.carPropertyDisplay.hideAllProperties();
-            }
-          }
+          } // else {
+          //     // 如果没有选中的车辆，隐藏属性显示
+          //     if (this.carPropertyDisplay) {
+          //         this.carPropertyDisplay.hideAllProperties();
+          //     }
+          // }
+
         }
 
       }, (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "levelToggleGroup", [_dec2], {
