@@ -40,29 +40,29 @@ System.register(["cc"], function (_export, _context) {
 
       }, _class2.carPropertiesConfig = {
         'car-1': {
-          speed: 60,
-          steering: 70,
-          durability: 80
+          speed: 25,
+          steering: 60,
+          durability: 40
         },
         'car-2': {
-          speed: 75,
-          steering: 65,
-          durability: 70
+          speed: 40,
+          steering: 40,
+          durability: 80
         },
         'car-3': {
-          speed: 85,
+          speed: 60,
           steering: 60,
-          durability: 65
-        },
-        'car-4': {
-          speed: 90,
-          steering: 55,
           durability: 60
         },
+        'car-4': {
+          speed: 70,
+          steering: 70,
+          durability: 50
+        },
         'car-5': {
-          speed: 95,
-          steering: 50,
-          durability: 55
+          speed: 65,
+          steering: 80,
+          durability: 60
         }
       }, _class2)) || _class));
 

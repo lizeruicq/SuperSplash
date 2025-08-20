@@ -634,6 +634,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           }), PlayerManager) : PlayerManager).instance.addMoney(gameResult.reward); // 更新关卡进度，不再传递时间参数
 
           this.updateLevelProgress(gameResult.stars, gameResult.performance);
+          (_crd && PlayerManager === void 0 ? (_reportPossibleCrUseOfPlayerManager({
+            error: Error()
+          }), PlayerManager) : PlayerManager).instance.savePlayerData();
           console.log(isVictory ? '游戏胜利！' : '游戏失败！');
         }
         /**
@@ -725,12 +728,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           var destroyedAllEnemies = this.enemyCount <= 0 && this.initialEnemyCount > 0; // 根据新的评价规则计算星星
 
-          if (playerPercentage >= 45) {
-            return 3; // 3星（A级）：颜料数量>=45%
+          if (playerPercentage >= 45 || destroyedAllEnemies) {
+            return 3; // 3星（A级）：颜料数量>=45% 或 摧毁所有AI车辆
           } else if (playerPercentage >= 35) {
             return 2; // 2星（B级）：颜料数量>=35%
-          } else if (playerPercentage >= 25 || destroyedAllEnemies) {
-            return 1; // 1星（C级）：颜料数量>=25% 或 摧毁所有AI车辆
+          } else if (playerPercentage >= 25) {
+            return 1; // 1星（C级）：颜料数量>=25% 
           } else {
             return 0; // 不满足任何条件，0星
           }
@@ -772,23 +775,23 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           switch (stars) {
             case 3:
-              performance = 'A';
-              reward = 500;
-              break;
-
-            case 2:
-              performance = 'B';
+              performance = 'S';
               reward = 300;
               break;
 
-            case 1:
-              performance = 'C';
+            case 2:
+              performance = 'A';
               reward = 200;
+              break;
+
+            case 1:
+              performance = 'B';
+              reward = 100;
               break;
 
             default:
               performance = 'F';
-              reward = 50;
+              reward = 20;
               break;
           }
 

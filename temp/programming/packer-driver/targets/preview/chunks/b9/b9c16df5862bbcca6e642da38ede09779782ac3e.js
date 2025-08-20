@@ -104,22 +104,22 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.carPrices = {
             'car-1': 0,
             // 默认车辆免费
-            'car-2': 500,
+            'car-2': 300,
             // 第二辆车500金币
-            'car-3': 1000,
+            'car-3': 500,
             // 第三辆车1000金币
-            'car-4': 1500,
+            'car-4': 700,
             // 第四辆车1500金币
-            'car-5': 2000 // 第五辆车2000金币
+            'car-5': 800 // 第五辆车2000金币
 
           };
           // 车辆价格配置
           this.carInfos = {
             'car-1': '操控性超强小车，武器配备为子弹发射器，击中对手你可造成伤害 \n This super maneuverable car is equipped with a bullet launcher. When you hit your opponent, you can cause damage.',
             'car-2': '经典跑车,具有坚固的车身,武器配备为火箭炮，爆炸后会清除附近的颜料 \nClassic sports car, with a sturdy body, equipped with  a rocket launcher. After explosion, it will clear the nearby paint.',
-            'car-3': '现代化的超级跑车，速度与转向均衡，配备武器为机炮，击中后可造成伤害 \nA modern supercar with balanced speed and steering, equipped with a bullet launcher. When you hit your opponent, you can cause damage.',
+            'car-3': '现代化的超级跑车，速度与转向均衡，配备武器为飞镖，攻守兼备 \nA modern supercar with balanced speed and steering, equipped with a dart launcher. it is a good choice for both attack and defense',
             'car-4': '甩尾加速犹如闪电，武器配备为火箭炮，爆炸后会清除附近的颜料\nThe drift and acceleration is like lightning, equipped with a rocket launcher. After explosion, it will clear the nearby paint.',
-            'car-5': '送豆腐专用，即使在狭窄的山路也灵活穿梭，武器配备为火箭炮，爆炸后会清除附近的颜料\n It is specially designed for delivering tofu and can move flexibly even on narrow mountain roads. equipped with a rocket launcher. '
+            'car-5': '送豆腐专用，即使在狭窄的山路也灵活穿梭，武器配备为飞镖，攻守兼备\n It is specially designed for delivering tofu and can move flexibly even on narrow mountain roads. equipped with a dart launcher. '
           };
           this.insufficientMoneyTimer = 0;
           // 金币不足提示计时器
@@ -256,7 +256,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           var carToggle = this.carToggleGroup.toggleItems.find(t => t.isChecked);
 
           if (!levelToggle || !carToggle) {
-            // 你可以在这里弹窗提示"请选择关卡和车辆"
+            this.showMessage("请选择车辆！\n please select a car!"); // 你可以在这里弹窗提示"请选择关卡和车辆"
+
             return;
           } // 记录选择到TempData
 
@@ -434,6 +435,14 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         showInsufficientMoneyMessage() {
           if (this.insufficientMoneyLabel) {
             this.insufficientMoneyLabel.string = '金币不足！\n your money is not enough';
+            this.insufficientMoneyLabel.node.active = true;
+            this.insufficientMoneyTimer = 3.0; // 3秒后隐藏
+          }
+        }
+
+        showMessage(string) {
+          if (this.insufficientMoneyLabel) {
+            this.insufficientMoneyLabel.string = string;
             this.insufficientMoneyLabel.node.active = true;
             this.insufficientMoneyTimer = 3.0; // 3秒后隐藏
           }

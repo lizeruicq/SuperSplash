@@ -160,7 +160,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           if (this.audioLabel) {
             this.audioLabel.string = (_crd && SoundManager === void 0 ? (_reportPossibleCrUseOfSoundManager({
               error: Error()
-            }), SoundManager) : SoundManager).instance.isMuted() ? "音效:关" : "音效:开";
+            }), SoundManager) : SoundManager).instance.isMuted() ? "音效:关 \n sound:off" : "音效:开\n sound:on";
           }
         }
 

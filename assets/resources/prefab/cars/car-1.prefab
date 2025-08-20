@@ -176,13 +176,13 @@
     "__prefab": {
       "__id__": 9
     },
-    "maxSpeed": 25,
+    "maxSpeed": 30,
     "acceleration": 25,
     "brakeDeceleration": 25,
     "turnSpeed": 200,
     "friction": 1.2,
     "initAngle": 0,
-    "maxHealth": 100,
+    "maxHealth": 80,
     "destroyedSprite": {
       "__uuid__": "86087b4b-4284-4b91-8707-fa1f71406ea1@f9941",
       "__expectedType__": "cc.SpriteFrame"
@@ -192,7 +192,7 @@
       "__uuid__": "e7d9af4d-540d-4efb-8ab7-30ad25e31221",
       "__expectedType__": "cc.Prefab"
     },
-    "paintSprayInterval": 0.05,
+    "paintSprayInterval": 0.1,
     "normalBulletPrefab": {
       "__uuid__": "ffdc0091-02b5-47e9-9cba-752ad0f7f260",
       "__expectedType__": "cc.Prefab"
@@ -205,7 +205,7 @@
       "__uuid__": "7fe3a2c1-44e3-45ed-a3a4-81e90a6994c7",
       "__expectedType__": "cc.Prefab"
     },
-    "fireRate": 2,
+    "fireRate": 3,
     "weaponType": 0,
     "maxAmmo": 15,
     "ammoReloadTime": 5,

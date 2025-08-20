@@ -137,11 +137,11 @@ System.register(["cc"], function (_export, _context) {
             level: 1,
             money: 0,
             experience: 0,
-            unlockedCars: ['car-1', 'car-2', 'car-3', 'car-4', 'car-5'],
+            unlockedCars: [],
             // 默认解锁第一辆车
             currentCar: '',
             // 移除车辆改装相关初始化
-            unlockedLevels: ['level-1', 'level-2', 'level-3', 'level-4', 'level-5'],
+            unlockedLevels: ['level-1'],
             // 默认只解锁第一关
             currentLevel: 'level-1',
             levelProgress: {
@@ -469,16 +469,16 @@ System.register(["cc"], function (_export, _context) {
 
           if (performance) {
             switch (performance) {
+              case 'S':
+                grade = LevelGrade.S;
+                break;
+
               case 'A':
                 grade = LevelGrade.A;
                 break;
 
               case 'B':
                 grade = LevelGrade.B;
-                break;
-
-              case 'C':
-                grade = LevelGrade.C;
                 break;
 
               case 'F':
@@ -489,11 +489,11 @@ System.register(["cc"], function (_export, _context) {
               default:
                 // 如果提供的表现评价无法识别，根据星星数确定等级
                 if (stars >= 3) {
-                  grade = LevelGrade.A;
+                  grade = LevelGrade.S;
                 } else if (stars >= 2) {
-                  grade = LevelGrade.B;
+                  grade = LevelGrade.A;
                 } else if (stars >= 1) {
-                  grade = LevelGrade.C;
+                  grade = LevelGrade.B;
                 } else {
                   grade = LevelGrade.F;
                 }
@@ -503,11 +503,11 @@ System.register(["cc"], function (_export, _context) {
           } else {
             // 没有提供表现评价时，根据星星数确定等级
             if (stars >= 3) {
-              grade = LevelGrade.A;
+              grade = LevelGrade.S;
             } else if (stars >= 2) {
-              grade = LevelGrade.B;
+              grade = LevelGrade.A;
             } else if (stars >= 1) {
-              grade = LevelGrade.C;
+              grade = LevelGrade.B;
             } else {
               grade = LevelGrade.F;
             }
@@ -633,14 +633,8 @@ System.register(["cc"], function (_export, _context) {
             case LevelGrade.B:
               return '#CD7F32';
             // 铜色
-
-            case LevelGrade.C:
-              return '#90EE90';
-            // 浅绿色
-
-            case LevelGrade.D:
-              return '#87CEEB';
-            // 天蓝色
+            // case LevelGrade.C: return '#90EE90'; // 浅绿色
+            // case LevelGrade.D: return '#87CEEB'; // 天蓝色
 
             case LevelGrade.F:
               return '#FF6B6B';

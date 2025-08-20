@@ -1142,7 +1142,7 @@
     "__prefab": {
       "__id__": 63
     },
-    "maxSpeed": 50,
+    "maxSpeed": 40,
     "acceleration": 30,
     "brakeDeceleration": 200,
     "turnSpeed": 80,
@@ -1563,8 +1563,8 @@
     "__prefab": {
       "__id__": 87
     },
-    "maxSpeed": 50,
-    "acceleration": 50,
+    "maxSpeed": 30,
+    "acceleration": 30,
     "brakeDeceleration": 200,
     "turnSpeed": 100,
     "friction": 1.5,
@@ -1984,8 +1984,8 @@
     "__prefab": {
       "__id__": 111
     },
-    "maxSpeed": 30,
-    "acceleration": 60,
+    "maxSpeed": 35,
+    "acceleration": 35,
     "brakeDeceleration": 200,
     "turnSpeed": 120,
     "friction": 1.5,

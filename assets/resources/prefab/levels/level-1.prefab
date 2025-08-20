@@ -875,7 +875,7 @@
     "turnSpeed": 50,
     "friction": 1.5,
     "initAngle": 0,
-    "maxHealth": 30,
+    "maxHealth": 50,
     "healthBar": null,
     "destroyedSprite": {
       "__uuid__": "86087b4b-4284-4b91-8707-fa1f71406ea1@f9941",
@@ -1296,7 +1296,7 @@
     "turnSpeed": 50,
     "friction": 1.5,
     "initAngle": 0,
-    "maxHealth": 30,
+    "maxHealth": 50,
     "healthBar": null,
     "destroyedSprite": {
       "__uuid__": "86087b4b-4284-4b91-8707-fa1f71406ea1@f9941",
@@ -1717,7 +1717,7 @@
     "turnSpeed": 50,
     "friction": 1.5,
     "initAngle": 0,
-    "maxHealth": 30,
+    "maxHealth": 50,
     "healthBar": null,
     "destroyedSprite": {
       "__uuid__": "86087b4b-4284-4b91-8707-fa1f71406ea1@f9941",
@@ -2156,7 +2156,7 @@
     "turnSpeed": 50,
     "friction": 1.5,
     "initAngle": 0,
-    "maxHealth": 30,
+    "maxHealth": 50,
     "healthBar": null,
     "destroyedSprite": {
       "__uuid__": "86087b4b-4284-4b91-8707-fa1f71406ea1@f9941",

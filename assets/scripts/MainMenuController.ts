@@ -111,7 +111,7 @@ export class MainMenuController extends Component {
 
     updateAudioButtonLabel() {
         if (this.audioLabel) {
-            this.audioLabel.string = SoundManager.instance.isMuted() ? "音效:关" : "音效:开";
+            this.audioLabel.string = SoundManager.instance.isMuted() ? "音效:关 \n sound:off" : "音效:开\n sound:on";
         }
     }
 
