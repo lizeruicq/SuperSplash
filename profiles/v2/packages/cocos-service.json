@@ -17,6 +17,10 @@
       "ios": {
         "configID": "e495ea",
         "services": []
+      },
+      "ohos": {
+        "configID": "e495ea",
+        "services": []
       }
     },
     "taskOptionsMap": {
@@ -72,6 +76,151 @@
       "1755700321733": {
         "configID": "e495ea",
         "services": []
+      },
+      "1755700586493": {
+        "configID": "e495ea",
+        "services": [],
+        "__version__": "3.0.9"
+      },
+      "1755700706383": {
+        "configID": "e495ea",
+        "services": [],
+        "__version__": "3.0.9"
+      },
+      "1755700914487": {
+        "configID": "e495ea",
+        "services": [],
+        "__version__": "3.0.9"
+      },
+      "1755701125065": {
+        "configID": "e495ea",
+        "services": [],
+        "__version__": "3.0.9"
+      },
+      "1755701446834": {
+        "configID": "e495ea",
+        "services": [],
+        "__version__": "3.0.9"
+      },
+      "1755701708190": {
+        "configID": "e495ea",
+        "services": [],
+        "__version__": "3.0.9"
+      },
+      "1755702795848": {
+        "configID": "e495ea",
+        "services": [],
+        "__version__": "3.0.9"
+      },
+      "1755703242417": {
+        "configID": "e495ea",
+        "services": [],
+        "__version__": "3.0.9"
+      },
+      "1755704577751": {
+        "configID": "e495ea",
+        "services": [],
+        "__version__": "3.0.9"
+      },
+      "1755705592929": {
+        "configID": "e495ea",
+        "services": [],
+        "__version__": "3.0.9"
+      },
+      "1755707307524": {
+        "configID": "e495ea",
+        "services": [],
+        "__version__": "3.0.9"
+      },
+      "1755739023808": {
+        "configID": "e495ea",
+        "services": [],
+        "__version__": "3.0.9"
+      },
+      "1755740341283": {
+        "configID": "e495ea",
+        "services": [],
+        "__version__": "3.0.9"
+      },
+      "1755741762582": {
+        "configID": "e495ea",
+        "services": [],
+        "__version__": "3.0.9"
+      },
+      "1755742119699": {
+        "configID": "e495ea",
+        "services": [],
+        "__version__": "3.0.9"
+      },
+      "1755749963481": {
+        "configID": "e495ea",
+        "services": [],
+        "__version__": "3.0.9"
+      },
+      "1755750748467": {
+        "configID": "e495ea",
+        "services": [],
+        "__version__": "3.0.9"
+      },
+      "1755751399549": {
+        "configID": "e495ea",
+        "services": [],
+        "__version__": "3.0.9"
+      },
+      "1755751984859": {
+        "configID": "e495ea",
+        "services": [],
+        "__version__": "3.0.9"
+      },
+      "1755786406645": {
+        "configID": "e495ea",
+        "services": [],
+        "__version__": "3.0.9"
+      },
+      "1755787034357": {
+        "configID": "e495ea",
+        "services": [],
+        "__version__": "3.0.9"
+      },
+      "1755867224401": {
+        "configID": "e495ea",
+        "services": [],
+        "__version__": "3.0.9"
+      },
+      "1755867816392": {
+        "configID": "e495ea",
+        "services": [],
+        "__version__": "3.0.9"
+      },
+      "1755868335604": {
+        "configID": "e495ea",
+        "services": [],
+        "__version__": "3.0.9"
+      },
+      "1755882270901": {
+        "configID": "e495ea",
+        "services": [],
+        "__version__": "3.0.9"
+      },
+      "1755919052606": {
+        "configID": "e495ea",
+        "services": [],
+        "__version__": "3.0.9"
+      },
+      "1755922058652": {
+        "configID": "e495ea",
+        "services": [],
+        "__version__": "3.0.9"
+      },
+      "1755941315429": {
+        "configID": "e495ea",
+        "services": [],
+        "__version__": "3.0.9"
+      },
+      "1755943690046": {
+        "configID": "e495ea",
+        "services": [],
+        "__version__": "3.0.9"
       }
     },
     "__version__": "1.3.9"

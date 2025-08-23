@@ -112,22 +112,23 @@ export class PlayerManager extends Component {
             this.node.destroy();
             return;
         }
-        
+
         PlayerManager._instance = this;
-        
-        // 设置为常驻节点，不随场景切换而销毁
-        // (this.node as any)._persistNode = true;
-        director.addPersistRootNode(this.node);
-        
-        // 移除环境检测
-        // this._detectEnvironment();
-        // this.resetPlayerData();
-        
-        // 初始化玩家数据
-        this._initPlayerData();
-        
-        // 加载数据
-        this.loadPlayerData();
+
+        try {
+            // 设置为常驻节点，不随场景切换而销毁
+            director.addPersistRootNode(this.node);
+
+            // 延迟初始化，确保系统准备就绪
+            this.scheduleOnce(() => {
+                this._initPlayerData();
+                this.loadPlayerData();
+                console.log('PlayerManager initialized successfully');
+            }, 0.1);
+
+        } catch (error) {
+            console.error('Error initializing PlayerManager:', error);
+        }
     }
     
     onDestroy() {
@@ -166,7 +167,7 @@ export class PlayerManager extends Component {
     private _initPlayerData() {
         this._playerData = {
             level: 1,
-            money: 0,
+            money: 200,
             experience: 0,
             
             unlockedCars: [], // 默认解锁第一辆车

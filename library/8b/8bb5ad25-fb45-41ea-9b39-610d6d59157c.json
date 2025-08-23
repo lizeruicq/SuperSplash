@@ -1987,7 +1987,7 @@
     "maxSpeed": 35,
     "acceleration": 35,
     "brakeDeceleration": 200,
-    "turnSpeed": 120,
+    "turnSpeed": 100,
     "friction": 1.5,
     "initAngle": 0,
     "maxHealth": 120,
@@ -2260,8 +2260,8 @@
       },
       {
         "__type__": "cc.Vec2",
-        "x": 533.2,
-        "y": 537.9
+        "x": 533,
+        "y": 495
       },
       {
         "__type__": "cc.Vec2",

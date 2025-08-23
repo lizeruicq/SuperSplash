@@ -7,6 +7,14 @@
     "/Users/zeruili/projects/cocos_project/driftClash/assets/TiledMap/city2.tmx": [
       "/Users/zeruili/projects/cocos_project/driftClash/assets/TiledMap/City_tiles.tsx",
       "/Users/zeruili/projects/cocos_project/driftClash/assets/TiledMap/City_tiles.png"
+    ],
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/TiledMap/city2.tmx": [
+      "/Users/zeruili/projects/cocos_project/SuperSplash/assets/TiledMap/City_tiles.tsx",
+      "/Users/zeruili/projects/cocos_project/SuperSplash/assets/TiledMap/City_tiles.png"
+    ],
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/TiledMap/city.tmx": [
+      "/Users/zeruili/projects/cocos_project/SuperSplash/assets/TiledMap/City_tiles.tsx",
+      "/Users/zeruili/projects/cocos_project/SuperSplash/assets/TiledMap/City_tiles.png"
     ]
   }
 }

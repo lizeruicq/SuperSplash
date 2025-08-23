@@ -2020,7 +2020,7 @@
     "maxSpeed": 30,
     "acceleration": 30,
     "brakeDeceleration": 200,
-    "turnSpeed": 120,
+    "turnSpeed": 100,
     "friction": 1.5,
     "initAngle": 0,
     "maxHealth": 120,

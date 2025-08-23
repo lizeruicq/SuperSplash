@@ -183,7 +183,7 @@ export class Bullet extends Component {
                 return;
         }
 
-        // // 播放音效
+        // 播放音效
         // this.playHitSound();
         
         // // 销毁子弹（仅适用于普通子弹和火焰子弹）
@@ -215,7 +215,7 @@ export class Bullet extends Component {
         this.createBulletExplosion();
         
         // 播放音效
-        SoundManager.instance.playSoundEffect('bulletHit');
+        // SoundManager.instance.playSoundEffect('bulletHit');
     }
 
     private handleDartHit(playerComponent: player | null, aiPlayerComponent: AIPlayer | null) {
@@ -237,7 +237,7 @@ export class Bullet extends Component {
         this.createDartExplosion();
         
         // 播放音效
-        SoundManager.instance.playSoundEffect('DartHit');
+        // SoundManager.instance.playSoundEffect('DartHit');
     }
 
     /**
@@ -260,7 +260,7 @@ export class Bullet extends Component {
         this.clearPaintInRange();
         
         // 播放音效
-        SoundManager.instance.playSoundEffect('explosion');
+        // SoundManager.instance.playSoundEffect('explosion');
     }
 
     /**
@@ -283,7 +283,7 @@ export class Bullet extends Component {
         this.dealExplosionDamage();
         
         // 播放音效
-        SoundManager.instance.playSoundEffect('explosion');
+        // SoundManager.instance.playSoundEffect('explosion');
     }
 
     /**
@@ -541,19 +541,19 @@ export class Bullet extends Component {
     /**
      * 播放碰撞音效
      */
-    private playHitSound() {
-        switch (this.bulletType) {
-            case BulletType.NORMAL:
-                SoundManager.instance.playSoundEffect('bulletHit');
-                break;
-            case BulletType.DART:
-                SoundManager.instance.playSoundEffect('dartHit');
-                break;
-            case BulletType.ROCKET:
-                SoundManager.instance.playSoundEffect('explosion');
-                break;
-        }
-    }
+    // private playHitSound() {
+    //     switch (this.bulletType) {
+    //         // case BulletType.NORMAL:
+    //         //     SoundManager.instance.playSoundEffect('bulletHit');
+    //         //     break;
+    //         // case BulletType.DART:
+    //         //     SoundManager.instance.playSoundEffect('dartHit');
+    //         //     break;
+    //         case BulletType.ROCKET:
+    //             SoundManager.instance.playSoundEffect('explosion');
+    //             break;
+    //     }
+    // }
 
     /**
      * 销毁子弹

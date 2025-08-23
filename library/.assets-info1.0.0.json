@@ -301,14 +301,6 @@
     "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/background2.png.meta": {
       "time": 1752891498613.7517
     },
-    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/background1.png": {
-      "time": 1752891498563.5964,
-      "uuid": "1c5052fa-8819-46bc-bb95-1aa90b873e2e"
-    },
-    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/background2.png": {
-      "time": 1752891498565.2583,
-      "uuid": "b2b39a66-2564-4be8-8802-d043d12ffd8b"
-    },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/scripts/PurchasePanel.ts.meta": {
       "time": 1752984207646.1838
     },
@@ -338,39 +330,11 @@
     "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/sound/bgm.wav.meta": {
       "time": 1753110505860.4316
     },
-    "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/sound/Plop.ogg": {
-      "time": 1753110505802.6812,
-      "uuid": "05d09d2a-d1e6-4db4-b7f1-46c828561e1c"
-    },
-    "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/sound/crash.ogg": {
-      "time": 1753110505802.6543,
-      "uuid": "6b75695c-de58-4b54-86d8-520be166015c"
-    },
-    "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/sound/tires_squal_loop.wav": {
-      "time": 1753110505805.291,
-      "uuid": "f89116d5-8d7e-402f-9955-3285188d78de"
-    },
-    "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/sound/running.wav": {
-      "time": 1753110505807.9333,
-      "uuid": "cb5bf55f-787d-4418-a1b0-f21d440384ce"
-    },
-    "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/sound/bgm.wav": {
-      "time": 1753110505816.613,
-      "uuid": "c492a1c7-8290-4d71-98ff-a4bb822cb067"
-    },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/sound/drift.mp3.meta": {
       "time": 1753110512728.7705
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/sound/engine_on.mp3.meta": {
       "time": 1753110512731.4622
-    },
-    "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/sound/drift.mp3": {
-      "time": 1753110512724.8335,
-      "uuid": "c1f2ce3a-5aa8-45ba-ab3e-5fff8bb87af9"
-    },
-    "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/sound/engine_on.mp3": {
-      "time": 1753110512725.0964,
-      "uuid": "9f868da1-89e4-4ca6-a4e1-2b592981db21"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/scripts/SoundManager.ts.meta": {
       "time": 1753111677334.4185
@@ -381,10 +345,6 @@
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/sound/explode.mp3.meta": {
       "time": 1753192191522.972
-    },
-    "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/sound/explode.mp3": {
-      "time": 1753192191477.7927,
-      "uuid": "df16bb3a-bc77-4766-bae7-2769316ed6e5"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/scripts/CarProperties.ts.meta": {
       "time": 1753289009987.2246
@@ -1061,10 +1021,6 @@
     "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/UI/shoot.png.meta": {
       "time": 1754726902627.1958
     },
-    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/UI/shoot.png": {
-      "time": 1754726895632.9966,
-      "uuid": "70958428-2d80-45d2-be19-959fe20eda20"
-    },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/UI/shangxiazuoyouTriangle17-2.png.meta": {
       "time": 1754727819305.3281
     },
@@ -1076,22 +1032,6 @@
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/UI/shangxiazuoyouTriangle18.png.meta": {
       "time": 1754727819324.356
-    },
-    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/UI/shangxiazuoyouTriangle17-2.png": {
-      "time": 1754727819294.173,
-      "uuid": "8be1a880-6cc0-49ef-97ed-9792b9660f07"
-    },
-    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/UI/shangxiazuoyouTriangle15.png": {
-      "time": 1754727819294.2405,
-      "uuid": "f1dc3119-9b7d-4a05-abb6-2617840a906b"
-    },
-    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/UI/shangxiazuoyouTriangle16.png": {
-      "time": 1754727819294.2825,
-      "uuid": "73d6b5b9-dc56-44d9-9b17-80a95b7bdd49"
-    },
-    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/UI/shangxiazuoyouTriangle18.png": {
-      "time": 1754727819294.3228,
-      "uuid": "a181abe3-561c-494c-9952-aa30d8e497fc"
     },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/logo.png.meta": {
       "time": 1754747189722.522
@@ -1213,26 +1153,6 @@
     "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/图片风格转换-9.jpg.meta": {
       "time": 1755609051709.1277
     },
-    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/图片风格转换-8.jpg": {
-      "time": 1755533391118.1106,
-      "uuid": "423e1555-8406-458e-a55d-3f2e78f1b735"
-    },
-    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/图片风格转换-9.jpg": {
-      "time": 1755533273279.5054,
-      "uuid": "3418420c-6e30-4052-9518-882319cc0283"
-    },
-    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/图片风格转换-11.jpg": {
-      "time": 1755533405503.8784,
-      "uuid": "c07d4f01-abc9-4f64-8f43-33a6ce868509"
-    },
-    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/图片风格转换-12.jpg": {
-      "time": 1755533443476.6697,
-      "uuid": "a9ba508d-fd85-45b5-9fd2-d14875277c0c"
-    },
-    "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/图片风格转换-10.jpg": {
-      "time": 1755533377885.2002,
-      "uuid": "78d77ff7-6930-4557-9736-dc3c53c2d458"
-    },
     "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/UI/Unknown-9.png.meta": {
       "time": 1755609644417.5522
     },
@@ -1246,6 +1166,1273 @@
     "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/setting.png": {
       "time": 1752666805611.1243,
       "uuid": "4b2a90e7-9654-43f7-b19c-1929bfdc1fa9"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/Scenes": {
+      "time": 1754805724106.2932,
+      "uuid": "311768e2-09ac-4c4f-834d-85e07497a5c5"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/TiledMap": {
+      "time": 1751092931321.343,
+      "uuid": "ca8300bc-5694-4fb2-9420-c134432c4866"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img": {
+      "time": 1755838053857.7668,
+      "uuid": "f04d4757-2526-40bc-83dc-41410588d6eb"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources": {
+      "time": 1755838053857.7668,
+      "uuid": "d97d032d-727a-433c-9189-878a2868c79d"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts": {
+      "time": 1755776913014.6016,
+      "uuid": "d4ffaca8-3516-4d6f-9187-e37ee8010ebd"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/background": {
+      "time": 1755939240625.9026,
+      "uuid": "6e03cd48-8a60-412f-b20f-82f4e1b5b329"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/cars": {
+      "time": 1754404250655.2095,
+      "uuid": "41215272-73c9-4fb3-9263-b76927c4d527"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu": {
+      "time": 1755946381340.2573,
+      "uuid": "b3322b39-4b8e-4556-8194-a14dbd5f51a9"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/paint": {
+      "time": 1754195481820.909,
+      "uuid": "40424df1-20d9-4c1a-b530-455872b99284"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/weapons": {
+      "time": 1755329434099.622,
+      "uuid": "fe3cb3bb-8e0d-46e7-8ece-3490aea9da1a"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/config": {
+      "time": 1753289058641.621,
+      "uuid": "c0d77e1a-8903-4645-b707-b56218e1eded"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/prefab": {
+      "time": 1754576558864.5813,
+      "uuid": "762a429e-c9d7-4d61-98f5-52886abdc2ad"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/UI": {
+      "time": 1755943375707.6316,
+      "uuid": "2398cf68-c464-466d-9c17-c2be447e298a"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/weapons/bulletexplosion": {
+      "time": 1754722295658.0989,
+      "uuid": "dbd3f203-748c-4c30-b8c3-8b6c6d403a4b"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/weapons/dartexplosion": {
+      "time": 1755331242746.188,
+      "uuid": "9ad573b9-dad9-4e4b-9a16-b7324830597e"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/weapons/explosion": {
+      "time": 1754663240672.1516,
+      "uuid": "92e549b4-41e4-4aad-8357-285d7c900d95"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/weapons/flame": {
+      "time": 1754674857392.527,
+      "uuid": "be5ded66-4142-4dcd-8732-97168d114bbe"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/prefab/cars": {
+      "time": 1752310766595.3074,
+      "uuid": "2054f310-6a94-41ce-a3b6-41dcd19b5f43"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/prefab/levels": {
+      "time": 1755445040341.4888,
+      "uuid": "c23f290e-b5e8-46ea-bf20-d18ab9b6705f"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/prefab/paints": {
+      "time": 1754220535686.098,
+      "uuid": "b0b6bdec-bc34-4ac8-808c-a35118bcf609"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/prefab/weapons": {
+      "time": 1755331180375.4714,
+      "uuid": "1ee9f941-ce0c-4508-b98b-c2c209f8155b"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/prefab/weapons/explosion": {
+      "time": 1755329293729.0652,
+      "uuid": "9db1701a-e1c8-4824-8c03-8ed3c79247d8"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/AIController.ts": {
+      "time": 1754494573004.8481,
+      "uuid": "f240925f-9753-4a81-ac73-a2a8210575a2"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/AIPlayer.ts": {
+      "time": 1755940071758.6548,
+      "uuid": "91c08d91-821d-4705-b576-bca425d89d56"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/Bullet.ts": {
+      "time": 1755881234193.11,
+      "uuid": "91ffccd6-b692-4a87-a2fe-51adeaa3b229"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/CarProperties.ts": {
+      "time": 1755655155148.0142,
+      "uuid": "796e3776-c599-4f75-9591-35aaeaae7fb6"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/CarPropertyDisplay.ts": {
+      "time": 1755611467905.7456,
+      "uuid": "add913cb-f124-45b3-9292-5dcf066e9b47"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/GameHUD.ts": {
+      "time": 1754728500452.841,
+      "uuid": "8d994a71-0534-4deb-9268-d898d9e0c007"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/GameManager.ts": {
+      "time": 1755939080349.24,
+      "uuid": "b67f4523-8daa-464a-8546-d89befbb2977"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/GameOverPanel.ts": {
+      "time": 1754798392340.3665,
+      "uuid": "850968dc-a180-4230-a0c6-b9496fca7201"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/HealthBarUI.ts": {
+      "time": 1751886004994.6763,
+      "uuid": "79d6f812-9554-4262-84e1-fd743e611bf9"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/MainMenuController.ts": {
+      "time": 1755880268520.9814,
+      "uuid": "0cf6405c-918a-40f1-b383-68a9fc739b7f"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/PaintManager.ts": {
+      "time": 1754746550522.3418,
+      "uuid": "7dd7ac9d-7d90-4745-bb56-3c99a1d345df"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/PaintSpot.ts": {
+      "time": 1753796381049.1853,
+      "uuid": "e9c7f25f-e46f-4cf1-9025-dae477143ca9"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/PausePanel.ts": {
+      "time": 1751880715966.924,
+      "uuid": "5a320709-c4da-48a6-9e0a-f1f0884117fb"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/PlayerInfoUI.ts": {
+      "time": 1754805724106.8003,
+      "uuid": "66fbc94f-5230-4bee-8600-db121d4f07fe"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/PlayerManager.ts": {
+      "time": 1755937244423.7375,
+      "uuid": "1b6d6687-2973-4618-af7b-db52ef67b8c1"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/PurchasePanel.ts": {
+      "time": 1754791136160.962,
+      "uuid": "c4e943de-6ca3-46a0-9231-17cb43e8e456"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/SceneTransition.ts": {
+      "time": 1755738484903.1643,
+      "uuid": "c161466d-78da-494f-9ff2-6a5b9ae13301"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/SelectManager.ts": {
+      "time": 1755776971423.2454,
+      "uuid": "be7b2dc0-da35-4de9-a81c-30690fdcd28f"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/SoundManager.ts": {
+      "time": 1755919414574.9187,
+      "uuid": "7c385d18-836f-4804-ae30-5bd158cfb7f5"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/TempData.ts": {
+      "time": 1751728327354.985,
+      "uuid": "4702a2d2-89fb-4b88-a080-9712952901be"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/camera_follow.ts": {
+      "time": 1751727963848.3662,
+      "uuid": "daf21382-6b58-4c9b-aeb4-ace960c8ca29"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/player.ts": {
+      "time": 1755938951495.0698,
+      "uuid": "b3924dc4-f7fe-491c-9736-a65419c312f5"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/Scenes.meta": {
+      "time": 1751109393489.1108
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/TiledMap.meta": {
+      "time": 1750498043785.241
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img.meta": {
+      "time": 1750861537288.3977
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources.meta": {
+      "time": 1751549490748.0537
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts.meta": {
+      "time": 1750948232792.9692
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/background.meta": {
+      "time": 1751949501457.9102
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/cars.meta": {
+      "time": 1754194729505.0579
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu.meta": {
+      "time": 1751167707037.9941
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/paint.meta": {
+      "time": 1754194959025.747
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/weapons.meta": {
+      "time": 1754576847851.5317
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/config.meta": {
+      "time": 1753289009986.835
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/prefab.meta": {
+      "time": 1751102457579.5425
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/UI.meta": {
+      "time": 1754194921301.4258
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/weapons/bulletexplosion.meta": {
+      "time": 1754720907859.336
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/weapons/dartexplosion.meta": {
+      "time": 1755329425284.5571
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/weapons/explosion.meta": {
+      "time": 1754663148063.758
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/weapons/flame.meta": {
+      "time": 1754674672255.5854
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/prefab/cars.meta": {
+      "time": 1751463188433.467
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/prefab/levels.meta": {
+      "time": 1751463178912.3833
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/prefab/paints.meta": {
+      "time": 1753712323193.1147
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/prefab/weapons.meta": {
+      "time": 1754576553548.8381
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/prefab/weapons/explosion.meta": {
+      "time": 1754663474966.6072
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/AIController.ts.meta": {
+      "time": 1754493208657.747
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/AIPlayer.ts.meta": {
+      "time": 1754493208657.9883
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/Bullet.ts.meta": {
+      "time": 1754536614454.1328
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/CarProperties.ts.meta": {
+      "time": 1753289009987.2246
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/CarPropertyDisplay.ts.meta": {
+      "time": 1753289009987.396
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/GameHUD.ts.meta": {
+      "time": 1753712719201.7864
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/GameManager.ts.meta": {
+      "time": 1751380777875.7236
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/GameOverPanel.ts.meta": {
+      "time": 1753716818526.3057
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/HealthBarUI.ts.meta": {
+      "time": 1751794812473.0356
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/MainMenuController.ts.meta": {
+      "time": 1751210132518.3552
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/PaintManager.ts.meta": {
+      "time": 1753710897295.9856
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/PaintSpot.ts.meta": {
+      "time": 1753710897296.1187
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/PausePanel.ts.meta": {
+      "time": 1751881488726.3596
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/PlayerInfoUI.ts.meta": {
+      "time": 1751210132518.5479
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/PlayerManager.ts.meta": {
+      "time": 1751106507131.1199
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/PurchasePanel.ts.meta": {
+      "time": 1752984207646.1838
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/SceneTransition.ts.meta": {
+      "time": 1752764446973.8596
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/SelectManager.ts.meta": {
+      "time": 1751380777875.8699
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/SoundManager.ts.meta": {
+      "time": 1753111677334.4185
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/TempData.ts.meta": {
+      "time": 1751382441481.8594
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/camera_follow.ts.meta": {
+      "time": 1750950248807.6147
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/player.ts.meta": {
+      "time": 1750948553272.1372
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/Scenes/LevelSelect.scene": {
+      "time": 1755943577638.5564,
+      "uuid": "091c5c0e-b72a-4cad-ab68-635bc57ff236"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/Scenes/gamescene.scene": {
+      "time": 1755939396471.571,
+      "uuid": "1563d039-d898-4d8f-9415-9f1da853b8a3"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/Scenes/mainmenu.scene": {
+      "time": 1755946563668.5952,
+      "uuid": "9a4dce19-24b9-4d46-b38f-ef49f2287dcb"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/TiledMap/City_tiles.png": {
+      "time": 1750772920271.2393,
+      "uuid": "09c7c4fd-1bb1-44c6-b6b8-53d6372098fd"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/TiledMap/City_tiles.tsx": {
+      "time": 1750772969217.576,
+      "uuid": "0f73f87e-5a6d-4c5f-a301-7985c7771ff8"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/TiledMap/SmallBurg_outside_assets.png": {
+      "time": 1750498182045.2585,
+      "uuid": "79ea8bc3-55e4-4161-87f4-d8417199f7b7"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/TiledMap/SmallBurg_outside_assets.tsx": {
+      "time": 1750498411272.1216,
+      "uuid": "64305baa-7783-4c84-8b22-65a3c9911550"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/TiledMap/city.tmx": {
+      "time": 1751078938485.3904,
+      "uuid": "c58e421d-cd2f-4cd7-b53d-7b468774492f"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/TiledMap/city2.tmx": {
+      "time": 1751092931321.0757,
+      "uuid": "77271c78-8b07-4918-bd48-a6f2015e66ca"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/TiledMap/smallburg_terrain.png": {
+      "time": 1750500952785.5593,
+      "uuid": "58373e6a-0c07-48bb-aeb7-6d2426d69f39"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/TiledMap/smallburg_terrain.tsx": {
+      "time": 1750500976387.6982,
+      "uuid": "96faef33-da58-4b5e-8a90-58a7d4cdf8e8"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/TiledMap/smallburg_terrain_spring_with_shadows.png": {
+      "time": 1750498195807.7363,
+      "uuid": "3f4a8955-01c2-409a-8435-bc200cc537df"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/TiledMap/smallburg_terrain_spring_with_shadows.tsx": {
+      "time": 1750500622643.127,
+      "uuid": "6fa4c070-0285-4d03-85b9-c31a736acbe7"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/background/arena.jpeg": {
+      "time": 1755532937018.0137,
+      "uuid": "b135840c-f427-4d30-be1f-895f2ae7c63c"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/background/jungle.jpeg": {
+      "time": 1755531814827.2332,
+      "uuid": "e8fb1513-1ca5-4f19-8b1e-a78941f4652c"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/background/snow.jpeg": {
+      "time": 1755529674024.0344,
+      "uuid": "02985efb-0217-4df8-b526-1375d8174925"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/background/soccor_court.jpg": {
+      "time": 1755525192219.7905,
+      "uuid": "7454f9f1-4796-405a-bd67-cce3835ce4a1"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/background/tennis_court.jpeg": {
+      "time": 1755532613717.7637,
+      "uuid": "0858485b-4b09-4b5e-9fc4-eafcbce6dc95"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/cars/86-f.png": {
+      "time": 1752309893173.1184,
+      "uuid": "7e95e032-b6ae-4de9-a8ab-c81b24b5fb5f"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/cars/86-t.png": {
+      "time": 1752309893173.038,
+      "uuid": "ed611db6-e51e-4a53-b624-848dd45ace21"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/cars/car.png": {
+      "time": 1751729801951.5068,
+      "uuid": "49e36654-b2c3-47d9-afeb-5db28286a1b0"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/cars/car1-crash.png": {
+      "time": 1751884553985.8413,
+      "uuid": "a238f344-7c25-4d83-a0ec-8c85e46d3ec8"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/cars/crash.png": {
+      "time": 1754404245512.5247,
+      "uuid": "86087b4b-4284-4b91-8707-fa1f71406ea1"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/cars/crush-2.png": {
+      "time": 1754403942521.2842,
+      "uuid": "735fb23f-198e-4668-adb0-ee0630341170"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/cars/mini-f.png": {
+      "time": 1752309829276.943,
+      "uuid": "35990206-f1f7-49c0-91d6-a50921fc8128"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/cars/rx7-f.png": {
+      "time": 1752307678956.312,
+      "uuid": "0b33dc38-0c13-4f55-b754-27d76610db59"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/cars/rx7-t.png": {
+      "time": 1752307674152.285,
+      "uuid": "38414c6f-ce08-40c3-b0a0-4f24ce1031de"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/cars/taycan-f.png": {
+      "time": 1752297270692.8096,
+      "uuid": "a9e97b11-149f-46e6-a990-c95fd6d91cd7"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/cars/taycan-t.png": {
+      "time": 1752897928534.9988,
+      "uuid": "d6c5db05-a7b5-4c39-b29f-89c86c315dcf"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/cars/z370-t.png": {
+      "time": 1752293773784.7495,
+      "uuid": "b9e95f02-4aec-4c01-8343-1c6ce036b0c6"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/cars/z370.png": {
+      "time": 1752293681726.4382,
+      "uuid": "5308cc80-fcde-4667-baa6-dbcdc87fd132"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/cs-ba.png": {
+      "time": 1753336186104.9495,
+      "uuid": "28974bc3-f2e4-4a81-a402-d716d17c19a7"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/gameover.png": {
+      "time": 1754197577881.6492,
+      "uuid": "ac4c6226-b5ca-40aa-8e65-d953ab93c6b4"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/logo.png": {
+      "time": 1754747189625.1716,
+      "uuid": "dddb3d97-5b9e-4cc8-acdf-f9e4453ac948"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/panel.png": {
+      "time": 1752672269353.8113,
+      "uuid": "6a0179db-b0bc-4905-8953-8ab076a3cfd6"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/panel2.png": {
+      "time": 1752672261124.5845,
+      "uuid": "0a74f435-3a83-44b1-af34-a8b16ea61ec9"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/setting.png": {
+      "time": 1752666805611.1243,
+      "uuid": "4b2a90e7-9654-43f7-b19c-1929bfdc1fa9"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/shezhi.png": {
+      "time": 1752505777785.0217,
+      "uuid": "f07db45e-fa1a-499c-b315-fc3e50f3aafa"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/traffic.png": {
+      "time": 1752511662822.8542,
+      "uuid": "83baeef7-746b-4f91-9a84-fd8a58d2b8b3"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/paint/paint_blue.png": {
+      "time": 1753798645923.9973,
+      "uuid": "eea97c99-7110-4239-a1cd-e97b3b5441c3"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/paint/paint_orange.png": {
+      "time": 1753801550465.212,
+      "uuid": "8cc3d7a6-bdc6-4872-af88-7b99795e09c3"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/paint/paint_pink.png": {
+      "time": 1754195481819.5745,
+      "uuid": "765da6a8-e074-4a3b-81b7-ca9710f9c2d3"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/paint/paint_purple.png": {
+      "time": 1754195481819.6707,
+      "uuid": "a2a3e90c-937f-4ef9-a2da-f20d445d214a"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/paint/paint_red.png": {
+      "time": 1754195481818.9866,
+      "uuid": "e2c578aa-a0c8-46be-bcd6-f1cdb818f1ba"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/paint/paint_yellow.png": {
+      "time": 1754195481819.1948,
+      "uuid": "4d4e7195-6c84-4621-8d3c-37fb67732162"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/weapons/bullet.png": {
+      "time": 1754576861796.3835,
+      "uuid": "2e63d6db-c814-4994-99aa-22ba87c907be"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/weapons/dart.png": {
+      "time": 1755328849744.336,
+      "uuid": "7bce5a88-2bc3-454b-9654-96b62e1ca29f"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/weapons/missile.png": {
+      "time": 1754664507702.3787,
+      "uuid": "0c2ffa44-c525-4224-94f2-895505bebe2f"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/prefab/loading.prefab": {
+      "time": 1752764704358.6055,
+      "uuid": "81520cf5-3a02-463b-b3ec-c8870a3f4940"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/UI/Unknown-9.png": {
+      "time": 1755609644344.5847,
+      "uuid": "dc275c2e-8d36-4a6b-9d10-616cfc9049e6"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/UI/back.png": {
+      "time": 1752728148426.1,
+      "uuid": "f2a743f7-c00a-4610-b94b-5374123d572e"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/UI/backtoselect.png": {
+      "time": 1754230721824.615,
+      "uuid": "dcb5adf7-9474-4ec2-bac1-fefc5f844ea7"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/UI/close.png": {
+      "time": 1752728148426.1245,
+      "uuid": "a426c2c8-58b1-4e5a-a16c-e75061a2d034"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/UI/green.png": {
+      "time": 1752512534424.8093,
+      "uuid": "1c18f6e7-3b13-401b-85a1-746bf7284949"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/UI/helmet.png": {
+      "time": 1752896266672.393,
+      "uuid": "a47a6013-b8ef-4f76-8a70-0a5d0f2ba81b"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/UI/lock.png": {
+      "time": 1752938388981.9143,
+      "uuid": "5c270278-c097-4dba-9f15-f3886683bff7"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/UI/moeny.png": {
+      "time": 1752897069048.1191,
+      "uuid": "cff45180-1973-4a53-8d9e-791cf8f042d8"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/UI/pause.png": {
+      "time": 1754199323859.242,
+      "uuid": "357cb1fb-4427-4677-aebe-aa3cf9f9df55"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/UI/pause_bt.png": {
+      "time": 1754230415008.7192,
+      "uuid": "b510303d-c68c-4e1b-8073-6a16eb4df9f8"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/UI/purchase.png": {
+      "time": 1755610235519.9146,
+      "uuid": "a50181e9-ecbd-4d36-bf53-3db514f24fee"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/UI/red.png": {
+      "time": 1752511998855.823,
+      "uuid": "4cf1948a-ffca-426e-9c43-1e7c864a1b60"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/UI/restart.png": {
+      "time": 1754230922225.1707,
+      "uuid": "8e2f4297-91a6-47cc-8cd7-438a85e78d5b"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/UI/resume.png": {
+      "time": 1754230721824.415,
+      "uuid": "37e04c65-4ac4-41b8-8169-a266f40e9fa8"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/UI/select.png": {
+      "time": 1755609684273.4033,
+      "uuid": "4befdd25-e632-4e7e-aa34-819783640186"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/UI/select2.png": {
+      "time": 1755610703940.022,
+      "uuid": "9368a3e2-29bf-4ad3-a422-77a08242544b"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/UI/star.png": {
+      "time": 1754217920919.2522,
+      "uuid": "ff4b1155-db8b-4cda-9bc0-6e743e5710bc"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/UI/yellow.png": {
+      "time": 1752666966316.5176,
+      "uuid": "593904f2-fa85-498f-9b0e-9f79890c24fd"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/weapons/bulletexplosion/bex1.png": {
+      "time": 1754721755236.5474,
+      "uuid": "397a0ece-b137-474f-89ed-de23addacf36"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/weapons/bulletexplosion/bex2.png": {
+      "time": 1754721755236.5469,
+      "uuid": "d5f59f10-43ce-42e5-9e56-f5218f429ca9"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/weapons/bulletexplosion/bulletexpolsion.anim": {
+      "time": 1755330918078.5347,
+      "uuid": "0ae27a3b-2d37-4978-96ea-626bbece40f5"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/weapons/dartexplosion/dart.anim": {
+      "time": 1755332040123.037,
+      "uuid": "de739197-8d74-4215-bfe7-818a203cdc66"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/weapons/dartexplosion/dartexplosion.anim": {
+      "time": 1755331121033.4565,
+      "uuid": "8194a12f-2724-4d82-a483-dc58be2f764b"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/weapons/dartexplosion/dartexplosion.png": {
+      "time": 1755329910421.413,
+      "uuid": "46b118a0-2a58-4c5b-9217-fa2e2a20ec95"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/weapons/explosion/Effect-10.png": {
+      "time": 1754663154182.2473,
+      "uuid": "0ac23244-9b49-4e66-b826-aba411c9a168"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/weapons/explosion/Effect-11.png": {
+      "time": 1754663154181.8994,
+      "uuid": "80d65b5e-2b49-4010-99da-69256f876ad5"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/weapons/explosion/Effect-3.png": {
+      "time": 1754663154181.4746,
+      "uuid": "7b3a54f4-3125-441b-a76e-6a0810ddb098"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/weapons/explosion/Effect-4.png": {
+      "time": 1754663154180.6165,
+      "uuid": "0162263e-21bb-48c5-b6c0-6d97af2328db"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/weapons/explosion/Effect-5.png": {
+      "time": 1754663154180.617,
+      "uuid": "fc931ecf-e981-48cc-999f-132edca72fa6"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/weapons/explosion/Effect-6.png": {
+      "time": 1754663154181.281,
+      "uuid": "7c7529e4-5710-4e94-ad74-45ccf3f84bbc"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/weapons/explosion/Effect-7.png": {
+      "time": 1754663154182.6729,
+      "uuid": "08078969-ceec-46d6-b660-82dd792138d6"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/weapons/explosion/Effect-8.png": {
+      "time": 1754663154182.0576,
+      "uuid": "91cc176a-7fae-4efa-a97b-53ccb18d63f9"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/weapons/explosion/Effect-9.png": {
+      "time": 1754663154181.9668,
+      "uuid": "1935062c-ea1c-43a3-9e21-c964c071ecec"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/weapons/explosion/explosion.anim": {
+      "time": 1754755428076.766,
+      "uuid": "9d731ae3-af25-407f-b588-4a7b062c376d"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/weapons/flame/efecto_fuego_00008.png": {
+      "time": 1754674719922.6775,
+      "uuid": "0d854dfe-e5ef-4ff7-8b3a-2c63f57b4063"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/weapons/flame/efecto_fuego_00009.png": {
+      "time": 1754674725256.2346,
+      "uuid": "e8b2fdf0-9c75-487c-a066-fcd5b64b7378"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/weapons/flame/efecto_fuego_00010.png": {
+      "time": 1754674729430.107,
+      "uuid": "71dbdcd5-d564-4005-92f8-f1b61c4ace2e"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/weapons/flame/efecto_fuego_00011.png": {
+      "time": 1754674732944.1594,
+      "uuid": "595a0063-a88e-4e29-839e-62bf089ab55e"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/weapons/flame/flame.anim": {
+      "time": 1754674933643.0356,
+      "uuid": "7b41546a-ca0c-4f94-a5e6-cd439b89de6e"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/prefab/cars/car-1.prefab": {
+      "time": 1755698380253.0781,
+      "uuid": "37fef8d9-5917-47b3-a40f-4e2ace6bf328"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/prefab/cars/car-2.prefab": {
+      "time": 1755700024715.024,
+      "uuid": "87676691-0988-4a4f-823c-9ede01a40e1c"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/prefab/cars/car-3.prefab": {
+      "time": 1755940432190.437,
+      "uuid": "48fa46bf-e334-4f77-b8e5-b81b32cc3846"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/prefab/cars/car-4.prefab": {
+      "time": 1755698065714.6194,
+      "uuid": "471a5567-970e-4fc0-9056-614a089c850d"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/prefab/cars/car-5.prefab": {
+      "time": 1755698071878.5686,
+      "uuid": "642f4c4e-3979-4274-9594-3c8286a57fb2"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/prefab/cars/healthBar.prefab": {
+      "time": 1751794822690.7478,
+      "uuid": "5fa4a020-ad12-4d51-9e7d-57cecdc056ca"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/prefab/levels/level-1.prefab": {
+      "time": 1755701099504.5847,
+      "uuid": "5e122843-ecf2-42e7-ab74-ec19f70240a3"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/prefab/levels/level-2.prefab": {
+      "time": 1755617126191.3994,
+      "uuid": "cf804555-7d75-4720-8a54-4f8a1348275f"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/prefab/levels/level-3.prefab": {
+      "time": 1755655928116.2917,
+      "uuid": "8d8867cd-f591-45fa-8564-e435fcdb1847"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/prefab/levels/level-4.prefab": {
+      "time": 1755940855160.1956,
+      "uuid": "0e092c45-c659-4c70-a247-9fe66ddd6b14"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/prefab/levels/level-5.prefab": {
+      "time": 1755940976368.6565,
+      "uuid": "8bb5ad25-fb45-41ea-9b39-610d6d59157c"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/prefab/paints/PaintRoot.prefab": {
+      "time": 1753802079941.6465,
+      "uuid": "4d5329e9-8f67-43e3-a399-e0fa9a5ad5f4"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/prefab/paints/README.md": {
+      "time": 1753799566501.5967,
+      "uuid": "962a8fae-c656-4e4a-bc33-02b0dbe793f5"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/prefab/paints/paint_blue.prefab": {
+      "time": 1753798945839.1736,
+      "uuid": "d1312f02-4e7f-4f9f-aed7-f255abb6e7f8"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/prefab/paints/paint_orange.prefab": {
+      "time": 1753801580360.367,
+      "uuid": "b71c19d0-4ac9-4dcb-aa32-b65fde2c406a"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/prefab/paints/paint_pink.prefab": {
+      "time": 1754220544486.7456,
+      "uuid": "35418bab-1e0a-4108-a267-ce8c8c2422c3"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/prefab/paints/paint_purple.prefab": {
+      "time": 1754220548201.9402,
+      "uuid": "a46287ff-f74b-4075-a483-08b1027fe72d"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/prefab/paints/paint_red.prefab": {
+      "time": 1754220551292.0986,
+      "uuid": "e7d9af4d-540d-4efb-8ab7-30ad25e31221"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/prefab/paints/paint_yellow.prefab": {
+      "time": 1754220560380.086,
+      "uuid": "4666d6c8-2376-4df4-be28-d66e383baace"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/prefab/weapons/bullet.prefab": {
+      "time": 1755655722325.2124,
+      "uuid": "ffdc0091-02b5-47e9-9cba-752ad0f7f260"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/prefab/weapons/dart.prefab": {
+      "time": 1755940599969.0935,
+      "uuid": "52e569f9-e5ef-4a7c-9807-cb29abc15d86"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/prefab/weapons/rocket.prefab": {
+      "time": 1755940814141.4631,
+      "uuid": "7fe3a2c1-44e3-45ed-a3a4-81e90a6994c7"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/prefab/weapons/explosion/bulletexplosion.prefab": {
+      "time": 1755330839142.4414,
+      "uuid": "124515d6-c01d-4b24-a978-eefc47e30c4d"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/prefab/weapons/explosion/dartexplosion.prefab": {
+      "time": 1755331158325.264,
+      "uuid": "0e832f25-ace4-4c2f-bb28-de4fb928d6ab"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/prefab/weapons/explosion/explosion.prefab": {
+      "time": 1755329239724.4753,
+      "uuid": "e107910c-0ef8-4a6b-8eb5-46d2b0965f23"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/Scenes/LevelSelect.scene.meta": {
+      "time": 1751174008010.2412
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/Scenes/mainmenu.scene.meta": {
+      "time": 1751167376857.5898
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/TiledMap/City_tiles.tsx.meta": {
+      "time": 1750772982576.9148
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/Scenes/gamescene.scene.meta": {
+      "time": 1750773427338.5786
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/TiledMap/SmallBurg_outside_assets.tsx.meta": {
+      "time": 1750500888774.1113
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/TiledMap/city2.tmx.meta": {
+      "time": 1751080168021.7188
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/TiledMap/city.tmx.meta": {
+      "time": 1751078962113.1714
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/TiledMap/City_tiles.png.meta": {
+      "time": 1750772920295.2656
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/TiledMap/smallburg_terrain.tsx.meta": {
+      "time": 1750522104939.456
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/TiledMap/SmallBurg_outside_assets.png.meta": {
+      "time": 1750498182073.4214
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/TiledMap/smallburg_terrain_spring_with_shadows.tsx.meta": {
+      "time": 1750500888774.2898
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/TiledMap/smallburg_terrain.png.meta": {
+      "time": 1750500952798.2244
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/TiledMap/smallburg_terrain_spring_with_shadows.png.meta": {
+      "time": 1750498195834.9563
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/background/soccor_court.jpg.meta": {
+      "time": 1755525211455.5298
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/background/jungle.jpeg.meta": {
+      "time": 1755531835019.1963
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/background/arena.jpeg.meta": {
+      "time": 1755532986770.0295
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/background/snow.jpeg.meta": {
+      "time": 1755529367864.0046
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/background/tennis_court.jpeg.meta": {
+      "time": 1755532986786.6084
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/cars/86-t.png.meta": {
+      "time": 1752545232778.0032
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/cars/86-f.png.meta": {
+      "time": 1752545223790.5332
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/cars/crash.png.meta": {
+      "time": 1754404245569.3672
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/cars/car.png.meta": {
+      "time": 1752545239424.45
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/cars/crush-2.png.meta": {
+      "time": 1754403942612.4531
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/cars/rx7-f.png.meta": {
+      "time": 1752545248900.3193
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/cars/car1-crash.png.meta": {
+      "time": 1752545235987.8638
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/cars/mini-f.png.meta": {
+      "time": 1752545245355.454
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/cars/rx7-t.png.meta": {
+      "time": 1752545254511.4185
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/cars/z370-t.png.meta": {
+      "time": 1752546551833.9575
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/cars/taycan-f.png.meta": {
+      "time": 1752546541478.2397
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/cars/z370.png.meta": {
+      "time": 1752546547819.8604
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/cs-ba.png.meta": {
+      "time": 1753336251990.3857
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/panel.png.meta": {
+      "time": 1752672269394.4138
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/logo.png.meta": {
+      "time": 1754747189722.522
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/cars/taycan-t.png.meta": {
+      "time": 1752897928637.0527
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/gameover.png.meta": {
+      "time": 1754197578029.1702
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/shezhi.png.meta": {
+      "time": 1752505794908.0308
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/panel2.png.meta": {
+      "time": 1752672261206.9924
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/paint/paint_blue.png.meta": {
+      "time": 1753798696404.3203
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/paint/paint_orange.png.meta": {
+      "time": 1754195066226.431
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/paint/paint_pink.png.meta": {
+      "time": 1754195481932.4287
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/traffic.png.meta": {
+      "time": 1752511920975.2095
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/paint/paint_red.png.meta": {
+      "time": 1754195481835.3892
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/setting.png.meta": {
+      "time": 1755610289608.505
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/weapons/bullet.png.meta": {
+      "time": 1754576861816.5554
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/paint/paint_yellow.png.meta": {
+      "time": 1754195481868.6692
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/paint/paint_purple.png.meta": {
+      "time": 1754195481965.1304
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/prefab/loading.prefab.meta": {
+      "time": 1752764704359.1843
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/weapons/dart.png.meta": {
+      "time": 1755328849844.9294
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/UI/Unknown-9.png.meta": {
+      "time": 1755609644417.5522
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/UI/back.png.meta": {
+      "time": 1754726602612.3752
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/weapons/missile.png.meta": {
+      "time": 1754664509626.7454
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/UI/helmet.png.meta": {
+      "time": 1752896266685.539
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/UI/lock.png.meta": {
+      "time": 1752938388990.0142
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/UI/green.png.meta": {
+      "time": 1752546561080.2385
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/UI/close.png.meta": {
+      "time": 1754726602616.6082
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/UI/backtoselect.png.meta": {
+      "time": 1754726602615.7637
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/UI/moeny.png.meta": {
+      "time": 1752897069058.643
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/UI/pause_bt.png.meta": {
+      "time": 1754230415061.9512
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/UI/red.png.meta": {
+      "time": 1752546557985.1265
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/UI/pause.png.meta": {
+      "time": 1754199323978.1846
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/UI/purchase.png.meta": {
+      "time": 1755610235564.0547
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/UI/select2.png.meta": {
+      "time": 1755610703960.7356
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/UI/restart.png.meta": {
+      "time": 1754230922291.5198
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/UI/resume.png.meta": {
+      "time": 1754726611659.7559
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/UI/star.png.meta": {
+      "time": 1754217920930.5815
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/weapons/bulletexplosion/bulletexpolsion.anim.meta": {
+      "time": 1754722295662.4438
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/weapons/dartexplosion/dart.anim.meta": {
+      "time": 1755331242747.5571
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/UI/yellow.png.meta": {
+      "time": 1752666966332.643
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/weapons/dartexplosion/dartexplosion.anim.meta": {
+      "time": 1755330959477.8264
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/weapons/bulletexplosion/bex1.png.meta": {
+      "time": 1754721755254.6316
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/weapons/bulletexplosion/bex2.png.meta": {
+      "time": 1754721755260.6023
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/UI/select.png.meta": {
+      "time": 1755609684355.5142
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/weapons/explosion/Effect-11.png.meta": {
+      "time": 1754663154240.5393
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/weapons/explosion/Effect-10.png.meta": {
+      "time": 1754663154255.3613
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/weapons/explosion/Effect-3.png.meta": {
+      "time": 1754663154211.7444
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/weapons/explosion/Effect-4.png.meta": {
+      "time": 1754663154219.5874
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/weapons/dartexplosion/dartexplosion.png.meta": {
+      "time": 1755329910476.228
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/weapons/explosion/Effect-5.png.meta": {
+      "time": 1754663154201.0718
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/weapons/explosion/Effect-7.png.meta": {
+      "time": 1754663154261.9885
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/weapons/explosion/Effect-6.png.meta": {
+      "time": 1754663154226.8877
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/weapons/explosion/Effect-8.png.meta": {
+      "time": 1754663154248.5754
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/weapons/explosion/Effect-9.png.meta": {
+      "time": 1754663154234.2642
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/weapons/explosion/explosion.anim.meta": {
+      "time": 1754663240676.204
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/weapons/flame/flame.anim.meta": {
+      "time": 1754674857393.595
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/prefab/cars/car-1.prefab.meta": {
+      "time": 1751728591200.1184
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/weapons/flame/efecto_fuego_00008.png.meta": {
+      "time": 1754674734355.1418
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/weapons/flame/efecto_fuego_00009.png.meta": {
+      "time": 1754674734353.9634
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/weapons/flame/efecto_fuego_00010.png.meta": {
+      "time": 1754674734355.444
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/weapons/flame/efecto_fuego_00011.png.meta": {
+      "time": 1754674734354.565
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/prefab/cars/car-2.prefab.meta": {
+      "time": 1752293799853.8403
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/prefab/cars/car-3.prefab.meta": {
+      "time": 1752297351825.2554
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/prefab/cars/car-4.prefab.meta": {
+      "time": 1752310765790.4875
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/prefab/cars/car-5.prefab.meta": {
+      "time": 1752310766597.8823
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/prefab/cars/healthBar.prefab.meta": {
+      "time": 1751793298608.602
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/prefab/levels/level-1.prefab.meta": {
+      "time": 1751949969165.876
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/prefab/levels/level-3.prefab.meta": {
+      "time": 1751987027194.968
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/prefab/levels/level-2.prefab.meta": {
+      "time": 1751949975316.93
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/prefab/levels/level-4.prefab.meta": {
+      "time": 1755354519549.1985
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/prefab/levels/level-5.prefab.meta": {
+      "time": 1755445040347.0764
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/prefab/paints/PaintRoot.prefab.meta": {
+      "time": 1753802079942.2808
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/prefab/paints/paint_blue.prefab.meta": {
+      "time": 1753798847367.2988
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/prefab/paints/paint_pink.prefab.meta": {
+      "time": 1754220427932.2876
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/prefab/paints/paint_orange.prefab.meta": {
+      "time": 1753801570680.8794
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/prefab/paints/README.md.meta": {
+      "time": 1753712323197.9548
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/prefab/paints/paint_purple.prefab.meta": {
+      "time": 1754220443798.3809
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/prefab/paints/paint_red.prefab.meta": {
+      "time": 1754220453269.5793
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/prefab/paints/paint_yellow.prefab.meta": {
+      "time": 1754220462637.321
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/prefab/weapons/dart.prefab.meta": {
+      "time": 1755331180377.3962
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/prefab/weapons/bullet.prefab.meta": {
+      "time": 1754576936763.6355
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/prefab/weapons/rocket.prefab.meta": {
+      "time": 1754664593799.1123
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/prefab/weapons/explosion/bulletexplosion.prefab.meta": {
+      "time": 1754722443736.4539
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/prefab/weapons/explosion/dartexplosion.prefab.meta": {
+      "time": 1755329293733.2644
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/prefab/weapons/explosion/explosion.prefab.meta": {
+      "time": 1754663478737.978
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound.meta": {
+      "time": 1753110295964.9429
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound": {
+      "time": 1755921836477.6658,
+      "uuid": "aa396c5e-59ca-4418-8f95-bdc105fc74ed"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/Plop_new.m4a.meta": {
+      "time": 1755921605651.938
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/battle2_new.m4a.meta": {
+      "time": 1755921605661.7266
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/battle_new.m4a.meta": {
+      "time": 1755921605656.3486
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/bgm_new.m4a.meta": {
+      "time": 1755921605662.3574
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/crash_new.m4a.meta": {
+      "time": 1755921605651.6357
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/crush_new.m4a.meta": {
+      "time": 1755921605667.5383
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/drift_new.m4a.meta": {
+      "time": 1755921605669.736
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/engine_on_new.m4a.meta": {
+      "time": 1755921605668.6963
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/explode_new.m4a.meta": {
+      "time": 1755921605669.8538
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/explodemini_new.m4a.meta": {
+      "time": 1755921605670.532
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/player_hit_new.m4a.meta": {
+      "time": 1755921605672.0063
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/shoot_new.m4a.meta": {
+      "time": 1755921605673.6199
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/crash_new.m4a": {
+      "time": 1755921601519.6033,
+      "uuid": "6a4569e1-e7a8-4813-bd13-eba6d16a217f"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/Plop_new.m4a": {
+      "time": 1755921601943.8877,
+      "uuid": "2f600d94-1f16-4ec5-aaeb-c6da789fe738"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/battle_new.m4a": {
+      "time": 1755921599069.5586,
+      "uuid": "f0126de9-908b-4055-a7c6-b0802b6ba2f3"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/battle2_new.m4a": {
+      "time": 1755921600740.3384,
+      "uuid": "0bc8a78b-bd7d-4fe0-82d4-c54b64b885bf"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/bgm_new.m4a": {
+      "time": 1755921601471.453,
+      "uuid": "556a0967-2aed-4c42-b221-0a202d1954ff"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/crush_new.m4a": {
+      "time": 1755921601580.5222,
+      "uuid": "71048de6-acd5-49cc-985f-60f651aa9064"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/engine_on_new.m4a": {
+      "time": 1755921601711.2502,
+      "uuid": "93a6c42e-99bb-43fc-929d-600829e7c672"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/drift_new.m4a": {
+      "time": 1755921601643.4478,
+      "uuid": "bd7fc9e7-382a-4306-bfb0-ed0ed18cc8bb"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/explode_new.m4a": {
+      "time": 1755921601753.4187,
+      "uuid": "efd1babe-05af-45cc-bec4-21dbf23b0ff0"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/explodemini_new.m4a": {
+      "time": 1755921601840.7485,
+      "uuid": "42ed8357-8bef-4b77-8c7b-883d8d0f7bee"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/player_hit_new.m4a": {
+      "time": 1755921601898.0522,
+      "uuid": "6060291b-d1ad-4bfd-95a7-384f32005584"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/shoot_new.m4a": {
+      "time": 1755921601985.816,
+      "uuid": "f0a18dd3-9aab-4386-b491-e05d74746be3"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/background/44f2669bbe90718e7c82cf002a71f346.jpeg.meta": {
+      "time": 1755938866689.9817
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/background/ab128ccde06826881ab545f5092053a3.jpeg.meta": {
+      "time": 1755938866671.785
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/background/ad8efe4d6bafcec5971648db598c0a71.jpeg.meta": {
+      "time": 1755938866689.1978
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/background/bf51dacb6999bf07f5c60c2c10c7e272.jpeg.meta": {
+      "time": 1755938866668.5347
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/background/ee870d916fd79516ca72b3c8388529c5.jpeg.meta": {
+      "time": 1755938866668.2651
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/416fa0011fee05baf8fe72f050036f62.jpeg.meta": {
+      "time": 1755938866759.6135
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/79850dc31e45b5179163b46b25a182d1.jpeg.meta": {
+      "time": 1755938866759.9502
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/UI/dir.png.meta": {
+      "time": 1755938866815.9055
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/UI/fire.png.meta": {
+      "time": 1755938866807.0872
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/background/ee870d916fd79516ca72b3c8388529c5.jpeg": {
+      "time": 1755937845219.4265,
+      "uuid": "8b94f137-a09a-4bc1-a2e8-cfe9b9381a81"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/background/bf51dacb6999bf07f5c60c2c10c7e272.jpeg": {
+      "time": 1755937880168.5862,
+      "uuid": "c3064ced-3493-400e-9aef-95dcf127c691"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/background/ab128ccde06826881ab545f5092053a3.jpeg": {
+      "time": 1755938419034.5288,
+      "uuid": "5752474b-fc09-45d1-8f04-192727032b83"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/background/ad8efe4d6bafcec5971648db598c0a71.jpeg": {
+      "time": 1755937924314.704,
+      "uuid": "0c0ec31d-a8dd-4c8f-a925-67c32a21e4f6"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/background/44f2669bbe90718e7c82cf002a71f346.jpeg": {
+      "time": 1755937961654.4534,
+      "uuid": "36dd683e-baea-4cb2-8dc1-6429449b3aaf"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/416fa0011fee05baf8fe72f050036f62.jpeg": {
+      "time": 1755938528665.6748,
+      "uuid": "0d56149c-3177-4a8d-8e88-84342246370e"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/79850dc31e45b5179163b46b25a182d1.jpeg": {
+      "time": 1755938469726.239,
+      "uuid": "de9038ee-21fe-4f18-9b9c-ac2644ea9723"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/UI/fire.png": {
+      "time": 1755938845542.8374,
+      "uuid": "57cc8bf6-b5ea-416c-9202-426553741a4d"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/UI/dir.png": {
+      "time": 1755938794360.2722,
+      "uuid": "c709f4a9-008a-48b5-ba8a-36a683eec71b"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/UI/rio.png.meta": {
+      "time": 1755943375742.569
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/UI/rio.png": {
+      "time": 1755941137585.1934,
+      "uuid": "ce46a122-c196-49e5-b142-94836c311b72"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/LaunchScreenBackground.jpg.meta": {
+      "time": 1755946381377.3684
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/LaunchScreenBackground.jpg": {
+      "time": 1755946381337.4778,
+      "uuid": "417da33c-6e54-4bb2-90e0-6fa28b1f60c1"
     }
   },
   "missing": {
@@ -1625,9 +2812,9 @@
       "removeTime": 1754719158572
     },
     "70958428-2d80-45d2-be19-959fe20eda20": {
-      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/UI/sheji.png",
+      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/UI/shoot.png",
       "time": 1754726895632.9966,
-      "removeTime": 1754726902621
+      "removeTime": 1755942823620
     },
     "949304f8-d71e-4d74-96be-bba313c71dbd": {
       "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/scripts/PaintCoordinateTest.ts",
@@ -1783,6 +2970,236 @@
       "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/UI/purchase.jpg",
       "time": 1755610150151.199,
       "removeTime": 1755610184145
+    },
+    "85c04c05-568c-466f-8ef9-c4861c9c600a": {
+      "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/StartupController.ts",
+      "time": 1755738183081.0579,
+      "removeTime": 1755740081827
+    },
+    "aa396c5e-59ca-4418-8f95-bdc105fc74ed": {
+      "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/sound",
+      "time": 1753192191482.0422,
+      "removeTime": 1755838053858
+    },
+    "05d09d2a-d1e6-4db4-b7f1-46c828561e1c": {
+      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/sound/Plop.ogg",
+      "time": 1753110505802.6812,
+      "removeTime": 1755919017633
+    },
+    "c492a1c7-8290-4d71-98ff-a4bb822cb067": {
+      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/sound/bgm.wav",
+      "time": 1753110505816.613,
+      "removeTime": 1755919017633
+    },
+    "6b75695c-de58-4b54-86d8-520be166015c": {
+      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/sound/crash.ogg",
+      "time": 1753110505802.6543,
+      "removeTime": 1755919017633
+    },
+    "c1f2ce3a-5aa8-45ba-ab3e-5fff8bb87af9": {
+      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/sound/drift.mp3",
+      "time": 1753110512724.8335,
+      "removeTime": 1755942823620
+    },
+    "9f868da1-89e4-4ca6-a4e1-2b592981db21": {
+      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/sound/engine_on.mp3",
+      "time": 1753110512725.0964,
+      "removeTime": 1755942823620
+    },
+    "df16bb3a-bc77-4766-bae7-2769316ed6e5": {
+      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/sound/explode.mp3",
+      "time": 1753192191477.7927,
+      "removeTime": 1755942823620
+    },
+    "cb5bf55f-787d-4418-a1b0-f21d440384ce": {
+      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/sound/running.wav",
+      "time": 1753110505807.9333,
+      "removeTime": 1755919017633
+    },
+    "f89116d5-8d7e-402f-9955-3285188d78de": {
+      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/sound/tires_squal_loop.wav",
+      "time": 1753110505805.291,
+      "removeTime": 1755919017633
+    },
+    "f33f8d2f-cc9f-4a6c-b170-2e68431b9220": {
+      "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/BACKUP",
+      "time": 1755921515765.1082,
+      "removeTime": 1755921627943
+    },
+    "c36886ba-5088-4f2e-91fb-05ab401867d2": {
+      "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/BACKUP/Plop.mp3",
+      "time": 1755846892000,
+      "removeTime": 1755921627943
+    },
+    "c6ac6ead-2da3-4619-9533-2ed222e5107d": {
+      "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/BACKUP/battle.mp3",
+      "time": 1736065158000,
+      "removeTime": 1755921627943
+    },
+    "19b2b9ee-c696-4d2d-90da-40ccb3518b3e": {
+      "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/BACKUP/battle2.mp3",
+      "time": 1736065158000,
+      "removeTime": 1755921627943
+    },
+    "98fed883-bbea-4a4a-b4d9-1e49b7348b7f": {
+      "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/BACKUP/bgm.mp3",
+      "time": 1755846892000,
+      "removeTime": 1755921627943
+    },
+    "b44fd9fc-e742-4d7f-bc94-f4b5a0e4547e": {
+      "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/BACKUP/crash.mp3",
+      "time": 1755846892000,
+      "removeTime": 1755921627943
+    },
+    "cac201d9-4b47-44a1-83a9-669f99ef541d": {
+      "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/BACKUP/crush.mp3",
+      "time": 1755846892000,
+      "removeTime": 1755921627943
+    },
+    "cf0a9e8d-648f-471a-a35f-1d32bed5434d": {
+      "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/BACKUP/drift.mp3",
+      "time": 1753110512724.8335,
+      "removeTime": 1755921627943
+    },
+    "6c7a019f-17c3-4ca7-be72-eba6293faa64": {
+      "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/BACKUP/engine_on.mp3",
+      "time": 1753110512725.0964,
+      "removeTime": 1755921627943
+    },
+    "820856ca-7a77-45ce-9444-59bfc5110c19": {
+      "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/BACKUP/explode.mp3",
+      "time": 1753192191477.7927,
+      "removeTime": 1755921627943
+    },
+    "449c9941-a981-4f77-9354-84aab5b50517": {
+      "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/BACKUP/explodemini.mp3",
+      "time": 1755846892000,
+      "removeTime": 1755921627943
+    },
+    "d8648f94-c1dc-4fdc-ac1a-02255d47512f": {
+      "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/BACKUP/player_hit.mp3",
+      "time": 1755846892000,
+      "removeTime": 1755921627943
+    },
+    "18087ec7-fbf5-473e-9d24-5972fcbc75ed": {
+      "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/BACKUP/shoot.mp3",
+      "time": 1755846892000,
+      "removeTime": 1755921627943
+    },
+    "6e4fca32-0041-43af-8784-bc9231ab4ca9": {
+      "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/Plop.mp3",
+      "time": 1755846892000,
+      "removeTime": 1755921839412
+    },
+    "3314cac7-1555-4a94-a548-2b7fd6a71c8d": {
+      "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/battle.mp3",
+      "time": 1736065158000,
+      "removeTime": 1755921839413
+    },
+    "a81d101c-61cf-40fc-805e-295deccc3602": {
+      "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/battle2.mp3",
+      "time": 1736065158000,
+      "removeTime": 1755921839413
+    },
+    "aae289d8-8c8b-4fce-9b7a-56a47d594fb1": {
+      "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/bgm.mp3",
+      "time": 1755846892000,
+      "removeTime": 1755921839413
+    },
+    "2a5c75e7-a751-4873-a8c7-4bd0cf93913d": {
+      "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/crash.mp3",
+      "time": 1755846892000,
+      "removeTime": 1755921839413
+    },
+    "896f168a-6ae4-42fa-a3c4-c68e5bf09700": {
+      "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/crush.mp3",
+      "time": 1755846892000,
+      "removeTime": 1755921839413
+    },
+    "138f914b-b916-4477-8099-d1fda9f1c489": {
+      "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/explodemini.mp3",
+      "time": 1755846892000,
+      "removeTime": 1755921839413
+    },
+    "55c3b2da-3a45-4f69-adf2-142a90bd0404": {
+      "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/player_hit.mp3",
+      "time": 1755846892000,
+      "removeTime": 1755921839413
+    },
+    "c7d4158f-0f94-4e56-b7d1-fd5a8d016478": {
+      "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/shoot.mp3",
+      "time": 1755846892000,
+      "removeTime": 1755921839413
+    },
+    "a9ba508d-fd85-45b5-9fd2-d14875277c0c": {
+      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/图片风格转换-12.jpg",
+      "time": 1755533443476.6697,
+      "removeTime": 1755942823621
+    },
+    "78d77ff7-6930-4557-9736-dc3c53c2d458": {
+      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/图片风格转换-10.jpg",
+      "time": 1755533377885.2002,
+      "removeTime": 1755942823621
+    },
+    "423e1555-8406-458e-a55d-3f2e78f1b735": {
+      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/图片风格转换-8.jpg",
+      "time": 1755533391118.1106,
+      "removeTime": 1755942823621
+    },
+    "3418420c-6e30-4052-9518-882319cc0283": {
+      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/图片风格转换-9.jpg",
+      "time": 1755533273279.5054,
+      "removeTime": 1755942823621
+    },
+    "c07d4f01-abc9-4f64-8f43-33a6ce868509": {
+      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/图片风格转换-11.jpg",
+      "time": 1755533405503.8784,
+      "removeTime": 1755942823621
+    },
+    "b2b39a66-2564-4be8-8802-d043d12ffd8b": {
+      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/background2.png",
+      "time": 1752891498565.2583,
+      "removeTime": 1755942823620
+    },
+    "1c5052fa-8819-46bc-bb95-1aa90b873e2e": {
+      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/background1.png",
+      "time": 1752891498563.5964,
+      "removeTime": 1755942823620
+    },
+    "8be1a880-6cc0-49ef-97ed-9792b9660f07": {
+      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/UI/shangxiazuoyouTriangle17-2.png",
+      "time": 1754727819294.173,
+      "removeTime": 1755942823620
+    },
+    "73d6b5b9-dc56-44d9-9b17-80a95b7bdd49": {
+      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/UI/shangxiazuoyouTriangle16.png",
+      "time": 1754727819294.2825,
+      "removeTime": 1755942823621
+    },
+    "a181abe3-561c-494c-9952-aa30d8e497fc": {
+      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/UI/shangxiazuoyouTriangle18.png",
+      "time": 1754727819294.3228,
+      "removeTime": 1755942823621
+    },
+    "f1dc3119-9b7d-4a05-abb6-2617840a906b": {
+      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/UI/shangxiazuoyouTriangle15.png",
+      "time": 1754727819294.2405,
+      "removeTime": 1755942823621
+    },
+    "8d038fa4-4723-42f1-8a2f-331aba9023e2": {
+      "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/UI/rio.png",
+      "time": 1755941137585.1934,
+      "removeTime": 1755942913511
+    },
+    "f94a2bdd-8a1c-4eb7-b4ec-3c8b41d6eb80": {
+      "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/UI/rio.png",
+      "time": 1755941137585.1934,
+      "removeTime": 1755943084368
+    },
+    "fea7c10b-2b34-45cf-b494-81a7079d899e": {
+      "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/UI/rio.jpg",
+      "time": 1755941137585.1934,
+      "removeTime": 1755943375703
     }
   }
 }

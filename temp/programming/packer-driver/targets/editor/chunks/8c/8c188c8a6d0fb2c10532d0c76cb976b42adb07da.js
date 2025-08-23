@@ -1,0 +1,624 @@
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5"], function (_export, _context) {
+  "use strict";
+
+  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Button, ToggleContainer, Toggle, Sprite, Color, Label, Node, find, TempData, PlayerManager, SceneTransition, CarPropertyDisplay, PurchasePanel, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _crd, ccclass, property, SelectManager;
+
+  function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
+
+  function _applyDecoratedDescriptor(target, property, decorators, descriptor, context) { var desc = {}; Object.keys(descriptor).forEach(function (key) { desc[key] = descriptor[key]; }); desc.enumerable = !!desc.enumerable; desc.configurable = !!desc.configurable; if ('value' in desc || desc.initializer) { desc.writable = true; } desc = decorators.slice().reverse().reduce(function (desc, decorator) { return decorator(target, property, desc) || desc; }, desc); if (context && desc.initializer !== void 0) { desc.value = desc.initializer ? desc.initializer.call(context) : void 0; desc.initializer = undefined; } if (desc.initializer === void 0) { Object.defineProperty(target, property, desc); desc = null; } return desc; }
+
+  function _initializerWarningHelper(descriptor, context) { throw new Error('Decorating class property failed. Please ensure that ' + 'transform-class-properties is enabled and runs after the decorators transform.'); }
+
+  function _reportPossibleCrUseOfTempData(extras) {
+    _reporterNs.report("TempData", "./TempData", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfPlayerManager(extras) {
+    _reporterNs.report("PlayerManager", "./PlayerManager", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfSceneTransition(extras) {
+    _reporterNs.report("SceneTransition", "./SceneTransition", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfCarPropertyDisplay(extras) {
+    _reporterNs.report("CarPropertyDisplay", "./CarPropertyDisplay", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfPurchasePanel(extras) {
+    _reporterNs.report("PurchasePanel", "./PurchasePanel", _context.meta, extras);
+  }
+
+  return {
+    setters: [function (_unresolved_) {
+      _reporterNs = _unresolved_;
+    }, function (_cc) {
+      _cclegacy = _cc.cclegacy;
+      __checkObsolete__ = _cc.__checkObsolete__;
+      __checkObsoleteInNamespace__ = _cc.__checkObsoleteInNamespace__;
+      _decorator = _cc._decorator;
+      Component = _cc.Component;
+      Button = _cc.Button;
+      ToggleContainer = _cc.ToggleContainer;
+      Toggle = _cc.Toggle;
+      Sprite = _cc.Sprite;
+      Color = _cc.Color;
+      Label = _cc.Label;
+      Node = _cc.Node;
+      find = _cc.find;
+    }, function (_unresolved_2) {
+      TempData = _unresolved_2.TempData;
+    }, function (_unresolved_3) {
+      PlayerManager = _unresolved_3.PlayerManager;
+    }, function (_unresolved_4) {
+      SceneTransition = _unresolved_4.SceneTransition;
+    }, function (_unresolved_5) {
+      CarPropertyDisplay = _unresolved_5.CarPropertyDisplay;
+    }, function (_unresolved_6) {
+      PurchasePanel = _unresolved_6.PurchasePanel;
+    }],
+    execute: function () {
+      _crd = true;
+
+      _cclegacy._RF.push({}, "be7b23A2jVN6agcMGkP3NKP", "SelectManager", undefined);
+
+      __checkObsolete__(['_decorator', 'Component', 'Button', 'ToggleContainer', 'Toggle', 'Sprite', 'Color', 'Label', 'Node', 'find']);
+
+      // @ts-ignore
+      ({
+        ccclass,
+        property
+      } = _decorator); // 添加PurchasePanel引用
+
+      // 车辆价格配置
+      _export("SelectManager", SelectManager = (_dec = ccclass('SelectManager'), _dec2 = property(ToggleContainer), _dec3 = property(ToggleContainer), _dec4 = property(Button), _dec5 = property(Button), _dec6 = property(Label), _dec7 = property({
+        type: Node,
+        tooltip: '场景中的购买面板节点'
+      }), _dec8 = property({
+        type: _crd && CarPropertyDisplay === void 0 ? (_reportPossibleCrUseOfCarPropertyDisplay({
+          error: Error()
+        }), CarPropertyDisplay) : CarPropertyDisplay,
+        tooltip: 'car-property节点上的CarPropertyDisplay组件'
+      }), _dec(_class = (_class2 = class SelectManager extends Component {
+        constructor(...args) {
+          super(...args);
+
+          _initializerDefineProperty(this, "levelToggleGroup", _descriptor, this);
+
+          _initializerDefineProperty(this, "carToggleGroup", _descriptor2, this);
+
+          _initializerDefineProperty(this, "startButton", _descriptor3, this);
+
+          _initializerDefineProperty(this, "backButton", _descriptor4, this);
+
+          _initializerDefineProperty(this, "insufficientMoneyLabel", _descriptor5, this);
+
+          // 金币不足提示标签
+          // 购买面板相关属性
+          _initializerDefineProperty(this, "purchasePanelNode", _descriptor6, this);
+
+          // 车辆属性显示相关属性
+          _initializerDefineProperty(this, "carPropertyDisplay", _descriptor7, this);
+
+          // 车辆价格配置
+          this.carPrices = {
+            'car-1': 0,
+            // 默认车辆免费
+            'car-2': 300,
+            // 第二辆车500金币
+            'car-3': 500,
+            // 第三辆车1000金币
+            'car-4': 700,
+            // 第四辆车1500金币
+            'car-5': 800 // 第五辆车2000金币
+
+          };
+          // 车辆价格配置
+          this.carInfos = {
+            'car-1': '操控性超强小车，武器配备为子弹发射器，击中对手你可造成伤害 \n This super maneuverable car is equipped with a bullet launcher. When you hit your opponent, you can cause damage.',
+            'car-2': '经典跑车,具有坚固的车身,武器配备为火箭炮，爆炸后会清除附近的颜料 \nClassic sports car, with a sturdy body, equipped with  a rocket launcher. After explosion, it will clear the nearby paint.',
+            'car-3': '现代化的超级跑车，速度与转向均衡，配备武器为飞镖，攻守兼备 \nA modern supercar with balanced speed and steering, equipped with a dart launcher. it is a good choice for both attack and defense',
+            'car-4': '甩尾加速犹如闪电，武器配备为火箭炮，爆炸后会清除附近的颜料\nThe drift and acceleration is like lightning, equipped with a rocket launcher. After explosion, it will clear the nearby paint.',
+            'car-5': '送豆腐专用，即使在狭窄的山路也灵活穿梭，武器配备为飞镖，攻守兼备\n It is specially designed for delivering tofu and can move flexibly even on narrow mountain roads. equipped with a dart launcher. '
+          };
+          this.insufficientMoneyTimer = 0;
+          // 金币不足提示计时器
+          this.pendingCarId = null;
+        }
+
+        onLoad() {
+          this.updateLevelToggles();
+          this.updateCarToggles();
+          this.setupCarPurchaseButtons();
+          this.setupCarSelectionListener(); // 隐藏金币不足提示
+
+          if (this.insufficientMoneyLabel) {
+            this.insufficientMoneyLabel.node.active = false;
+          } // 自动查找车辆属性显示组件（如果没有手动设置）
+
+
+          this.autoFindCarPropertyDisplay();
+        }
+
+        updateLevelToggles() {
+          const playerManager = (_crd && PlayerManager === void 0 ? (_reportPossibleCrUseOfPlayerManager({
+            error: Error()
+          }), PlayerManager) : PlayerManager).instance;
+          console.log('更新关卡显示');
+          this.levelToggleGroup.toggleItems.forEach(toggle => {
+            const levelId = toggle.node.name;
+            const isUnlocked = playerManager.isLevelUnlocked(levelId);
+            console.log(`关卡 ${levelId}: 解锁状态 = ${isUnlocked}`); // 设置交互性和颜色
+
+            toggle.interactable = isUnlocked;
+            const sprite = toggle.node.getComponent(Sprite);
+            const lock = toggle.node.getChildByName('lock');
+
+            if (sprite) {
+              sprite.color = isUnlocked ? Color.WHITE : Color.BLACK;
+            }
+
+            if (lock) {
+              lock.active = !isUnlocked;
+            } // 更新评级显示
+
+
+            this.updateLevelGradeDisplay(toggle.node, levelId);
+          });
+        }
+        /**
+         * 更新关卡评级显示
+         */
+
+
+        updateLevelGradeDisplay(levelNode, levelId) {
+          const playerManager = (_crd && PlayerManager === void 0 ? (_reportPossibleCrUseOfPlayerManager({
+            error: Error()
+          }), PlayerManager) : PlayerManager).instance;
+          const gradeText = playerManager.getLevelGradeText(levelId); // 查找或创建评级标签
+
+          let gradeLabel = levelNode.getChildByName('GradeLabel');
+
+          if (!gradeLabel) {
+            var _levelNode$getCompone;
+
+            // 如果没有评级标签节点，尝试查找现有的Label子节点
+            gradeLabel = (_levelNode$getCompone = levelNode.getComponentInChildren(Label)) == null ? void 0 : _levelNode$getCompone.node;
+          }
+
+          if (gradeLabel) {
+            const label = gradeLabel.getComponent(Label);
+
+            if (label) {
+              if (gradeText) {
+                label.string = gradeText;
+                label.node.active = true; // 设置评级颜色
+
+                const progress = playerManager.getLevelProgress(levelId);
+
+                if (progress) {
+                  const colorHex = playerManager.getLevelGradeColor(progress.grade);
+                  label.color = this.hexToColor(colorHex);
+                }
+              } else {
+                label.string = '';
+                label.node.active = false;
+              }
+            }
+          }
+        }
+        /**
+         * 将十六进制颜色转换为Cocos Color
+         */
+
+
+        hexToColor(hex) {
+          const r = parseInt(hex.slice(1, 3), 16);
+          const g = parseInt(hex.slice(3, 5), 16);
+          const b = parseInt(hex.slice(5, 7), 16);
+          return new Color(r, g, b, 255);
+        }
+
+        updateCarToggles() {
+          const unlockedCars = (_crd && PlayerManager === void 0 ? (_reportPossibleCrUseOfPlayerManager({
+            error: Error()
+          }), PlayerManager) : PlayerManager).instance.playerData.unlockedCars;
+          this.carToggleGroup.toggleItems.forEach(toggle => {
+            const carId = toggle.node.name;
+            const isUnlocked = unlockedCars.indexOf(carId) !== -1; // 设置车辆图标的交互性和颜色
+
+            toggle.interactable = isUnlocked;
+            const sprite = toggle.node.getComponent(Sprite);
+
+            if (sprite) {
+              sprite.color = isUnlocked ? Color.WHITE : Color.BLACK;
+            } // 处理购买按钮的显示
+
+
+            this.updateCarPurchaseButton(toggle.node, carId, isUnlocked);
+          });
+        }
+
+        start() {
+          if (this.startButton) {
+            this.startButton.node.on(Button.EventType.CLICK, this.onStartGame, this);
+          }
+
+          if (this.backButton) {
+            this.backButton.node.on(Button.EventType.CLICK, this.onBackButton, this);
+          }
+        }
+
+        onStartGame() {
+          // 获取当前选中的level
+          const levelToggle = this.levelToggleGroup.toggleItems.find(t => t.isChecked); // 获取当前选中的car
+
+          const carToggle = this.carToggleGroup.toggleItems.find(t => t.isChecked);
+
+          if (!levelToggle || !carToggle) {
+            this.showMessage("请选择车辆！\n please select a car!"); // 你可以在这里弹窗提示"请选择关卡和车辆"
+
+            return;
+          } // 记录选择到TempData
+
+
+          (_crd && TempData === void 0 ? (_reportPossibleCrUseOfTempData({
+            error: Error()
+          }), TempData) : TempData).selectedLevel = levelToggle.node.name;
+          (_crd && TempData === void 0 ? (_reportPossibleCrUseOfTempData({
+            error: Error()
+          }), TempData) : TempData).selectedCar = carToggle.node.name;
+          console.log(levelToggle.node.name, carToggle.node.name); // 切换到游戏场景
+
+          (_crd && SceneTransition === void 0 ? (_reportPossibleCrUseOfSceneTransition({
+            error: Error()
+          }), SceneTransition) : SceneTransition).loadScene('gamescene');
+        }
+
+        onBackButton() {
+          (_crd && SceneTransition === void 0 ? (_reportPossibleCrUseOfSceneTransition({
+            error: Error()
+          }), SceneTransition) : SceneTransition).loadScene('mainmenu');
+        }
+        /**
+         * 设置车辆购买按钮
+         */
+
+
+        setupCarPurchaseButtons() {
+          this.carToggleGroup.toggleItems.forEach(toggle => {
+            const carId = toggle.node.name;
+            const isUnlocked = (_crd && PlayerManager === void 0 ? (_reportPossibleCrUseOfPlayerManager({
+              error: Error()
+            }), PlayerManager) : PlayerManager).instance.playerData.unlockedCars.indexOf(carId) !== -1;
+            this.updateCarPurchaseButton(toggle.node, carId, isUnlocked);
+          });
+        }
+        /**
+         * 更新单个车辆的购买按钮
+         */
+
+
+        updateCarPurchaseButton(carNode, carId, isUnlocked) {
+          // 查找或创建购买按钮
+          let purchaseButton = carNode.getChildByName('PurchaseButton');
+
+          if (!isUnlocked && this.carPrices[carId] !== undefined) {
+            // 车辆未解锁且有价格配置，显示购买按钮
+            if (!purchaseButton) {
+              // 创建购买按钮（这里假设场景中已经有购买按钮节点）
+              purchaseButton = carNode.getChildByName('PurchaseButton');
+            }
+
+            if (purchaseButton) {
+              purchaseButton.active = true; // 设置按钮文本
+              // const buttonLabel = purchaseButton.getChildByName('Label')?.getComponent(Label);
+              // if (buttonLabel) {
+              //     buttonLabel.string = `购买 ${this.carPrices[carId]}`;
+              // }
+              // 绑定点击事件
+
+              const button = purchaseButton.getComponent(Button);
+
+              if (button) {
+                button.node.off(Button.EventType.CLICK);
+                button.node.on(Button.EventType.CLICK, () => {
+                  this.pendingCarId = carId;
+                  this.showPurchasePanel(this.carPrices[carId], this.carInfos[carId]);
+                }, this);
+              }
+            }
+          } else {
+            // 车辆已解锁或免费，隐藏购买按钮
+            if (purchaseButton) {
+              purchaseButton.active = false;
+            }
+          }
+        }
+        /**
+         * 显示购买面板
+         */
+
+
+        showPurchasePanel(price, info) {
+          if (!this.purchasePanelNode) {
+            console.error('购买面板节点未配置');
+            return;
+          }
+
+          const purchasePanel = this.purchasePanelNode.getComponent(_crd && PurchasePanel === void 0 ? (_reportPossibleCrUseOfPurchasePanel({
+            error: Error()
+          }), PurchasePanel) : PurchasePanel);
+
+          if (!purchasePanel) {
+            console.error('购买面板组件未找到');
+            return;
+          } // 确保面板在最上层
+          // this.purchasePanelNode.setSiblingIndex(Number.MAX_SAFE_INTEGER);
+          // 显示面板
+
+
+          purchasePanel.show(price, info, purchasePrice => {
+            // 确认购买后的回调
+            this.processPurchase(purchasePrice);
+          });
+        }
+        /**
+         * 处理实际购买逻辑
+         */
+
+
+        processPurchase(price) {
+          if (!this.pendingCarId) {
+            return;
+          }
+
+          const carId = this.pendingCarId;
+          const playerManager = (_crd && PlayerManager === void 0 ? (_reportPossibleCrUseOfPlayerManager({
+            error: Error()
+          }), PlayerManager) : PlayerManager).instance; // 检查玩家金币是否足够（再次检查，因为用户可能在面板显示期间改变了金币）
+
+          if (playerManager.playerData.money >= price) {
+            // 扣除金币并解锁车辆
+            if (playerManager.spendMoney(price)) {
+              playerManager.unlockCar(carId);
+              console.log(`成功购买车辆 ${carId}，花费 ${price} 金币`); // 更新UI显示
+
+              this.updateCarToggles(); // 保存数据
+
+              playerManager.savePlayerData();
+            }
+          } else {
+            // 金币不足，显示提示
+            this.showInsufficientMoneyMessage();
+          } // 重置待购买车辆ID
+
+
+          this.pendingCarId = null;
+        }
+        /**
+         * 购买车辆
+         */
+        // onPurchaseCar(carId: string) {
+        //     const price = this.carPrices[carId];
+        //     if (price === undefined) {
+        //         console.warn(`车辆 ${carId} 没有配置价格`);
+        //         return;
+        //     }
+        //     const playerManager = PlayerManager.instance;
+        //     if (!playerManager) {
+        //         console.error('PlayerManager 实例不存在');
+        //         return;
+        //     }
+        //     // 检查玩家金币是否足够
+        //     if (playerManager.playerData.money >= price) {
+        //         // 扣除金币并解锁车辆
+        //         if (playerManager.spendMoney(price)) {
+        //             playerManager.unlockCar(carId);
+        //             console.log(`成功购买车辆 ${carId}，花费 ${price} 金币`);
+        //             // 更新UI显示
+        //             this.updateCarToggles();
+        //             // 保存数据
+        //             playerManager.savePlayerData();
+        //         }
+        //     } else {
+        //         // 金币不足，显示提示
+        //         this.showInsufficientMoneyMessage();
+        //     }
+        // }
+
+        /**
+         * 显示金币不足提示
+         */
+
+
+        showInsufficientMoneyMessage() {
+          if (this.insufficientMoneyLabel) {
+            this.insufficientMoneyLabel.string = '金币不足！\n your money is not enough';
+            this.insufficientMoneyLabel.node.active = true;
+            this.insufficientMoneyTimer = 3.0; // 3秒后隐藏
+          }
+        }
+
+        showMessage(string) {
+          if (this.insufficientMoneyLabel) {
+            this.insufficientMoneyLabel.string = string;
+            this.insufficientMoneyLabel.node.active = true;
+            this.insufficientMoneyTimer = 3.0; // 3秒后隐藏
+          }
+        }
+        /**
+         * 更新方法，处理金币不足提示的计时
+         */
+
+
+        update(deltaTime) {
+          if (this.insufficientMoneyTimer > 0) {
+            this.insufficientMoneyTimer -= deltaTime;
+
+            if (this.insufficientMoneyTimer <= 0) {
+              if (this.insufficientMoneyLabel) {
+                this.insufficientMoneyLabel.node.active = false;
+              }
+            }
+          }
+        }
+        /**
+         * 获取车辆价格
+         */
+
+
+        getCarPrice(carId) {
+          return this.carPrices[carId] || 0;
+        }
+        /**
+         * 设置车辆价格
+         */
+
+
+        setCarPrice(carId, price) {
+          this.carPrices[carId] = price;
+        }
+        /**
+         * 自动查找车辆属性显示组件
+         */
+
+
+        autoFindCarPropertyDisplay() {
+          if (!this.carPropertyDisplay) {
+            // 尝试在场景中查找car-property节点
+            const carPropertyNode = find('Canvas/car-property') || find('car-property') || this.node.getChildByName('car-property');
+
+            if (carPropertyNode) {
+              this.carPropertyDisplay = carPropertyNode.getComponent(_crd && CarPropertyDisplay === void 0 ? (_reportPossibleCrUseOfCarPropertyDisplay({
+                error: Error()
+              }), CarPropertyDisplay) : CarPropertyDisplay);
+
+              if (!this.carPropertyDisplay) {
+                console.warn('car-property节点找到了，但没有CarPropertyDisplay组件');
+              }
+            } else {
+              console.warn('未找到car-property节点，请确保场景中存在该节点');
+            }
+          }
+        }
+        /**
+         * 设置车辆选择监听器
+         */
+
+
+        setupCarSelectionListener() {
+          if (!this.carToggleGroup) {
+            console.warn('carToggleGroup未设置');
+            return;
+          } // 为每个车辆Toggle添加选择监听
+
+
+          this.carToggleGroup.toggleItems.forEach(toggle => {
+            toggle.node.on(Toggle.EventType.TOGGLE, this.onCarToggleChanged, this);
+          }); // 检查是否有默认选中的车辆
+
+          this.checkInitialCarSelection();
+        }
+        /**
+         * 车辆Toggle状态改变时的回调
+         */
+
+
+        onCarToggleChanged(toggle) {
+          if (toggle.isChecked) {
+            const carId = toggle.node.name;
+            console.log(`选中车辆: ${carId}`);
+            this.showCarProperties(carId);
+          }
+        }
+        /**
+         * 显示车辆属性
+         */
+
+
+        showCarProperties(carId) {
+          if (this.carPropertyDisplay) {
+            this.carPropertyDisplay.showCarProperties(carId);
+          } else {
+            console.warn('CarPropertyDisplay组件未找到，无法显示车辆属性');
+          }
+        }
+        /**
+         * 检查初始车辆选择
+         */
+
+
+        checkInitialCarSelection() {
+          const selectedToggle = this.carToggleGroup.toggleItems.find(toggle => toggle.isChecked);
+
+          if (selectedToggle) {
+            const carId = selectedToggle.node.name;
+            this.showCarProperties(carId);
+          } // else {
+          //     // 如果没有选中的车辆，隐藏属性显示
+          //     if (this.carPropertyDisplay) {
+          //         this.carPropertyDisplay.hideAllProperties();
+          //     }
+          // }
+
+        }
+
+      }, (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "levelToggleGroup", [_dec2], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function () {
+          return null;
+        }
+      }), _descriptor2 = _applyDecoratedDescriptor(_class2.prototype, "carToggleGroup", [_dec3], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function () {
+          return null;
+        }
+      }), _descriptor3 = _applyDecoratedDescriptor(_class2.prototype, "startButton", [_dec4], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function () {
+          return null;
+        }
+      }), _descriptor4 = _applyDecoratedDescriptor(_class2.prototype, "backButton", [_dec5], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function () {
+          return null;
+        }
+      }), _descriptor5 = _applyDecoratedDescriptor(_class2.prototype, "insufficientMoneyLabel", [_dec6], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function () {
+          return null;
+        }
+      }), _descriptor6 = _applyDecoratedDescriptor(_class2.prototype, "purchasePanelNode", [_dec7], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function () {
+          return null;
+        }
+      }), _descriptor7 = _applyDecoratedDescriptor(_class2.prototype, "carPropertyDisplay", [_dec8], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function () {
+          return null;
+        }
+      })), _class2)) || _class));
+
+      _cclegacy._RF.pop();
+
+      _crd = false;
+    }
+  };
+});
+//# sourceMappingURL=8c188c8a6d0fb2c10532d0c76cb976b42adb07da.js.map

@@ -348,12 +348,12 @@ export class player extends Component {
      * 玩家车辆与AI车辆碰撞时，按双方速度造成伤害
      */
     onBeginContact(_selfCollider: BoxCollider2D, otherCollider: BoxCollider2D, _contact: IPhysics2DContact | null) {
-        SoundManager.instance.playSoundEffect('carCollision');
         console.log('玩家车辆发生碰撞，碰撞对象:', otherCollider.node.name);
         // 判断对方是否为AI车辆
         const otherNode = otherCollider.node;
         const aiPlayer = otherNode.getComponent(AIPlayer);
         if (aiPlayer) {
+            SoundManager.instance.playSoundEffect('carCollision');
             console.log('碰撞对象是AI车辆:', otherNode.name);
             // 获取双方速度
             const mySpeed = this._rigidBody.linearVelocity.length();
@@ -384,9 +384,10 @@ export class player extends Component {
                     console.log('玩家与自己发射的子弹碰撞，不造成伤害和反作用力');
                     return;
                 } else {
+                    SoundManager.instance.playSoundEffect('carCollision');
                     // 其他子弹造成伤害
                     const bulletDamage = bullet['damage'] || 5;
-                    this.takeDamage(bulletDamage);
+                    // this.takeDamage(bulletDamage);
                     
                     // 施加反作用力（只有非普通子弹才施加物理推力）
                     // 火焰子弹(FLAME)已被注释，所以只检查是否为普通子弹
@@ -402,6 +403,7 @@ export class player extends Component {
             }
             // 检测与地图边界的碰撞
             else {
+                SoundManager.instance.playSoundEffect('carCollision');
                 const mySpeed = this._rigidBody.linearVelocity.length();
                 const damageFactor = 0.3; // 地图边界碰撞的伤害系数
                 const boundaryDamage = Math.round(mySpeed * damageFactor);

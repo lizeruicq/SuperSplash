@@ -114,6 +114,8 @@ export class GameManager extends Component {
 
     start() {
         console.log("调用场景内容加载")
+        SoundManager.instance.stopBGM()
+        SoundManager.instance.playSoundEffect("battlebgm1")
         this.initializeGame();
         this.bindButtonEvents();
         this.loadLevelAndCar();
@@ -265,7 +267,12 @@ export class GameManager extends Component {
                 }
             });
         }
-        SoundManager.instance.playSoundEffect('carStart');
+        // 检查SoundManager是否已初始化后再播放音效
+        if (SoundManager.instance) {
+            SoundManager.instance.playSoundEffect('carStart');
+        } else {
+            console.warn('SoundManager 尚未初始化，无法播放音效');
+        }
     }
 
     /**
@@ -538,6 +545,8 @@ export class GameManager extends Component {
 
         // 加载主菜单场景
         SceneTransition.loadScene('LevelSelect');
+        SoundManager.instance.stopbattleBGM()
+        SoundManager.instance.playBGM()
     }
 
     /**
@@ -902,7 +911,11 @@ export class GameManager extends Component {
                 new Vec2(0, 1),   // 上
                 new Vec2(1, 0),   // 右
                 new Vec2(0, -1),  // 下
-                new Vec2(-1, 0)   // 左
+                new Vec2(-1, 0),  // 左
+                new Vec2(-1, -1),
+                new Vec2(1, 1),
+                new Vec2(-1, 1),
+                new Vec2(1, -1),
             ];
 
             // 为每个方向创建一个子弹

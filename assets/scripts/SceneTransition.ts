@@ -45,7 +45,7 @@ export class SceneTransition extends Component {
         SceneTransition.instance = this;
 
         // 设置为常驻节点，不会在场景切换时被销毁
-        director.addPersistRootNode(this.node);
+        // director.addPersistRootNode(this.node);
 
         // 获取UIOpacity组件
         this.uiOpacity = this.getComponent(UIOpacity);
