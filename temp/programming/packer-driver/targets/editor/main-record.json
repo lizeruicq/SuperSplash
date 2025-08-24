@@ -1,7 +1,7 @@
 {
   "modules": {
     "cce:/internal/x/cc": {
-      "mTimestamp": 2970.599833,
+      "mTimestamp": 2519.064625,
       "chunkId": "93ba276ea7b26ffcdc433fab14afc1ed6f05647b",
       "imports": [
         {
@@ -976,7 +976,7 @@
       ]
     },
     "cce:/internal/x/prerequisite-imports": {
-      "mTimestamp": 3563.453208,
+      "mTimestamp": 3046.467083,
       "chunkId": "6d8fd2b0177941b032ddc0733af48a561fb60657",
       "imports": [
         {
@@ -4071,7 +4071,7 @@
       ]
     },
     "cce:/internal/code-quality/cr.mjs": {
-      "mTimestamp": 1755942820350,
+      "mTimestamp": 1756010923966,
       "chunkId": "6a5019a719a9014c047e67aa1cf34453ab8392ce",
       "imports": [],
       "type": "esm",
@@ -6198,7 +6198,7 @@
     },
     "file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/AIPlayer.ts": {
       "mTimestamp": {
-        "mtime": 1755940071758.6548,
+        "mtime": 1755960611664.6978,
         "uuid": "91c08d91-821d-4705-b576-bca425d89d56"
       },
       "chunkId": "bffa694b6a42ea502801eb3e252af84ebdf912e3",
@@ -6366,7 +6366,7 @@
     },
     "file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/Bullet.ts": {
       "mTimestamp": {
-        "mtime": 1755881234193.11,
+        "mtime": 1755959793753.2964,
         "uuid": "91ffccd6-b692-4a87-a2fe-51adeaa3b229"
       },
       "chunkId": "9627b0d9d58257818228bafb8d66e482f9701299",
@@ -6712,7 +6712,7 @@
     },
     "file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/GameManager.ts": {
       "mTimestamp": {
-        "mtime": 1755939080349.24,
+        "mtime": 1755959793753.4177,
         "uuid": "b67f4523-8daa-464a-8546-d89befbb2977"
       },
       "chunkId": "6e3db3d463ace5cac70cc212be5e384ebcc64b5f",
@@ -7163,7 +7163,7 @@
     },
     "file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/MainMenuController.ts": {
       "mTimestamp": {
-        "mtime": 1755880268520.9814,
+        "mtime": 1755959793753.5112,
         "uuid": "0cf6405c-918a-40f1-b383-68a9fc739b7f"
       },
       "chunkId": "054d9434f81bde272393a693c0acd2cc7f26001f",
@@ -7561,7 +7561,7 @@
     },
     "file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/PlayerManager.ts": {
       "mTimestamp": {
-        "mtime": 1755937244423.7375,
+        "mtime": 1755959793753.6208,
         "uuid": "1b6d6687-2973-4618-af7b-db52ef67b8c1"
       },
       "chunkId": "6031a6df382439e751708d8e1ff225136ce4b996",
@@ -7665,7 +7665,7 @@
     },
     "file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/SceneTransition.ts": {
       "mTimestamp": {
-        "mtime": 1755738484903.1643,
+        "mtime": 1755959793753.709,
         "uuid": "c161466d-78da-494f-9ff2-6a5b9ae13301"
       },
       "chunkId": "7b4b511aca644805dad617e0005683d5fa26b665",
@@ -7885,7 +7885,7 @@
     },
     "file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/SoundManager.ts": {
       "mTimestamp": {
-        "mtime": 1755919414574.9187,
+        "mtime": 1755959793753.7888,
         "uuid": "7c385d18-836f-4804-ae30-5bd158cfb7f5"
       },
       "chunkId": "da56edff780e583578bcbe6fd7546a92ebf27b1e",
@@ -8011,7 +8011,7 @@
     },
     "file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/player.ts": {
       "mTimestamp": {
-        "mtime": 1755938951495.0698,
+        "mtime": 1755959793753.9922,
         "uuid": "b3924dc4-f7fe-491c-9736-a65419c312f5"
       },
       "chunkId": "5226b2c7ce6b19f4f28975e17d285b490ae9ad7c",
@@ -8151,246 +8151,6 @@
           "resolved": {
             "type": "module",
             "url": "file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/Bullet.ts"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///Applications/Cocos/Creator/3.8.6/CocosCreator.app/Contents/Resources/app.asar.unpacked/modules/platform-extensions/extensions/adsense-h5g-plugin/static/adsense-h5g-api/ad_event.ts": {
-      "mTimestamp": {
-        "mtime": 1742837477000,
-        "uuid": "b8d97018-1648-4f7f-b2c7-941dcbde2a17"
-      },
-      "chunkId": "88ac7a162973380edd5431d80072fce16cd402cc",
-      "imports": [
-        {
-          "value": "cc"
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///Applications/Cocos/Creator/3.8.6/CocosCreator.app/Contents/Resources/app.asar.unpacked/modules/platform-extensions/extensions/adsense-h5g-plugin/static/adsense-h5g-api/h5_games_ads.ts": {
-      "mTimestamp": {
-        "mtime": 1742837477000,
-        "uuid": "b502a825-f7c2-4ee4-b75e-605528f25515"
-      },
-      "chunkId": "d00e783fd1173ca00d34f0d5b6fe7e9ce66e02b0",
-      "imports": [
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 19
-            },
-            "end": {
-              "line": 1,
-              "column": 23
-            }
-          }
-        },
-        {
-          "value": "./ad_event",
-          "resolved": "__unresolved_0",
-          "loc": {
-            "start": {
-              "line": 6,
-              "column": 72
-            },
-            "end": {
-              "line": 6,
-              "column": 84
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "error",
-            "text": "Error: 以 file:///Applications/Cocos/Creator/3.8.6/CocosCreator.app/Contents/Resources/app.asar.unpacked/modules/platform-extensions/extensions/adsense-h5g-plugin/static/adsense-h5g-api/h5_games_ads.ts 为起点找不到模块 \"./ad_event\""
-          },
-          "messages": [
-            {
-              "level": "warn",
-              "text": "你是否遗漏了扩展名？请注意你不能在模块说明符中省略扩展名。"
-            }
-          ]
-        }
-      ]
-    },
-    "file:///Applications/Cocos/Creator/3.8.6/CocosCreator.app/Contents/Resources/app.asar.unpacked/modules/platform-extensions/extensions/adsense-h5g-plugin/static/adsense-h5g-api/interstitial_callback.ts": {
-      "mTimestamp": {
-        "mtime": 1742837477000,
-        "uuid": "fd80a9b5-5b61-4c02-af13-e6508e6644ff"
-      },
-      "chunkId": "51e06e09d5eeb7ade648d1be05b2015c9ba69d68",
-      "imports": [
-        {
-          "value": "cc"
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///Applications/Cocos/Creator/3.8.6/CocosCreator.app/Contents/Resources/app.asar.unpacked/modules/platform-extensions/extensions/adsense-h5g-plugin/static/adsense-h5g-api/interstitial_type.ts": {
-      "mTimestamp": {
-        "mtime": 1742837477000,
-        "uuid": "e7ecae40-ddb1-4ac1-8abf-0382e9d40f02"
-      },
-      "chunkId": "53eae608936e28859e698ba758f57c7e80f2a164",
-      "imports": [
-        {
-          "value": "cc"
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///Applications/Cocos/Creator/3.8.6/CocosCreator.app/Contents/Resources/app.asar.unpacked/modules/platform-extensions/extensions/adsense-h5g-plugin/static/adsense-h5g-api/preroll_callback.ts": {
-      "mTimestamp": {
-        "mtime": 1742837477000,
-        "uuid": "3c6b2349-eaf5-4afc-893a-894cd8511526"
-      },
-      "chunkId": "acff3b1ccef437e5b2ffab20ba90a14a1304f8f6",
-      "imports": [
-        {
-          "value": "cc"
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///Applications/Cocos/Creator/3.8.6/CocosCreator.app/Contents/Resources/app.asar.unpacked/modules/platform-extensions/extensions/adsense-h5g-plugin/static/adsense-h5g-api/rewarded_callback.ts": {
-      "mTimestamp": {
-        "mtime": 1742837477000,
-        "uuid": "e0c4e2c7-5823-4fba-8095-6ad5a9830da6"
-      },
-      "chunkId": "b69cf2900308d0879070a4914a7efa2857266e96",
-      "imports": [
-        {
-          "value": "cc"
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/StartupController.ts": {
-      "mTimestamp": {
-        "mtime": 1755738183081.0579,
-        "uuid": "85c04c05-568c-466f-8ef9-c4861c9c600a"
-      },
-      "chunkId": "49f0bfa7fbc3a68c76636ef920523245d0010d73",
-      "imports": [
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 48
-            },
-            "end": {
-              "line": 1,
-              "column": 52
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
           },
           "messages": []
         }

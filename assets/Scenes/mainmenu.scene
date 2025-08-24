@@ -4256,15 +4256,9 @@
     "weaponFireAudioSource": {
       "__id__": 128
     },
-    "rocketHitAudioSource": {
-      "__id__": 129
-    },
-    "bulletHitAudioSource": {
-      "__id__": 130
-    },
-    "dartHitAudioSource": {
-      "__id__": 131
-    },
+    "rocketHitAudioSource": null,
+    "bulletHitAudioSource": null,
+    "dartHitAudioSource": null,
     "_id": "bfCgYEP+xJia6gXNUl6mC3"
   },
   {

@@ -801,7 +801,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           const direction = new Vec2(Math.cos(rad), Math.sin(rad)); // 计算子弹发射位置（车辆正前方）
 
           const vehicleWorldPos = this.node.worldPosition;
-          const offsetDistance = 60; // 子弹发射偏移距离（像素）
+          const offsetDistance = 70; // 子弹发射偏移距离（像素）
 
           const bulletStartPos = new Vec3(vehicleWorldPos.x + direction.x * offsetDistance, vehicleWorldPos.y + direction.y * offsetDistance, vehicleWorldPos.z); // 获取GameManager实例并发射子弹
 

@@ -1,0 +1,95 @@
+8-24-2025 12:48:43 - log: Load engine in /Applications/Cocos/Creator/3.8.6/CocosCreator.app/Contents/Resources/resources/3d/engine
+8-24-2025 12:48:43 - log: Register native engine in /Applications/Cocos/Creator/3.8.6/CocosCreator.app/Contents/Resources/resources/3d/engine/native
+8-24-2025 12:48:44 - log: Request namespace: device-list
+8-24-2025 12:48:47 - info: [PreviewInEditor] 预览环境初始化完毕
+8-24-2025 12:48:47 - log: [Scene] meshopt wasm decoder initialized
+8-24-2025 12:48:47 - log: [Scene] [bullet]:bullet wasm lib loaded.
+8-24-2025 12:48:47 - log: [Scene] [box2d]:box2d wasm lib loaded.
+8-24-2025 12:48:47 - log: [Scene] [PHYSICS]: using builtin.
+8-24-2025 12:48:47 - log: [Scene] Cocos Creator v3.8.6
+8-24-2025 12:48:47 - log: [Scene] Using custom pipeline: Builtin
+8-24-2025 12:48:47 - log: [Scene] [PHYSICS2D]: switch from box2d-wasm to box2d.
+8-24-2025 12:48:55 - info: [Window] Download the Vue Devtools extension for a better development experience:
+https://github.com/vuejs/vue-devtools
+8-24-2025 12:48:55 - info: [Window] You are running Vue in development mode.
+Make sure to turn on production mode when deploying for production.
+See more tips at https://vuejs.org/guide/deployment.html
+8-24-2025 12:49:12 - warn: [Assets] [build-script][[Build.Script.Rollup]] Circular dependency: file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/player.ts -> file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/AIPlayer.ts -> file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/player.ts
+[warning][[Build.Script.Rollup]] Circular dependency: file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/GameManager.ts -> file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/player.ts -> file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/AIPlayer.ts -> file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/GameManager.ts
+Warn: [Assets] [build-script][[Build.Script.Rollup]] Circular dependency: file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/player.ts -> file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/AIPlayer.ts -> file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/player.ts
+[warning][[Build.Script.Rollup]] Circular dependency: file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/GameManager.ts -> file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/player.ts -> file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/AIPlayer.ts -> file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/GameManager.ts
+
+    at console.warn (/Applications/Cocos/Creator/3.8.6/CocosCreator.app/Contents/Resources/app.asar/node_modules/@sentry/src/instrument/console.ts:40:20)
+    at NewConsole.warn (/Applications/Cocos/Creator/3.8.6/CocosCreator.app/Contents/Resources/app.asar/builtin/asset-db/dist/worker/console.ccc:1:1510)
+    at NewConsole.warn (/Applications/Cocos/Creator/3.8.6/CocosCreator.app/Contents/Resources/app.asar/builtin/builder/dist/worker/console.ccc:1:2337)
+    at Socket.<anonymous> (/Applications/Cocos/Creator/3.8.6/CocosCreator.app/Contents/Resources/app.asar/builtin/builder/dist/worker/worker-pools/sub-process-manager.ccc:1:3399)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+    at Pipe.onStreamRead (node:internal/stream_base_commons:191:23)
+8-24-2025 12:49:12 - warn: [Assets] [build-script][[Build.Script.Rollup]] Circular dependency: file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/AIController.ts -> file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/GameManager.ts -> file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/player.ts -> file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/AIPlayer.ts -> file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/AIController.ts
+[warning][[Build.Script.Rollup]] Circular dependency: file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/player.ts -> file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/AIPlayer.ts -> file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/Bullet.ts -> file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/player.ts
+[warning][[Build.Script.Rollup]] Circular dependency: file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/AIPlayer.ts -> file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/Bullet.ts -> file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/AIPlayer.ts
+[warning][[Build.Script.Rollup]] Circular dependency: file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/GameManager.ts -> file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/player.ts -> file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/AIPlayer.ts -> file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/Bullet.ts -> file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/GameManager.ts
+[warning][[Build.Script.Rollup]] Circular dependency: file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/GameManager.ts -> file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/player.ts -> file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/GameManager.ts
+[warning][[Build.Script.Rollup]] Circular dependency: file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/AIController.ts -> file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/GameManager.ts -> file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/AIController.ts
+[warning][[Build.Script.Rollup]] Circular dependency: file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/GameManager.ts -> file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/GameOverPanel.ts -> file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/GameManager.ts
+[warning][[Build.Script.Rollup]] Circular dependency: file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/GameManager.ts -> file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/GameHUD.ts -> file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/GameManager.ts
+Warn: [Assets] [build-script][[Build.Script.Rollup]] Circular dependency: file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/AIController.ts -> file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/GameManager.ts -> file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/player.ts -> file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/AIPlayer.ts -> file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/AIController.ts
+[warning][[Build.Script.Rollup]] Circular dependency: file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/player.ts -> file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/AIPlayer.ts -> file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/Bullet.ts -> file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/player.ts
+[warning][[Build.Script.Rollup]] Circular dependency: file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/AIPlayer.ts -> file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/Bullet.ts -> file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/AIPlayer.ts
+[warning][[Build.Script.Rollup]] Circular dependency: file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/GameManager.ts -> file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/player.ts -> file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/AIPlayer.ts -> file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/Bullet.ts -> file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/GameManager.ts
+[warning][[Build.Script.Rollup]] Circular dependency: file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/GameManager.ts -> file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/player.ts -> file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/GameManager.ts
+[warning][[Build.Script.Rollup]] Circular dependency: file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/AIController.ts -> file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/GameManager.ts -> file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/AIController.ts
+[warning][[Build.Script.Rollup]] Circular dependency: file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/GameManager.ts -> file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/GameOverPanel.ts -> file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/GameManager.ts
+[warning][[Build.Script.Rollup]] Circular dependency: file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/GameManager.ts -> file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/GameHUD.ts -> file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/GameManager.ts
+
+    at console.warn (/Applications/Cocos/Creator/3.8.6/CocosCreator.app/Contents/Resources/app.asar/node_modules/@sentry/src/instrument/console.ts:40:20)
+    at NewConsole.warn (/Applications/Cocos/Creator/3.8.6/CocosCreator.app/Contents/Resources/app.asar/builtin/asset-db/dist/worker/console.ccc:1:1510)
+    at NewConsole.warn (/Applications/Cocos/Creator/3.8.6/CocosCreator.app/Contents/Resources/app.asar/builtin/builder/dist/worker/console.ccc:1:2337)
+    at Socket.<anonymous> (/Applications/Cocos/Creator/3.8.6/CocosCreator.app/Contents/Resources/app.asar/builtin/builder/dist/worker/worker-pools/sub-process-manager.ccc:1:3399)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+    at Pipe.onStreamRead (node:internal/stream_base_commons:191:23)
+8-24-2025 12:49:21 - error: [Assets] [cmake-err] CMake Error: File /Users/zeruili/projects/cocos_project/SuperSplash/native/engine/ios/LaunchScreenBackgroundLandscape.png does not exist.
+CMake Error at /Applications/Cocos/Creator/3.8.6/CocosCreator.app/Contents/Resources/resources/3d/engine/templates/cmake/apple.cmake:47 (configure_file):
+  configure_file Problem configuring file
+Call Stack (most recent call first):
+  CMakeLists.txt:18 (cc_ios_before_target)
+
+
+Error: [Assets] [cmake-err] CMake Error: File /Users/zeruili/projects/cocos_project/SuperSplash/native/engine/ios/LaunchScreenBackgroundLandscape.png does not exist.
+CMake Error at /Applications/Cocos/Creator/3.8.6/CocosCreator.app/Contents/Resources/resources/3d/engine/templates/cmake/apple.cmake:47 (configure_file):
+  configure_file Problem configuring file
+Call Stack (most recent call first):
+  CMakeLists.txt:18 (cc_ios_before_target)
+
+
+
+    at console.error (/Applications/Cocos/Creator/3.8.6/CocosCreator.app/Contents/Resources/app.asar/node_modules/@sentry/src/instrument/console.ts:40:20)
+    at NewConsole.error (/Applications/Cocos/Creator/3.8.6/CocosCreator.app/Contents/Resources/app.asar/builtin/asset-db/dist/worker/console.ccc:1:1409)
+    at NewConsole.error (/Applications/Cocos/Creator/3.8.6/CocosCreator.app/Contents/Resources/app.asar/builtin/builder/dist/worker/console.ccc:1:2237)
+    at Socket.<anonymous> (/Applications/Cocos/Creator/3.8.6/CocosCreator.app/Contents/Resources/resources/3d/engine/scripts/native-pack-tool/source/utils.ts:479:29)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Socket.Readable.push (node:internal/streams/readable:390:5)
+    at Pipe.onStreamRead (node:internal/stream_base_commons:191:23)
+8-24-2025 12:49:21 - error: [Assets] 构建插件 native 的钩子函数 onAfterBuild 执行失败，请检查插件的代码逻辑~, progress: 62%Error: [Assets] 构建插件 native 的钩子函数 onAfterBuild 执行失败，请检查插件的代码逻辑~, progress: 62%
+    at console.error (/Applications/Cocos/Creator/3.8.6/CocosCreator.app/Contents/Resources/app.asar/node_modules/@sentry/src/instrument/console.ts:40:20)
+    at NewConsole.error (/Applications/Cocos/Creator/3.8.6/CocosCreator.app/Contents/Resources/app.asar/builtin/asset-db/dist/worker/console.ccc:1:1409)
+    at NewConsole.error (/Applications/Cocos/Creator/3.8.6/CocosCreator.app/Contents/Resources/app.asar/builtin/builder/dist/worker/console.ccc:1:2237)
+    at BuildTask.updateProcess (/Applications/Cocos/Creator/3.8.6/CocosCreator.app/Contents/Resources/app.asar/builtin/builder/dist/worker/builder/manager/task-base.ccc:1:602)
+    at BuildTask.runPluginTask (/Applications/Cocos/Creator/3.8.6/CocosCreator.app/Contents/Resources/app.asar/builtin/builder/dist/worker/builder/manager/task-base.ccc:1:1497)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at BuildTask.run (/Applications/Cocos/Creator/3.8.6/CocosCreator.app/Contents/Resources/app.asar/builtin/builder/dist/worker/builder/index.ccc:1:5246)
+    at build (/Applications/Cocos/Creator/3.8.6/CocosCreator.app/Contents/Resources/app.asar/builtin/builder/dist/worker/index.ccc:1:4259)
+    at Ipc.<anonymous> (/Applications/Cocos/Creator/3.8.6/CocosCreator.app/Contents/Resources/app.asar/builtin/builder/dist/worker/msg-util.ccc:1:210)
+8-24-2025 12:49:21 - error: [Assets] run cmake failed "cmake -S "/Users/zeruili/projects/cocos_project/SuperSplash/native/engine/ios" -GXcode -B"/Users/zeruili/projects/cocos_project/SuperSplash/build/ios/proj" -T buildsystem=12 -DCMAKE_SYSTEM_NAME=iOS -DCMAKE_CXX_COMPILER=clang++ -DCMAKE_C_COMPILER=clang -DRES_DIR="/Users/zeruili/projects/cocos_project/SuperSplash/build/ios" -DAPP_NAME="SuperSplash" -DLAUNCH_TYPE="Release"", code: 1, signal: nullError: run cmake failed "cmake -S "/Users/zeruili/projects/cocos_project/SuperSplash/native/engine/ios" -GXcode -B"/Users/zeruili/projects/cocos_project/SuperSplash/build/ios/proj" -T buildsystem=12 -DCMAKE_SYSTEM_NAME=iOS -DCMAKE_CXX_COMPILER=clang++ -DCMAKE_C_COMPILER=clang -DRES_DIR="/Users/zeruili/projects/cocos_project/SuperSplash/build/ios" -DAPP_NAME="SuperSplash" -DLAUNCH_TYPE="Release"", code: 1, signal: null
+    at ChildProcess.<anonymous> (/Applications/Cocos/Creator/3.8.6/CocosCreator.app/Contents/Resources/resources/3d/engine/scripts/native-pack-tool/source/utils.ts:484:28)
+    at ChildProcess.emit (node:events:519:28)
+    at maybeClose (node:internal/child_process:1105:16)
+    at Process.ChildProcess._handle.onexit (node:internal/child_process:305:5)

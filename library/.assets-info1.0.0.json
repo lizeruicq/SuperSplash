@@ -1168,7 +1168,7 @@
       "uuid": "4b2a90e7-9654-43f7-b19c-1929bfdc1fa9"
     },
     "/Users/zeruili/projects/cocos_project/SuperSplash/assets/Scenes": {
-      "time": 1754805724106.2932,
+      "time": 1755959793714.3042,
       "uuid": "311768e2-09ac-4c4f-834d-85e07497a5c5"
     },
     "/Users/zeruili/projects/cocos_project/SuperSplash/assets/TiledMap": {
@@ -1176,19 +1176,19 @@
       "uuid": "ca8300bc-5694-4fb2-9420-c134432c4866"
     },
     "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img": {
-      "time": 1755838053857.7668,
+      "time": 1755959793714.4583,
       "uuid": "f04d4757-2526-40bc-83dc-41410588d6eb"
     },
     "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources": {
-      "time": 1755838053857.7668,
+      "time": 1755959793732.354,
       "uuid": "d97d032d-727a-433c-9189-878a2868c79d"
     },
     "/Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts": {
-      "time": 1755776913014.6016,
+      "time": 1755959793753.9595,
       "uuid": "d4ffaca8-3516-4d6f-9187-e37ee8010ebd"
     },
     "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/background": {
-      "time": 1755939240625.9026,
+      "time": 1755959793721.5168,
       "uuid": "6e03cd48-8a60-412f-b20f-82f4e1b5b329"
     },
     "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/cars": {
@@ -1196,7 +1196,7 @@
       "uuid": "41215272-73c9-4fb3-9263-b76927c4d527"
     },
     "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu": {
-      "time": 1755946381340.2573,
+      "time": 1755959793726.38,
       "uuid": "b3322b39-4b8e-4556-8194-a14dbd5f51a9"
     },
     "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/paint": {
@@ -1204,7 +1204,7 @@
       "uuid": "40424df1-20d9-4c1a-b530-455872b99284"
     },
     "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/weapons": {
-      "time": 1755329434099.622,
+      "time": 1755947887867.4297,
       "uuid": "fe3cb3bb-8e0d-46e7-8ece-3490aea9da1a"
     },
     "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/config": {
@@ -1216,7 +1216,7 @@
       "uuid": "762a429e-c9d7-4d61-98f5-52886abdc2ad"
     },
     "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/UI": {
-      "time": 1755943375707.6316,
+      "time": 1755959793731.3713,
       "uuid": "2398cf68-c464-466d-9c17-c2be447e298a"
     },
     "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/weapons/bulletexplosion": {
@@ -1240,7 +1240,7 @@
       "uuid": "2054f310-6a94-41ce-a3b6-41dcd19b5f43"
     },
     "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/prefab/levels": {
-      "time": 1755445040341.4888,
+      "time": 1755959793732.2805,
       "uuid": "c23f290e-b5e8-46ea-bf20-d18ab9b6705f"
     },
     "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/prefab/paints": {
@@ -1260,11 +1260,11 @@
       "uuid": "f240925f-9753-4a81-ac73-a2a8210575a2"
     },
     "/Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/AIPlayer.ts": {
-      "time": 1755940071758.6548,
+      "time": 1755960611664.6978,
       "uuid": "91c08d91-821d-4705-b576-bca425d89d56"
     },
     "/Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/Bullet.ts": {
-      "time": 1755881234193.11,
+      "time": 1755959793753.2964,
       "uuid": "91ffccd6-b692-4a87-a2fe-51adeaa3b229"
     },
     "/Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/CarProperties.ts": {
@@ -1280,7 +1280,7 @@
       "uuid": "8d994a71-0534-4deb-9268-d898d9e0c007"
     },
     "/Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/GameManager.ts": {
-      "time": 1755939080349.24,
+      "time": 1755959793753.4177,
       "uuid": "b67f4523-8daa-464a-8546-d89befbb2977"
     },
     "/Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/GameOverPanel.ts": {
@@ -1292,7 +1292,7 @@
       "uuid": "79d6f812-9554-4262-84e1-fd743e611bf9"
     },
     "/Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/MainMenuController.ts": {
-      "time": 1755880268520.9814,
+      "time": 1755959793753.5112,
       "uuid": "0cf6405c-918a-40f1-b383-68a9fc739b7f"
     },
     "/Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/PaintManager.ts": {
@@ -1312,7 +1312,7 @@
       "uuid": "66fbc94f-5230-4bee-8600-db121d4f07fe"
     },
     "/Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/PlayerManager.ts": {
-      "time": 1755937244423.7375,
+      "time": 1755959793753.6208,
       "uuid": "1b6d6687-2973-4618-af7b-db52ef67b8c1"
     },
     "/Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/PurchasePanel.ts": {
@@ -1320,7 +1320,7 @@
       "uuid": "c4e943de-6ca3-46a0-9231-17cb43e8e456"
     },
     "/Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/SceneTransition.ts": {
-      "time": 1755738484903.1643,
+      "time": 1755959793753.709,
       "uuid": "c161466d-78da-494f-9ff2-6a5b9ae13301"
     },
     "/Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/SelectManager.ts": {
@@ -1328,7 +1328,7 @@
       "uuid": "be7b2dc0-da35-4de9-a81c-30690fdcd28f"
     },
     "/Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/SoundManager.ts": {
-      "time": 1755919414574.9187,
+      "time": 1755959793753.7888,
       "uuid": "7c385d18-836f-4804-ae30-5bd158cfb7f5"
     },
     "/Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/TempData.ts": {
@@ -1340,7 +1340,7 @@
       "uuid": "daf21382-6b58-4c9b-aeb4-ace960c8ca29"
     },
     "/Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/player.ts": {
-      "time": 1755938951495.0698,
+      "time": 1755959793753.9922,
       "uuid": "b3924dc4-f7fe-491c-9736-a65419c312f5"
     },
     "/Users/zeruili/projects/cocos_project/SuperSplash/assets/Scenes.meta": {
@@ -1476,15 +1476,15 @@
       "time": 1750948553272.1372
     },
     "/Users/zeruili/projects/cocos_project/SuperSplash/assets/Scenes/LevelSelect.scene": {
-      "time": 1755943577638.5564,
+      "time": 1755959793713.7642,
       "uuid": "091c5c0e-b72a-4cad-ab68-635bc57ff236"
     },
     "/Users/zeruili/projects/cocos_project/SuperSplash/assets/Scenes/gamescene.scene": {
-      "time": 1755939396471.571,
+      "time": 1755959793714.2285,
       "uuid": "1563d039-d898-4d8f-9415-9f1da853b8a3"
     },
     "/Users/zeruili/projects/cocos_project/SuperSplash/assets/Scenes/mainmenu.scene": {
-      "time": 1755946563668.5952,
+      "time": 1756010906874.6143,
       "uuid": "9a4dce19-24b9-4d46-b38f-ef49f2287dcb"
     },
     "/Users/zeruili/projects/cocos_project/SuperSplash/assets/TiledMap/City_tiles.png": {
@@ -1852,7 +1852,7 @@
       "uuid": "5fa4a020-ad12-4d51-9e7d-57cecdc056ca"
     },
     "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/prefab/levels/level-1.prefab": {
-      "time": 1755701099504.5847,
+      "time": 1755959793731.9978,
       "uuid": "5e122843-ecf2-42e7-ab74-ec19f70240a3"
     },
     "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/prefab/levels/level-2.prefab": {
@@ -1864,11 +1864,11 @@
       "uuid": "8d8867cd-f591-45fa-8564-e435fcdb1847"
     },
     "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/prefab/levels/level-4.prefab": {
-      "time": 1755940855160.1956,
+      "time": 1756010082211.8914,
       "uuid": "0e092c45-c659-4c70-a247-9fe66ddd6b14"
     },
     "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/prefab/levels/level-5.prefab": {
-      "time": 1755940976368.6565,
+      "time": 1756010229868.9548,
       "uuid": "8bb5ad25-fb45-41ea-9b39-610d6d59157c"
     },
     "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/prefab/paints/PaintRoot.prefab": {
@@ -2270,169 +2270,169 @@
       "time": 1753110295964.9429
     },
     "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound": {
-      "time": 1755921836477.6658,
+      "time": 1755959793752.4941,
       "uuid": "aa396c5e-59ca-4418-8f95-bdc105fc74ed"
     },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/background/44f2669bbe90718e7c82cf002a71f346.jpeg.meta": {
+      "time": 1755959793716.373
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/background/ab128ccde06826881ab545f5092053a3.jpeg.meta": {
+      "time": 1755959793718.1091
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/background/ad8efe4d6bafcec5971648db598c0a71.jpeg.meta": {
+      "time": 1755959793719.6038
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/background/bf51dacb6999bf07f5c60c2c10c7e272.jpeg.meta": {
+      "time": 1755959793720.3242
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/background/ee870d916fd79516ca72b3c8388529c5.jpeg.meta": {
+      "time": 1755959793721.5417
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/416fa0011fee05baf8fe72f050036f62.jpeg.meta": {
+      "time": 1755959793724.9668
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/79850dc31e45b5179163b46b25a182d1.jpeg.meta": {
+      "time": 1755959793726.094
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/LaunchScreenBackground.jpg.meta": {
+      "time": 1755959793726.4128
+    },
     "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/Plop_new.m4a.meta": {
-      "time": 1755921605651.938
+      "time": 1755959793732.543
     },
     "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/battle2_new.m4a.meta": {
-      "time": 1755921605661.7266
+      "time": 1755959793740.339
     },
     "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/battle_new.m4a.meta": {
-      "time": 1755921605656.3486
+      "time": 1755959793748.449
     },
     "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/bgm_new.m4a.meta": {
-      "time": 1755921605662.3574
+      "time": 1755959793751.3677
     },
     "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/crash_new.m4a.meta": {
-      "time": 1755921605651.6357
+      "time": 1755959793751.4993
     },
     "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/crush_new.m4a.meta": {
-      "time": 1755921605667.5383
+      "time": 1755959793751.6306
     },
     "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/drift_new.m4a.meta": {
-      "time": 1755921605669.736
+      "time": 1755959793751.7764
     },
     "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/engine_on_new.m4a.meta": {
-      "time": 1755921605668.6963
+      "time": 1755959793752.0134
     },
     "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/explode_new.m4a.meta": {
-      "time": 1755921605669.8538
+      "time": 1755959793752.142
     },
     "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/explodemini_new.m4a.meta": {
-      "time": 1755921605670.532
+      "time": 1755959793752.2974
     },
     "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/player_hit_new.m4a.meta": {
-      "time": 1755921605672.0063
+      "time": 1755959793752.4075
     },
     "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/shoot_new.m4a.meta": {
-      "time": 1755921605673.6199
+      "time": 1755959793752.5156
     },
-    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/crash_new.m4a": {
-      "time": 1755921601519.6033,
-      "uuid": "6a4569e1-e7a8-4813-bd13-eba6d16a217f"
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/UI/dir.png.meta": {
+      "time": 1755959793729.0815
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/UI/fire.png.meta": {
+      "time": 1755959793731.1196
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/UI/rio.png.meta": {
+      "time": 1755959793731.4043
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/background/bf51dacb6999bf07f5c60c2c10c7e272.jpeg": {
+      "time": 1755959793720.2498,
+      "uuid": "c3064ced-3493-400e-9aef-95dcf127c691"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/background/ad8efe4d6bafcec5971648db598c0a71.jpeg": {
+      "time": 1755959793719.4988,
+      "uuid": "0c0ec31d-a8dd-4c8f-a925-67c32a21e4f6"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/background/ab128ccde06826881ab545f5092053a3.jpeg": {
+      "time": 1755959793717.8794,
+      "uuid": "5752474b-fc09-45d1-8f04-192727032b83"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/background/44f2669bbe90718e7c82cf002a71f346.jpeg": {
+      "time": 1755959793716.1885,
+      "uuid": "36dd683e-baea-4cb2-8dc1-6429449b3aaf"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/background/ee870d916fd79516ca72b3c8388529c5.jpeg": {
+      "time": 1755959793721.4644,
+      "uuid": "8b94f137-a09a-4bc1-a2e8-cfe9b9381a81"
     },
     "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/Plop_new.m4a": {
-      "time": 1755921601943.8877,
+      "time": 1755959793732.491,
       "uuid": "2f600d94-1f16-4ec5-aaeb-c6da789fe738"
     },
-    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/battle_new.m4a": {
-      "time": 1755921599069.5586,
-      "uuid": "f0126de9-908b-4055-a7c6-b0802b6ba2f3"
-    },
     "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/battle2_new.m4a": {
-      "time": 1755921600740.3384,
+      "time": 1755959793740.1343,
       "uuid": "0bc8a78b-bd7d-4fe0-82d4-c54b64b885bf"
     },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/battle_new.m4a": {
+      "time": 1755959793748.2253,
+      "uuid": "f0126de9-908b-4055-a7c6-b0802b6ba2f3"
+    },
     "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/bgm_new.m4a": {
-      "time": 1755921601471.453,
+      "time": 1755959793751.2515,
       "uuid": "556a0967-2aed-4c42-b221-0a202d1954ff"
     },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/crash_new.m4a": {
+      "time": 1755959793751.4502,
+      "uuid": "6a4569e1-e7a8-4813-bd13-eba6d16a217f"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/LaunchScreenBackground.jpg": {
+      "time": 1755959793726.3413,
+      "uuid": "417da33c-6e54-4bb2-90e0-6fa28b1f60c1"
+    },
     "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/crush_new.m4a": {
-      "time": 1755921601580.5222,
+      "time": 1755959793751.586,
       "uuid": "71048de6-acd5-49cc-985f-60f651aa9064"
     },
     "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/engine_on_new.m4a": {
-      "time": 1755921601711.2502,
+      "time": 1755959793751.9563,
       "uuid": "93a6c42e-99bb-43fc-929d-600829e7c672"
     },
     "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/drift_new.m4a": {
-      "time": 1755921601643.4478,
+      "time": 1755959793751.7195,
       "uuid": "bd7fc9e7-382a-4306-bfb0-ed0ed18cc8bb"
     },
     "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/explode_new.m4a": {
-      "time": 1755921601753.4187,
+      "time": 1755959793752.0981,
       "uuid": "efd1babe-05af-45cc-bec4-21dbf23b0ff0"
     },
     "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/explodemini_new.m4a": {
-      "time": 1755921601840.7485,
+      "time": 1755959793752.241,
       "uuid": "42ed8357-8bef-4b77-8c7b-883d8d0f7bee"
     },
     "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/player_hit_new.m4a": {
-      "time": 1755921601898.0522,
+      "time": 1755959793752.3657,
       "uuid": "6060291b-d1ad-4bfd-95a7-384f32005584"
     },
     "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/shoot_new.m4a": {
-      "time": 1755921601985.816,
+      "time": 1755959793752.4705,
       "uuid": "f0a18dd3-9aab-4386-b491-e05d74746be3"
     },
-    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/background/44f2669bbe90718e7c82cf002a71f346.jpeg.meta": {
-      "time": 1755938866689.9817
-    },
-    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/background/ab128ccde06826881ab545f5092053a3.jpeg.meta": {
-      "time": 1755938866671.785
-    },
-    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/background/ad8efe4d6bafcec5971648db598c0a71.jpeg.meta": {
-      "time": 1755938866689.1978
-    },
-    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/background/bf51dacb6999bf07f5c60c2c10c7e272.jpeg.meta": {
-      "time": 1755938866668.5347
-    },
-    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/background/ee870d916fd79516ca72b3c8388529c5.jpeg.meta": {
-      "time": 1755938866668.2651
-    },
-    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/416fa0011fee05baf8fe72f050036f62.jpeg.meta": {
-      "time": 1755938866759.6135
-    },
-    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/79850dc31e45b5179163b46b25a182d1.jpeg.meta": {
-      "time": 1755938866759.9502
-    },
-    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/UI/dir.png.meta": {
-      "time": 1755938866815.9055
-    },
-    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/UI/fire.png.meta": {
-      "time": 1755938866807.0872
-    },
-    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/background/ee870d916fd79516ca72b3c8388529c5.jpeg": {
-      "time": 1755937845219.4265,
-      "uuid": "8b94f137-a09a-4bc1-a2e8-cfe9b9381a81"
-    },
-    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/background/bf51dacb6999bf07f5c60c2c10c7e272.jpeg": {
-      "time": 1755937880168.5862,
-      "uuid": "c3064ced-3493-400e-9aef-95dcf127c691"
-    },
-    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/background/ab128ccde06826881ab545f5092053a3.jpeg": {
-      "time": 1755938419034.5288,
-      "uuid": "5752474b-fc09-45d1-8f04-192727032b83"
-    },
-    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/background/ad8efe4d6bafcec5971648db598c0a71.jpeg": {
-      "time": 1755937924314.704,
-      "uuid": "0c0ec31d-a8dd-4c8f-a925-67c32a21e4f6"
-    },
-    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/background/44f2669bbe90718e7c82cf002a71f346.jpeg": {
-      "time": 1755937961654.4534,
-      "uuid": "36dd683e-baea-4cb2-8dc1-6429449b3aaf"
-    },
-    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/416fa0011fee05baf8fe72f050036f62.jpeg": {
-      "time": 1755938528665.6748,
-      "uuid": "0d56149c-3177-4a8d-8e88-84342246370e"
-    },
     "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/79850dc31e45b5179163b46b25a182d1.jpeg": {
-      "time": 1755938469726.239,
+      "time": 1755959793726.0225,
       "uuid": "de9038ee-21fe-4f18-9b9c-ac2644ea9723"
     },
-    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/UI/fire.png": {
-      "time": 1755938845542.8374,
-      "uuid": "57cc8bf6-b5ea-416c-9202-426553741a4d"
-    },
     "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/UI/dir.png": {
-      "time": 1755938794360.2722,
+      "time": 1755959793728.9832,
       "uuid": "c709f4a9-008a-48b5-ba8a-36a683eec71b"
     },
-    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/UI/rio.png.meta": {
-      "time": 1755943375742.569
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/416fa0011fee05baf8fe72f050036f62.jpeg": {
+      "time": 1755959793724.5383,
+      "uuid": "0d56149c-3177-4a8d-8e88-84342246370e"
+    },
+    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/UI/fire.png": {
+      "time": 1755959793731.0493,
+      "uuid": "57cc8bf6-b5ea-416c-9202-426553741a4d"
     },
     "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/UI/rio.png": {
-      "time": 1755941137585.1934,
+      "time": 1755959793731.3413,
       "uuid": "ce46a122-c196-49e5-b142-94836c311b72"
-    },
-    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/LaunchScreenBackground.jpg.meta": {
-      "time": 1755946381377.3684
-    },
-    "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/LaunchScreenBackground.jpg": {
-      "time": 1755946381337.4778,
-      "uuid": "417da33c-6e54-4bb2-90e0-6fa28b1f60c1"
     }
   },
   "missing": {
@@ -2812,9 +2812,9 @@
       "removeTime": 1754719158572
     },
     "70958428-2d80-45d2-be19-959fe20eda20": {
-      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/UI/shoot.png",
-      "time": 1754726895632.9966,
-      "removeTime": 1755942823620
+      "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/UI/shoot.png",
+      "time": 1755959104424.869,
+      "removeTime": 1755959798434
     },
     "949304f8-d71e-4d74-96be-bba313c71dbd": {
       "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/scripts/PaintCoordinateTest.ts",
@@ -2982,44 +2982,44 @@
       "removeTime": 1755838053858
     },
     "05d09d2a-d1e6-4db4-b7f1-46c828561e1c": {
-      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/sound/Plop.ogg",
-      "time": 1753110505802.6812,
-      "removeTime": 1755919017633
+      "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/Plop.ogg",
+      "time": 1755959104427.8096,
+      "removeTime": 1755959798434
     },
     "c492a1c7-8290-4d71-98ff-a4bb822cb067": {
-      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/sound/bgm.wav",
-      "time": 1753110505816.613,
-      "removeTime": 1755919017633
+      "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/bgm.wav",
+      "time": 1755959104460.0342,
+      "removeTime": 1755959798434
     },
     "6b75695c-de58-4b54-86d8-520be166015c": {
-      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/sound/crash.ogg",
-      "time": 1753110505802.6543,
-      "removeTime": 1755919017633
+      "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/crash.ogg",
+      "time": 1755959104460.7942,
+      "removeTime": 1755959798434
     },
     "c1f2ce3a-5aa8-45ba-ab3e-5fff8bb87af9": {
-      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/sound/drift.mp3",
-      "time": 1753110512724.8335,
-      "removeTime": 1755942823620
+      "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/drift.mp3",
+      "time": 1755959104461.1665,
+      "removeTime": 1755959798434
     },
     "9f868da1-89e4-4ca6-a4e1-2b592981db21": {
-      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/sound/engine_on.mp3",
-      "time": 1753110512725.0964,
-      "removeTime": 1755942823620
+      "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/engine_on.mp3",
+      "time": 1755959104462.1235,
+      "removeTime": 1755959798434
     },
     "df16bb3a-bc77-4766-bae7-2769316ed6e5": {
-      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/sound/explode.mp3",
-      "time": 1753192191477.7927,
-      "removeTime": 1755942823620
+      "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/explode.mp3",
+      "time": 1755959104462.8196,
+      "removeTime": 1755959798434
     },
     "cb5bf55f-787d-4418-a1b0-f21d440384ce": {
-      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/sound/running.wav",
-      "time": 1753110505807.9333,
-      "removeTime": 1755919017633
+      "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/running.wav",
+      "time": 1755959104468.4788,
+      "removeTime": 1755959798434
     },
     "f89116d5-8d7e-402f-9955-3285188d78de": {
-      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/resources/sound/tires_squal_loop.wav",
-      "time": 1753110505805.291,
-      "removeTime": 1755919017633
+      "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/tires_squal_loop.wav",
+      "time": 1755959104470.6274,
+      "removeTime": 1755959798434
     },
     "f33f8d2f-cc9f-4a6c-b170-2e68431b9220": {
       "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/BACKUP",
@@ -3132,59 +3132,59 @@
       "removeTime": 1755921839413
     },
     "a9ba508d-fd85-45b5-9fd2-d14875277c0c": {
-      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/图片风格转换-12.jpg",
-      "time": 1755533443476.6697,
-      "removeTime": 1755942823621
+      "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/background/图片风格转换-12.jpg",
+      "time": 1755959104422.88,
+      "removeTime": 1755959798433
     },
     "78d77ff7-6930-4557-9736-dc3c53c2d458": {
-      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/图片风格转换-10.jpg",
-      "time": 1755533377885.2002,
-      "removeTime": 1755942823621
+      "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/background/图片风格转换-10.jpg",
+      "time": 1755959104420.6868,
+      "removeTime": 1755959798433
     },
     "423e1555-8406-458e-a55d-3f2e78f1b735": {
-      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/图片风格转换-8.jpg",
-      "time": 1755533391118.1106,
-      "removeTime": 1755942823621
+      "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/background/图片风格转换-8.jpg",
+      "time": 1755959104423.5452,
+      "removeTime": 1755959798433
     },
     "3418420c-6e30-4052-9518-882319cc0283": {
-      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/图片风格转换-9.jpg",
-      "time": 1755533273279.5054,
-      "removeTime": 1755942823621
+      "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/background/图片风格转换-9.jpg",
+      "time": 1755959104424.1736,
+      "removeTime": 1755959798434
     },
     "c07d4f01-abc9-4f64-8f43-33a6ce868509": {
-      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/img/background/图片风格转换-11.jpg",
-      "time": 1755533405503.8784,
-      "removeTime": 1755942823621
+      "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/background/图片风格转换-11.jpg",
+      "time": 1755959104421.8809,
+      "removeTime": 1755959798433
     },
     "b2b39a66-2564-4be8-8802-d043d12ffd8b": {
-      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/background2.png",
-      "time": 1752891498565.2583,
-      "removeTime": 1755942823620
+      "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/background2.png",
+      "time": 1755959104426.7534,
+      "removeTime": 1755959798434
     },
     "1c5052fa-8819-46bc-bb95-1aa90b873e2e": {
-      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/background1.png",
-      "time": 1752891498563.5964,
-      "removeTime": 1755942823620
+      "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/background1.png",
+      "time": 1755959104425.5874,
+      "removeTime": 1755959798434
     },
     "8be1a880-6cc0-49ef-97ed-9792b9660f07": {
-      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/UI/shangxiazuoyouTriangle17-2.png",
-      "time": 1754727819294.173,
-      "removeTime": 1755942823620
+      "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/UI/shangxiazuoyouTriangle17-2.png",
+      "time": 1755959104424.6692,
+      "removeTime": 1755959798434
     },
     "73d6b5b9-dc56-44d9-9b17-80a95b7bdd49": {
-      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/UI/shangxiazuoyouTriangle16.png",
-      "time": 1754727819294.2825,
-      "removeTime": 1755942823621
+      "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/UI/shangxiazuoyouTriangle16.png",
+      "time": 1755959104424.5757,
+      "removeTime": 1755959798434
     },
     "a181abe3-561c-494c-9952-aa30d8e497fc": {
-      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/UI/shangxiazuoyouTriangle18.png",
-      "time": 1754727819294.3228,
-      "removeTime": 1755942823621
+      "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/UI/shangxiazuoyouTriangle18.png",
+      "time": 1755959104424.7673,
+      "removeTime": 1755959798434
     },
     "f1dc3119-9b7d-4a05-abb6-2617840a906b": {
-      "path": "/Users/zeruili/projects/cocos_project/driftClash/assets/img/menu/UI/shangxiazuoyouTriangle15.png",
-      "time": 1754727819294.2405,
-      "removeTime": 1755942823621
+      "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/UI/shangxiazuoyouTriangle15.png",
+      "time": 1755959104424.4807,
+      "removeTime": 1755959798434
     },
     "8d038fa4-4723-42f1-8a2f-331aba9023e2": {
       "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/UI/rio.png",
@@ -3200,6 +3200,121 @@
       "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/UI/rio.jpg",
       "time": 1755941137585.1934,
       "removeTime": 1755943375703
+    },
+    "36dd683e-baea-4cb2-8dc1-6429449b3aaf": {
+      "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/background/44f2669bbe90718e7c82cf002a71f346.jpeg",
+      "time": 1755958815285.2249,
+      "removeTime": 1755959146021
+    },
+    "5752474b-fc09-45d1-8f04-192727032b83": {
+      "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/background/ab128ccde06826881ab545f5092053a3.jpeg",
+      "time": 1755958815287.188,
+      "removeTime": 1755959146021
+    },
+    "0c0ec31d-a8dd-4c8f-a925-67c32a21e4f6": {
+      "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/background/ad8efe4d6bafcec5971648db598c0a71.jpeg",
+      "time": 1755958815288.5818,
+      "removeTime": 1755959146021
+    },
+    "c3064ced-3493-400e-9aef-95dcf127c691": {
+      "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/background/bf51dacb6999bf07f5c60c2c10c7e272.jpeg",
+      "time": 1755958815289.2915,
+      "removeTime": 1755959146022
+    },
+    "8b94f137-a09a-4bc1-a2e8-cfe9b9381a81": {
+      "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/background/ee870d916fd79516ca72b3c8388529c5.jpeg",
+      "time": 1755958815290.4595,
+      "removeTime": 1755959146022
+    },
+    "0d56149c-3177-4a8d-8e88-84342246370e": {
+      "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/416fa0011fee05baf8fe72f050036f62.jpeg",
+      "time": 1755958815293.7495,
+      "removeTime": 1755959146022
+    },
+    "de9038ee-21fe-4f18-9b9c-ac2644ea9723": {
+      "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/79850dc31e45b5179163b46b25a182d1.jpeg",
+      "time": 1755958815295.1687,
+      "removeTime": 1755959146022
+    },
+    "417da33c-6e54-4bb2-90e0-6fa28b1f60c1": {
+      "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/LaunchScreenBackground.jpg",
+      "time": 1755958815295.5164,
+      "removeTime": 1755959146022
+    },
+    "2f600d94-1f16-4ec5-aaeb-c6da789fe738": {
+      "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/Plop_new.m4a",
+      "time": 1755958815301.1907,
+      "removeTime": 1755959146022
+    },
+    "0bc8a78b-bd7d-4fe0-82d4-c54b64b885bf": {
+      "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/battle2_new.m4a",
+      "time": 1755958815308.5615,
+      "removeTime": 1755959146022
+    },
+    "f0126de9-908b-4055-a7c6-b0802b6ba2f3": {
+      "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/battle_new.m4a",
+      "time": 1755958815316.5903,
+      "removeTime": 1755959146022
+    },
+    "556a0967-2aed-4c42-b221-0a202d1954ff": {
+      "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/bgm_new.m4a",
+      "time": 1755958815319.4888,
+      "removeTime": 1755959146022
+    },
+    "6a4569e1-e7a8-4813-bd13-eba6d16a217f": {
+      "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/crash_new.m4a",
+      "time": 1755958815319.8318,
+      "removeTime": 1755959146022
+    },
+    "71048de6-acd5-49cc-985f-60f651aa9064": {
+      "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/crush_new.m4a",
+      "time": 1755958815319.9583,
+      "removeTime": 1755959146022
+    },
+    "bd7fc9e7-382a-4306-bfb0-ed0ed18cc8bb": {
+      "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/drift_new.m4a",
+      "time": 1755958815320.0872,
+      "removeTime": 1755959146022
+    },
+    "93a6c42e-99bb-43fc-929d-600829e7c672": {
+      "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/engine_on_new.m4a",
+      "time": 1755958815320.339,
+      "removeTime": 1755959146022
+    },
+    "efd1babe-05af-45cc-bec4-21dbf23b0ff0": {
+      "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/explode_new.m4a",
+      "time": 1755958815320.4695,
+      "removeTime": 1755959146022
+    },
+    "42ed8357-8bef-4b77-8c7b-883d8d0f7bee": {
+      "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/explodemini_new.m4a",
+      "time": 1755958815320.623,
+      "removeTime": 1755959146022
+    },
+    "6060291b-d1ad-4bfd-95a7-384f32005584": {
+      "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/player_hit_new.m4a",
+      "time": 1755958815320.738,
+      "removeTime": 1755959146022
+    },
+    "f0a18dd3-9aab-4386-b491-e05d74746be3": {
+      "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/resources/sound/shoot_new.m4a",
+      "time": 1755958815320.8577,
+      "removeTime": 1755959146022
+    },
+    "c709f4a9-008a-48b5-ba8a-36a683eec71b": {
+      "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/UI/dir.png",
+      "time": 1755958815297.9438,
+      "removeTime": 1755959146022
+    },
+    "57cc8bf6-b5ea-416c-9202-426553741a4d": {
+      "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/UI/fire.png",
+      "time": 1755958815300.026,
+      "removeTime": 1755959146022
+    },
+    "ce46a122-c196-49e5-b142-94836c311b72": {
+      "path": "/Users/zeruili/projects/cocos_project/SuperSplash/assets/img/menu/UI/rio.png",
+      "time": 1755958815300.526,
+      "removeTime": 1755959146022
     }
   }
 }

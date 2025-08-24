@@ -670,6 +670,69 @@
         "targetVersion": "15.0",
         "__version__": "1.0.1",
         "developerTeam": "UWR5Y8Y7U8_0D198E51CA352285F98A27F6273A0515BD826D7C"
+      },
+      "1756010485043": {
+        "executableName": "SuperSplash",
+        "packageName": "com.rio.supersplsh",
+        "renderBackEnd": {
+          "metal": true
+        },
+        "skipUpdateXcodeProject": false,
+        "orientation": {
+          "portrait": false,
+          "upsideDown": false,
+          "landscapeRight": true,
+          "landscapeLeft": false
+        },
+        "osTarget": {
+          "iphoneos": false,
+          "simulator": true
+        },
+        "targetVersion": "15.0",
+        "__version__": "1.0.1",
+        "developerTeam": "UWR5Y8Y7U8_0D198E51CA352285F98A27F6273A0515BD826D7C"
+      },
+      "1756010636970": {
+        "executableName": "SuperSplash",
+        "packageName": "com.rio.supersplsh",
+        "renderBackEnd": {
+          "metal": true
+        },
+        "skipUpdateXcodeProject": false,
+        "orientation": {
+          "portrait": false,
+          "upsideDown": false,
+          "landscapeRight": true,
+          "landscapeLeft": false
+        },
+        "osTarget": {
+          "iphoneos": false,
+          "simulator": true
+        },
+        "targetVersion": "15.0",
+        "__version__": "1.0.1",
+        "developerTeam": "UWR5Y8Y7U8_0D198E51CA352285F98A27F6273A0515BD826D7C"
+      },
+      "1756010948778": {
+        "executableName": "SuperSplash",
+        "packageName": "com.rio.supersplsh",
+        "renderBackEnd": {
+          "metal": true
+        },
+        "skipUpdateXcodeProject": false,
+        "orientation": {
+          "portrait": false,
+          "upsideDown": false,
+          "landscapeRight": true,
+          "landscapeLeft": false
+        },
+        "osTarget": {
+          "iphoneos": false,
+          "simulator": true
+        },
+        "targetVersion": "15.0",
+        "__version__": "1.0.1",
+        "developerTeam": "UWR5Y8Y7U8_0D198E51CA352285F98A27F6273A0515BD826D7C"
       }
     },
     "__version__": "1.3.9"
