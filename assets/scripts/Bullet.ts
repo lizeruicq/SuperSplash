@@ -54,7 +54,7 @@ export class Bullet extends Component {
     })
     explosionRadius: number = 300;
 
-    private _shooterId: string = ''; // 发射者ID
+    public _shooterId: string = ''; // 发射者ID
     private _rigidBody: RigidBody2D = null!;
     private _direction: Vec2 = new Vec2(0, 1); // 默认向上
     private _velocity: Vec2 = new Vec2(0, 0);
@@ -142,7 +142,7 @@ export class Bullet extends Component {
         // 飞镖子弹之间不互相碰撞
         if (this.bulletType === BulletType.DART) {
             const otherBullet = otherNode.getComponent(Bullet);
-            if (otherBullet && otherBullet.bulletType === BulletType.DART) {
+            if (otherBullet && otherBullet._shooterId == this._shooterId && otherBullet.bulletType === BulletType.DART) {
                 return;
             }
         }

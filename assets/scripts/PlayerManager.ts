@@ -167,7 +167,7 @@ export class PlayerManager extends Component {
     private _initPlayerData() {
         this._playerData = {
             level: 1,
-            money: 200,
+            money: 0,
             experience: 0,
             
             unlockedCars: [], // 默认解锁第一辆车

@@ -747,11 +747,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           const destroyedAllEnemies = this.enemyCount <= 0 && this.initialEnemyCount > 0; // 根据新的评价规则计算星星
 
-          if (playerPercentage >= 45 || destroyedAllEnemies) {
+          if (playerPercentage >= 44 || destroyedAllEnemies) {
             return 3; // 3星（A级）：颜料数量>=45% 或 摧毁所有AI车辆
-          } else if (playerPercentage >= 35) {
+          } else if (playerPercentage >= 34) {
             return 2; // 2星（B级）：颜料数量>=35%
-          } else if (playerPercentage >= 25) {
+          } else if (playerPercentage >= 24) {
             return 1; // 1星（C级）：颜料数量>=25% 
           } else {
             return 0; // 不满足任何条件，0星

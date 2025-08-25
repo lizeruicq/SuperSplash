@@ -1,0 +1,9 @@
+{
+    "systemInfo": {
+        "arch": "arm64",
+        "cpu": "Apple M4",
+        "version": "Darwin Kernel Version 24.6.0: Mon Jul 14 11:30:40 PDT 2025; root:xnu-11417.140.69~1/RELEASE_ARM64_T8132"
+    },
+    "sceneListMap": {},
+    "deviceMd5": "4ade0bf3b465c2d387bbf6f072cc7f7e"
+}

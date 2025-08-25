@@ -1,7 +1,7 @@
 {
   "modules": {
     "cce:/internal/x/cc": {
-      "mTimestamp": 2519.064625,
+      "mTimestamp": 2814.769667,
       "chunkId": "93ba276ea7b26ffcdc433fab14afc1ed6f05647b",
       "imports": [
         {
@@ -976,7 +976,7 @@
       ]
     },
     "cce:/internal/x/prerequisite-imports": {
-      "mTimestamp": 3046.467083,
+      "mTimestamp": 30920344.089125,
       "chunkId": "6d8fd2b0177941b032ddc0733af48a561fb60657",
       "imports": [
         {
@@ -4071,7 +4071,7 @@
       ]
     },
     "cce:/internal/code-quality/cr.mjs": {
-      "mTimestamp": 1756010923966,
+      "mTimestamp": 1756094270779,
       "chunkId": "6a5019a719a9014c047e67aa1cf34453ab8392ce",
       "imports": [],
       "type": "esm",
@@ -6366,7 +6366,7 @@
     },
     "file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/Bullet.ts": {
       "mTimestamp": {
-        "mtime": 1755959793753.2964,
+        "mtime": 1756095416134.4514,
         "uuid": "91ffccd6-b692-4a87-a2fe-51adeaa3b229"
       },
       "chunkId": "9627b0d9d58257818228bafb8d66e482f9701299",
@@ -6712,7 +6712,7 @@
     },
     "file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/GameManager.ts": {
       "mTimestamp": {
-        "mtime": 1755959793753.4177,
+        "mtime": 1756095648946.2634,
         "uuid": "b67f4523-8daa-464a-8546-d89befbb2977"
       },
       "chunkId": "6e3db3d463ace5cac70cc212be5e384ebcc64b5f",
@@ -7561,7 +7561,7 @@
     },
     "file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/PlayerManager.ts": {
       "mTimestamp": {
-        "mtime": 1755959793753.6208,
+        "mtime": 1756125186680.4531,
         "uuid": "1b6d6687-2973-4618-af7b-db52ef67b8c1"
       },
       "chunkId": "6031a6df382439e751708d8e1ff225136ce4b996",
@@ -7885,7 +7885,7 @@
     },
     "file:///Users/zeruili/projects/cocos_project/SuperSplash/assets/scripts/SoundManager.ts": {
       "mTimestamp": {
-        "mtime": 1755959793753.7888,
+        "mtime": 1756035970326.3464,
         "uuid": "7c385d18-836f-4804-ae30-5bd158cfb7f5"
       },
       "chunkId": "da56edff780e583578bcbe6fd7546a92ebf27b1e",

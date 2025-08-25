@@ -5,10 +5,11 @@
     "designResolution": {
       "width": 1280,
       "height": 720,
-      "fitHeight": false,
+      "fitHeight": true,
       "fitWidth": true
     },
-    "downloadMaxConcurrency": 100
+    "downloadMaxConcurrency": 100,
+    "highQuality": false
   },
   "layer": [
     {

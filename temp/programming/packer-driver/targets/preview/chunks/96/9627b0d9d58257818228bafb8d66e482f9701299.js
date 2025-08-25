@@ -202,7 +202,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           if (this.bulletType === BulletType.DART) {
             var otherBullet = otherNode.getComponent(Bullet);
 
-            if (otherBullet && otherBullet.bulletType === BulletType.DART) {
+            if (otherBullet && otherBullet._shooterId == this._shooterId && otherBullet.bulletType === BulletType.DART) {
               return;
             }
           } // 检查是否碰撞到车辆

@@ -2041,7 +2041,7 @@
       "__uuid__": "7fe3a2c1-44e3-45ed-a3a4-81e90a6994c7",
       "__expectedType__": "cc.Prefab"
     },
-    "fireRate": 0.3,
+    "fireRate": 0.5,
     "weaponType": 2,
     "_id": ""
   },

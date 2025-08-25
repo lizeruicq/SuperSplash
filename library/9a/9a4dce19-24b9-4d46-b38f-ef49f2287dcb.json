@@ -214,7 +214,7 @@
     "_priority": 0,
     "_fov": 45,
     "_fovAxis": 0,
-    "_orthoHeight": 360,
+    "_orthoHeight": 381.4866760168303,
     "_near": 0,
     "_far": 1000,
     "_color": {
@@ -340,7 +340,7 @@
       "__uuid__": "de9038ee-21fe-4f18-9b9c-ac2644ea9723@f9941",
       "__expectedType__": "cc.SpriteFrame"
     },
-    "_type": 0,
+    "_type": 1,
     "_fillType": 0,
     "_sizeMode": 0,
     "_fillCenter": {
@@ -350,7 +350,7 @@
     },
     "_fillStart": 0,
     "_fillRange": 0,
-    "_isTrimmedMode": true,
+    "_isTrimmedMode": false,
     "_useGrayscale": false,
     "_atlas": null,
     "_id": "61bt3qIF1KI6kTJNySf7CS"
@@ -1400,8 +1400,8 @@
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 573.1739999999998,
-      "y": 294.0469999999999,
+      "x": 550.181,
+      "y": 294.047,
       "z": 0
     },
     "_lrot": {
@@ -1555,8 +1555,8 @@
       "__id__": 2
     },
     "_left": 0,
-    "_right": 0.026357031250000166,
-    "_top": 0.04493994464325066,
+    "_right": 0.04432031249999989,
+    "_top": 0.044939944643250504,
     "_bottom": 335,
     "_horizontalCenter": 0,
     "_verticalCenter": 0,
@@ -1568,7 +1568,7 @@
     "_isAbsVerticalCenter": true,
     "_originalWidth": 0,
     "_originalHeight": 50,
-    "_alignMode": 2,
+    "_alignMode": 1,
     "_lockFlags": 0,
     "_id": "86q8MljrdID7GZrcVI1EmA"
   },
@@ -3952,7 +3952,7 @@
     "_cameraComponent": {
       "__id__": 4
     },
-    "_alignCanvasWithScreen": false,
+    "_alignCanvasWithScreen": true,
     "_id": "12O/ljcVlEqLmVm3U2gEOQ"
   },
   {

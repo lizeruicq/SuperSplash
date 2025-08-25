@@ -1,3 +1,0 @@
-# directories for searching native plugins
-/Users/zeruili/projects/cocos_project/SuperSplash/native
-/Users/zeruili/projects/cocos_project/SuperSplash/extensions
